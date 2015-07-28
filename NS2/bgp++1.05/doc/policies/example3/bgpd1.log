@@ -1,0 +1,24 @@
+2015/07/25 22:23:13  5.285739 BGP: 192.38.0.6 [FSM] Timer (start timer expire).
+2015/07/25 22:23:13  5.285739 BGP: 192.38.0.6 [FSM] BGP_Start (Idle->Connect)
+2015/07/25 22:23:13  5.285739 BGP: 192.38.0.6 went from Idle to Connect
+2015/07/25 22:23:13  5.285739 BGP: 192.38.0.6 [Event] Connect start to 192.38.0.6
+2015/07/25 22:23:13  5.285739 BGP: 192.38.0.6 [FSM] Non blocking connect waiting result
+2015/07/25 22:23:13  5.288166 BGP: 192.38.0.6 [FSM] TCP_connection_open (Connect->OpenSent)
+2015/07/25 22:23:13  5.288166 BGP: 192.38.0.6 went from Connect to OpenSent
+2015/07/25 22:23:13  5.288166 BGP: 192.38.0.6 sending OPEN, version 4, my as 1, holdtime 180, id 192.38.0.1
+2015/07/25 22:23:13  5.288166 BGP: 192.38.0.6 send message type 1, length (incl. header) 45
+2015/07/25 22:23:13  5.290592 BGP: 192.38.0.6 [Event] BGP connection closed 
+2015/07/25 22:23:13  5.290592 BGP: 192.38.0.6 [FSM] TCP_connection_closed (OpenSent->Active)
+2015/07/25 22:23:13  5.290592 BGP: 192.38.0.6 went from OpenSent to Active
+2015/07/25 22:23:13  5.362694 BGP: 192.38.0.2 [FSM] Timer (start timer expire).
+2015/07/25 22:23:13  5.362694 BGP: 192.38.0.2 [FSM] BGP_Start (Idle->Connect)
+2015/07/25 22:23:13  5.362694 BGP: 192.38.0.2 went from Idle to Connect
+2015/07/25 22:23:13  5.362694 BGP: 192.38.0.2 [Event] Connect start to 192.38.0.2
+2015/07/25 22:23:13  5.362694 BGP: 192.38.0.2 [FSM] Non blocking connect waiting result
+2015/07/25 22:23:13  5.365120 BGP: 192.38.0.2 [FSM] TCP_connection_open (Connect->OpenSent)
+2015/07/25 22:23:13  5.365120 BGP: 192.38.0.2 went from Connect to OpenSent
+2015/07/25 22:23:13  5.365120 BGP: 192.38.0.2 sending OPEN, version 4, my as 1, holdtime 180, id 192.38.0.1
+2015/07/25 22:23:13  5.365120 BGP: 192.38.0.2 send message type 1, length (incl. header) 45
+2015/07/25 22:23:13  5.367547 BGP: 192.38.0.2 [Event] BGP connection closed 
+2015/07/25 22:23:13  5.367547 BGP: 192.38.0.2 [FSM] TCP_connection_closed (OpenSent->Active)
+2015/07/25 22:23:13  5.367547 BGP: 192.38.0.2 went from OpenSent to Active

@@ -1,0 +1,179 @@
+BGP++ beta 1.01: 
+---------------
+o support for pdns v2
+o remove ^M from regex-gnu.h
+o small corrections in documentation
+o added med, pdns example
+
+BGP++ beta 1.02: 
+---------------
+o fix route_map_master.event_hook initialization bug
+
+BGP++ beta 1.03:
+---------------
+o replace non-standard slist with list
+o rm min definition
+o InterfaceListPointer initialization	
+
+BGP++ beta 1.03a: 
+----------------
+o Fix MRAI bug: timestamps for 
+  a prefix were erased when sending 
+  a withdrawal.
+o Rm unnecessary error msgs
+o tcp-full.cc: when closing a connection 
+  that is in SYN_SENT state 
+  call cancel_timers();
+
+BGP++ beta 1.03b: 
+----------------
+o Fix bug Bgp::bgp_mrai_timers_off() use of uninitialized 
+  value & infinite loop.
+
+BGP++ beta 1.03c:
+----------------
+o new routeadv_list_search function to scan the
+  routeadv_list
+o Fix bug introduced by misplaced comment
+o Change bgp_routeadv_timer to remove expired
+  thread from routeadv_list as soon as the bmi
+  info is freed.
+
+BGP++ beta 1.04:
+---------------
+o in this version there was an attempt to merge the
+  BGP++ code to the latest Zebra version 0.93b.
+  Several pieces of software were modified to reflect
+  the latest 0.93b release affecting mainly the flap
+  dampening and the route advertisement related code.
+o more memory efficient. A routing table representation 
+  scheme is introduced that shares redundant memory blocks 
+  between routers and can result in significant memory
+  savings.
+o support for checkpointing/resuming a simulation using
+  CONDOR:
+  A new command has been introduced, usage:
+
+  Application/Route/Bgp checkpoint <file>
+
+  This command takes a checkpoint of the process
+  and stores it at <file>. The checkpoint is taken as
+  soon as all BGP initialization have finished, in particular
+  when the last bgp instance exits the bgp_main() function.
+  The <file> can be used to restart the process later, e.g.:
+
+  ns -_condor_restart <file>
+
+  This works only if ns has been compiled
+  with CONDOR, and the HAVE_CONDOR macro is defined.
+
+  Moreover, srand() & timer initializations will happen
+  after the chekpoint is taken. Thus, simulations restarted
+  from the same <file> won't use the same seed.
+
+
+o Change BGP++ bgp-router command used in pdns context.
+  This command should be used to list the neighbors that don't
+  reside in the local federate. The form of the command is:
+
+  <registry> bgp-router <ip-identifier> <interface-ip> <mask> ....
+
+  <ip-identifier>       : IP address (as specified in the .conf file )of
+                          a BGP router that is in another federate *and* to
+                          which a local BGP router connects
+  
+  <interface-ip> <mask> : One or more pairs of <interface-ip> <mask>. The mask
+                          is not used and should be removed in subsequent
+                          revisions. The <interface-ip> is an IP that is a assign
+                          an interface of a router with one of the commands
+                          rlink or set-ipaddr, e.g:
+
+                          $n2 rlink 100Mb 5ms DropTail 10.1.0.1 255.255.255.0
+                          [$ns link $n2 $n1] set-ipaddr 192.168.2.6 255.255.255.0
+
+                          Important: All the ip address that are assigned to a router/node
+                          with the commands right above *must* be listed in the bgp-router
+                          command.
+
+o Now one can disable reusing memory for the tcl space be setting
+  the dont_reuse static variable, e.g.
+        Application/Route/Bgp dont-reuse
+
+
+o Now one logging file can be used from all
+  BGP instances.
+  The following command can be used from the tcl space
+  to set and query the global log file:
+
+      Application/Route/Bgp use-log-file bla.log
+      puts [Application/Route/Bgp use-log-file]
+
+  The first command should only be used at the beginning of the
+  simulation at the beginning of the tcl file, otherwise
+  unexpected behavior may result.
+
+  If this variable is set to some file, then
+  the file is used for logging by all
+  BGP instances that have logging enabled (with
+  the "log filename" command). The argument
+  of the later command is ignored. Since all BGP instances
+  use the same file for logging each line is prefixed or suffixed
+  with the id of the BGP instance that wrote to the file
+  within # characters, e.g.
+ 
+  *> 189.0.0.0/8        0.0.0.0                            32768 AS path: i#192.38.14.1#
+  *> 190.0.0.0/8        0.0.0.0                            32768 AS path: i#192.38.14.1#
+                                     or
+  
+  #192.38.14.2#2004/02/27 15:07:57  6.409467 BGP: 192.38.14.1 sending KEEPALIVE
+  #192.38.14.2#2004/02/27 15:07:57  6.409467 BGP: 192.38.14.1 send message type 4, length (incl. header) 19
+  #192.38.14.1#2004/02/27 15:07:57  6.411185 BGP: 192.38.14.2 rcv message type 1, length (excl. header) 26
+  #192.38.14.1#2004/02/27 15:07:57  6.411185 BGP: 192.38.14.2 rcv OPEN, version 4, remote-as 2, hol
+
+  This modification was necessary because in simulations with
+  few thousands routers the OS file descriptor limit would be
+  exceeded.
+  
+BGP++ beta 1.04a:
+----------------
+o Fixed compilation problem with gcc 3.3.3 due to
+  deprecated multiline strings.
+o Removed silly warning about deprecated 
+  "bgp-instance register bgp-registry"
+  command.
+
+BGP++ beta 1.04b:
+----------------
+o Fixed flap dampening bug.
+  The variable first_time_insert was erroneously
+  declared as 'static'. Thanks to Lei Li for finding
+  this bug.
+
+BGP++ beta 1.04c:
+----------------
+o Bug fixes: 
+  In the bgp_process function the adj_out
+  of a peer was set even when an UPDATE msg was
+  suppressed by the mrai timer. Fixed this to set
+  adj_out only when an UPDATE msg is actually
+  sent. 
+  Also the same function when a withdrawal arrived
+  didnt rm supressed updates if the adj_out was
+  not set. Fixed this to rm supressed updates
+  regardless of whether adj_out is set.
+
+  Commented out call of function peer_2_target_link
+  in line bgp.cc:12129. This function caused pdns
+  to crash when running distributed simulations.
+  It should be commented out, but was uncommented
+  by mistake between releases 1.04 and 1.04a. It is
+  part of experimental code used to implement
+  bgp-table-based packet forwarding (classifier-bgp.[cc/h]).
+
+BGP++ beta 1.05:
+----------------
+o Fixed bug in the mrai-per-peer implementation.
+  The bug appeared after the 1.04c fixes. Bug
+  description: after mrai expiration the adj-out
+  of a peer to which an update was sent was not
+  updated.

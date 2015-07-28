@@ -1,0 +1,99 @@
+2015/07/24 19:51:04  6.765439 BGP: 2.2.2.2 [FSM] Timer (start timer expire).
+2015/07/24 19:51:04  6.765439 BGP: 2.2.2.2 [FSM] BGP_Start (Idle->Connect)
+2015/07/24 19:51:04  6.765439 BGP: 2.2.2.2 went from Idle to Connect
+2015/07/24 19:51:04  6.765439 BGP: 2.2.2.2 [Event] Connect start to 2.2.2.2
+2015/07/24 19:51:04  6.765439 BGP: 2.2.2.2 [FSM] Non blocking connect waiting result
+2015/07/24 19:51:04  6.767866 BGP: 2.2.2.2 [FSM] TCP_connection_open (Connect->OpenSent)
+2015/07/24 19:51:04  6.767866 BGP: 2.2.2.2 went from Connect to OpenSent
+2015/07/24 19:51:04  6.767866 BGP: 2.2.2.2 sending OPEN, version 4, my as 400, holdtime 180, id 4.4.4.4
+2015/07/24 19:51:04  6.767866 BGP: 2.2.2.2 send message type 1, length (incl. header) 45
+2015/07/24 19:51:04  6.770292 BGP: 2.2.2.2 [Event] BGP connection closed 
+2015/07/24 19:51:04  6.770292 BGP: 2.2.2.2 [FSM] TCP_connection_closed (OpenSent->Active)
+2015/07/24 19:51:04  6.770292 BGP: 2.2.2.2 went from OpenSent to Active
+2015/07/24 19:51:06  8.177312 BGP: [Event] BGP connection from host 2.2.2.2
+2015/07/24 19:51:06  8.177312 BGP: [Event] Make dummy peer structure until read Open packet
+2015/07/24 19:51:06  8.177312 BGP: 2.2.2.2 [FSM] TCP_connection_open (Active->OpenSent)
+2015/07/24 19:51:06  8.177312 BGP: 2.2.2.2 went from Active to OpenSent
+2015/07/24 19:51:06  8.177979 BGP: 2.2.2.2 rcv message type 1, length (excl. header) 26
+2015/07/24 19:51:06  8.177979 BGP: 2.2.2.2 rcv OPEN, version 4, remote-as 200, holdtime 180, id 2.2.2.2
+2015/07/24 19:51:06  8.177979 BGP: 2.2.2.2 [Event] Transfer temporary BGP peer to existing one
+2015/07/24 19:51:06  8.177979 BGP: 2.2.2.2 sending OPEN, version 4, my as 400, holdtime 180, id 4.4.4.4
+2015/07/24 19:51:06  8.177979 BGP: 2.2.2.2 send message type 1, length (incl. header) 45
+2015/07/24 19:51:06  8.177979 BGP: 2.2.2.2 rcv OPEN w/ OPTION parameter len: 16
+2015/07/24 19:51:06  8.177979 BGP: 2.2.2.2 rcvd OPEN w/ optional parameter type 2 (Capability) len 6
+2015/07/24 19:51:06  8.177979 BGP: 2.2.2.2 OPEN has CAPABILITY code: 1, length 4
+2015/07/24 19:51:06  8.177979 BGP: 2.2.2.2 OPEN has MP_EXT CAP for afi/safi: 1/1
+2015/07/24 19:51:06  8.177979 BGP: 2.2.2.2 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+2015/07/24 19:51:06  8.177979 BGP: 2.2.2.2 OPEN has CAPABILITY code: 128, length 0
+2015/07/24 19:51:06  8.177979 BGP: 2.2.2.2 OPEN has ROUTE-REFRESH capability(old) for all address-families
+2015/07/24 19:51:06  8.177979 BGP: 2.2.2.2 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+2015/07/24 19:51:06  8.177979 BGP: 2.2.2.2 OPEN has CAPABILITY code: 2, length 0
+2015/07/24 19:51:06  8.177979 BGP: 2.2.2.2 OPEN has ROUTE-REFRESH capability(New) for all address-families
+2015/07/24 19:51:06  8.177979 BGP: 2.2.2.2 [Event] Accepting BGP peer delete
+2015/07/24 19:51:06  8.177979 BGP: 2.2.2.2 [FSM] Receive_OPEN_message (OpenSent->OpenConfirm)
+2015/07/24 19:51:06  8.177979 BGP: 2.2.2.2 went from OpenSent to OpenConfirm
+2015/07/24 19:51:06  8.177979 BGP: 2.2.2.2 sending KEEPALIVE
+2015/07/24 19:51:06  8.177979 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+2015/07/24 19:51:06  8.180747 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+2015/07/24 19:51:06  8.180747 BGP: 2.2.2.2 KEEPALIVE rcvd
+2015/07/24 19:51:06  8.180747 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (OpenConfirm->Established)
+2015/07/24 19:51:06  8.180747 BGP: 2.2.2.2 went from OpenConfirm to Established
+2015/07/24 19:51:06  8.180747 BGP: 2.2.2.2 sending KEEPALIVE
+2015/07/24 19:51:06  8.180747 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+2015/07/24 19:51:06  8.183376 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+2015/07/24 19:51:06  8.183376 BGP: 2.2.2.2 KEEPALIVE rcvd
+2015/07/24 19:51:06  8.183376 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (Established->Established)
+2015/07/24 19:51:06  8.186438 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, aggregated by 200 2.2.2.2, path 200 100
+2015/07/24 19:51:06  8.186438 BGP: 2.2.2.2 rcvd 160.0.0.0/8
+2015/07/24 19:51:06  8.186438 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+2015/07/24 19:51:06  8.186438 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, path 200 100
+2015/07/24 19:51:06  8.186438 BGP: 2.2.2.2 rcvd 160.20.0.0/16
+2015/07/24 19:51:06  8.186438 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+2015/07/24 19:51:06  8.454182 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+2015/07/24 19:51:06  8.454182 BGP: 2.2.2.2 rcvd UPDATE about 160.0.0.0/8 -- withdrawn
+2015/07/24 19:51:06  8.454182 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+2015/07/24 19:51:06  8.502672 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, path 200 300
+2015/07/24 19:51:06  8.502672 BGP: 2.2.2.2 rcvd 160.10.0.0/16
+2015/07/24 19:51:06  8.502672 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+2015/07/24 19:51:36  38.183584 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, aggregated by 200 2.2.2.2, path 200 {100,300}
+2015/07/24 19:51:36  38.183584 BGP: 2.2.2.2 rcvd 160.0.0.0/8
+2015/07/24 19:51:36  38.183584 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+2015/07/24 19:52:06  68.177979 BGP: 2.2.2.2 [FSM] Timer (keepalive timer expire)
+2015/07/24 19:52:06  68.177979 BGP: 2.2.2.2 [FSM] KeepAlive_timer_expired (Established->Established)
+2015/07/24 19:52:06  68.177979 BGP: 2.2.2.2 sending KEEPALIVE
+2015/07/24 19:52:06  68.177979 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+2015/07/24 19:52:06  68.180747 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+2015/07/24 19:52:06  68.180747 BGP: 2.2.2.2 KEEPALIVE rcvd
+2015/07/24 19:52:06  68.180747 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (Established->Established)
+>show ip bgp
+BGP table version is 0, local router ID is 4.4.4.4
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+*> 160.0.0.0/8        2.2.2.2                                0  200 {100,300}i
+*> 160.10.0.0       2.2.2.2                                0  200 300i
+*> 160.20.0.0       2.2.2.2                                0  200 100i
+
+Total number of prefixes 3
+2015/07/24 19:53:06  128.177979 BGP: 2.2.2.2 [FSM] Timer (keepalive timer expire)
+2015/07/24 19:53:06  128.177979 BGP: 2.2.2.2 [FSM] KeepAlive_timer_expired (Established->Established)
+2015/07/24 19:53:06  128.177979 BGP: 2.2.2.2 sending KEEPALIVE
+2015/07/24 19:53:06  128.177979 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+2015/07/24 19:53:06  128.180747 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+2015/07/24 19:53:06  128.180747 BGP: 2.2.2.2 KEEPALIVE rcvd
+2015/07/24 19:53:06  128.180747 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (Established->Established)
+2015/07/24 19:54:06  188.177979 BGP: 2.2.2.2 [FSM] Timer (keepalive timer expire)
+2015/07/24 19:54:06  188.177979 BGP: 2.2.2.2 [FSM] KeepAlive_timer_expired (Established->Established)
+2015/07/24 19:54:06  188.177979 BGP: 2.2.2.2 sending KEEPALIVE
+2015/07/24 19:54:06  188.177979 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+2015/07/24 19:54:06  188.180747 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+2015/07/24 19:54:06  188.180747 BGP: 2.2.2.2 KEEPALIVE rcvd
+2015/07/24 19:54:06  188.180747 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (Established->Established)
+2015/07/24 19:55:06  248.177979 BGP: 2.2.2.2 [FSM] Timer (keepalive timer expire)
+2015/07/24 19:55:06  248.177979 BGP: 2.2.2.2 [FSM] KeepAlive_timer_expired (Established->Established)
+2015/07/24 19:55:06  248.177979 BGP: 2.2.2.2 sending KEEPALIVE
+2015/07/24 19:55:06  248.177979 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+2015/07/24 19:55:06  248.180747 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+2015/07/24 19:55:06  248.180747 BGP: 2.2.2.2 KEEPALIVE rcvd
+2015/07/24 19:55:06  248.180747 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (Established->Established)

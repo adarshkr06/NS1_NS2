@@ -1,0 +1,84 @@
+=====================
+Flap dampening test 1
+=====================
+Topology:  AS1-----AS2-----AS3
+
+To run the simulation:
+	ns flap-dampening.tcl -dir ./conf -stop 5000
+
+Each AS has one router. AS3 announces the 10.0.3.0/24 
+block to AS2. It starts flapping at the 60th second 
+of the simulation; every 60seconds it withdraws or 
+reannounces the prefix. It stops doing so at the 420th 
+second of the simulation. By that time the penalty assigned 
+to the prefix by AS2 exceeds the limit and it is damped. 
+At the 4000th second the AS3 attempts to reannounce the 
+prefix. By that time the penalty at AS2 has decayed below 
+the reuse limit so it is not damped any more.
+
+<-U     :  announcement of 10.0.3.0/24
+<-W     :  withdrawal of 10.0.3.0/24
+p2      :  Flap dampening penalty at AS2 for 10.0.3.0/24 block
+Delta(i):  Delta(i) is the time until  router's i running 	     
+	   MRAI timer expires. Delta(i)<=30
+        
+Topology:  
+	 AS1-----AS2-----AS3
+
+t0:                 <-U       t0 = time that session is established
+t1:          <-U              t1=t0 + Delta(2)
+t2:                 <-W       t2=60   					      
+t3:          <-W              t3~60   p2 = 1000					    
+t4:                 <-U       t4=120 + Delta(1)
+t5:          <-U              t5=120 + Delta(1) + Delta(2)
+t6:                 <-W       t6=180
+t7:          <-W              t7~180  p2 = 2000 - Decay
+t8:                 <-U       t8=240 + Delta(1)
+t9:          <-U              t9=240 + Delta(1) + Delta(2) 
+t10:                <-W       t10=300
+t11          <-W              t11~300 p2 = 3000 - Decay    
+
+Any further announcements are damped since 
+the 2000 suppress threshold is exceeded.
+
+t12:                <-U       t12=360 + Delta(1)
+t13:            Damped        t13~360 + Delta(1) 
+t14:                <-W       t14=420
+t15:            Damped        t15~420  p2 = 4000 - Delay 
+
+t16:                <-U       t16=4000 + Delta(1) 
+t17:         <-U              t17~4000 + Delta(1)  p2 < reuse_threshold = 750
+
+=====================
+Flap dampening test 2
+=====================
+Topology:
+	
+	AS1-----AS2-----AS3
+
+To run the simulation:
+	ns flap-dampening.tcl -dir ./conf -stop 5000 -clear
+
+For the second test the '-clear' flag is necessary.
+The only difference of this test to the 1st test is 
+that at the 500th second of the simulation the 
+'no bgp dampening' command is used to disable
+dampening at AS2. Also at the 501th second of the 
+simulation AS3 reannounces the 10.0.3.0/24 block. 
+This time the announcement is not damped.
+
+=========================
+Flap dampening validation
+=========================
+Test 1 
+
+o Validate that announcements after the third flap are damped.
+  Three flaps are enough to exceed the damp limit.
+
+o Validate that the last update, sent at the 4000th second of the simulation,
+  is not damped.
+
+Test 2
+
+o Validate that the announcement at the 501th second of the simulation is not 
+  damped.

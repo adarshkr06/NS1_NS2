@@ -1,0 +1,1933 @@
+#2.2.2.2#2015/07/27 01:01:28  5.138409 BGP: 3.3.3.3 [FSM] Timer (start timer expire).
+#2.2.2.2#2015/07/27 01:01:28  5.138409 BGP: 3.3.3.3 [FSM] BGP_Start (Idle->Connect)
+#2.2.2.2#2015/07/27 01:01:28  5.138409 BGP: 3.3.3.3 went from Idle to Connect
+#2.2.2.2#2015/07/27 01:01:28  5.138409 BGP: 3.3.3.3 [Event] Connect start to 3.3.3.3
+#2.2.2.2#2015/07/27 01:01:28  5.138409 BGP: 3.3.3.3 [FSM] Non blocking connect waiting result
+#2.2.2.2#2015/07/27 01:01:28  5.140835 BGP: 3.3.3.3 [FSM] TCP_connection_open (Connect->OpenSent)
+#2.2.2.2#2015/07/27 01:01:28  5.140835 BGP: 3.3.3.3 went from Connect to OpenSent
+#2.2.2.2#2015/07/27 01:01:28  5.140835 BGP: 3.3.3.3 sending OPEN, version 4, my as 2, holdtime 180, id 2.2.2.2
+#2.2.2.2#2015/07/27 01:01:28  5.140835 BGP: 3.3.3.3 send message type 1, length (incl. header) 45
+#3.3.3.3#2015/07/27 01:01:28  5.142049 BGP: [Event] BGP connection from host 2.2.2.2
+#3.3.3.3#2015/07/27 01:01:28  5.142049 BGP: [Event] BGP connection IP address 2.2.2.2 is Idle state
+#3.3.3.3#2015/07/27 01:01:28  5.142049 BGP: [Event] BGP closing TCP connection to IP address 2.2.2.2 
+#2.2.2.2#2015/07/27 01:01:28  5.143262 BGP: 3.3.3.3 [Event] BGP connection closed 
+#2.2.2.2#2015/07/27 01:01:28  5.143262 BGP: 3.3.3.3 [FSM] TCP_connection_closed (OpenSent->Active)
+#2.2.2.2#2015/07/27 01:01:28  5.143262 BGP: 3.3.3.3 went from OpenSent to Active
+#2.2.2.2#2015/07/27 01:01:28  5.705658 BGP: 1.1.1.1 [FSM] Timer (start timer expire).
+#2.2.2.2#2015/07/27 01:01:28  5.705658 BGP: 1.1.1.1 [FSM] BGP_Start (Idle->Connect)
+#2.2.2.2#2015/07/27 01:01:28  5.705658 BGP: 1.1.1.1 went from Idle to Connect
+#2.2.2.2#2015/07/27 01:01:28  5.705658 BGP: 1.1.1.1 [Event] Connect start to 1.1.1.1
+#2.2.2.2#2015/07/27 01:01:28  5.705658 BGP: 1.1.1.1 [FSM] Non blocking connect waiting result
+#2.2.2.2#2015/07/27 01:01:28  5.708085 BGP: 1.1.1.1 [FSM] TCP_connection_open (Connect->OpenSent)
+#2.2.2.2#2015/07/27 01:01:28  5.708085 BGP: 1.1.1.1 went from Connect to OpenSent
+#2.2.2.2#2015/07/27 01:01:28  5.708085 BGP: 1.1.1.1 sending OPEN, version 4, my as 2, holdtime 180, id 2.2.2.2
+#2.2.2.2#2015/07/27 01:01:28  5.708085 BGP: 1.1.1.1 send message type 1, length (incl. header) 45
+#1.1.1.1#2015/07/27 01:01:28  5.709298 BGP: [Event] BGP connection from host 2.2.2.2
+#1.1.1.1#2015/07/27 01:01:28  5.709298 BGP: [Event] BGP connection IP address 2.2.2.2 is Idle state
+#1.1.1.1#2015/07/27 01:01:28  5.709298 BGP: [Event] BGP closing TCP connection to IP address 2.2.2.2 
+#2.2.2.2#2015/07/27 01:01:28  5.710511 BGP: 1.1.1.1 [Event] BGP connection closed 
+#2.2.2.2#2015/07/27 01:01:28  5.710511 BGP: 1.1.1.1 [FSM] TCP_connection_closed (OpenSent->Active)
+#2.2.2.2#2015/07/27 01:01:28  5.710511 BGP: 1.1.1.1 went from OpenSent to Active
+#2.2.2.2#2015/07/27 01:01:28  5.741680 BGP: 4.4.4.4 [FSM] Timer (start timer expire).
+#2.2.2.2#2015/07/27 01:01:28  5.741680 BGP: 4.4.4.4 [FSM] BGP_Start (Idle->Connect)
+#2.2.2.2#2015/07/27 01:01:28  5.741680 BGP: 4.4.4.4 went from Idle to Connect
+#2.2.2.2#2015/07/27 01:01:28  5.741680 BGP: 4.4.4.4 [Event] Connect start to 4.4.4.4
+#2.2.2.2#2015/07/27 01:01:28  5.741680 BGP: 4.4.4.4 [FSM] Non blocking connect waiting result
+#2.2.2.2#2015/07/27 01:01:28  5.744107 BGP: 4.4.4.4 [FSM] TCP_connection_open (Connect->OpenSent)
+#2.2.2.2#2015/07/27 01:01:28  5.744107 BGP: 4.4.4.4 went from Connect to OpenSent
+#2.2.2.2#2015/07/27 01:01:28  5.744107 BGP: 4.4.4.4 sending OPEN, version 4, my as 2, holdtime 180, id 2.2.2.2
+#2.2.2.2#2015/07/27 01:01:28  5.744107 BGP: 4.4.4.4 send message type 1, length (incl. header) 45
+#4.4.4.4#2015/07/27 01:01:28  5.745320 BGP: [Event] BGP connection from host 2.2.2.2
+#4.4.4.4#2015/07/27 01:01:28  5.745320 BGP: [Event] BGP connection IP address 2.2.2.2 is Idle state
+#4.4.4.4#2015/07/27 01:01:28  5.745320 BGP: [Event] BGP closing TCP connection to IP address 2.2.2.2 
+#2.2.2.2#2015/07/27 01:01:28  5.746533 BGP: 4.4.4.4 [Event] BGP connection closed 
+#2.2.2.2#2015/07/27 01:01:28  5.746533 BGP: 4.4.4.4 [FSM] TCP_connection_closed (OpenSent->Active)
+#2.2.2.2#2015/07/27 01:01:28  5.746533 BGP: 4.4.4.4 went from OpenSent to Active
+#1.1.1.1#2015/07/27 01:01:28  5.760047 BGP: 4.4.4.4 [FSM] Timer (start timer expire).
+#1.1.1.1#2015/07/27 01:01:28  5.760047 BGP: 4.4.4.4 [FSM] BGP_Start (Idle->Connect)
+#1.1.1.1#2015/07/27 01:01:28  5.760047 BGP: 4.4.4.4 went from Idle to Connect
+#1.1.1.1#2015/07/27 01:01:28  5.760047 BGP: 4.4.4.4 [Event] Connect start to 4.4.4.4
+#1.1.1.1#2015/07/27 01:01:28  5.760047 BGP: 4.4.4.4 [FSM] Non blocking connect waiting result
+#1.1.1.1#2015/07/27 01:01:28  5.762474 BGP: 4.4.4.4 [FSM] TCP_connection_open (Connect->OpenSent)
+#1.1.1.1#2015/07/27 01:01:28  5.762474 BGP: 4.4.4.4 went from Connect to OpenSent
+#1.1.1.1#2015/07/27 01:01:28  5.762474 BGP: 4.4.4.4 sending OPEN, version 4, my as 1, holdtime 180, id 1.1.1.1
+#1.1.1.1#2015/07/27 01:01:28  5.762474 BGP: 4.4.4.4 send message type 1, length (incl. header) 45
+#4.4.4.4#2015/07/27 01:01:28  5.763687 BGP: [Event] BGP connection from host 1.1.1.1
+#4.4.4.4#2015/07/27 01:01:28  5.763687 BGP: [Event] BGP connection IP address 1.1.1.1 is Idle state
+#4.4.4.4#2015/07/27 01:01:28  5.763687 BGP: [Event] BGP closing TCP connection to IP address 1.1.1.1 
+#1.1.1.1#2015/07/27 01:01:28  5.764901 BGP: 4.4.4.4 [Event] BGP connection closed 
+#1.1.1.1#2015/07/27 01:01:28  5.764901 BGP: 4.4.4.4 [FSM] TCP_connection_closed (OpenSent->Active)
+#1.1.1.1#2015/07/27 01:01:28  5.764901 BGP: 4.4.4.4 went from OpenSent to Active
+#4.4.4.4#2015/07/27 01:01:28  5.995598 BGP: 1.1.1.1 [FSM] Timer (start timer expire).
+#4.4.4.4#2015/07/27 01:01:28  5.995598 BGP: 1.1.1.1 [FSM] BGP_Start (Idle->Connect)
+#4.4.4.4#2015/07/27 01:01:28  5.995598 BGP: 1.1.1.1 went from Idle to Connect
+#4.4.4.4#2015/07/27 01:01:28  5.995598 BGP: 1.1.1.1 [Event] Connect start to 1.1.1.1
+#4.4.4.4#2015/07/27 01:01:28  5.995598 BGP: 1.1.1.1 [FSM] Non blocking connect waiting result
+#4.4.4.4#2015/07/27 01:01:28  5.998025 BGP: 1.1.1.1 [FSM] TCP_connection_open (Connect->OpenSent)
+#4.4.4.4#2015/07/27 01:01:28  5.998025 BGP: 1.1.1.1 went from Connect to OpenSent
+#4.4.4.4#2015/07/27 01:01:28  5.998025 BGP: 1.1.1.1 sending OPEN, version 4, my as 4, holdtime 180, id 4.4.4.4
+#4.4.4.4#2015/07/27 01:01:28  5.998025 BGP: 1.1.1.1 send message type 1, length (incl. header) 45
+#1.1.1.1#2015/07/27 01:01:28  5.999238 BGP: [Event] BGP connection from host 4.4.4.4
+#1.1.1.1#2015/07/27 01:01:28  5.999238 BGP: [Event] Make dummy peer structure until read Open packet
+#1.1.1.1#2015/07/27 01:01:28  5.999238 BGP: 4.4.4.4 [FSM] TCP_connection_open (Active->OpenSent)
+#1.1.1.1#2015/07/27 01:01:28  5.999238 BGP: 4.4.4.4 went from Active to OpenSent
+#1.1.1.1#2015/07/27 01:01:28  5.999905 BGP: 4.4.4.4 rcv message type 1, length (excl. header) 26
+#1.1.1.1#2015/07/27 01:01:28  5.999905 BGP: 4.4.4.4 rcv OPEN, version 4, remote-as 4, holdtime 180, id 4.4.4.4
+#1.1.1.1#2015/07/27 01:01:28  5.999905 BGP: 4.4.4.4 [Event] Transfer temporary BGP peer to existing one
+#1.1.1.1#2015/07/27 01:01:28  5.999905 BGP: 4.4.4.4 sending OPEN, version 4, my as 1, holdtime 180, id 1.1.1.1
+#1.1.1.1#2015/07/27 01:01:28  5.999905 BGP: 4.4.4.4 send message type 1, length (incl. header) 45
+#1.1.1.1#2015/07/27 01:01:28  5.999905 BGP: 4.4.4.4 rcv OPEN w/ OPTION parameter len: 16
+#1.1.1.1#2015/07/27 01:01:28  5.999905 BGP: 4.4.4.4 rcvd OPEN w/ optional parameter type 2 (Capability) len 6
+#1.1.1.1#2015/07/27 01:01:28  5.999905 BGP: 4.4.4.4 OPEN has CAPABILITY code: 1, length 4
+#1.1.1.1#2015/07/27 01:01:28  5.999905 BGP: 4.4.4.4 OPEN has MP_EXT CAP for afi/safi: 1/1
+#1.1.1.1#2015/07/27 01:01:28  5.999905 BGP: 4.4.4.4 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+#1.1.1.1#2015/07/27 01:01:28  5.999905 BGP: 4.4.4.4 OPEN has CAPABILITY code: 128, length 0
+#1.1.1.1#2015/07/27 01:01:28  5.999905 BGP: 4.4.4.4 OPEN has ROUTE-REFRESH capability(old) for all address-families
+#1.1.1.1#2015/07/27 01:01:28  5.999905 BGP: 4.4.4.4 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+#1.1.1.1#2015/07/27 01:01:28  5.999905 BGP: 4.4.4.4 OPEN has CAPABILITY code: 2, length 0
+#1.1.1.1#2015/07/27 01:01:28  5.999905 BGP: 4.4.4.4 OPEN has ROUTE-REFRESH capability(New) for all address-families
+#1.1.1.1#2015/07/27 01:01:28  5.999905 BGP: 4.4.4.4 [Event] Accepting BGP peer delete
+#1.1.1.1#2015/07/27 01:01:28  5.999905 BGP: 4.4.4.4 [FSM] Receive_OPEN_message (OpenSent->OpenConfirm)
+#1.1.1.1#2015/07/27 01:01:28  5.999905 BGP: 4.4.4.4 went from OpenSent to OpenConfirm
+#1.1.1.1#2015/07/27 01:01:28  5.999905 BGP: 4.4.4.4 sending KEEPALIVE
+#1.1.1.1#2015/07/27 01:01:28  5.999905 BGP: 4.4.4.4 send message type 4, length (incl. header) 19
+#4.4.4.4#2015/07/27 01:01:29  6.001358 BGP: 1.1.1.1 rcv message type 1, length (excl. header) 26
+#4.4.4.4#2015/07/27 01:01:29  6.001358 BGP: 1.1.1.1 rcv OPEN, version 4, remote-as 1, holdtime 180, id 1.1.1.1
+#4.4.4.4#2015/07/27 01:01:29  6.001358 BGP: 1.1.1.1 rcv OPEN w/ OPTION parameter len: 16
+#4.4.4.4#2015/07/27 01:01:29  6.001358 BGP: 1.1.1.1 rcvd OPEN w/ optional parameter type 2 (Capability) len 6
+#4.4.4.4#2015/07/27 01:01:29  6.001358 BGP: 1.1.1.1 OPEN has CAPABILITY code: 1, length 4
+#4.4.4.4#2015/07/27 01:01:29  6.001358 BGP: 1.1.1.1 OPEN has MP_EXT CAP for afi/safi: 1/1
+#4.4.4.4#2015/07/27 01:01:29  6.001358 BGP: 1.1.1.1 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+#4.4.4.4#2015/07/27 01:01:29  6.001358 BGP: 1.1.1.1 OPEN has CAPABILITY code: 128, length 0
+#4.4.4.4#2015/07/27 01:01:29  6.001358 BGP: 1.1.1.1 OPEN has ROUTE-REFRESH capability(old) for all address-families
+#4.4.4.4#2015/07/27 01:01:29  6.001358 BGP: 1.1.1.1 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+#4.4.4.4#2015/07/27 01:01:29  6.001358 BGP: 1.1.1.1 OPEN has CAPABILITY code: 2, length 0
+#4.4.4.4#2015/07/27 01:01:29  6.001358 BGP: 1.1.1.1 OPEN has ROUTE-REFRESH capability(New) for all address-families
+#4.4.4.4#2015/07/27 01:01:29  6.001358 BGP: 1.1.1.1 [FSM] Receive_OPEN_message (OpenSent->OpenConfirm)
+#4.4.4.4#2015/07/27 01:01:29  6.001358 BGP: 1.1.1.1 went from OpenSent to OpenConfirm
+#4.4.4.4#2015/07/27 01:01:29  6.001358 BGP: 1.1.1.1 sending KEEPALIVE
+#4.4.4.4#2015/07/27 01:01:29  6.001358 BGP: 1.1.1.1 send message type 4, length (incl. header) 19
+#1.1.1.1#2015/07/27 01:01:29  6.002673 BGP: 4.4.4.4 rcv message type 4, length (excl. header) 0
+#1.1.1.1#2015/07/27 01:01:29  6.002673 BGP: 4.4.4.4 KEEPALIVE rcvd
+#1.1.1.1#2015/07/27 01:01:29  6.002673 BGP: 4.4.4.4 [FSM] Receive_KEEPALIVE_message (OpenConfirm->Established)
+#1.1.1.1#2015/07/27 01:01:29  6.002673 BGP: 4.4.4.4 went from OpenConfirm to Established
+#1.1.1.1#2015/07/27 01:01:29  6.002673 BGP: 4.4.4.4 sending KEEPALIVE
+#1.1.1.1#2015/07/27 01:01:29  6.002673 BGP: 4.4.4.4 send message type 4, length (incl. header) 19
+#4.4.4.4#2015/07/27 01:01:29  6.003987 BGP: 1.1.1.1 rcv message type 4, length (excl. header) 0
+#4.4.4.4#2015/07/27 01:01:29  6.003987 BGP: 1.1.1.1 KEEPALIVE rcvd
+#4.4.4.4#2015/07/27 01:01:29  6.003987 BGP: 1.1.1.1 [FSM] Receive_KEEPALIVE_message (OpenConfirm->Established)
+#4.4.4.4#2015/07/27 01:01:29  6.003987 BGP: 1.1.1.1 went from OpenConfirm to Established
+#4.4.4.4#2015/07/27 01:01:29  6.003987 BGP: 1.1.1.1 sending KEEPALIVE
+#4.4.4.4#2015/07/27 01:01:29  6.003987 BGP: 1.1.1.1 send message type 4, length (incl. header) 19
+#1.1.1.1#2015/07/27 01:01:29  6.005302 BGP: 4.4.4.4 rcv message type 4, length (excl. header) 0
+#1.1.1.1#2015/07/27 01:01:29  6.005302 BGP: 4.4.4.4 KEEPALIVE rcvd
+#1.1.1.1#2015/07/27 01:01:29  6.005302 BGP: 4.4.4.4 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:01:29  6.006617 BGP: 1.1.1.1 rcv message type 4, length (excl. header) 0
+#4.4.4.4#2015/07/27 01:01:29  6.006617 BGP: 1.1.1.1 KEEPALIVE rcvd
+#4.4.4.4#2015/07/27 01:01:29  6.006617 BGP: 1.1.1.1 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:01:29  6.115201 BGP: 1.1.1.1 [FSM] Timer (start timer expire).
+#3.3.3.3#2015/07/27 01:01:29  6.115201 BGP: 1.1.1.1 [FSM] BGP_Start (Idle->Connect)
+#3.3.3.3#2015/07/27 01:01:29  6.115201 BGP: 1.1.1.1 went from Idle to Connect
+#3.3.3.3#2015/07/27 01:01:29  6.115201 BGP: 1.1.1.1 [Event] Connect start to 1.1.1.1
+#3.3.3.3#2015/07/27 01:01:29  6.115201 BGP: 1.1.1.1 [FSM] Non blocking connect waiting result
+#3.3.3.3#2015/07/27 01:01:29  6.117627 BGP: 1.1.1.1 [FSM] TCP_connection_open (Connect->OpenSent)
+#3.3.3.3#2015/07/27 01:01:29  6.117627 BGP: 1.1.1.1 went from Connect to OpenSent
+#3.3.3.3#2015/07/27 01:01:29  6.117627 BGP: 1.1.1.1 sending OPEN, version 4, my as 3, holdtime 180, id 3.3.3.3
+#3.3.3.3#2015/07/27 01:01:29  6.117627 BGP: 1.1.1.1 send message type 1, length (incl. header) 45
+#1.1.1.1#2015/07/27 01:01:29  6.118841 BGP: [Event] BGP connection from host 3.3.3.3
+#1.1.1.1#2015/07/27 01:01:29  6.118841 BGP: [Event] BGP connection IP address 3.3.3.3 is Idle state
+#1.1.1.1#2015/07/27 01:01:29  6.118841 BGP: [Event] BGP closing TCP connection to IP address 3.3.3.3 
+#3.3.3.3#2015/07/27 01:01:29  6.120054 BGP: 1.1.1.1 [Event] BGP connection closed 
+#3.3.3.3#2015/07/27 01:01:29  6.120054 BGP: 1.1.1.1 [FSM] TCP_connection_closed (OpenSent->Active)
+#3.3.3.3#2015/07/27 01:01:29  6.120054 BGP: 1.1.1.1 went from OpenSent to Active
+#4.4.4.4#2015/07/27 01:01:29  6.163678 BGP: 2.2.2.2 [FSM] Timer (start timer expire).
+#4.4.4.4#2015/07/27 01:01:29  6.163678 BGP: 2.2.2.2 [FSM] BGP_Start (Idle->Connect)
+#4.4.4.4#2015/07/27 01:01:29  6.163678 BGP: 2.2.2.2 went from Idle to Connect
+#4.4.4.4#2015/07/27 01:01:29  6.163678 BGP: 2.2.2.2 [Event] Connect start to 2.2.2.2
+#4.4.4.4#2015/07/27 01:01:29  6.163678 BGP: 2.2.2.2 [FSM] Non blocking connect waiting result
+#4.4.4.4#2015/07/27 01:01:29  6.166105 BGP: 2.2.2.2 [FSM] TCP_connection_open (Connect->OpenSent)
+#4.4.4.4#2015/07/27 01:01:29  6.166105 BGP: 2.2.2.2 went from Connect to OpenSent
+#4.4.4.4#2015/07/27 01:01:29  6.166105 BGP: 2.2.2.2 sending OPEN, version 4, my as 4, holdtime 180, id 4.4.4.4
+#4.4.4.4#2015/07/27 01:01:29  6.166105 BGP: 2.2.2.2 send message type 1, length (incl. header) 45
+#2.2.2.2#2015/07/27 01:01:29  6.167318 BGP: [Event] BGP connection from host 4.4.4.4
+#2.2.2.2#2015/07/27 01:01:29  6.167318 BGP: [Event] Make dummy peer structure until read Open packet
+#2.2.2.2#2015/07/27 01:01:29  6.167318 BGP: 4.4.4.4 [FSM] TCP_connection_open (Active->OpenSent)
+#2.2.2.2#2015/07/27 01:01:29  6.167318 BGP: 4.4.4.4 went from Active to OpenSent
+#2.2.2.2#2015/07/27 01:01:29  6.167985 BGP: 4.4.4.4 rcv message type 1, length (excl. header) 26
+#2.2.2.2#2015/07/27 01:01:29  6.167985 BGP: 4.4.4.4 rcv OPEN, version 4, remote-as 4, holdtime 180, id 4.4.4.4
+#2.2.2.2#2015/07/27 01:01:29  6.167985 BGP: 4.4.4.4 [Event] Transfer temporary BGP peer to existing one
+#2.2.2.2#2015/07/27 01:01:29  6.167985 BGP: 4.4.4.4 sending OPEN, version 4, my as 2, holdtime 180, id 2.2.2.2
+#2.2.2.2#2015/07/27 01:01:29  6.167985 BGP: 4.4.4.4 send message type 1, length (incl. header) 45
+#2.2.2.2#2015/07/27 01:01:29  6.167985 BGP: 4.4.4.4 rcv OPEN w/ OPTION parameter len: 16
+#2.2.2.2#2015/07/27 01:01:29  6.167985 BGP: 4.4.4.4 rcvd OPEN w/ optional parameter type 2 (Capability) len 6
+#2.2.2.2#2015/07/27 01:01:29  6.167985 BGP: 4.4.4.4 OPEN has CAPABILITY code: 1, length 4
+#2.2.2.2#2015/07/27 01:01:29  6.167985 BGP: 4.4.4.4 OPEN has MP_EXT CAP for afi/safi: 1/1
+#2.2.2.2#2015/07/27 01:01:29  6.167985 BGP: 4.4.4.4 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+#2.2.2.2#2015/07/27 01:01:29  6.167985 BGP: 4.4.4.4 OPEN has CAPABILITY code: 128, length 0
+#2.2.2.2#2015/07/27 01:01:29  6.167985 BGP: 4.4.4.4 OPEN has ROUTE-REFRESH capability(old) for all address-families
+#2.2.2.2#2015/07/27 01:01:29  6.167985 BGP: 4.4.4.4 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+#2.2.2.2#2015/07/27 01:01:29  6.167985 BGP: 4.4.4.4 OPEN has CAPABILITY code: 2, length 0
+#2.2.2.2#2015/07/27 01:01:29  6.167985 BGP: 4.4.4.4 OPEN has ROUTE-REFRESH capability(New) for all address-families
+#2.2.2.2#2015/07/27 01:01:29  6.167985 BGP: 4.4.4.4 [Event] Accepting BGP peer delete
+#2.2.2.2#2015/07/27 01:01:29  6.167985 BGP: 4.4.4.4 [FSM] Receive_OPEN_message (OpenSent->OpenConfirm)
+#2.2.2.2#2015/07/27 01:01:29  6.167985 BGP: 4.4.4.4 went from OpenSent to OpenConfirm
+#2.2.2.2#2015/07/27 01:01:29  6.167985 BGP: 4.4.4.4 sending KEEPALIVE
+#2.2.2.2#2015/07/27 01:01:29  6.167985 BGP: 4.4.4.4 send message type 4, length (incl. header) 19
+#4.4.4.4#2015/07/27 01:01:29  6.169438 BGP: 2.2.2.2 rcv message type 1, length (excl. header) 26
+#4.4.4.4#2015/07/27 01:01:29  6.169438 BGP: 2.2.2.2 rcv OPEN, version 4, remote-as 2, holdtime 180, id 2.2.2.2
+#4.4.4.4#2015/07/27 01:01:29  6.169438 BGP: 2.2.2.2 rcv OPEN w/ OPTION parameter len: 16
+#4.4.4.4#2015/07/27 01:01:29  6.169438 BGP: 2.2.2.2 rcvd OPEN w/ optional parameter type 2 (Capability) len 6
+#4.4.4.4#2015/07/27 01:01:29  6.169438 BGP: 2.2.2.2 OPEN has CAPABILITY code: 1, length 4
+#4.4.4.4#2015/07/27 01:01:29  6.169438 BGP: 2.2.2.2 OPEN has MP_EXT CAP for afi/safi: 1/1
+#4.4.4.4#2015/07/27 01:01:29  6.169438 BGP: 2.2.2.2 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+#4.4.4.4#2015/07/27 01:01:29  6.169438 BGP: 2.2.2.2 OPEN has CAPABILITY code: 128, length 0
+#4.4.4.4#2015/07/27 01:01:29  6.169438 BGP: 2.2.2.2 OPEN has ROUTE-REFRESH capability(old) for all address-families
+#4.4.4.4#2015/07/27 01:01:29  6.169438 BGP: 2.2.2.2 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+#4.4.4.4#2015/07/27 01:01:29  6.169438 BGP: 2.2.2.2 OPEN has CAPABILITY code: 2, length 0
+#4.4.4.4#2015/07/27 01:01:29  6.169438 BGP: 2.2.2.2 OPEN has ROUTE-REFRESH capability(New) for all address-families
+#4.4.4.4#2015/07/27 01:01:29  6.169438 BGP: 2.2.2.2 [FSM] Receive_OPEN_message (OpenSent->OpenConfirm)
+#4.4.4.4#2015/07/27 01:01:29  6.169438 BGP: 2.2.2.2 went from OpenSent to OpenConfirm
+#4.4.4.4#2015/07/27 01:01:29  6.169438 BGP: 2.2.2.2 sending KEEPALIVE
+#4.4.4.4#2015/07/27 01:01:29  6.169438 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+#2.2.2.2#2015/07/27 01:01:29  6.170753 BGP: 4.4.4.4 rcv message type 4, length (excl. header) 0
+#2.2.2.2#2015/07/27 01:01:29  6.170753 BGP: 4.4.4.4 KEEPALIVE rcvd
+#2.2.2.2#2015/07/27 01:01:29  6.170753 BGP: 4.4.4.4 [FSM] Receive_KEEPALIVE_message (OpenConfirm->Established)
+#2.2.2.2#2015/07/27 01:01:29  6.170753 BGP: 4.4.4.4 went from OpenConfirm to Established
+#2.2.2.2#2015/07/27 01:01:29  6.170753 BGP: 4.4.4.4 sending KEEPALIVE
+#2.2.2.2#2015/07/27 01:01:29  6.170753 BGP: 4.4.4.4 send message type 4, length (incl. header) 19
+#4.4.4.4#2015/07/27 01:01:29  6.172067 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+#4.4.4.4#2015/07/27 01:01:29  6.172067 BGP: 2.2.2.2 KEEPALIVE rcvd
+#4.4.4.4#2015/07/27 01:01:29  6.172067 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (OpenConfirm->Established)
+#4.4.4.4#2015/07/27 01:01:29  6.172067 BGP: 2.2.2.2 went from OpenConfirm to Established
+#4.4.4.4#2015/07/27 01:01:29  6.172067 BGP: 2.2.2.2 sending KEEPALIVE
+#4.4.4.4#2015/07/27 01:01:29  6.172067 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+#2.2.2.2#2015/07/27 01:01:29  6.173382 BGP: 4.4.4.4 rcv message type 4, length (excl. header) 0
+#2.2.2.2#2015/07/27 01:01:29  6.173382 BGP: 4.4.4.4 KEEPALIVE rcvd
+#2.2.2.2#2015/07/27 01:01:29  6.173382 BGP: 4.4.4.4 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:01:29  6.174697 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+#4.4.4.4#2015/07/27 01:01:29  6.174697 BGP: 2.2.2.2 KEEPALIVE rcvd
+#4.4.4.4#2015/07/27 01:01:29  6.174697 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:01:29  6.507615 BGP: 3.3.3.3 [FSM] Timer (start timer expire).
+#4.4.4.4#2015/07/27 01:01:29  6.507615 BGP: 3.3.3.3 [FSM] BGP_Start (Idle->Connect)
+#4.4.4.4#2015/07/27 01:01:29  6.507615 BGP: 3.3.3.3 went from Idle to Connect
+#4.4.4.4#2015/07/27 01:01:29  6.507615 BGP: 3.3.3.3 [Event] Connect start to 3.3.3.3
+#4.4.4.4#2015/07/27 01:01:29  6.507615 BGP: 3.3.3.3 [FSM] Non blocking connect waiting result
+#4.4.4.4#2015/07/27 01:01:29  6.510042 BGP: 3.3.3.3 [FSM] TCP_connection_open (Connect->OpenSent)
+#4.4.4.4#2015/07/27 01:01:29  6.510042 BGP: 3.3.3.3 went from Connect to OpenSent
+#4.4.4.4#2015/07/27 01:01:29  6.510042 BGP: 3.3.3.3 sending OPEN, version 4, my as 4, holdtime 180, id 4.4.4.4
+#4.4.4.4#2015/07/27 01:01:29  6.510042 BGP: 3.3.3.3 send message type 1, length (incl. header) 45
+#3.3.3.3#2015/07/27 01:01:29  6.511255 BGP: [Event] BGP connection from host 4.4.4.4
+#3.3.3.3#2015/07/27 01:01:29  6.511255 BGP: [Event] BGP connection IP address 4.4.4.4 is Idle state
+#3.3.3.3#2015/07/27 01:01:29  6.511255 BGP: [Event] BGP closing TCP connection to IP address 4.4.4.4 
+#4.4.4.4#2015/07/27 01:01:29  6.512468 BGP: 3.3.3.3 [Event] BGP connection closed 
+#4.4.4.4#2015/07/27 01:01:29  6.512468 BGP: 3.3.3.3 [FSM] TCP_connection_closed (OpenSent->Active)
+#4.4.4.4#2015/07/27 01:01:29  6.512468 BGP: 3.3.3.3 went from OpenSent to Active
+#1.1.1.1#2015/07/27 01:01:29  6.586841 BGP: 3.3.3.3 [FSM] Timer (start timer expire).
+#1.1.1.1#2015/07/27 01:01:29  6.586841 BGP: 3.3.3.3 [FSM] BGP_Start (Idle->Connect)
+#1.1.1.1#2015/07/27 01:01:29  6.586841 BGP: 3.3.3.3 went from Idle to Connect
+#1.1.1.1#2015/07/27 01:01:29  6.586841 BGP: 3.3.3.3 [Event] Connect start to 3.3.3.3
+#1.1.1.1#2015/07/27 01:01:29  6.586841 BGP: 3.3.3.3 [FSM] Non blocking connect waiting result
+#1.1.1.1#2015/07/27 01:01:29  6.589267 BGP: 3.3.3.3 [FSM] TCP_connection_open (Connect->OpenSent)
+#1.1.1.1#2015/07/27 01:01:29  6.589267 BGP: 3.3.3.3 went from Connect to OpenSent
+#1.1.1.1#2015/07/27 01:01:29  6.589267 BGP: 3.3.3.3 sending OPEN, version 4, my as 1, holdtime 180, id 1.1.1.1
+#1.1.1.1#2015/07/27 01:01:29  6.589267 BGP: 3.3.3.3 send message type 1, length (incl. header) 45
+#3.3.3.3#2015/07/27 01:01:29  6.590481 BGP: [Event] BGP connection from host 1.1.1.1
+#3.3.3.3#2015/07/27 01:01:29  6.590481 BGP: [Event] Make dummy peer structure until read Open packet
+#3.3.3.3#2015/07/27 01:01:29  6.590481 BGP: 1.1.1.1 [FSM] TCP_connection_open (Active->OpenSent)
+#3.3.3.3#2015/07/27 01:01:29  6.590481 BGP: 1.1.1.1 went from Active to OpenSent
+#3.3.3.3#2015/07/27 01:01:29  6.591147 BGP: 1.1.1.1 rcv message type 1, length (excl. header) 26
+#3.3.3.3#2015/07/27 01:01:29  6.591147 BGP: 1.1.1.1 rcv OPEN, version 4, remote-as 1, holdtime 180, id 1.1.1.1
+#3.3.3.3#2015/07/27 01:01:29  6.591147 BGP: 1.1.1.1 [Event] Transfer temporary BGP peer to existing one
+#3.3.3.3#2015/07/27 01:01:29  6.591147 BGP: 1.1.1.1 sending OPEN, version 4, my as 3, holdtime 180, id 3.3.3.3
+#3.3.3.3#2015/07/27 01:01:29  6.591147 BGP: 1.1.1.1 send message type 1, length (incl. header) 45
+#3.3.3.3#2015/07/27 01:01:29  6.591147 BGP: 1.1.1.1 rcv OPEN w/ OPTION parameter len: 16
+#3.3.3.3#2015/07/27 01:01:29  6.591147 BGP: 1.1.1.1 rcvd OPEN w/ optional parameter type 2 (Capability) len 6
+#3.3.3.3#2015/07/27 01:01:29  6.591147 BGP: 1.1.1.1 OPEN has CAPABILITY code: 1, length 4
+#3.3.3.3#2015/07/27 01:01:29  6.591147 BGP: 1.1.1.1 OPEN has MP_EXT CAP for afi/safi: 1/1
+#3.3.3.3#2015/07/27 01:01:29  6.591147 BGP: 1.1.1.1 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+#3.3.3.3#2015/07/27 01:01:29  6.591147 BGP: 1.1.1.1 OPEN has CAPABILITY code: 128, length 0
+#3.3.3.3#2015/07/27 01:01:29  6.591147 BGP: 1.1.1.1 OPEN has ROUTE-REFRESH capability(old) for all address-families
+#3.3.3.3#2015/07/27 01:01:29  6.591147 BGP: 1.1.1.1 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+#3.3.3.3#2015/07/27 01:01:29  6.591147 BGP: 1.1.1.1 OPEN has CAPABILITY code: 2, length 0
+#3.3.3.3#2015/07/27 01:01:29  6.591147 BGP: 1.1.1.1 OPEN has ROUTE-REFRESH capability(New) for all address-families
+#3.3.3.3#2015/07/27 01:01:29  6.591147 BGP: 1.1.1.1 [Event] Accepting BGP peer delete
+#3.3.3.3#2015/07/27 01:01:29  6.591147 BGP: 1.1.1.1 [FSM] Receive_OPEN_message (OpenSent->OpenConfirm)
+#3.3.3.3#2015/07/27 01:01:29  6.591147 BGP: 1.1.1.1 went from OpenSent to OpenConfirm
+#3.3.3.3#2015/07/27 01:01:29  6.591147 BGP: 1.1.1.1 sending KEEPALIVE
+#3.3.3.3#2015/07/27 01:01:29  6.591147 BGP: 1.1.1.1 send message type 4, length (incl. header) 19
+#1.1.1.1#2015/07/27 01:01:29  6.592601 BGP: 3.3.3.3 rcv message type 1, length (excl. header) 26
+#1.1.1.1#2015/07/27 01:01:29  6.592601 BGP: 3.3.3.3 rcv OPEN, version 4, remote-as 3, holdtime 180, id 3.3.3.3
+#1.1.1.1#2015/07/27 01:01:29  6.592601 BGP: 3.3.3.3 rcv OPEN w/ OPTION parameter len: 16
+#1.1.1.1#2015/07/27 01:01:29  6.592601 BGP: 3.3.3.3 rcvd OPEN w/ optional parameter type 2 (Capability) len 6
+#1.1.1.1#2015/07/27 01:01:29  6.592601 BGP: 3.3.3.3 OPEN has CAPABILITY code: 1, length 4
+#1.1.1.1#2015/07/27 01:01:29  6.592601 BGP: 3.3.3.3 OPEN has MP_EXT CAP for afi/safi: 1/1
+#1.1.1.1#2015/07/27 01:01:29  6.592601 BGP: 3.3.3.3 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+#1.1.1.1#2015/07/27 01:01:29  6.592601 BGP: 3.3.3.3 OPEN has CAPABILITY code: 128, length 0
+#1.1.1.1#2015/07/27 01:01:29  6.592601 BGP: 3.3.3.3 OPEN has ROUTE-REFRESH capability(old) for all address-families
+#1.1.1.1#2015/07/27 01:01:29  6.592601 BGP: 3.3.3.3 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+#1.1.1.1#2015/07/27 01:01:29  6.592601 BGP: 3.3.3.3 OPEN has CAPABILITY code: 2, length 0
+#1.1.1.1#2015/07/27 01:01:29  6.592601 BGP: 3.3.3.3 OPEN has ROUTE-REFRESH capability(New) for all address-families
+#1.1.1.1#2015/07/27 01:01:29  6.592601 BGP: 3.3.3.3 [FSM] Receive_OPEN_message (OpenSent->OpenConfirm)
+#1.1.1.1#2015/07/27 01:01:29  6.592601 BGP: 3.3.3.3 went from OpenSent to OpenConfirm
+#1.1.1.1#2015/07/27 01:01:29  6.592601 BGP: 3.3.3.3 sending KEEPALIVE
+#1.1.1.1#2015/07/27 01:01:29  6.592601 BGP: 3.3.3.3 send message type 4, length (incl. header) 19
+#3.3.3.3#2015/07/27 01:01:29  6.593915 BGP: 1.1.1.1 rcv message type 4, length (excl. header) 0
+#3.3.3.3#2015/07/27 01:01:29  6.593915 BGP: 1.1.1.1 KEEPALIVE rcvd
+#3.3.3.3#2015/07/27 01:01:29  6.593915 BGP: 1.1.1.1 [FSM] Receive_KEEPALIVE_message (OpenConfirm->Established)
+#3.3.3.3#2015/07/27 01:01:29  6.593915 BGP: 1.1.1.1 went from OpenConfirm to Established
+#3.3.3.3#2015/07/27 01:01:29  6.593915 BGP: 1.1.1.1 sending KEEPALIVE
+#3.3.3.3#2015/07/27 01:01:29  6.593915 BGP: 1.1.1.1 send message type 4, length (incl. header) 19
+#1.1.1.1#2015/07/27 01:01:29  6.595230 BGP: 3.3.3.3 rcv message type 4, length (excl. header) 0
+#1.1.1.1#2015/07/27 01:01:29  6.595230 BGP: 3.3.3.3 KEEPALIVE rcvd
+#1.1.1.1#2015/07/27 01:01:29  6.595230 BGP: 3.3.3.3 [FSM] Receive_KEEPALIVE_message (OpenConfirm->Established)
+#1.1.1.1#2015/07/27 01:01:29  6.595230 BGP: 3.3.3.3 went from OpenConfirm to Established
+#1.1.1.1#2015/07/27 01:01:29  6.595230 BGP: 3.3.3.3 sending KEEPALIVE
+#1.1.1.1#2015/07/27 01:01:29  6.595230 BGP: 3.3.3.3 send message type 4, length (incl. header) 19
+#3.3.3.3#2015/07/27 01:01:29  6.596545 BGP: 1.1.1.1 rcv message type 4, length (excl. header) 0
+#3.3.3.3#2015/07/27 01:01:29  6.596545 BGP: 1.1.1.1 KEEPALIVE rcvd
+#3.3.3.3#2015/07/27 01:01:29  6.596545 BGP: 1.1.1.1 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:01:29  6.597859 BGP: 3.3.3.3 rcv message type 4, length (excl. header) 0
+#1.1.1.1#2015/07/27 01:01:29  6.597859 BGP: 3.3.3.3 KEEPALIVE rcvd
+#1.1.1.1#2015/07/27 01:01:29  6.597859 BGP: 3.3.3.3 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:01:30  7.003778 BGP: 4.4.4.4 [FSM] Timer (start timer expire).
+#3.3.3.3#2015/07/27 01:01:30  7.003778 BGP: 4.4.4.4 [FSM] BGP_Start (Idle->Connect)
+#3.3.3.3#2015/07/27 01:01:30  7.003778 BGP: 4.4.4.4 went from Idle to Connect
+#3.3.3.3#2015/07/27 01:01:30  7.003778 BGP: 4.4.4.4 [Event] Connect start to 4.4.4.4
+#3.3.3.3#2015/07/27 01:01:30  7.003778 BGP: 4.4.4.4 [FSM] Non blocking connect waiting result
+#3.3.3.3#2015/07/27 01:01:30  7.006205 BGP: 4.4.4.4 [FSM] TCP_connection_open (Connect->OpenSent)
+#3.3.3.3#2015/07/27 01:01:30  7.006205 BGP: 4.4.4.4 went from Connect to OpenSent
+#3.3.3.3#2015/07/27 01:01:30  7.006205 BGP: 4.4.4.4 sending OPEN, version 4, my as 3, holdtime 180, id 3.3.3.3
+#3.3.3.3#2015/07/27 01:01:30  7.006205 BGP: 4.4.4.4 send message type 1, length (incl. header) 45
+#4.4.4.4#2015/07/27 01:01:30  7.007418 BGP: [Event] BGP connection from host 3.3.3.3
+#4.4.4.4#2015/07/27 01:01:30  7.007418 BGP: [Event] Make dummy peer structure until read Open packet
+#4.4.4.4#2015/07/27 01:01:30  7.007418 BGP: 3.3.3.3 [FSM] TCP_connection_open (Active->OpenSent)
+#4.4.4.4#2015/07/27 01:01:30  7.007418 BGP: 3.3.3.3 went from Active to OpenSent
+#4.4.4.4#2015/07/27 01:01:30  7.008085 BGP: 3.3.3.3 rcv message type 1, length (excl. header) 26
+#4.4.4.4#2015/07/27 01:01:30  7.008085 BGP: 3.3.3.3 rcv OPEN, version 4, remote-as 3, holdtime 180, id 3.3.3.3
+#4.4.4.4#2015/07/27 01:01:30  7.008085 BGP: 3.3.3.3 [Event] Transfer temporary BGP peer to existing one
+#4.4.4.4#2015/07/27 01:01:30  7.008085 BGP: 3.3.3.3 sending OPEN, version 4, my as 4, holdtime 180, id 4.4.4.4
+#4.4.4.4#2015/07/27 01:01:30  7.008085 BGP: 3.3.3.3 send message type 1, length (incl. header) 45
+#4.4.4.4#2015/07/27 01:01:30  7.008085 BGP: 3.3.3.3 rcv OPEN w/ OPTION parameter len: 16
+#4.4.4.4#2015/07/27 01:01:30  7.008085 BGP: 3.3.3.3 rcvd OPEN w/ optional parameter type 2 (Capability) len 6
+#4.4.4.4#2015/07/27 01:01:30  7.008085 BGP: 3.3.3.3 OPEN has CAPABILITY code: 1, length 4
+#4.4.4.4#2015/07/27 01:01:30  7.008085 BGP: 3.3.3.3 OPEN has MP_EXT CAP for afi/safi: 1/1
+#4.4.4.4#2015/07/27 01:01:30  7.008085 BGP: 3.3.3.3 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+#4.4.4.4#2015/07/27 01:01:30  7.008085 BGP: 3.3.3.3 OPEN has CAPABILITY code: 128, length 0
+#4.4.4.4#2015/07/27 01:01:30  7.008085 BGP: 3.3.3.3 OPEN has ROUTE-REFRESH capability(old) for all address-families
+#4.4.4.4#2015/07/27 01:01:30  7.008085 BGP: 3.3.3.3 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+#4.4.4.4#2015/07/27 01:01:30  7.008085 BGP: 3.3.3.3 OPEN has CAPABILITY code: 2, length 0
+#4.4.4.4#2015/07/27 01:01:30  7.008085 BGP: 3.3.3.3 OPEN has ROUTE-REFRESH capability(New) for all address-families
+#4.4.4.4#2015/07/27 01:01:30  7.008085 BGP: 3.3.3.3 [Event] Accepting BGP peer delete
+#4.4.4.4#2015/07/27 01:01:30  7.008085 BGP: 3.3.3.3 [FSM] Receive_OPEN_message (OpenSent->OpenConfirm)
+#4.4.4.4#2015/07/27 01:01:30  7.008085 BGP: 3.3.3.3 went from OpenSent to OpenConfirm
+#4.4.4.4#2015/07/27 01:01:30  7.008085 BGP: 3.3.3.3 sending KEEPALIVE
+#4.4.4.4#2015/07/27 01:01:30  7.008085 BGP: 3.3.3.3 send message type 4, length (incl. header) 19
+#3.3.3.3#2015/07/27 01:01:30  7.009538 BGP: 4.4.4.4 rcv message type 1, length (excl. header) 26
+#3.3.3.3#2015/07/27 01:01:30  7.009538 BGP: 4.4.4.4 rcv OPEN, version 4, remote-as 4, holdtime 180, id 4.4.4.4
+#3.3.3.3#2015/07/27 01:01:30  7.009538 BGP: 4.4.4.4 rcv OPEN w/ OPTION parameter len: 16
+#3.3.3.3#2015/07/27 01:01:30  7.009538 BGP: 4.4.4.4 rcvd OPEN w/ optional parameter type 2 (Capability) len 6
+#3.3.3.3#2015/07/27 01:01:30  7.009538 BGP: 4.4.4.4 OPEN has CAPABILITY code: 1, length 4
+#3.3.3.3#2015/07/27 01:01:30  7.009538 BGP: 4.4.4.4 OPEN has MP_EXT CAP for afi/safi: 1/1
+#3.3.3.3#2015/07/27 01:01:30  7.009538 BGP: 4.4.4.4 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+#3.3.3.3#2015/07/27 01:01:30  7.009538 BGP: 4.4.4.4 OPEN has CAPABILITY code: 128, length 0
+#3.3.3.3#2015/07/27 01:01:30  7.009538 BGP: 4.4.4.4 OPEN has ROUTE-REFRESH capability(old) for all address-families
+#3.3.3.3#2015/07/27 01:01:30  7.009538 BGP: 4.4.4.4 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+#3.3.3.3#2015/07/27 01:01:30  7.009538 BGP: 4.4.4.4 OPEN has CAPABILITY code: 2, length 0
+#3.3.3.3#2015/07/27 01:01:30  7.009538 BGP: 4.4.4.4 OPEN has ROUTE-REFRESH capability(New) for all address-families
+#3.3.3.3#2015/07/27 01:01:30  7.009538 BGP: 4.4.4.4 [FSM] Receive_OPEN_message (OpenSent->OpenConfirm)
+#3.3.3.3#2015/07/27 01:01:30  7.009538 BGP: 4.4.4.4 went from OpenSent to OpenConfirm
+#3.3.3.3#2015/07/27 01:01:30  7.009538 BGP: 4.4.4.4 sending KEEPALIVE
+#3.3.3.3#2015/07/27 01:01:30  7.009538 BGP: 4.4.4.4 send message type 4, length (incl. header) 19
+#4.4.4.4#2015/07/27 01:01:30  7.010853 BGP: 3.3.3.3 rcv message type 4, length (excl. header) 0
+#4.4.4.4#2015/07/27 01:01:30  7.010853 BGP: 3.3.3.3 KEEPALIVE rcvd
+#4.4.4.4#2015/07/27 01:01:30  7.010853 BGP: 3.3.3.3 [FSM] Receive_KEEPALIVE_message (OpenConfirm->Established)
+#4.4.4.4#2015/07/27 01:01:30  7.010853 BGP: 3.3.3.3 went from OpenConfirm to Established
+#4.4.4.4#2015/07/27 01:01:30  7.010853 BGP: 3.3.3.3 sending KEEPALIVE
+#4.4.4.4#2015/07/27 01:01:30  7.010853 BGP: 3.3.3.3 send message type 4, length (incl. header) 19
+#3.3.3.3#2015/07/27 01:01:30  7.012167 BGP: 4.4.4.4 rcv message type 4, length (excl. header) 0
+#3.3.3.3#2015/07/27 01:01:30  7.012167 BGP: 4.4.4.4 KEEPALIVE rcvd
+#3.3.3.3#2015/07/27 01:01:30  7.012167 BGP: 4.4.4.4 [FSM] Receive_KEEPALIVE_message (OpenConfirm->Established)
+#3.3.3.3#2015/07/27 01:01:30  7.012167 BGP: 4.4.4.4 went from OpenConfirm to Established
+#3.3.3.3#2015/07/27 01:01:30  7.012167 BGP: 4.4.4.4 sending KEEPALIVE
+#3.3.3.3#2015/07/27 01:01:30  7.012167 BGP: 4.4.4.4 send message type 4, length (incl. header) 19
+#4.4.4.4#2015/07/27 01:01:30  7.013482 BGP: 3.3.3.3 rcv message type 4, length (excl. header) 0
+#4.4.4.4#2015/07/27 01:01:30  7.013482 BGP: 3.3.3.3 KEEPALIVE rcvd
+#4.4.4.4#2015/07/27 01:01:30  7.013482 BGP: 3.3.3.3 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:01:30  7.014797 BGP: 4.4.4.4 rcv message type 4, length (excl. header) 0
+#3.3.3.3#2015/07/27 01:01:30  7.014797 BGP: 4.4.4.4 KEEPALIVE rcvd
+#3.3.3.3#2015/07/27 01:01:30  7.014797 BGP: 4.4.4.4 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:01:30  7.695232 BGP: 2.2.2.2 [FSM] Timer (start timer expire).
+#3.3.3.3#2015/07/27 01:01:30  7.695232 BGP: 2.2.2.2 [FSM] BGP_Start (Idle->Connect)
+#3.3.3.3#2015/07/27 01:01:30  7.695232 BGP: 2.2.2.2 went from Idle to Connect
+#3.3.3.3#2015/07/27 01:01:30  7.695232 BGP: 2.2.2.2 [Event] Connect start to 2.2.2.2
+#3.3.3.3#2015/07/27 01:01:30  7.695232 BGP: 2.2.2.2 [FSM] Non blocking connect waiting result
+#3.3.3.3#2015/07/27 01:01:30  7.697659 BGP: 2.2.2.2 [FSM] TCP_connection_open (Connect->OpenSent)
+#3.3.3.3#2015/07/27 01:01:30  7.697659 BGP: 2.2.2.2 went from Connect to OpenSent
+#3.3.3.3#2015/07/27 01:01:30  7.697659 BGP: 2.2.2.2 sending OPEN, version 4, my as 3, holdtime 180, id 3.3.3.3
+#3.3.3.3#2015/07/27 01:01:30  7.697659 BGP: 2.2.2.2 send message type 1, length (incl. header) 45
+#2.2.2.2#2015/07/27 01:01:30  7.698872 BGP: [Event] BGP connection from host 3.3.3.3
+#2.2.2.2#2015/07/27 01:01:30  7.698872 BGP: [Event] Make dummy peer structure until read Open packet
+#2.2.2.2#2015/07/27 01:01:30  7.698872 BGP: 3.3.3.3 [FSM] TCP_connection_open (Active->OpenSent)
+#2.2.2.2#2015/07/27 01:01:30  7.698872 BGP: 3.3.3.3 went from Active to OpenSent
+#2.2.2.2#2015/07/27 01:01:30  7.699539 BGP: 3.3.3.3 rcv message type 1, length (excl. header) 26
+#2.2.2.2#2015/07/27 01:01:30  7.699539 BGP: 3.3.3.3 rcv OPEN, version 4, remote-as 3, holdtime 180, id 3.3.3.3
+#2.2.2.2#2015/07/27 01:01:30  7.699539 BGP: 3.3.3.3 [Event] Transfer temporary BGP peer to existing one
+#2.2.2.2#2015/07/27 01:01:30  7.699539 BGP: 3.3.3.3 sending OPEN, version 4, my as 2, holdtime 180, id 2.2.2.2
+#2.2.2.2#2015/07/27 01:01:30  7.699539 BGP: 3.3.3.3 send message type 1, length (incl. header) 45
+#2.2.2.2#2015/07/27 01:01:30  7.699539 BGP: 3.3.3.3 rcv OPEN w/ OPTION parameter len: 16
+#2.2.2.2#2015/07/27 01:01:30  7.699539 BGP: 3.3.3.3 rcvd OPEN w/ optional parameter type 2 (Capability) len 6
+#2.2.2.2#2015/07/27 01:01:30  7.699539 BGP: 3.3.3.3 OPEN has CAPABILITY code: 1, length 4
+#2.2.2.2#2015/07/27 01:01:30  7.699539 BGP: 3.3.3.3 OPEN has MP_EXT CAP for afi/safi: 1/1
+#2.2.2.2#2015/07/27 01:01:30  7.699539 BGP: 3.3.3.3 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+#2.2.2.2#2015/07/27 01:01:30  7.699539 BGP: 3.3.3.3 OPEN has CAPABILITY code: 128, length 0
+#2.2.2.2#2015/07/27 01:01:30  7.699539 BGP: 3.3.3.3 OPEN has ROUTE-REFRESH capability(old) for all address-families
+#2.2.2.2#2015/07/27 01:01:30  7.699539 BGP: 3.3.3.3 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+#2.2.2.2#2015/07/27 01:01:30  7.699539 BGP: 3.3.3.3 OPEN has CAPABILITY code: 2, length 0
+#2.2.2.2#2015/07/27 01:01:30  7.699539 BGP: 3.3.3.3 OPEN has ROUTE-REFRESH capability(New) for all address-families
+#2.2.2.2#2015/07/27 01:01:30  7.699539 BGP: 3.3.3.3 [Event] Accepting BGP peer delete
+#2.2.2.2#2015/07/27 01:01:30  7.699539 BGP: 3.3.3.3 [FSM] Receive_OPEN_message (OpenSent->OpenConfirm)
+#2.2.2.2#2015/07/27 01:01:30  7.699539 BGP: 3.3.3.3 went from OpenSent to OpenConfirm
+#2.2.2.2#2015/07/27 01:01:30  7.699539 BGP: 3.3.3.3 sending KEEPALIVE
+#2.2.2.2#2015/07/27 01:01:30  7.699539 BGP: 3.3.3.3 send message type 4, length (incl. header) 19
+#3.3.3.3#2015/07/27 01:01:30  7.700992 BGP: 2.2.2.2 rcv message type 1, length (excl. header) 26
+#3.3.3.3#2015/07/27 01:01:30  7.700992 BGP: 2.2.2.2 rcv OPEN, version 4, remote-as 2, holdtime 180, id 2.2.2.2
+#3.3.3.3#2015/07/27 01:01:30  7.700992 BGP: 2.2.2.2 rcv OPEN w/ OPTION parameter len: 16
+#3.3.3.3#2015/07/27 01:01:30  7.700992 BGP: 2.2.2.2 rcvd OPEN w/ optional parameter type 2 (Capability) len 6
+#3.3.3.3#2015/07/27 01:01:30  7.700992 BGP: 2.2.2.2 OPEN has CAPABILITY code: 1, length 4
+#3.3.3.3#2015/07/27 01:01:30  7.700992 BGP: 2.2.2.2 OPEN has MP_EXT CAP for afi/safi: 1/1
+#3.3.3.3#2015/07/27 01:01:30  7.700992 BGP: 2.2.2.2 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+#3.3.3.3#2015/07/27 01:01:30  7.700992 BGP: 2.2.2.2 OPEN has CAPABILITY code: 128, length 0
+#3.3.3.3#2015/07/27 01:01:30  7.700992 BGP: 2.2.2.2 OPEN has ROUTE-REFRESH capability(old) for all address-families
+#3.3.3.3#2015/07/27 01:01:30  7.700992 BGP: 2.2.2.2 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+#3.3.3.3#2015/07/27 01:01:30  7.700992 BGP: 2.2.2.2 OPEN has CAPABILITY code: 2, length 0
+#3.3.3.3#2015/07/27 01:01:30  7.700992 BGP: 2.2.2.2 OPEN has ROUTE-REFRESH capability(New) for all address-families
+#3.3.3.3#2015/07/27 01:01:30  7.700992 BGP: 2.2.2.2 [FSM] Receive_OPEN_message (OpenSent->OpenConfirm)
+#3.3.3.3#2015/07/27 01:01:30  7.700992 BGP: 2.2.2.2 went from OpenSent to OpenConfirm
+#3.3.3.3#2015/07/27 01:01:30  7.700992 BGP: 2.2.2.2 sending KEEPALIVE
+#3.3.3.3#2015/07/27 01:01:30  7.700992 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+#2.2.2.2#2015/07/27 01:01:30  7.702307 BGP: 3.3.3.3 rcv message type 4, length (excl. header) 0
+#2.2.2.2#2015/07/27 01:01:30  7.702307 BGP: 3.3.3.3 KEEPALIVE rcvd
+#2.2.2.2#2015/07/27 01:01:30  7.702307 BGP: 3.3.3.3 [FSM] Receive_KEEPALIVE_message (OpenConfirm->Established)
+#2.2.2.2#2015/07/27 01:01:30  7.702307 BGP: 3.3.3.3 went from OpenConfirm to Established
+#2.2.2.2#2015/07/27 01:01:30  7.702307 BGP: 3.3.3.3 sending KEEPALIVE
+#2.2.2.2#2015/07/27 01:01:30  7.702307 BGP: 3.3.3.3 send message type 4, length (incl. header) 19
+#3.3.3.3#2015/07/27 01:01:30  7.703622 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+#3.3.3.3#2015/07/27 01:01:30  7.703622 BGP: 2.2.2.2 KEEPALIVE rcvd
+#3.3.3.3#2015/07/27 01:01:30  7.703622 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (OpenConfirm->Established)
+#3.3.3.3#2015/07/27 01:01:30  7.703622 BGP: 2.2.2.2 went from OpenConfirm to Established
+#3.3.3.3#2015/07/27 01:01:30  7.703622 BGP: 2.2.2.2 sending KEEPALIVE
+#3.3.3.3#2015/07/27 01:01:30  7.703622 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+#2.2.2.2#2015/07/27 01:01:30  7.704936 BGP: 3.3.3.3 rcv message type 4, length (excl. header) 0
+#2.2.2.2#2015/07/27 01:01:30  7.704936 BGP: 3.3.3.3 KEEPALIVE rcvd
+#2.2.2.2#2015/07/27 01:01:30  7.704936 BGP: 3.3.3.3 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:01:30  7.706251 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+#3.3.3.3#2015/07/27 01:01:30  7.706251 BGP: 2.2.2.2 KEEPALIVE rcvd
+#3.3.3.3#2015/07/27 01:01:30  7.706251 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:01:31  8.224628 BGP: 2.2.2.2 [FSM] Timer (start timer expire).
+#1.1.1.1#2015/07/27 01:01:31  8.224628 BGP: 2.2.2.2 [FSM] BGP_Start (Idle->Connect)
+#1.1.1.1#2015/07/27 01:01:31  8.224628 BGP: 2.2.2.2 went from Idle to Connect
+#1.1.1.1#2015/07/27 01:01:31  8.224628 BGP: 2.2.2.2 [Event] Connect start to 2.2.2.2
+#1.1.1.1#2015/07/27 01:01:31  8.224628 BGP: 2.2.2.2 [FSM] Non blocking connect waiting result
+#1.1.1.1#2015/07/27 01:01:31  8.227055 BGP: 2.2.2.2 [FSM] TCP_connection_open (Connect->OpenSent)
+#1.1.1.1#2015/07/27 01:01:31  8.227055 BGP: 2.2.2.2 went from Connect to OpenSent
+#1.1.1.1#2015/07/27 01:01:31  8.227055 BGP: 2.2.2.2 sending OPEN, version 4, my as 1, holdtime 180, id 1.1.1.1
+#1.1.1.1#2015/07/27 01:01:31  8.227055 BGP: 2.2.2.2 send message type 1, length (incl. header) 45
+#2.2.2.2#2015/07/27 01:01:31  8.228268 BGP: [Event] BGP connection from host 1.1.1.1
+#2.2.2.2#2015/07/27 01:01:31  8.228268 BGP: [Event] Make dummy peer structure until read Open packet
+#2.2.2.2#2015/07/27 01:01:31  8.228268 BGP: 1.1.1.1 [FSM] TCP_connection_open (Active->OpenSent)
+#2.2.2.2#2015/07/27 01:01:31  8.228268 BGP: 1.1.1.1 went from Active to OpenSent
+#2.2.2.2#2015/07/27 01:01:31  8.228935 BGP: 1.1.1.1 rcv message type 1, length (excl. header) 26
+#2.2.2.2#2015/07/27 01:01:31  8.228935 BGP: 1.1.1.1 rcv OPEN, version 4, remote-as 1, holdtime 180, id 1.1.1.1
+#2.2.2.2#2015/07/27 01:01:31  8.228935 BGP: 1.1.1.1 [Event] Transfer temporary BGP peer to existing one
+#2.2.2.2#2015/07/27 01:01:31  8.228935 BGP: 1.1.1.1 sending OPEN, version 4, my as 2, holdtime 180, id 2.2.2.2
+#2.2.2.2#2015/07/27 01:01:31  8.228935 BGP: 1.1.1.1 send message type 1, length (incl. header) 45
+#2.2.2.2#2015/07/27 01:01:31  8.228935 BGP: 1.1.1.1 rcv OPEN w/ OPTION parameter len: 16
+#2.2.2.2#2015/07/27 01:01:31  8.228935 BGP: 1.1.1.1 rcvd OPEN w/ optional parameter type 2 (Capability) len 6
+#2.2.2.2#2015/07/27 01:01:31  8.228935 BGP: 1.1.1.1 OPEN has CAPABILITY code: 1, length 4
+#2.2.2.2#2015/07/27 01:01:31  8.228935 BGP: 1.1.1.1 OPEN has MP_EXT CAP for afi/safi: 1/1
+#2.2.2.2#2015/07/27 01:01:31  8.228935 BGP: 1.1.1.1 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+#2.2.2.2#2015/07/27 01:01:31  8.228935 BGP: 1.1.1.1 OPEN has CAPABILITY code: 128, length 0
+#2.2.2.2#2015/07/27 01:01:31  8.228935 BGP: 1.1.1.1 OPEN has ROUTE-REFRESH capability(old) for all address-families
+#2.2.2.2#2015/07/27 01:01:31  8.228935 BGP: 1.1.1.1 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+#2.2.2.2#2015/07/27 01:01:31  8.228935 BGP: 1.1.1.1 OPEN has CAPABILITY code: 2, length 0
+#2.2.2.2#2015/07/27 01:01:31  8.228935 BGP: 1.1.1.1 OPEN has ROUTE-REFRESH capability(New) for all address-families
+#2.2.2.2#2015/07/27 01:01:31  8.228935 BGP: 1.1.1.1 [Event] Accepting BGP peer delete
+#2.2.2.2#2015/07/27 01:01:31  8.228935 BGP: 1.1.1.1 [FSM] Receive_OPEN_message (OpenSent->OpenConfirm)
+#2.2.2.2#2015/07/27 01:01:31  8.228935 BGP: 1.1.1.1 went from OpenSent to OpenConfirm
+#2.2.2.2#2015/07/27 01:01:31  8.228935 BGP: 1.1.1.1 sending KEEPALIVE
+#2.2.2.2#2015/07/27 01:01:31  8.228935 BGP: 1.1.1.1 send message type 4, length (incl. header) 19
+#1.1.1.1#2015/07/27 01:01:31  8.230388 BGP: 2.2.2.2 rcv message type 1, length (excl. header) 26
+#1.1.1.1#2015/07/27 01:01:31  8.230388 BGP: 2.2.2.2 rcv OPEN, version 4, remote-as 2, holdtime 180, id 2.2.2.2
+#1.1.1.1#2015/07/27 01:01:31  8.230388 BGP: 2.2.2.2 rcv OPEN w/ OPTION parameter len: 16
+#1.1.1.1#2015/07/27 01:01:31  8.230388 BGP: 2.2.2.2 rcvd OPEN w/ optional parameter type 2 (Capability) len 6
+#1.1.1.1#2015/07/27 01:01:31  8.230388 BGP: 2.2.2.2 OPEN has CAPABILITY code: 1, length 4
+#1.1.1.1#2015/07/27 01:01:31  8.230388 BGP: 2.2.2.2 OPEN has MP_EXT CAP for afi/safi: 1/1
+#1.1.1.1#2015/07/27 01:01:31  8.230388 BGP: 2.2.2.2 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+#1.1.1.1#2015/07/27 01:01:31  8.230388 BGP: 2.2.2.2 OPEN has CAPABILITY code: 128, length 0
+#1.1.1.1#2015/07/27 01:01:31  8.230388 BGP: 2.2.2.2 OPEN has ROUTE-REFRESH capability(old) for all address-families
+#1.1.1.1#2015/07/27 01:01:31  8.230388 BGP: 2.2.2.2 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+#1.1.1.1#2015/07/27 01:01:31  8.230388 BGP: 2.2.2.2 OPEN has CAPABILITY code: 2, length 0
+#1.1.1.1#2015/07/27 01:01:31  8.230388 BGP: 2.2.2.2 OPEN has ROUTE-REFRESH capability(New) for all address-families
+#1.1.1.1#2015/07/27 01:01:31  8.230388 BGP: 2.2.2.2 [FSM] Receive_OPEN_message (OpenSent->OpenConfirm)
+#1.1.1.1#2015/07/27 01:01:31  8.230388 BGP: 2.2.2.2 went from OpenSent to OpenConfirm
+#1.1.1.1#2015/07/27 01:01:31  8.230388 BGP: 2.2.2.2 sending KEEPALIVE
+#1.1.1.1#2015/07/27 01:01:31  8.230388 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+#2.2.2.2#2015/07/27 01:01:31  8.231703 BGP: 1.1.1.1 rcv message type 4, length (excl. header) 0
+#2.2.2.2#2015/07/27 01:01:31  8.231703 BGP: 1.1.1.1 KEEPALIVE rcvd
+#2.2.2.2#2015/07/27 01:01:31  8.231703 BGP: 1.1.1.1 [FSM] Receive_KEEPALIVE_message (OpenConfirm->Established)
+#2.2.2.2#2015/07/27 01:01:31  8.231703 BGP: 1.1.1.1 went from OpenConfirm to Established
+#2.2.2.2#2015/07/27 01:01:31  8.231703 BGP: 1.1.1.1 sending KEEPALIVE
+#2.2.2.2#2015/07/27 01:01:31  8.231703 BGP: 1.1.1.1 send message type 4, length (incl. header) 19
+#1.1.1.1#2015/07/27 01:01:31  8.233018 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+#1.1.1.1#2015/07/27 01:01:31  8.233018 BGP: 2.2.2.2 KEEPALIVE rcvd
+#1.1.1.1#2015/07/27 01:01:31  8.233018 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (OpenConfirm->Established)
+#1.1.1.1#2015/07/27 01:01:31  8.233018 BGP: 2.2.2.2 went from OpenConfirm to Established
+#1.1.1.1#2015/07/27 01:01:31  8.233018 BGP: 2.2.2.2 sending KEEPALIVE
+#1.1.1.1#2015/07/27 01:01:31  8.233018 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+#2.2.2.2#2015/07/27 01:01:31  8.234332 BGP: 1.1.1.1 rcv message type 4, length (excl. header) 0
+#2.2.2.2#2015/07/27 01:01:31  8.234332 BGP: 1.1.1.1 KEEPALIVE rcvd
+#2.2.2.2#2015/07/27 01:01:31  8.234332 BGP: 1.1.1.1 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:01:31  8.235647 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+#1.1.1.1#2015/07/27 01:01:31  8.235647 BGP: 2.2.2.2 KEEPALIVE rcvd
+#1.1.1.1#2015/07/27 01:01:31  8.235647 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (Established->Established)
+>network 10.0.3.0/24#4.4.4.4#
+#4.4.4.4#2015/07/27 01:01:43  20.000000 BGP: 1.1.1.1 send UPDATE 10.0.3.0/24 nexthop 4.4.4.4, origin i, path 
+#4.4.4.4#2015/07/27 01:01:43  20.000000 BGP: 2.2.2.2 send UPDATE 10.0.3.0/24 nexthop 4.4.4.4, origin i, path 
+#4.4.4.4#2015/07/27 01:01:43  20.000000 BGP: 3.3.3.3 send UPDATE 10.0.3.0/24 nexthop 4.4.4.4, origin i, path 
+#1.1.1.1#2015/07/27 01:01:43  20.001453 BGP: 4.4.4.4 rcvd UPDATE w/ attr: nexthop 4.4.4.4, origin i, path 4
+#1.1.1.1#2015/07/27 01:01:43  20.001453 BGP: 4.4.4.4 rcvd 10.0.3.0/24
+#1.1.1.1#2015/07/27 01:01:43  20.001453 BGP: 2.2.2.2 send UPDATE 10.0.3.0/24 nexthop 1.1.1.1, origin i, path 4
+#1.1.1.1#2015/07/27 01:01:43  20.001453 BGP: 3.3.3.3 send UPDATE 10.0.3.0/24 nexthop 1.1.1.1, origin i, path 4
+#2.2.2.2#2015/07/27 01:01:43  20.001453 BGP: 4.4.4.4 rcvd UPDATE w/ attr: nexthop 4.4.4.4, origin i, path 4
+#2.2.2.2#2015/07/27 01:01:43  20.001453 BGP: 4.4.4.4 rcvd 10.0.3.0/24
+#2.2.2.2#2015/07/27 01:01:43  20.001453 BGP: 1.1.1.1 send UPDATE 10.0.3.0/24 nexthop 2.2.2.2, origin i, path 4
+#2.2.2.2#2015/07/27 01:01:43  20.001453 BGP: 3.3.3.3 send UPDATE 10.0.3.0/24 nexthop 2.2.2.2, origin i, path 4
+#3.3.3.3#2015/07/27 01:01:43  20.001453 BGP: 4.4.4.4 rcvd UPDATE w/ attr: nexthop 4.4.4.4, origin i, path 4
+#3.3.3.3#2015/07/27 01:01:43  20.001453 BGP: 4.4.4.4 rcvd 10.0.3.0/24
+#3.3.3.3#2015/07/27 01:01:43  20.001453 BGP: 1.1.1.1 send UPDATE 10.0.3.0/24 nexthop 3.3.3.3, origin i, path 4
+#3.3.3.3#2015/07/27 01:01:43  20.001453 BGP: 2.2.2.2 send UPDATE 10.0.3.0/24 nexthop 3.3.3.3, origin i, path 4
+#1.1.1.1#2015/07/27 01:01:43  20.001453 BGP: 4.4.4.4 [FSM] Receive_UPDATE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:01:43  20.001453 BGP: 4.4.4.4 [FSM] Receive_UPDATE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:01:43  20.001453 BGP: 4.4.4.4 [FSM] Receive_UPDATE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:01:43  20.002917 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 1.1.1.1, origin i, path 1 4
+#2.2.2.2#2015/07/27 01:01:43  20.002917 BGP: 1.1.1.1 rcvd 10.0.3.0/24
+#1.1.1.1#2015/07/27 01:01:43  20.002917 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, path 2 4
+#1.1.1.1#2015/07/27 01:01:43  20.002917 BGP: 2.2.2.2 rcvd 10.0.3.0/24
+#1.1.1.1#2015/07/27 01:01:43  20.002917 BGP: 2.2.2.2 send UPDATE 10.0.3.0/24 -- unreachable
+#1.1.1.1#2015/07/27 01:01:43  20.002917 BGP: 3.3.3.3 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#1.1.1.1#2015/07/27 01:01:43  20.002917 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 nexthop 1.1.1.1, origin i, path 2 4
+#3.3.3.3#2015/07/27 01:01:43  20.002917 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 1.1.1.1, origin i, path 1 4
+#3.3.3.3#2015/07/27 01:01:43  20.002917 BGP: 1.1.1.1 rcvd 10.0.3.0/24
+#3.3.3.3#2015/07/27 01:01:43  20.002917 BGP: 1.1.1.1 send UPDATE 10.0.3.0/24 -- unreachable
+#3.3.3.3#2015/07/27 01:01:43  20.002917 BGP: 2.2.2.2 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#3.3.3.3#2015/07/27 01:01:43  20.002917 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 nexthop 3.3.3.3, origin i, path 1 4
+#2.2.2.2#2015/07/27 01:01:43  20.002917 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:01:43  20.002917 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:01:43  20.002917 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:01:43  20.002917 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 3.3.3.3, origin i, path 3 4
+#2.2.2.2#2015/07/27 01:01:43  20.002917 BGP: 3.3.3.3 rcvd 10.0.3.0/24
+#2.2.2.2#2015/07/27 01:01:43  20.002917 BGP: 1.1.1.1 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#2.2.2.2#2015/07/27 01:01:43  20.002917 BGP: 3.3.3.3 send UPDATE 10.0.3.0/24 -- unreachable
+#2.2.2.2#2015/07/27 01:01:43  20.002917 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 nexthop 2.2.2.2, origin i, path 3 4
+#2.2.2.2#2015/07/27 01:01:43  20.002917 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:01:43  20.002917 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 3.3.3.3, origin i, path 3 4
+#1.1.1.1#2015/07/27 01:01:43  20.002917 BGP: 3.3.3.3 rcvd 10.0.3.0/24
+#3.3.3.3#2015/07/27 01:01:43  20.002917 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, path 2 4
+#3.3.3.3#2015/07/27 01:01:43  20.002917 BGP: 2.2.2.2 rcvd 10.0.3.0/24
+#1.1.1.1#2015/07/27 01:01:43  20.002917 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:01:43  20.002917 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:01:43  20.004392 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 1.1.1.1, origin i, path 1 2 4
+#4.4.4.4#2015/07/27 01:01:43  20.004392 BGP: 1.1.1.1 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#4.4.4.4#2015/07/27 01:01:43  20.004392 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:01:43  20.004392 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 3.3.3.3, origin i, path 3 1 4
+#4.4.4.4#2015/07/27 01:01:43  20.004392 BGP: 3.3.3.3 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#4.4.4.4#2015/07/27 01:01:43  20.004392 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:01:43  20.004392 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, path 2 3 4
+#4.4.4.4#2015/07/27 01:01:43  20.004392 BGP: 2.2.2.2 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#4.4.4.4#2015/07/27 01:01:43  20.004392 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:01:43  20.101357 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+#1.1.1.1#2015/07/27 01:01:43  20.101357 BGP: 3.3.3.3 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+#1.1.1.1#2015/07/27 01:01:43  20.101357 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:01:43  20.101357 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+#3.3.3.3#2015/07/27 01:01:43  20.101357 BGP: 2.2.2.2 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+#2.2.2.2#2015/07/27 01:01:43  20.101357 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+#2.2.2.2#2015/07/27 01:01:43  20.101357 BGP: 1.1.1.1 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+#3.3.3.3#2015/07/27 01:01:43  20.101357 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:01:43  20.101357 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:02:13  50.001453 BGP: 3.3.3.3 [FSM] Timer (routeadv timer expire)
+#1.1.1.1#2015/07/27 01:02:13  50.001453 BGP: 3.3.3.3 send UPDATE 10.0.3.0/24 nexthop 1.1.1.1, origin i, path 2 4
+#3.3.3.3#2015/07/27 01:02:13  50.001453 BGP: 2.2.2.2 [FSM] Timer (routeadv timer expire)
+#3.3.3.3#2015/07/27 01:02:13  50.001453 BGP: 2.2.2.2 send UPDATE 10.0.3.0/24 nexthop 3.3.3.3, origin i, path 1 4
+#2.2.2.2#2015/07/27 01:02:13  50.001453 BGP: 1.1.1.1 [FSM] Timer (routeadv timer expire)
+#2.2.2.2#2015/07/27 01:02:13  50.001453 BGP: 1.1.1.1 send UPDATE 10.0.3.0/24 nexthop 2.2.2.2, origin i, path 3 4
+#3.3.3.3#2015/07/27 01:02:13  50.002928 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 1.1.1.1, origin i, path 1 2 4
+#3.3.3.3#2015/07/27 01:02:13  50.002928 BGP: 1.1.1.1 rcvd 10.0.3.0/24
+#3.3.3.3#2015/07/27 01:02:13  50.002928 BGP: 2.2.2.2 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#3.3.3.3#2015/07/27 01:02:13  50.002928 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 nexthop 3.3.3.3, origin i, path 1 2 4
+#2.2.2.2#2015/07/27 01:02:13  50.002928 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 3.3.3.3, origin i, path 3 1 4
+#2.2.2.2#2015/07/27 01:02:13  50.002928 BGP: 3.3.3.3 rcvd 10.0.3.0/24
+#2.2.2.2#2015/07/27 01:02:13  50.002928 BGP: 1.1.1.1 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#2.2.2.2#2015/07/27 01:02:13  50.002928 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 nexthop 2.2.2.2, origin i, path 3 1 4
+#1.1.1.1#2015/07/27 01:02:13  50.002928 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, path 2 3 4
+#1.1.1.1#2015/07/27 01:02:13  50.002928 BGP: 2.2.2.2 rcvd 10.0.3.0/24
+#1.1.1.1#2015/07/27 01:02:13  50.002928 BGP: 3.3.3.3 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#1.1.1.1#2015/07/27 01:02:13  50.002928 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 nexthop 1.1.1.1, origin i, path 2 3 4
+#3.3.3.3#2015/07/27 01:02:13  50.002928 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:02:13  50.002928 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:02:13  50.002928 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:02:13  50.004413 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 3.3.3.3, origin i, path 3 1 2 4
+#4.4.4.4#2015/07/27 01:02:13  50.004413 BGP: 3.3.3.3 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#4.4.4.4#2015/07/27 01:02:13  50.004413 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:02:13  50.004413 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, path 2 3 1 4
+#4.4.4.4#2015/07/27 01:02:13  50.004413 BGP: 2.2.2.2 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#4.4.4.4#2015/07/27 01:02:13  50.004413 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:02:13  50.004413 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 1.1.1.1, origin i, path 1 2 3 4
+#4.4.4.4#2015/07/27 01:02:13  50.004413 BGP: 1.1.1.1 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#4.4.4.4#2015/07/27 01:02:13  50.004413 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+>show ip bgp#1.1.1.1#
+BGP table version is 0, local router ID is 1.1.1.1#1.1.1.1#
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal#1.1.1.1#
+Origin codes: i - IGP, e - EGP, ? - incomplete#1.1.1.1#
+#1.1.1.1#
+   Network          Next Hop            Metric LocPrf Weight Path#1.1.1.1#
+*> 10.0.3.0/24         2.2.2.2                       100      0  2 3 4i#1.1.1.1#
+*                   4.4.4.4                        10      0  4i#1.1.1.1#
+#1.1.1.1#
+Total number of prefixes 1#1.1.1.1#
+>show ip bgp#2.2.2.2#
+BGP table version is 0, local router ID is 2.2.2.2#2.2.2.2#
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal#2.2.2.2#
+Origin codes: i - IGP, e - EGP, ? - incomplete#2.2.2.2#
+#2.2.2.2#
+   Network          Next Hop            Metric LocPrf Weight Path#2.2.2.2#
+*> 10.0.3.0/24         3.3.3.3                       100      0  3 1 4i#2.2.2.2#
+*                   4.4.4.4                        10      0  4i#2.2.2.2#
+#2.2.2.2#
+Total number of prefixes 1#2.2.2.2#
+>show ip bgp#3.3.3.3#
+BGP table version is 0, local router ID is 3.3.3.3#3.3.3.3#
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal#3.3.3.3#
+Origin codes: i - IGP, e - EGP, ? - incomplete#3.3.3.3#
+#3.3.3.3#
+   Network          Next Hop            Metric LocPrf Weight Path#3.3.3.3#
+*> 10.0.3.0/24         1.1.1.1                       100      0  1 2 4i#3.3.3.3#
+*                   4.4.4.4                        10      0  4i#3.3.3.3#
+#3.3.3.3#
+Total number of prefixes 1#3.3.3.3#
+#1.1.1.1#2015/07/27 01:02:28  65.999905 BGP: 4.4.4.4 [FSM] Timer (keepalive timer expire)
+#1.1.1.1#2015/07/27 01:02:28  65.999905 BGP: 4.4.4.4 [FSM] KeepAlive_timer_expired (Established->Established)
+#1.1.1.1#2015/07/27 01:02:28  65.999905 BGP: 4.4.4.4 sending KEEPALIVE
+#1.1.1.1#2015/07/27 01:02:28  65.999905 BGP: 4.4.4.4 send message type 4, length (incl. header) 19
+#4.4.4.4#2015/07/27 01:02:29  66.001219 BGP: 1.1.1.1 rcv message type 4, length (excl. header) 0
+#4.4.4.4#2015/07/27 01:02:29  66.001219 BGP: 1.1.1.1 KEEPALIVE rcvd
+#4.4.4.4#2015/07/27 01:02:29  66.001219 BGP: 1.1.1.1 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:02:29  66.001358 BGP: 1.1.1.1 [FSM] Timer (keepalive timer expire)
+#4.4.4.4#2015/07/27 01:02:29  66.001358 BGP: 1.1.1.1 [FSM] KeepAlive_timer_expired (Established->Established)
+#4.4.4.4#2015/07/27 01:02:29  66.001358 BGP: 1.1.1.1 sending KEEPALIVE
+#4.4.4.4#2015/07/27 01:02:29  66.001358 BGP: 1.1.1.1 send message type 4, length (incl. header) 19
+#1.1.1.1#2015/07/27 01:02:29  66.002673 BGP: 4.4.4.4 rcv message type 4, length (excl. header) 0
+#1.1.1.1#2015/07/27 01:02:29  66.002673 BGP: 4.4.4.4 KEEPALIVE rcvd
+#1.1.1.1#2015/07/27 01:02:29  66.002673 BGP: 4.4.4.4 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:02:29  66.167985 BGP: 4.4.4.4 [FSM] Timer (keepalive timer expire)
+#2.2.2.2#2015/07/27 01:02:29  66.167985 BGP: 4.4.4.4 [FSM] KeepAlive_timer_expired (Established->Established)
+#2.2.2.2#2015/07/27 01:02:29  66.167985 BGP: 4.4.4.4 sending KEEPALIVE
+#2.2.2.2#2015/07/27 01:02:29  66.167985 BGP: 4.4.4.4 send message type 4, length (incl. header) 19
+#4.4.4.4#2015/07/27 01:02:29  66.169299 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+#4.4.4.4#2015/07/27 01:02:29  66.169299 BGP: 2.2.2.2 KEEPALIVE rcvd
+#4.4.4.4#2015/07/27 01:02:29  66.169299 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:02:29  66.169438 BGP: 2.2.2.2 [FSM] Timer (keepalive timer expire)
+#4.4.4.4#2015/07/27 01:02:29  66.169438 BGP: 2.2.2.2 [FSM] KeepAlive_timer_expired (Established->Established)
+#4.4.4.4#2015/07/27 01:02:29  66.169438 BGP: 2.2.2.2 sending KEEPALIVE
+#4.4.4.4#2015/07/27 01:02:29  66.169438 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+#2.2.2.2#2015/07/27 01:02:29  66.170753 BGP: 4.4.4.4 rcv message type 4, length (excl. header) 0
+#2.2.2.2#2015/07/27 01:02:29  66.170753 BGP: 4.4.4.4 KEEPALIVE rcvd
+#2.2.2.2#2015/07/27 01:02:29  66.170753 BGP: 4.4.4.4 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:02:29  66.591147 BGP: 1.1.1.1 [FSM] Timer (keepalive timer expire)
+#3.3.3.3#2015/07/27 01:02:29  66.591147 BGP: 1.1.1.1 [FSM] KeepAlive_timer_expired (Established->Established)
+#3.3.3.3#2015/07/27 01:02:29  66.591147 BGP: 1.1.1.1 sending KEEPALIVE
+#3.3.3.3#2015/07/27 01:02:29  66.591147 BGP: 1.1.1.1 send message type 4, length (incl. header) 19
+#1.1.1.1#2015/07/27 01:02:29  66.592462 BGP: 3.3.3.3 rcv message type 4, length (excl. header) 0
+#1.1.1.1#2015/07/27 01:02:29  66.592462 BGP: 3.3.3.3 KEEPALIVE rcvd
+#1.1.1.1#2015/07/27 01:02:29  66.592462 BGP: 3.3.3.3 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:02:29  66.592601 BGP: 3.3.3.3 [FSM] Timer (keepalive timer expire)
+#1.1.1.1#2015/07/27 01:02:29  66.592601 BGP: 3.3.3.3 [FSM] KeepAlive_timer_expired (Established->Established)
+#1.1.1.1#2015/07/27 01:02:29  66.592601 BGP: 3.3.3.3 sending KEEPALIVE
+#1.1.1.1#2015/07/27 01:02:29  66.592601 BGP: 3.3.3.3 send message type 4, length (incl. header) 19
+#3.3.3.3#2015/07/27 01:02:29  66.593915 BGP: 1.1.1.1 rcv message type 4, length (excl. header) 0
+#3.3.3.3#2015/07/27 01:02:29  66.593915 BGP: 1.1.1.1 KEEPALIVE rcvd
+#3.3.3.3#2015/07/27 01:02:29  66.593915 BGP: 1.1.1.1 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:02:30  67.008085 BGP: 3.3.3.3 [FSM] Timer (keepalive timer expire)
+#4.4.4.4#2015/07/27 01:02:30  67.008085 BGP: 3.3.3.3 [FSM] KeepAlive_timer_expired (Established->Established)
+#4.4.4.4#2015/07/27 01:02:30  67.008085 BGP: 3.3.3.3 sending KEEPALIVE
+#4.4.4.4#2015/07/27 01:02:30  67.008085 BGP: 3.3.3.3 send message type 4, length (incl. header) 19
+#3.3.3.3#2015/07/27 01:02:30  67.009399 BGP: 4.4.4.4 rcv message type 4, length (excl. header) 0
+#3.3.3.3#2015/07/27 01:02:30  67.009399 BGP: 4.4.4.4 KEEPALIVE rcvd
+#3.3.3.3#2015/07/27 01:02:30  67.009399 BGP: 4.4.4.4 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:02:30  67.009538 BGP: 4.4.4.4 [FSM] Timer (keepalive timer expire)
+#3.3.3.3#2015/07/27 01:02:30  67.009538 BGP: 4.4.4.4 [FSM] KeepAlive_timer_expired (Established->Established)
+#3.3.3.3#2015/07/27 01:02:30  67.009538 BGP: 4.4.4.4 sending KEEPALIVE
+#3.3.3.3#2015/07/27 01:02:30  67.009538 BGP: 4.4.4.4 send message type 4, length (incl. header) 19
+#4.4.4.4#2015/07/27 01:02:30  67.010853 BGP: 3.3.3.3 rcv message type 4, length (excl. header) 0
+#4.4.4.4#2015/07/27 01:02:30  67.010853 BGP: 3.3.3.3 KEEPALIVE rcvd
+#4.4.4.4#2015/07/27 01:02:30  67.010853 BGP: 3.3.3.3 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:02:30  67.699539 BGP: 3.3.3.3 [FSM] Timer (keepalive timer expire)
+#2.2.2.2#2015/07/27 01:02:30  67.699539 BGP: 3.3.3.3 [FSM] KeepAlive_timer_expired (Established->Established)
+#2.2.2.2#2015/07/27 01:02:30  67.699539 BGP: 3.3.3.3 sending KEEPALIVE
+#2.2.2.2#2015/07/27 01:02:30  67.699539 BGP: 3.3.3.3 send message type 4, length (incl. header) 19
+#3.3.3.3#2015/07/27 01:02:30  67.700854 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+#3.3.3.3#2015/07/27 01:02:30  67.700854 BGP: 2.2.2.2 KEEPALIVE rcvd
+#3.3.3.3#2015/07/27 01:02:30  67.700854 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:02:30  67.700992 BGP: 2.2.2.2 [FSM] Timer (keepalive timer expire)
+#3.3.3.3#2015/07/27 01:02:30  67.700992 BGP: 2.2.2.2 [FSM] KeepAlive_timer_expired (Established->Established)
+#3.3.3.3#2015/07/27 01:02:30  67.700992 BGP: 2.2.2.2 sending KEEPALIVE
+#3.3.3.3#2015/07/27 01:02:30  67.700992 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+#2.2.2.2#2015/07/27 01:02:30  67.702307 BGP: 3.3.3.3 rcv message type 4, length (excl. header) 0
+#2.2.2.2#2015/07/27 01:02:30  67.702307 BGP: 3.3.3.3 KEEPALIVE rcvd
+#2.2.2.2#2015/07/27 01:02:30  67.702307 BGP: 3.3.3.3 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:02:31  68.228935 BGP: 1.1.1.1 [FSM] Timer (keepalive timer expire)
+#2.2.2.2#2015/07/27 01:02:31  68.228935 BGP: 1.1.1.1 [FSM] KeepAlive_timer_expired (Established->Established)
+#2.2.2.2#2015/07/27 01:02:31  68.228935 BGP: 1.1.1.1 sending KEEPALIVE
+#2.2.2.2#2015/07/27 01:02:31  68.228935 BGP: 1.1.1.1 send message type 4, length (incl. header) 19
+#1.1.1.1#2015/07/27 01:02:31  68.230250 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+#1.1.1.1#2015/07/27 01:02:31  68.230250 BGP: 2.2.2.2 KEEPALIVE rcvd
+#1.1.1.1#2015/07/27 01:02:31  68.230250 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:02:31  68.230388 BGP: 2.2.2.2 [FSM] Timer (keepalive timer expire)
+#1.1.1.1#2015/07/27 01:02:31  68.230388 BGP: 2.2.2.2 [FSM] KeepAlive_timer_expired (Established->Established)
+#1.1.1.1#2015/07/27 01:02:31  68.230388 BGP: 2.2.2.2 sending KEEPALIVE
+#1.1.1.1#2015/07/27 01:02:31  68.230388 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+#2.2.2.2#2015/07/27 01:02:31  68.231703 BGP: 1.1.1.1 rcv message type 4, length (excl. header) 0
+#2.2.2.2#2015/07/27 01:02:31  68.231703 BGP: 1.1.1.1 KEEPALIVE rcvd
+#2.2.2.2#2015/07/27 01:02:31  68.231703 BGP: 1.1.1.1 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:02:43  80.001453 BGP: 2.2.2.2 [FSM] Timer (routeadv timer expire)
+#3.3.3.3#2015/07/27 01:02:43  80.001453 BGP: 2.2.2.2 send UPDATE 10.0.3.0/24 nexthop 3.3.3.3, origin i, path 1 2 4
+#1.1.1.1#2015/07/27 01:02:43  80.001453 BGP: 3.3.3.3 [FSM] Timer (routeadv timer expire)
+#1.1.1.1#2015/07/27 01:02:43  80.001453 BGP: 3.3.3.3 send UPDATE 10.0.3.0/24 nexthop 1.1.1.1, origin i, path 2 3 4
+#2.2.2.2#2015/07/27 01:02:43  80.001453 BGP: 1.1.1.1 [FSM] Timer (routeadv timer expire)
+#2.2.2.2#2015/07/27 01:02:43  80.001453 BGP: 1.1.1.1 send UPDATE 10.0.3.0/24 nexthop 2.2.2.2, origin i, path 3 1 4
+#2.2.2.2#2015/07/27 01:02:43  80.002939 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 3.3.3.3, origin i, path 3 1 2 4
+#2.2.2.2#2015/07/27 01:02:43  80.002939 BGP: 3.3.3.3 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#2.2.2.2#2015/07/27 01:02:43  80.002939 BGP: 1.1.1.1 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#2.2.2.2#2015/07/27 01:02:43  80.002939 BGP: 3.3.3.3 send UPDATE 10.0.3.0/24 nexthop 2.2.2.2, origin i, path 4
+#2.2.2.2#2015/07/27 01:02:43  80.002939 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 -- unreachable
+#3.3.3.3#2015/07/27 01:02:43  80.002939 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 1.1.1.1, origin i, path 1 2 3 4
+#3.3.3.3#2015/07/27 01:02:43  80.002939 BGP: 1.1.1.1 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#3.3.3.3#2015/07/27 01:02:43  80.002939 BGP: 1.1.1.1 send UPDATE 10.0.3.0/24 nexthop 3.3.3.3, origin i, path 4
+#3.3.3.3#2015/07/27 01:02:43  80.002939 BGP: 2.2.2.2 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#3.3.3.3#2015/07/27 01:02:43  80.002939 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 -- unreachable
+#1.1.1.1#2015/07/27 01:02:43  80.002939 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, path 2 3 1 4
+#1.1.1.1#2015/07/27 01:02:43  80.002939 BGP: 2.2.2.2 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#1.1.1.1#2015/07/27 01:02:43  80.002939 BGP: 2.2.2.2 send UPDATE 10.0.3.0/24 nexthop 1.1.1.1, origin i, path 4
+#1.1.1.1#2015/07/27 01:02:43  80.002939 BGP: 3.3.3.3 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#1.1.1.1#2015/07/27 01:02:43  80.002939 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 -- unreachable
+#2.2.2.2#2015/07/27 01:02:43  80.002939 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:02:43  80.002939 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:02:43  80.002939 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:02:43  80.004296 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+#4.4.4.4#2015/07/27 01:02:43  80.004296 BGP: 2.2.2.2 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+#4.4.4.4#2015/07/27 01:02:43  80.004296 BGP: 2.2.2.2 Cant find the route 10.0.3.0/24
+#4.4.4.4#2015/07/27 01:02:43  80.004296 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:02:43  80.004296 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+#4.4.4.4#2015/07/27 01:02:43  80.004296 BGP: 3.3.3.3 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+#4.4.4.4#2015/07/27 01:02:43  80.004296 BGP: 3.3.3.3 Cant find the route 10.0.3.0/24
+#4.4.4.4#2015/07/27 01:02:43  80.004296 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:02:43  80.004296 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+#4.4.4.4#2015/07/27 01:02:43  80.004296 BGP: 1.1.1.1 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+#4.4.4.4#2015/07/27 01:02:43  80.004296 BGP: 1.1.1.1 Cant find the route 10.0.3.0/24
+#4.4.4.4#2015/07/27 01:02:43  80.004296 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:02:43  80.004403 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, path 2 4
+#3.3.3.3#2015/07/27 01:02:43  80.004403 BGP: 2.2.2.2 rcvd 10.0.3.0/24
+#1.1.1.1#2015/07/27 01:02:43  80.004403 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 3.3.3.3, origin i, path 3 4
+#1.1.1.1#2015/07/27 01:02:43  80.004403 BGP: 3.3.3.3 rcvd 10.0.3.0/24
+#2.2.2.2#2015/07/27 01:02:43  80.004403 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 1.1.1.1, origin i, path 1 4
+#2.2.2.2#2015/07/27 01:02:43  80.004403 BGP: 1.1.1.1 rcvd 10.0.3.0/24
+#3.3.3.3#2015/07/27 01:02:43  80.004403 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:02:43  80.004403 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:02:43  80.004403 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+>show ip bgp#1.1.1.1#
+BGP table version is 0, local router ID is 1.1.1.1#1.1.1.1#
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal#1.1.1.1#
+Origin codes: i - IGP, e - EGP, ? - incomplete#1.1.1.1#
+#1.1.1.1#
+   Network          Next Hop            Metric LocPrf Weight Path#1.1.1.1#
+*  10.0.3.0/24         3.3.3.3                        10      0  3 4i#1.1.1.1#
+*>                  4.4.4.4                        10      0  4i#1.1.1.1#
+#1.1.1.1#
+Total number of prefixes 1#1.1.1.1#
+>show ip bgp#2.2.2.2#
+BGP table version is 0, local router ID is 2.2.2.2#2.2.2.2#
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal#2.2.2.2#
+Origin codes: i - IGP, e - EGP, ? - incomplete#2.2.2.2#
+#2.2.2.2#
+   Network          Next Hop            Metric LocPrf Weight Path#2.2.2.2#
+*  10.0.3.0/24         1.1.1.1                        10      0  1 4i#2.2.2.2#
+*>                  4.4.4.4                        10      0  4i#2.2.2.2#
+#2.2.2.2#
+Total number of prefixes 1#2.2.2.2#
+>show ip bgp#3.3.3.3#
+BGP table version is 0, local router ID is 3.3.3.3#3.3.3.3#
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal#3.3.3.3#
+Origin codes: i - IGP, e - EGP, ? - incomplete#3.3.3.3#
+#3.3.3.3#
+   Network          Next Hop            Metric LocPrf Weight Path#3.3.3.3#
+*  10.0.3.0/24         2.2.2.2                        10      0  2 4i#3.3.3.3#
+*>                  4.4.4.4                        10      0  4i#3.3.3.3#
+#3.3.3.3#
+Total number of prefixes 1#3.3.3.3#
+#1.1.1.1#2015/07/27 01:03:13  110.001453 BGP: 3.3.3.3 [FSM] Timer (routeadv timer expire)
+#1.1.1.1#2015/07/27 01:03:13  110.001453 BGP: 3.3.3.3 send UPDATE 10.0.3.0/24 nexthop 1.1.1.1, origin i, path 4
+#2.2.2.2#2015/07/27 01:03:13  110.001453 BGP: 1.1.1.1 [FSM] Timer (routeadv timer expire)
+#2.2.2.2#2015/07/27 01:03:13  110.001453 BGP: 1.1.1.1 send UPDATE 10.0.3.0/24 nexthop 2.2.2.2, origin i, path 4
+#3.3.3.3#2015/07/27 01:03:13  110.001453 BGP: 2.2.2.2 [FSM] Timer (routeadv timer expire)
+#3.3.3.3#2015/07/27 01:03:13  110.001453 BGP: 2.2.2.2 send UPDATE 10.0.3.0/24 nexthop 3.3.3.3, origin i, path 4
+#3.3.3.3#2015/07/27 01:03:13  110.002917 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 1.1.1.1, origin i, path 1 4
+#3.3.3.3#2015/07/27 01:03:13  110.002917 BGP: 1.1.1.1 rcvd 10.0.3.0/24
+#3.3.3.3#2015/07/27 01:03:13  110.002917 BGP: 1.1.1.1 send UPDATE 10.0.3.0/24 -- unreachable
+#3.3.3.3#2015/07/27 01:03:13  110.002917 BGP: 2.2.2.2 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#3.3.3.3#2015/07/27 01:03:13  110.002917 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 nexthop 3.3.3.3, origin i, path 1 4
+#1.1.1.1#2015/07/27 01:03:13  110.002917 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, path 2 4
+#1.1.1.1#2015/07/27 01:03:13  110.002917 BGP: 2.2.2.2 rcvd 10.0.3.0/24
+#1.1.1.1#2015/07/27 01:03:13  110.002917 BGP: 2.2.2.2 send UPDATE 10.0.3.0/24 -- unreachable
+#1.1.1.1#2015/07/27 01:03:13  110.002917 BGP: 3.3.3.3 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#1.1.1.1#2015/07/27 01:03:13  110.002917 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 nexthop 1.1.1.1, origin i, path 2 4
+#2.2.2.2#2015/07/27 01:03:13  110.002917 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 3.3.3.3, origin i, path 3 4
+#2.2.2.2#2015/07/27 01:03:13  110.002917 BGP: 3.3.3.3 rcvd 10.0.3.0/24
+#2.2.2.2#2015/07/27 01:03:13  110.002917 BGP: 1.1.1.1 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#2.2.2.2#2015/07/27 01:03:13  110.002917 BGP: 3.3.3.3 send UPDATE 10.0.3.0/24 -- unreachable
+#2.2.2.2#2015/07/27 01:03:13  110.002917 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 nexthop 2.2.2.2, origin i, path 3 4
+#3.3.3.3#2015/07/27 01:03:13  110.002917 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:03:13  110.002917 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:03:13  110.002917 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:03:13  110.004275 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+#1.1.1.1#2015/07/27 01:03:13  110.004275 BGP: 3.3.3.3 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+#2.2.2.2#2015/07/27 01:03:13  110.004275 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+#2.2.2.2#2015/07/27 01:03:13  110.004275 BGP: 1.1.1.1 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+#3.3.3.3#2015/07/27 01:03:13  110.004275 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+#3.3.3.3#2015/07/27 01:03:13  110.004275 BGP: 2.2.2.2 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+#1.1.1.1#2015/07/27 01:03:13  110.004275 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:03:13  110.004275 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:03:13  110.004275 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:03:13  110.004392 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 3.3.3.3, origin i, path 3 1 4
+#4.4.4.4#2015/07/27 01:03:13  110.004392 BGP: 3.3.3.3 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#4.4.4.4#2015/07/27 01:03:13  110.004392 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:03:13  110.004392 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 1.1.1.1, origin i, path 1 2 4
+#4.4.4.4#2015/07/27 01:03:13  110.004392 BGP: 1.1.1.1 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#4.4.4.4#2015/07/27 01:03:13  110.004392 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:03:13  110.004392 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, path 2 3 4
+#4.4.4.4#2015/07/27 01:03:13  110.004392 BGP: 2.2.2.2 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#4.4.4.4#2015/07/27 01:03:13  110.004392 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+>show ip bgp#1.1.1.1#
+BGP table version is 0, local router ID is 1.1.1.1#1.1.1.1#
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal#1.1.1.1#
+Origin codes: i - IGP, e - EGP, ? - incomplete#1.1.1.1#
+#1.1.1.1#
+   Network          Next Hop            Metric LocPrf Weight Path#1.1.1.1#
+*> 10.0.3.0/24         2.2.2.2                       100      0  2 4i#1.1.1.1#
+*                   4.4.4.4                        10      0  4i#1.1.1.1#
+#1.1.1.1#
+Total number of prefixes 1#1.1.1.1#
+>show ip bgp#2.2.2.2#
+BGP table version is 0, local router ID is 2.2.2.2#2.2.2.2#
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal#2.2.2.2#
+Origin codes: i - IGP, e - EGP, ? - incomplete#2.2.2.2#
+#2.2.2.2#
+   Network          Next Hop            Metric LocPrf Weight Path#2.2.2.2#
+*> 10.0.3.0/24         3.3.3.3                       100      0  3 4i#2.2.2.2#
+*                   4.4.4.4                        10      0  4i#2.2.2.2#
+#2.2.2.2#
+Total number of prefixes 1#2.2.2.2#
+>show ip bgp#3.3.3.3#
+BGP table version is 0, local router ID is 3.3.3.3#3.3.3.3#
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal#3.3.3.3#
+Origin codes: i - IGP, e - EGP, ? - incomplete#3.3.3.3#
+#3.3.3.3#
+   Network          Next Hop            Metric LocPrf Weight Path#3.3.3.3#
+*> 10.0.3.0/24         1.1.1.1                       100      0  1 4i#3.3.3.3#
+*                   4.4.4.4                        10      0  4i#3.3.3.3#
+#3.3.3.3#
+Total number of prefixes 1#3.3.3.3#
+#1.1.1.1#2015/07/27 01:03:28  125.999905 BGP: 4.4.4.4 [FSM] Timer (keepalive timer expire)
+#1.1.1.1#2015/07/27 01:03:28  125.999905 BGP: 4.4.4.4 [FSM] KeepAlive_timer_expired (Established->Established)
+#1.1.1.1#2015/07/27 01:03:28  125.999905 BGP: 4.4.4.4 sending KEEPALIVE
+#1.1.1.1#2015/07/27 01:03:28  125.999905 BGP: 4.4.4.4 send message type 4, length (incl. header) 19
+#4.4.4.4#2015/07/27 01:03:29  126.001219 BGP: 1.1.1.1 rcv message type 4, length (excl. header) 0
+#4.4.4.4#2015/07/27 01:03:29  126.001219 BGP: 1.1.1.1 KEEPALIVE rcvd
+#4.4.4.4#2015/07/27 01:03:29  126.001219 BGP: 1.1.1.1 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:03:29  126.001358 BGP: 1.1.1.1 [FSM] Timer (keepalive timer expire)
+#4.4.4.4#2015/07/27 01:03:29  126.001358 BGP: 1.1.1.1 [FSM] KeepAlive_timer_expired (Established->Established)
+#4.4.4.4#2015/07/27 01:03:29  126.001358 BGP: 1.1.1.1 sending KEEPALIVE
+#4.4.4.4#2015/07/27 01:03:29  126.001358 BGP: 1.1.1.1 send message type 4, length (incl. header) 19
+#1.1.1.1#2015/07/27 01:03:29  126.002673 BGP: 4.4.4.4 rcv message type 4, length (excl. header) 0
+#1.1.1.1#2015/07/27 01:03:29  126.002673 BGP: 4.4.4.4 KEEPALIVE rcvd
+#1.1.1.1#2015/07/27 01:03:29  126.002673 BGP: 4.4.4.4 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:03:29  126.167985 BGP: 4.4.4.4 [FSM] Timer (keepalive timer expire)
+#2.2.2.2#2015/07/27 01:03:29  126.167985 BGP: 4.4.4.4 [FSM] KeepAlive_timer_expired (Established->Established)
+#2.2.2.2#2015/07/27 01:03:29  126.167985 BGP: 4.4.4.4 sending KEEPALIVE
+#2.2.2.2#2015/07/27 01:03:29  126.167985 BGP: 4.4.4.4 send message type 4, length (incl. header) 19
+#4.4.4.4#2015/07/27 01:03:29  126.169299 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+#4.4.4.4#2015/07/27 01:03:29  126.169299 BGP: 2.2.2.2 KEEPALIVE rcvd
+#4.4.4.4#2015/07/27 01:03:29  126.169299 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:03:29  126.169438 BGP: 2.2.2.2 [FSM] Timer (keepalive timer expire)
+#4.4.4.4#2015/07/27 01:03:29  126.169438 BGP: 2.2.2.2 [FSM] KeepAlive_timer_expired (Established->Established)
+#4.4.4.4#2015/07/27 01:03:29  126.169438 BGP: 2.2.2.2 sending KEEPALIVE
+#4.4.4.4#2015/07/27 01:03:29  126.169438 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+#2.2.2.2#2015/07/27 01:03:29  126.170753 BGP: 4.4.4.4 rcv message type 4, length (excl. header) 0
+#2.2.2.2#2015/07/27 01:03:29  126.170753 BGP: 4.4.4.4 KEEPALIVE rcvd
+#2.2.2.2#2015/07/27 01:03:29  126.170753 BGP: 4.4.4.4 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:03:29  126.591147 BGP: 1.1.1.1 [FSM] Timer (keepalive timer expire)
+#3.3.3.3#2015/07/27 01:03:29  126.591147 BGP: 1.1.1.1 [FSM] KeepAlive_timer_expired (Established->Established)
+#3.3.3.3#2015/07/27 01:03:29  126.591147 BGP: 1.1.1.1 sending KEEPALIVE
+#3.3.3.3#2015/07/27 01:03:29  126.591147 BGP: 1.1.1.1 send message type 4, length (incl. header) 19
+#1.1.1.1#2015/07/27 01:03:29  126.592462 BGP: 3.3.3.3 rcv message type 4, length (excl. header) 0
+#1.1.1.1#2015/07/27 01:03:29  126.592462 BGP: 3.3.3.3 KEEPALIVE rcvd
+#1.1.1.1#2015/07/27 01:03:29  126.592462 BGP: 3.3.3.3 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:03:29  126.592601 BGP: 3.3.3.3 [FSM] Timer (keepalive timer expire)
+#1.1.1.1#2015/07/27 01:03:29  126.592601 BGP: 3.3.3.3 [FSM] KeepAlive_timer_expired (Established->Established)
+#1.1.1.1#2015/07/27 01:03:29  126.592601 BGP: 3.3.3.3 sending KEEPALIVE
+#1.1.1.1#2015/07/27 01:03:29  126.592601 BGP: 3.3.3.3 send message type 4, length (incl. header) 19
+#3.3.3.3#2015/07/27 01:03:29  126.593915 BGP: 1.1.1.1 rcv message type 4, length (excl. header) 0
+#3.3.3.3#2015/07/27 01:03:29  126.593915 BGP: 1.1.1.1 KEEPALIVE rcvd
+#3.3.3.3#2015/07/27 01:03:29  126.593915 BGP: 1.1.1.1 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:03:30  127.008085 BGP: 3.3.3.3 [FSM] Timer (keepalive timer expire)
+#4.4.4.4#2015/07/27 01:03:30  127.008085 BGP: 3.3.3.3 [FSM] KeepAlive_timer_expired (Established->Established)
+#4.4.4.4#2015/07/27 01:03:30  127.008085 BGP: 3.3.3.3 sending KEEPALIVE
+#4.4.4.4#2015/07/27 01:03:30  127.008085 BGP: 3.3.3.3 send message type 4, length (incl. header) 19
+#3.3.3.3#2015/07/27 01:03:30  127.009399 BGP: 4.4.4.4 rcv message type 4, length (excl. header) 0
+#3.3.3.3#2015/07/27 01:03:30  127.009399 BGP: 4.4.4.4 KEEPALIVE rcvd
+#3.3.3.3#2015/07/27 01:03:30  127.009399 BGP: 4.4.4.4 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:03:30  127.009538 BGP: 4.4.4.4 [FSM] Timer (keepalive timer expire)
+#3.3.3.3#2015/07/27 01:03:30  127.009538 BGP: 4.4.4.4 [FSM] KeepAlive_timer_expired (Established->Established)
+#3.3.3.3#2015/07/27 01:03:30  127.009538 BGP: 4.4.4.4 sending KEEPALIVE
+#3.3.3.3#2015/07/27 01:03:30  127.009538 BGP: 4.4.4.4 send message type 4, length (incl. header) 19
+#4.4.4.4#2015/07/27 01:03:30  127.010853 BGP: 3.3.3.3 rcv message type 4, length (excl. header) 0
+#4.4.4.4#2015/07/27 01:03:30  127.010853 BGP: 3.3.3.3 KEEPALIVE rcvd
+#4.4.4.4#2015/07/27 01:03:30  127.010853 BGP: 3.3.3.3 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:03:30  127.699539 BGP: 3.3.3.3 [FSM] Timer (keepalive timer expire)
+#2.2.2.2#2015/07/27 01:03:30  127.699539 BGP: 3.3.3.3 [FSM] KeepAlive_timer_expired (Established->Established)
+#2.2.2.2#2015/07/27 01:03:30  127.699539 BGP: 3.3.3.3 sending KEEPALIVE
+#2.2.2.2#2015/07/27 01:03:30  127.699539 BGP: 3.3.3.3 send message type 4, length (incl. header) 19
+#3.3.3.3#2015/07/27 01:03:30  127.700854 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+#3.3.3.3#2015/07/27 01:03:30  127.700854 BGP: 2.2.2.2 KEEPALIVE rcvd
+#3.3.3.3#2015/07/27 01:03:30  127.700854 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:03:30  127.700992 BGP: 2.2.2.2 [FSM] Timer (keepalive timer expire)
+#3.3.3.3#2015/07/27 01:03:30  127.700992 BGP: 2.2.2.2 [FSM] KeepAlive_timer_expired (Established->Established)
+#3.3.3.3#2015/07/27 01:03:30  127.700992 BGP: 2.2.2.2 sending KEEPALIVE
+#3.3.3.3#2015/07/27 01:03:30  127.700992 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+#2.2.2.2#2015/07/27 01:03:30  127.702307 BGP: 3.3.3.3 rcv message type 4, length (excl. header) 0
+#2.2.2.2#2015/07/27 01:03:30  127.702307 BGP: 3.3.3.3 KEEPALIVE rcvd
+#2.2.2.2#2015/07/27 01:03:30  127.702307 BGP: 3.3.3.3 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:03:31  128.228935 BGP: 1.1.1.1 [FSM] Timer (keepalive timer expire)
+#2.2.2.2#2015/07/27 01:03:31  128.228935 BGP: 1.1.1.1 [FSM] KeepAlive_timer_expired (Established->Established)
+#2.2.2.2#2015/07/27 01:03:31  128.228935 BGP: 1.1.1.1 sending KEEPALIVE
+#2.2.2.2#2015/07/27 01:03:31  128.228935 BGP: 1.1.1.1 send message type 4, length (incl. header) 19
+#1.1.1.1#2015/07/27 01:03:31  128.230250 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+#1.1.1.1#2015/07/27 01:03:31  128.230250 BGP: 2.2.2.2 KEEPALIVE rcvd
+#1.1.1.1#2015/07/27 01:03:31  128.230250 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:03:31  128.230388 BGP: 2.2.2.2 [FSM] Timer (keepalive timer expire)
+#1.1.1.1#2015/07/27 01:03:31  128.230388 BGP: 2.2.2.2 [FSM] KeepAlive_timer_expired (Established->Established)
+#1.1.1.1#2015/07/27 01:03:31  128.230388 BGP: 2.2.2.2 sending KEEPALIVE
+#1.1.1.1#2015/07/27 01:03:31  128.230388 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+#2.2.2.2#2015/07/27 01:03:31  128.231703 BGP: 1.1.1.1 rcv message type 4, length (excl. header) 0
+#2.2.2.2#2015/07/27 01:03:31  128.231703 BGP: 1.1.1.1 KEEPALIVE rcvd
+#2.2.2.2#2015/07/27 01:03:31  128.231703 BGP: 1.1.1.1 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:03:43  140.001453 BGP: 2.2.2.2 [FSM] Timer (routeadv timer expire)
+#3.3.3.3#2015/07/27 01:03:43  140.001453 BGP: 2.2.2.2 send UPDATE 10.0.3.0/24 nexthop 3.3.3.3, origin i, path 1 4
+#1.1.1.1#2015/07/27 01:03:43  140.001453 BGP: 3.3.3.3 [FSM] Timer (routeadv timer expire)
+#1.1.1.1#2015/07/27 01:03:43  140.001453 BGP: 3.3.3.3 send UPDATE 10.0.3.0/24 nexthop 1.1.1.1, origin i, path 2 4
+#2.2.2.2#2015/07/27 01:03:43  140.001453 BGP: 1.1.1.1 [FSM] Timer (routeadv timer expire)
+#2.2.2.2#2015/07/27 01:03:43  140.001453 BGP: 1.1.1.1 send UPDATE 10.0.3.0/24 nexthop 2.2.2.2, origin i, path 3 4
+#2.2.2.2#2015/07/27 01:03:43  140.002928 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 3.3.3.3, origin i, path 3 1 4
+#2.2.2.2#2015/07/27 01:03:43  140.002928 BGP: 3.3.3.3 rcvd 10.0.3.0/24
+#2.2.2.2#2015/07/27 01:03:43  140.002928 BGP: 1.1.1.1 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#2.2.2.2#2015/07/27 01:03:43  140.002928 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 nexthop 2.2.2.2, origin i, path 3 1 4
+#3.3.3.3#2015/07/27 01:03:43  140.002928 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 1.1.1.1, origin i, path 1 2 4
+#3.3.3.3#2015/07/27 01:03:43  140.002928 BGP: 1.1.1.1 rcvd 10.0.3.0/24
+#3.3.3.3#2015/07/27 01:03:43  140.002928 BGP: 2.2.2.2 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#3.3.3.3#2015/07/27 01:03:43  140.002928 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 nexthop 3.3.3.3, origin i, path 1 2 4
+#1.1.1.1#2015/07/27 01:03:43  140.002928 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, path 2 3 4
+#1.1.1.1#2015/07/27 01:03:43  140.002928 BGP: 2.2.2.2 rcvd 10.0.3.0/24
+#1.1.1.1#2015/07/27 01:03:43  140.002928 BGP: 3.3.3.3 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#1.1.1.1#2015/07/27 01:03:43  140.002928 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 nexthop 1.1.1.1, origin i, path 2 3 4
+#2.2.2.2#2015/07/27 01:03:43  140.002928 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:03:43  140.002928 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:03:43  140.002928 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:03:43  140.004413 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, path 2 3 1 4
+#4.4.4.4#2015/07/27 01:03:43  140.004413 BGP: 2.2.2.2 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#4.4.4.4#2015/07/27 01:03:43  140.004413 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:03:43  140.004413 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 3.3.3.3, origin i, path 3 1 2 4
+#4.4.4.4#2015/07/27 01:03:43  140.004413 BGP: 3.3.3.3 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#4.4.4.4#2015/07/27 01:03:43  140.004413 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:03:43  140.004413 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 1.1.1.1, origin i, path 1 2 3 4
+#4.4.4.4#2015/07/27 01:03:43  140.004413 BGP: 1.1.1.1 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#4.4.4.4#2015/07/27 01:03:43  140.004413 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+>show ip bgp#1.1.1.1#
+BGP table version is 0, local router ID is 1.1.1.1#1.1.1.1#
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal#1.1.1.1#
+Origin codes: i - IGP, e - EGP, ? - incomplete#1.1.1.1#
+#1.1.1.1#
+   Network          Next Hop            Metric LocPrf Weight Path#1.1.1.1#
+*> 10.0.3.0/24         2.2.2.2                       100      0  2 3 4i#1.1.1.1#
+*                   4.4.4.4                        10      0  4i#1.1.1.1#
+#1.1.1.1#
+Total number of prefixes 1#1.1.1.1#
+>show ip bgp#2.2.2.2#
+BGP table version is 0, local router ID is 2.2.2.2#2.2.2.2#
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal#2.2.2.2#
+Origin codes: i - IGP, e - EGP, ? - incomplete#2.2.2.2#
+#2.2.2.2#
+   Network          Next Hop            Metric LocPrf Weight Path#2.2.2.2#
+*> 10.0.3.0/24         3.3.3.3                       100      0  3 1 4i#2.2.2.2#
+*                   4.4.4.4                        10      0  4i#2.2.2.2#
+#2.2.2.2#
+Total number of prefixes 1#2.2.2.2#
+>show ip bgp#3.3.3.3#
+BGP table version is 0, local router ID is 3.3.3.3#3.3.3.3#
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal#3.3.3.3#
+Origin codes: i - IGP, e - EGP, ? - incomplete#3.3.3.3#
+#3.3.3.3#
+   Network          Next Hop            Metric LocPrf Weight Path#3.3.3.3#
+*> 10.0.3.0/24         1.1.1.1                       100      0  1 2 4i#3.3.3.3#
+*                   4.4.4.4                        10      0  4i#3.3.3.3#
+#3.3.3.3#
+Total number of prefixes 1#3.3.3.3#
+#1.1.1.1#2015/07/27 01:04:13  170.001453 BGP: 3.3.3.3 [FSM] Timer (routeadv timer expire)
+#1.1.1.1#2015/07/27 01:04:13  170.001453 BGP: 3.3.3.3 send UPDATE 10.0.3.0/24 nexthop 1.1.1.1, origin i, path 2 3 4
+#2.2.2.2#2015/07/27 01:04:13  170.001453 BGP: 1.1.1.1 [FSM] Timer (routeadv timer expire)
+#2.2.2.2#2015/07/27 01:04:13  170.001453 BGP: 1.1.1.1 send UPDATE 10.0.3.0/24 nexthop 2.2.2.2, origin i, path 3 1 4
+#3.3.3.3#2015/07/27 01:04:13  170.001453 BGP: 2.2.2.2 [FSM] Timer (routeadv timer expire)
+#3.3.3.3#2015/07/27 01:04:13  170.001453 BGP: 2.2.2.2 send UPDATE 10.0.3.0/24 nexthop 3.3.3.3, origin i, path 1 2 4
+#3.3.3.3#2015/07/27 01:04:13  170.002939 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 1.1.1.1, origin i, path 1 2 3 4
+#3.3.3.3#2015/07/27 01:04:13  170.002939 BGP: 1.1.1.1 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#3.3.3.3#2015/07/27 01:04:13  170.002939 BGP: 1.1.1.1 send UPDATE 10.0.3.0/24 nexthop 3.3.3.3, origin i, path 4
+#3.3.3.3#2015/07/27 01:04:13  170.002939 BGP: 2.2.2.2 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#3.3.3.3#2015/07/27 01:04:13  170.002939 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 -- unreachable
+#1.1.1.1#2015/07/27 01:04:13  170.002939 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, path 2 3 1 4
+#1.1.1.1#2015/07/27 01:04:13  170.002939 BGP: 2.2.2.2 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#1.1.1.1#2015/07/27 01:04:13  170.002939 BGP: 2.2.2.2 send UPDATE 10.0.3.0/24 nexthop 1.1.1.1, origin i, path 4
+#1.1.1.1#2015/07/27 01:04:13  170.002939 BGP: 3.3.3.3 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#1.1.1.1#2015/07/27 01:04:13  170.002939 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 -- unreachable
+#2.2.2.2#2015/07/27 01:04:13  170.002939 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 3.3.3.3, origin i, path 3 1 2 4
+#2.2.2.2#2015/07/27 01:04:13  170.002939 BGP: 3.3.3.3 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#2.2.2.2#2015/07/27 01:04:13  170.002939 BGP: 1.1.1.1 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#2.2.2.2#2015/07/27 01:04:13  170.002939 BGP: 3.3.3.3 send UPDATE 10.0.3.0/24 nexthop 2.2.2.2, origin i, path 4
+#2.2.2.2#2015/07/27 01:04:13  170.002939 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 -- unreachable
+#3.3.3.3#2015/07/27 01:04:13  170.002939 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:04:13  170.002939 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:04:13  170.002939 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:04:13  170.004296 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+#4.4.4.4#2015/07/27 01:04:13  170.004296 BGP: 3.3.3.3 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+#4.4.4.4#2015/07/27 01:04:13  170.004296 BGP: 3.3.3.3 Cant find the route 10.0.3.0/24
+#4.4.4.4#2015/07/27 01:04:13  170.004296 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:04:13  170.004296 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+#4.4.4.4#2015/07/27 01:04:13  170.004296 BGP: 1.1.1.1 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+#4.4.4.4#2015/07/27 01:04:13  170.004296 BGP: 1.1.1.1 Cant find the route 10.0.3.0/24
+#4.4.4.4#2015/07/27 01:04:13  170.004296 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:04:13  170.004296 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+#4.4.4.4#2015/07/27 01:04:13  170.004296 BGP: 2.2.2.2 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+#4.4.4.4#2015/07/27 01:04:13  170.004296 BGP: 2.2.2.2 Cant find the route 10.0.3.0/24
+#4.4.4.4#2015/07/27 01:04:13  170.004296 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:04:13  170.004403 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 3.3.3.3, origin i, path 3 4
+#1.1.1.1#2015/07/27 01:04:13  170.004403 BGP: 3.3.3.3 rcvd 10.0.3.0/24
+#2.2.2.2#2015/07/27 01:04:13  170.004403 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 1.1.1.1, origin i, path 1 4
+#2.2.2.2#2015/07/27 01:04:13  170.004403 BGP: 1.1.1.1 rcvd 10.0.3.0/24
+#3.3.3.3#2015/07/27 01:04:13  170.004403 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, path 2 4
+#3.3.3.3#2015/07/27 01:04:13  170.004403 BGP: 2.2.2.2 rcvd 10.0.3.0/24
+#1.1.1.1#2015/07/27 01:04:13  170.004403 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:04:13  170.004403 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:04:13  170.004403 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:04:28  185.999905 BGP: 4.4.4.4 [FSM] Timer (keepalive timer expire)
+#1.1.1.1#2015/07/27 01:04:28  185.999905 BGP: 4.4.4.4 [FSM] KeepAlive_timer_expired (Established->Established)
+#1.1.1.1#2015/07/27 01:04:28  185.999905 BGP: 4.4.4.4 sending KEEPALIVE
+#1.1.1.1#2015/07/27 01:04:28  185.999905 BGP: 4.4.4.4 send message type 4, length (incl. header) 19
+#4.4.4.4#2015/07/27 01:04:29  186.001219 BGP: 1.1.1.1 rcv message type 4, length (excl. header) 0
+#4.4.4.4#2015/07/27 01:04:29  186.001219 BGP: 1.1.1.1 KEEPALIVE rcvd
+#4.4.4.4#2015/07/27 01:04:29  186.001219 BGP: 1.1.1.1 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:04:29  186.001358 BGP: 1.1.1.1 [FSM] Timer (keepalive timer expire)
+#4.4.4.4#2015/07/27 01:04:29  186.001358 BGP: 1.1.1.1 [FSM] KeepAlive_timer_expired (Established->Established)
+#4.4.4.4#2015/07/27 01:04:29  186.001358 BGP: 1.1.1.1 sending KEEPALIVE
+#4.4.4.4#2015/07/27 01:04:29  186.001358 BGP: 1.1.1.1 send message type 4, length (incl. header) 19
+#1.1.1.1#2015/07/27 01:04:29  186.002673 BGP: 4.4.4.4 rcv message type 4, length (excl. header) 0
+#1.1.1.1#2015/07/27 01:04:29  186.002673 BGP: 4.4.4.4 KEEPALIVE rcvd
+#1.1.1.1#2015/07/27 01:04:29  186.002673 BGP: 4.4.4.4 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:04:29  186.167985 BGP: 4.4.4.4 [FSM] Timer (keepalive timer expire)
+#2.2.2.2#2015/07/27 01:04:29  186.167985 BGP: 4.4.4.4 [FSM] KeepAlive_timer_expired (Established->Established)
+#2.2.2.2#2015/07/27 01:04:29  186.167985 BGP: 4.4.4.4 sending KEEPALIVE
+#2.2.2.2#2015/07/27 01:04:29  186.167985 BGP: 4.4.4.4 send message type 4, length (incl. header) 19
+#4.4.4.4#2015/07/27 01:04:29  186.169299 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+#4.4.4.4#2015/07/27 01:04:29  186.169299 BGP: 2.2.2.2 KEEPALIVE rcvd
+#4.4.4.4#2015/07/27 01:04:29  186.169299 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:04:29  186.169438 BGP: 2.2.2.2 [FSM] Timer (keepalive timer expire)
+#4.4.4.4#2015/07/27 01:04:29  186.169438 BGP: 2.2.2.2 [FSM] KeepAlive_timer_expired (Established->Established)
+#4.4.4.4#2015/07/27 01:04:29  186.169438 BGP: 2.2.2.2 sending KEEPALIVE
+#4.4.4.4#2015/07/27 01:04:29  186.169438 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+#2.2.2.2#2015/07/27 01:04:29  186.170753 BGP: 4.4.4.4 rcv message type 4, length (excl. header) 0
+#2.2.2.2#2015/07/27 01:04:29  186.170753 BGP: 4.4.4.4 KEEPALIVE rcvd
+#2.2.2.2#2015/07/27 01:04:29  186.170753 BGP: 4.4.4.4 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:04:29  186.591147 BGP: 1.1.1.1 [FSM] Timer (keepalive timer expire)
+#3.3.3.3#2015/07/27 01:04:29  186.591147 BGP: 1.1.1.1 [FSM] KeepAlive_timer_expired (Established->Established)
+#3.3.3.3#2015/07/27 01:04:29  186.591147 BGP: 1.1.1.1 sending KEEPALIVE
+#3.3.3.3#2015/07/27 01:04:29  186.591147 BGP: 1.1.1.1 send message type 4, length (incl. header) 19
+#1.1.1.1#2015/07/27 01:04:29  186.592462 BGP: 3.3.3.3 rcv message type 4, length (excl. header) 0
+#1.1.1.1#2015/07/27 01:04:29  186.592462 BGP: 3.3.3.3 KEEPALIVE rcvd
+#1.1.1.1#2015/07/27 01:04:29  186.592462 BGP: 3.3.3.3 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:04:29  186.592601 BGP: 3.3.3.3 [FSM] Timer (keepalive timer expire)
+#1.1.1.1#2015/07/27 01:04:29  186.592601 BGP: 3.3.3.3 [FSM] KeepAlive_timer_expired (Established->Established)
+#1.1.1.1#2015/07/27 01:04:29  186.592601 BGP: 3.3.3.3 sending KEEPALIVE
+#1.1.1.1#2015/07/27 01:04:29  186.592601 BGP: 3.3.3.3 send message type 4, length (incl. header) 19
+#3.3.3.3#2015/07/27 01:04:29  186.593915 BGP: 1.1.1.1 rcv message type 4, length (excl. header) 0
+#3.3.3.3#2015/07/27 01:04:29  186.593915 BGP: 1.1.1.1 KEEPALIVE rcvd
+#3.3.3.3#2015/07/27 01:04:29  186.593915 BGP: 1.1.1.1 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:04:30  187.008085 BGP: 3.3.3.3 [FSM] Timer (keepalive timer expire)
+#4.4.4.4#2015/07/27 01:04:30  187.008085 BGP: 3.3.3.3 [FSM] KeepAlive_timer_expired (Established->Established)
+#4.4.4.4#2015/07/27 01:04:30  187.008085 BGP: 3.3.3.3 sending KEEPALIVE
+#4.4.4.4#2015/07/27 01:04:30  187.008085 BGP: 3.3.3.3 send message type 4, length (incl. header) 19
+#3.3.3.3#2015/07/27 01:04:30  187.009399 BGP: 4.4.4.4 rcv message type 4, length (excl. header) 0
+#3.3.3.3#2015/07/27 01:04:30  187.009399 BGP: 4.4.4.4 KEEPALIVE rcvd
+#3.3.3.3#2015/07/27 01:04:30  187.009399 BGP: 4.4.4.4 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:04:30  187.009538 BGP: 4.4.4.4 [FSM] Timer (keepalive timer expire)
+#3.3.3.3#2015/07/27 01:04:30  187.009538 BGP: 4.4.4.4 [FSM] KeepAlive_timer_expired (Established->Established)
+#3.3.3.3#2015/07/27 01:04:30  187.009538 BGP: 4.4.4.4 sending KEEPALIVE
+#3.3.3.3#2015/07/27 01:04:30  187.009538 BGP: 4.4.4.4 send message type 4, length (incl. header) 19
+#4.4.4.4#2015/07/27 01:04:30  187.010853 BGP: 3.3.3.3 rcv message type 4, length (excl. header) 0
+#4.4.4.4#2015/07/27 01:04:30  187.010853 BGP: 3.3.3.3 KEEPALIVE rcvd
+#4.4.4.4#2015/07/27 01:04:30  187.010853 BGP: 3.3.3.3 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:04:30  187.699539 BGP: 3.3.3.3 [FSM] Timer (keepalive timer expire)
+#2.2.2.2#2015/07/27 01:04:30  187.699539 BGP: 3.3.3.3 [FSM] KeepAlive_timer_expired (Established->Established)
+#2.2.2.2#2015/07/27 01:04:30  187.699539 BGP: 3.3.3.3 sending KEEPALIVE
+#2.2.2.2#2015/07/27 01:04:30  187.699539 BGP: 3.3.3.3 send message type 4, length (incl. header) 19
+#3.3.3.3#2015/07/27 01:04:30  187.700854 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+#3.3.3.3#2015/07/27 01:04:30  187.700854 BGP: 2.2.2.2 KEEPALIVE rcvd
+#3.3.3.3#2015/07/27 01:04:30  187.700854 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:04:30  187.700992 BGP: 2.2.2.2 [FSM] Timer (keepalive timer expire)
+#3.3.3.3#2015/07/27 01:04:30  187.700992 BGP: 2.2.2.2 [FSM] KeepAlive_timer_expired (Established->Established)
+#3.3.3.3#2015/07/27 01:04:30  187.700992 BGP: 2.2.2.2 sending KEEPALIVE
+#3.3.3.3#2015/07/27 01:04:30  187.700992 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+#2.2.2.2#2015/07/27 01:04:30  187.702307 BGP: 3.3.3.3 rcv message type 4, length (excl. header) 0
+#2.2.2.2#2015/07/27 01:04:30  187.702307 BGP: 3.3.3.3 KEEPALIVE rcvd
+#2.2.2.2#2015/07/27 01:04:30  187.702307 BGP: 3.3.3.3 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:04:31  188.228935 BGP: 1.1.1.1 [FSM] Timer (keepalive timer expire)
+#2.2.2.2#2015/07/27 01:04:31  188.228935 BGP: 1.1.1.1 [FSM] KeepAlive_timer_expired (Established->Established)
+#2.2.2.2#2015/07/27 01:04:31  188.228935 BGP: 1.1.1.1 sending KEEPALIVE
+#2.2.2.2#2015/07/27 01:04:31  188.228935 BGP: 1.1.1.1 send message type 4, length (incl. header) 19
+#1.1.1.1#2015/07/27 01:04:31  188.230250 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+#1.1.1.1#2015/07/27 01:04:31  188.230250 BGP: 2.2.2.2 KEEPALIVE rcvd
+#1.1.1.1#2015/07/27 01:04:31  188.230250 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:04:31  188.230388 BGP: 2.2.2.2 [FSM] Timer (keepalive timer expire)
+#1.1.1.1#2015/07/27 01:04:31  188.230388 BGP: 2.2.2.2 [FSM] KeepAlive_timer_expired (Established->Established)
+#1.1.1.1#2015/07/27 01:04:31  188.230388 BGP: 2.2.2.2 sending KEEPALIVE
+#1.1.1.1#2015/07/27 01:04:31  188.230388 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+#2.2.2.2#2015/07/27 01:04:31  188.231703 BGP: 1.1.1.1 rcv message type 4, length (excl. header) 0
+#2.2.2.2#2015/07/27 01:04:31  188.231703 BGP: 1.1.1.1 KEEPALIVE rcvd
+#2.2.2.2#2015/07/27 01:04:31  188.231703 BGP: 1.1.1.1 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:04:43  200.001453 BGP: 2.2.2.2 [FSM] Timer (routeadv timer expire)
+#3.3.3.3#2015/07/27 01:04:43  200.001453 BGP: 2.2.2.2 send UPDATE 10.0.3.0/24 nexthop 3.3.3.3, origin i, path 4
+#1.1.1.1#2015/07/27 01:04:43  200.001453 BGP: 3.3.3.3 [FSM] Timer (routeadv timer expire)
+#1.1.1.1#2015/07/27 01:04:43  200.001453 BGP: 3.3.3.3 send UPDATE 10.0.3.0/24 nexthop 1.1.1.1, origin i, path 4
+#2.2.2.2#2015/07/27 01:04:43  200.001453 BGP: 1.1.1.1 [FSM] Timer (routeadv timer expire)
+#2.2.2.2#2015/07/27 01:04:43  200.001453 BGP: 1.1.1.1 send UPDATE 10.0.3.0/24 nexthop 2.2.2.2, origin i, path 4
+#2.2.2.2#2015/07/27 01:04:43  200.002917 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 3.3.3.3, origin i, path 3 4
+#2.2.2.2#2015/07/27 01:04:43  200.002917 BGP: 3.3.3.3 rcvd 10.0.3.0/24
+#2.2.2.2#2015/07/27 01:04:43  200.002917 BGP: 1.1.1.1 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#2.2.2.2#2015/07/27 01:04:43  200.002917 BGP: 3.3.3.3 send UPDATE 10.0.3.0/24 -- unreachable
+#2.2.2.2#2015/07/27 01:04:43  200.002917 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 nexthop 2.2.2.2, origin i, path 3 4
+#3.3.3.3#2015/07/27 01:04:43  200.002917 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 1.1.1.1, origin i, path 1 4
+#3.3.3.3#2015/07/27 01:04:43  200.002917 BGP: 1.1.1.1 rcvd 10.0.3.0/24
+#3.3.3.3#2015/07/27 01:04:43  200.002917 BGP: 1.1.1.1 send UPDATE 10.0.3.0/24 -- unreachable
+#3.3.3.3#2015/07/27 01:04:43  200.002917 BGP: 2.2.2.2 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#3.3.3.3#2015/07/27 01:04:43  200.002917 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 nexthop 3.3.3.3, origin i, path 1 4
+#1.1.1.1#2015/07/27 01:04:43  200.002917 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, path 2 4
+#1.1.1.1#2015/07/27 01:04:43  200.002917 BGP: 2.2.2.2 rcvd 10.0.3.0/24
+#1.1.1.1#2015/07/27 01:04:43  200.002917 BGP: 2.2.2.2 send UPDATE 10.0.3.0/24 -- unreachable
+#1.1.1.1#2015/07/27 01:04:43  200.002917 BGP: 3.3.3.3 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#1.1.1.1#2015/07/27 01:04:43  200.002917 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 nexthop 1.1.1.1, origin i, path 2 4
+#2.2.2.2#2015/07/27 01:04:43  200.002917 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:04:43  200.002917 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:04:43  200.002917 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:04:43  200.004275 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+#3.3.3.3#2015/07/27 01:04:43  200.004275 BGP: 2.2.2.2 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+#1.1.1.1#2015/07/27 01:04:43  200.004275 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+#1.1.1.1#2015/07/27 01:04:43  200.004275 BGP: 3.3.3.3 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+#2.2.2.2#2015/07/27 01:04:43  200.004275 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+#2.2.2.2#2015/07/27 01:04:43  200.004275 BGP: 1.1.1.1 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+#3.3.3.3#2015/07/27 01:04:43  200.004275 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:04:43  200.004275 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:04:43  200.004275 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:04:43  200.004392 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, path 2 3 4
+#4.4.4.4#2015/07/27 01:04:43  200.004392 BGP: 2.2.2.2 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#4.4.4.4#2015/07/27 01:04:43  200.004392 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:04:43  200.004392 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 3.3.3.3, origin i, path 3 1 4
+#4.4.4.4#2015/07/27 01:04:43  200.004392 BGP: 3.3.3.3 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#4.4.4.4#2015/07/27 01:04:43  200.004392 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:04:43  200.004392 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 1.1.1.1, origin i, path 1 2 4
+#4.4.4.4#2015/07/27 01:04:43  200.004392 BGP: 1.1.1.1 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#4.4.4.4#2015/07/27 01:04:43  200.004392 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:05:13  230.001453 BGP: 2.2.2.2 [FSM] Timer (routeadv timer expire)
+#3.3.3.3#2015/07/27 01:05:13  230.001453 BGP: 2.2.2.2 send UPDATE 10.0.3.0/24 nexthop 3.3.3.3, origin i, path 1 4
+#1.1.1.1#2015/07/27 01:05:13  230.001453 BGP: 3.3.3.3 [FSM] Timer (routeadv timer expire)
+#1.1.1.1#2015/07/27 01:05:13  230.001453 BGP: 3.3.3.3 send UPDATE 10.0.3.0/24 nexthop 1.1.1.1, origin i, path 2 4
+#2.2.2.2#2015/07/27 01:05:13  230.001453 BGP: 1.1.1.1 [FSM] Timer (routeadv timer expire)
+#2.2.2.2#2015/07/27 01:05:13  230.001453 BGP: 1.1.1.1 send UPDATE 10.0.3.0/24 nexthop 2.2.2.2, origin i, path 3 4
+#2.2.2.2#2015/07/27 01:05:13  230.002928 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 3.3.3.3, origin i, path 3 1 4
+#2.2.2.2#2015/07/27 01:05:13  230.002928 BGP: 3.3.3.3 rcvd 10.0.3.0/24
+#2.2.2.2#2015/07/27 01:05:13  230.002928 BGP: 1.1.1.1 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#2.2.2.2#2015/07/27 01:05:13  230.002928 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 nexthop 2.2.2.2, origin i, path 3 1 4
+#3.3.3.3#2015/07/27 01:05:13  230.002928 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 1.1.1.1, origin i, path 1 2 4
+#3.3.3.3#2015/07/27 01:05:13  230.002928 BGP: 1.1.1.1 rcvd 10.0.3.0/24
+#3.3.3.3#2015/07/27 01:05:13  230.002928 BGP: 2.2.2.2 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#3.3.3.3#2015/07/27 01:05:13  230.002928 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 nexthop 3.3.3.3, origin i, path 1 2 4
+#1.1.1.1#2015/07/27 01:05:13  230.002928 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, path 2 3 4
+#1.1.1.1#2015/07/27 01:05:13  230.002928 BGP: 2.2.2.2 rcvd 10.0.3.0/24
+#1.1.1.1#2015/07/27 01:05:13  230.002928 BGP: 3.3.3.3 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#1.1.1.1#2015/07/27 01:05:13  230.002928 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 nexthop 1.1.1.1, origin i, path 2 3 4
+#2.2.2.2#2015/07/27 01:05:13  230.002928 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:05:13  230.002928 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:05:13  230.002928 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:05:13  230.004413 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, path 2 3 1 4
+#4.4.4.4#2015/07/27 01:05:13  230.004413 BGP: 2.2.2.2 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#4.4.4.4#2015/07/27 01:05:13  230.004413 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:05:13  230.004413 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 3.3.3.3, origin i, path 3 1 2 4
+#4.4.4.4#2015/07/27 01:05:13  230.004413 BGP: 3.3.3.3 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#4.4.4.4#2015/07/27 01:05:13  230.004413 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:05:13  230.004413 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 1.1.1.1, origin i, path 1 2 3 4
+#4.4.4.4#2015/07/27 01:05:13  230.004413 BGP: 1.1.1.1 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#4.4.4.4#2015/07/27 01:05:13  230.004413 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:05:28  245.999905 BGP: 4.4.4.4 [FSM] Timer (keepalive timer expire)
+#1.1.1.1#2015/07/27 01:05:28  245.999905 BGP: 4.4.4.4 [FSM] KeepAlive_timer_expired (Established->Established)
+#1.1.1.1#2015/07/27 01:05:28  245.999905 BGP: 4.4.4.4 sending KEEPALIVE
+#1.1.1.1#2015/07/27 01:05:28  245.999905 BGP: 4.4.4.4 send message type 4, length (incl. header) 19
+#4.4.4.4#2015/07/27 01:05:29  246.001219 BGP: 1.1.1.1 rcv message type 4, length (excl. header) 0
+#4.4.4.4#2015/07/27 01:05:29  246.001219 BGP: 1.1.1.1 KEEPALIVE rcvd
+#4.4.4.4#2015/07/27 01:05:29  246.001219 BGP: 1.1.1.1 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:05:29  246.001358 BGP: 1.1.1.1 [FSM] Timer (keepalive timer expire)
+#4.4.4.4#2015/07/27 01:05:29  246.001358 BGP: 1.1.1.1 [FSM] KeepAlive_timer_expired (Established->Established)
+#4.4.4.4#2015/07/27 01:05:29  246.001358 BGP: 1.1.1.1 sending KEEPALIVE
+#4.4.4.4#2015/07/27 01:05:29  246.001358 BGP: 1.1.1.1 send message type 4, length (incl. header) 19
+#1.1.1.1#2015/07/27 01:05:29  246.002673 BGP: 4.4.4.4 rcv message type 4, length (excl. header) 0
+#1.1.1.1#2015/07/27 01:05:29  246.002673 BGP: 4.4.4.4 KEEPALIVE rcvd
+#1.1.1.1#2015/07/27 01:05:29  246.002673 BGP: 4.4.4.4 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:05:29  246.167985 BGP: 4.4.4.4 [FSM] Timer (keepalive timer expire)
+#2.2.2.2#2015/07/27 01:05:29  246.167985 BGP: 4.4.4.4 [FSM] KeepAlive_timer_expired (Established->Established)
+#2.2.2.2#2015/07/27 01:05:29  246.167985 BGP: 4.4.4.4 sending KEEPALIVE
+#2.2.2.2#2015/07/27 01:05:29  246.167985 BGP: 4.4.4.4 send message type 4, length (incl. header) 19
+#4.4.4.4#2015/07/27 01:05:29  246.169299 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+#4.4.4.4#2015/07/27 01:05:29  246.169299 BGP: 2.2.2.2 KEEPALIVE rcvd
+#4.4.4.4#2015/07/27 01:05:29  246.169299 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:05:29  246.169438 BGP: 2.2.2.2 [FSM] Timer (keepalive timer expire)
+#4.4.4.4#2015/07/27 01:05:29  246.169438 BGP: 2.2.2.2 [FSM] KeepAlive_timer_expired (Established->Established)
+#4.4.4.4#2015/07/27 01:05:29  246.169438 BGP: 2.2.2.2 sending KEEPALIVE
+#4.4.4.4#2015/07/27 01:05:29  246.169438 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+#2.2.2.2#2015/07/27 01:05:29  246.170753 BGP: 4.4.4.4 rcv message type 4, length (excl. header) 0
+#2.2.2.2#2015/07/27 01:05:29  246.170753 BGP: 4.4.4.4 KEEPALIVE rcvd
+#2.2.2.2#2015/07/27 01:05:29  246.170753 BGP: 4.4.4.4 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:05:29  246.591147 BGP: 1.1.1.1 [FSM] Timer (keepalive timer expire)
+#3.3.3.3#2015/07/27 01:05:29  246.591147 BGP: 1.1.1.1 [FSM] KeepAlive_timer_expired (Established->Established)
+#3.3.3.3#2015/07/27 01:05:29  246.591147 BGP: 1.1.1.1 sending KEEPALIVE
+#3.3.3.3#2015/07/27 01:05:29  246.591147 BGP: 1.1.1.1 send message type 4, length (incl. header) 19
+#1.1.1.1#2015/07/27 01:05:29  246.592462 BGP: 3.3.3.3 rcv message type 4, length (excl. header) 0
+#1.1.1.1#2015/07/27 01:05:29  246.592462 BGP: 3.3.3.3 KEEPALIVE rcvd
+#1.1.1.1#2015/07/27 01:05:29  246.592462 BGP: 3.3.3.3 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:05:29  246.592601 BGP: 3.3.3.3 [FSM] Timer (keepalive timer expire)
+#1.1.1.1#2015/07/27 01:05:29  246.592601 BGP: 3.3.3.3 [FSM] KeepAlive_timer_expired (Established->Established)
+#1.1.1.1#2015/07/27 01:05:29  246.592601 BGP: 3.3.3.3 sending KEEPALIVE
+#1.1.1.1#2015/07/27 01:05:29  246.592601 BGP: 3.3.3.3 send message type 4, length (incl. header) 19
+#3.3.3.3#2015/07/27 01:05:29  246.593915 BGP: 1.1.1.1 rcv message type 4, length (excl. header) 0
+#3.3.3.3#2015/07/27 01:05:29  246.593915 BGP: 1.1.1.1 KEEPALIVE rcvd
+#3.3.3.3#2015/07/27 01:05:29  246.593915 BGP: 1.1.1.1 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:05:30  247.008085 BGP: 3.3.3.3 [FSM] Timer (keepalive timer expire)
+#4.4.4.4#2015/07/27 01:05:30  247.008085 BGP: 3.3.3.3 [FSM] KeepAlive_timer_expired (Established->Established)
+#4.4.4.4#2015/07/27 01:05:30  247.008085 BGP: 3.3.3.3 sending KEEPALIVE
+#4.4.4.4#2015/07/27 01:05:30  247.008085 BGP: 3.3.3.3 send message type 4, length (incl. header) 19
+#3.3.3.3#2015/07/27 01:05:30  247.009399 BGP: 4.4.4.4 rcv message type 4, length (excl. header) 0
+#3.3.3.3#2015/07/27 01:05:30  247.009399 BGP: 4.4.4.4 KEEPALIVE rcvd
+#3.3.3.3#2015/07/27 01:05:30  247.009399 BGP: 4.4.4.4 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:05:30  247.009538 BGP: 4.4.4.4 [FSM] Timer (keepalive timer expire)
+#3.3.3.3#2015/07/27 01:05:30  247.009538 BGP: 4.4.4.4 [FSM] KeepAlive_timer_expired (Established->Established)
+#3.3.3.3#2015/07/27 01:05:30  247.009538 BGP: 4.4.4.4 sending KEEPALIVE
+#3.3.3.3#2015/07/27 01:05:30  247.009538 BGP: 4.4.4.4 send message type 4, length (incl. header) 19
+#4.4.4.4#2015/07/27 01:05:30  247.010853 BGP: 3.3.3.3 rcv message type 4, length (excl. header) 0
+#4.4.4.4#2015/07/27 01:05:30  247.010853 BGP: 3.3.3.3 KEEPALIVE rcvd
+#4.4.4.4#2015/07/27 01:05:30  247.010853 BGP: 3.3.3.3 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:05:30  247.699539 BGP: 3.3.3.3 [FSM] Timer (keepalive timer expire)
+#2.2.2.2#2015/07/27 01:05:30  247.699539 BGP: 3.3.3.3 [FSM] KeepAlive_timer_expired (Established->Established)
+#2.2.2.2#2015/07/27 01:05:30  247.699539 BGP: 3.3.3.3 sending KEEPALIVE
+#2.2.2.2#2015/07/27 01:05:30  247.699539 BGP: 3.3.3.3 send message type 4, length (incl. header) 19
+#3.3.3.3#2015/07/27 01:05:30  247.700854 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+#3.3.3.3#2015/07/27 01:05:30  247.700854 BGP: 2.2.2.2 KEEPALIVE rcvd
+#3.3.3.3#2015/07/27 01:05:30  247.700854 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:05:30  247.700992 BGP: 2.2.2.2 [FSM] Timer (keepalive timer expire)
+#3.3.3.3#2015/07/27 01:05:30  247.700992 BGP: 2.2.2.2 [FSM] KeepAlive_timer_expired (Established->Established)
+#3.3.3.3#2015/07/27 01:05:30  247.700992 BGP: 2.2.2.2 sending KEEPALIVE
+#3.3.3.3#2015/07/27 01:05:30  247.700992 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+#2.2.2.2#2015/07/27 01:05:30  247.702307 BGP: 3.3.3.3 rcv message type 4, length (excl. header) 0
+#2.2.2.2#2015/07/27 01:05:30  247.702307 BGP: 3.3.3.3 KEEPALIVE rcvd
+#2.2.2.2#2015/07/27 01:05:30  247.702307 BGP: 3.3.3.3 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:05:31  248.228935 BGP: 1.1.1.1 [FSM] Timer (keepalive timer expire)
+#2.2.2.2#2015/07/27 01:05:31  248.228935 BGP: 1.1.1.1 [FSM] KeepAlive_timer_expired (Established->Established)
+#2.2.2.2#2015/07/27 01:05:31  248.228935 BGP: 1.1.1.1 sending KEEPALIVE
+#2.2.2.2#2015/07/27 01:05:31  248.228935 BGP: 1.1.1.1 send message type 4, length (incl. header) 19
+#1.1.1.1#2015/07/27 01:05:31  248.230250 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+#1.1.1.1#2015/07/27 01:05:31  248.230250 BGP: 2.2.2.2 KEEPALIVE rcvd
+#1.1.1.1#2015/07/27 01:05:31  248.230250 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:05:31  248.230388 BGP: 2.2.2.2 [FSM] Timer (keepalive timer expire)
+#1.1.1.1#2015/07/27 01:05:31  248.230388 BGP: 2.2.2.2 [FSM] KeepAlive_timer_expired (Established->Established)
+#1.1.1.1#2015/07/27 01:05:31  248.230388 BGP: 2.2.2.2 sending KEEPALIVE
+#1.1.1.1#2015/07/27 01:05:31  248.230388 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+#2.2.2.2#2015/07/27 01:05:31  248.231703 BGP: 1.1.1.1 rcv message type 4, length (excl. header) 0
+#2.2.2.2#2015/07/27 01:05:31  248.231703 BGP: 1.1.1.1 KEEPALIVE rcvd
+#2.2.2.2#2015/07/27 01:05:31  248.231703 BGP: 1.1.1.1 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:05:43  260.001453 BGP: 2.2.2.2 [FSM] Timer (routeadv timer expire)
+#3.3.3.3#2015/07/27 01:05:43  260.001453 BGP: 2.2.2.2 send UPDATE 10.0.3.0/24 nexthop 3.3.3.3, origin i, path 1 2 4
+#1.1.1.1#2015/07/27 01:05:43  260.001453 BGP: 3.3.3.3 [FSM] Timer (routeadv timer expire)
+#1.1.1.1#2015/07/27 01:05:43  260.001453 BGP: 3.3.3.3 send UPDATE 10.0.3.0/24 nexthop 1.1.1.1, origin i, path 2 3 4
+#2.2.2.2#2015/07/27 01:05:43  260.001453 BGP: 1.1.1.1 [FSM] Timer (routeadv timer expire)
+#2.2.2.2#2015/07/27 01:05:43  260.001453 BGP: 1.1.1.1 send UPDATE 10.0.3.0/24 nexthop 2.2.2.2, origin i, path 3 1 4
+#2.2.2.2#2015/07/27 01:05:43  260.002939 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 3.3.3.3, origin i, path 3 1 2 4
+#2.2.2.2#2015/07/27 01:05:43  260.002939 BGP: 3.3.3.3 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#2.2.2.2#2015/07/27 01:05:43  260.002939 BGP: 1.1.1.1 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#2.2.2.2#2015/07/27 01:05:43  260.002939 BGP: 3.3.3.3 send UPDATE 10.0.3.0/24 nexthop 2.2.2.2, origin i, path 4
+#2.2.2.2#2015/07/27 01:05:43  260.002939 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 -- unreachable
+#3.3.3.3#2015/07/27 01:05:43  260.002939 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 1.1.1.1, origin i, path 1 2 3 4
+#3.3.3.3#2015/07/27 01:05:43  260.002939 BGP: 1.1.1.1 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#3.3.3.3#2015/07/27 01:05:43  260.002939 BGP: 1.1.1.1 send UPDATE 10.0.3.0/24 nexthop 3.3.3.3, origin i, path 4
+#3.3.3.3#2015/07/27 01:05:43  260.002939 BGP: 2.2.2.2 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#3.3.3.3#2015/07/27 01:05:43  260.002939 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 -- unreachable
+#1.1.1.1#2015/07/27 01:05:43  260.002939 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, path 2 3 1 4
+#1.1.1.1#2015/07/27 01:05:43  260.002939 BGP: 2.2.2.2 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#1.1.1.1#2015/07/27 01:05:43  260.002939 BGP: 2.2.2.2 send UPDATE 10.0.3.0/24 nexthop 1.1.1.1, origin i, path 4
+#1.1.1.1#2015/07/27 01:05:43  260.002939 BGP: 3.3.3.3 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#1.1.1.1#2015/07/27 01:05:43  260.002939 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 -- unreachable
+#2.2.2.2#2015/07/27 01:05:43  260.002939 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:05:43  260.002939 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:05:43  260.002939 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:05:43  260.004296 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+#4.4.4.4#2015/07/27 01:05:43  260.004296 BGP: 2.2.2.2 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+#4.4.4.4#2015/07/27 01:05:43  260.004296 BGP: 2.2.2.2 Cant find the route 10.0.3.0/24
+#4.4.4.4#2015/07/27 01:05:43  260.004296 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:05:43  260.004296 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+#4.4.4.4#2015/07/27 01:05:43  260.004296 BGP: 3.3.3.3 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+#4.4.4.4#2015/07/27 01:05:43  260.004296 BGP: 3.3.3.3 Cant find the route 10.0.3.0/24
+#4.4.4.4#2015/07/27 01:05:43  260.004296 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:05:43  260.004296 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+#4.4.4.4#2015/07/27 01:05:43  260.004296 BGP: 1.1.1.1 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+#4.4.4.4#2015/07/27 01:05:43  260.004296 BGP: 1.1.1.1 Cant find the route 10.0.3.0/24
+#4.4.4.4#2015/07/27 01:05:43  260.004296 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:05:43  260.004403 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, path 2 4
+#3.3.3.3#2015/07/27 01:05:43  260.004403 BGP: 2.2.2.2 rcvd 10.0.3.0/24
+#1.1.1.1#2015/07/27 01:05:43  260.004403 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 3.3.3.3, origin i, path 3 4
+#1.1.1.1#2015/07/27 01:05:43  260.004403 BGP: 3.3.3.3 rcvd 10.0.3.0/24
+#2.2.2.2#2015/07/27 01:05:43  260.004403 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 1.1.1.1, origin i, path 1 4
+#2.2.2.2#2015/07/27 01:05:43  260.004403 BGP: 1.1.1.1 rcvd 10.0.3.0/24
+#3.3.3.3#2015/07/27 01:05:43  260.004403 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:05:43  260.004403 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:05:43  260.004403 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:06:13  290.001453 BGP: 2.2.2.2 [FSM] Timer (routeadv timer expire)
+#3.3.3.3#2015/07/27 01:06:13  290.001453 BGP: 2.2.2.2 send UPDATE 10.0.3.0/24 nexthop 3.3.3.3, origin i, path 4
+#1.1.1.1#2015/07/27 01:06:13  290.001453 BGP: 3.3.3.3 [FSM] Timer (routeadv timer expire)
+#1.1.1.1#2015/07/27 01:06:13  290.001453 BGP: 3.3.3.3 send UPDATE 10.0.3.0/24 nexthop 1.1.1.1, origin i, path 4
+#2.2.2.2#2015/07/27 01:06:13  290.001453 BGP: 1.1.1.1 [FSM] Timer (routeadv timer expire)
+#2.2.2.2#2015/07/27 01:06:13  290.001453 BGP: 1.1.1.1 send UPDATE 10.0.3.0/24 nexthop 2.2.2.2, origin i, path 4
+#2.2.2.2#2015/07/27 01:06:13  290.002917 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 3.3.3.3, origin i, path 3 4
+#2.2.2.2#2015/07/27 01:06:13  290.002917 BGP: 3.3.3.3 rcvd 10.0.3.0/24
+#2.2.2.2#2015/07/27 01:06:13  290.002917 BGP: 1.1.1.1 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#2.2.2.2#2015/07/27 01:06:13  290.002917 BGP: 3.3.3.3 send UPDATE 10.0.3.0/24 -- unreachable
+#2.2.2.2#2015/07/27 01:06:13  290.002917 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 nexthop 2.2.2.2, origin i, path 3 4
+#3.3.3.3#2015/07/27 01:06:13  290.002917 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 1.1.1.1, origin i, path 1 4
+#3.3.3.3#2015/07/27 01:06:13  290.002917 BGP: 1.1.1.1 rcvd 10.0.3.0/24
+#3.3.3.3#2015/07/27 01:06:13  290.002917 BGP: 1.1.1.1 send UPDATE 10.0.3.0/24 -- unreachable
+#3.3.3.3#2015/07/27 01:06:13  290.002917 BGP: 2.2.2.2 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#3.3.3.3#2015/07/27 01:06:13  290.002917 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 nexthop 3.3.3.3, origin i, path 1 4
+#1.1.1.1#2015/07/27 01:06:13  290.002917 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, path 2 4
+#1.1.1.1#2015/07/27 01:06:13  290.002917 BGP: 2.2.2.2 rcvd 10.0.3.0/24
+#1.1.1.1#2015/07/27 01:06:13  290.002917 BGP: 2.2.2.2 send UPDATE 10.0.3.0/24 -- unreachable
+#1.1.1.1#2015/07/27 01:06:13  290.002917 BGP: 3.3.3.3 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#1.1.1.1#2015/07/27 01:06:13  290.002917 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 nexthop 1.1.1.1, origin i, path 2 4
+#2.2.2.2#2015/07/27 01:06:13  290.002917 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:06:13  290.002917 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:06:13  290.002917 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:06:13  290.004275 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+#3.3.3.3#2015/07/27 01:06:13  290.004275 BGP: 2.2.2.2 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+#1.1.1.1#2015/07/27 01:06:13  290.004275 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+#1.1.1.1#2015/07/27 01:06:13  290.004275 BGP: 3.3.3.3 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+#2.2.2.2#2015/07/27 01:06:13  290.004275 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+#2.2.2.2#2015/07/27 01:06:13  290.004275 BGP: 1.1.1.1 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+#3.3.3.3#2015/07/27 01:06:13  290.004275 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:06:13  290.004275 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:06:13  290.004275 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:06:13  290.004392 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, path 2 3 4
+#4.4.4.4#2015/07/27 01:06:13  290.004392 BGP: 2.2.2.2 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#4.4.4.4#2015/07/27 01:06:13  290.004392 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:06:13  290.004392 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 3.3.3.3, origin i, path 3 1 4
+#4.4.4.4#2015/07/27 01:06:13  290.004392 BGP: 3.3.3.3 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#4.4.4.4#2015/07/27 01:06:13  290.004392 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:06:13  290.004392 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 1.1.1.1, origin i, path 1 2 4
+#4.4.4.4#2015/07/27 01:06:13  290.004392 BGP: 1.1.1.1 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#4.4.4.4#2015/07/27 01:06:13  290.004392 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:06:28  305.999905 BGP: 4.4.4.4 [FSM] Timer (keepalive timer expire)
+#1.1.1.1#2015/07/27 01:06:28  305.999905 BGP: 4.4.4.4 [FSM] KeepAlive_timer_expired (Established->Established)
+#1.1.1.1#2015/07/27 01:06:28  305.999905 BGP: 4.4.4.4 sending KEEPALIVE
+#1.1.1.1#2015/07/27 01:06:28  305.999905 BGP: 4.4.4.4 send message type 4, length (incl. header) 19
+#4.4.4.4#2015/07/27 01:06:29  306.001219 BGP: 1.1.1.1 rcv message type 4, length (excl. header) 0
+#4.4.4.4#2015/07/27 01:06:29  306.001219 BGP: 1.1.1.1 KEEPALIVE rcvd
+#4.4.4.4#2015/07/27 01:06:29  306.001219 BGP: 1.1.1.1 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:06:29  306.001358 BGP: 1.1.1.1 [FSM] Timer (keepalive timer expire)
+#4.4.4.4#2015/07/27 01:06:29  306.001358 BGP: 1.1.1.1 [FSM] KeepAlive_timer_expired (Established->Established)
+#4.4.4.4#2015/07/27 01:06:29  306.001358 BGP: 1.1.1.1 sending KEEPALIVE
+#4.4.4.4#2015/07/27 01:06:29  306.001358 BGP: 1.1.1.1 send message type 4, length (incl. header) 19
+#1.1.1.1#2015/07/27 01:06:29  306.002673 BGP: 4.4.4.4 rcv message type 4, length (excl. header) 0
+#1.1.1.1#2015/07/27 01:06:29  306.002673 BGP: 4.4.4.4 KEEPALIVE rcvd
+#1.1.1.1#2015/07/27 01:06:29  306.002673 BGP: 4.4.4.4 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:06:29  306.167985 BGP: 4.4.4.4 [FSM] Timer (keepalive timer expire)
+#2.2.2.2#2015/07/27 01:06:29  306.167985 BGP: 4.4.4.4 [FSM] KeepAlive_timer_expired (Established->Established)
+#2.2.2.2#2015/07/27 01:06:29  306.167985 BGP: 4.4.4.4 sending KEEPALIVE
+#2.2.2.2#2015/07/27 01:06:29  306.167985 BGP: 4.4.4.4 send message type 4, length (incl. header) 19
+#4.4.4.4#2015/07/27 01:06:29  306.169299 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+#4.4.4.4#2015/07/27 01:06:29  306.169299 BGP: 2.2.2.2 KEEPALIVE rcvd
+#4.4.4.4#2015/07/27 01:06:29  306.169299 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:06:29  306.169438 BGP: 2.2.2.2 [FSM] Timer (keepalive timer expire)
+#4.4.4.4#2015/07/27 01:06:29  306.169438 BGP: 2.2.2.2 [FSM] KeepAlive_timer_expired (Established->Established)
+#4.4.4.4#2015/07/27 01:06:29  306.169438 BGP: 2.2.2.2 sending KEEPALIVE
+#4.4.4.4#2015/07/27 01:06:29  306.169438 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+#2.2.2.2#2015/07/27 01:06:29  306.170753 BGP: 4.4.4.4 rcv message type 4, length (excl. header) 0
+#2.2.2.2#2015/07/27 01:06:29  306.170753 BGP: 4.4.4.4 KEEPALIVE rcvd
+#2.2.2.2#2015/07/27 01:06:29  306.170753 BGP: 4.4.4.4 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:06:29  306.591147 BGP: 1.1.1.1 [FSM] Timer (keepalive timer expire)
+#3.3.3.3#2015/07/27 01:06:29  306.591147 BGP: 1.1.1.1 [FSM] KeepAlive_timer_expired (Established->Established)
+#3.3.3.3#2015/07/27 01:06:29  306.591147 BGP: 1.1.1.1 sending KEEPALIVE
+#3.3.3.3#2015/07/27 01:06:29  306.591147 BGP: 1.1.1.1 send message type 4, length (incl. header) 19
+#1.1.1.1#2015/07/27 01:06:29  306.592462 BGP: 3.3.3.3 rcv message type 4, length (excl. header) 0
+#1.1.1.1#2015/07/27 01:06:29  306.592462 BGP: 3.3.3.3 KEEPALIVE rcvd
+#1.1.1.1#2015/07/27 01:06:29  306.592462 BGP: 3.3.3.3 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:06:29  306.592601 BGP: 3.3.3.3 [FSM] Timer (keepalive timer expire)
+#1.1.1.1#2015/07/27 01:06:29  306.592601 BGP: 3.3.3.3 [FSM] KeepAlive_timer_expired (Established->Established)
+#1.1.1.1#2015/07/27 01:06:29  306.592601 BGP: 3.3.3.3 sending KEEPALIVE
+#1.1.1.1#2015/07/27 01:06:29  306.592601 BGP: 3.3.3.3 send message type 4, length (incl. header) 19
+#3.3.3.3#2015/07/27 01:06:29  306.593915 BGP: 1.1.1.1 rcv message type 4, length (excl. header) 0
+#3.3.3.3#2015/07/27 01:06:29  306.593915 BGP: 1.1.1.1 KEEPALIVE rcvd
+#3.3.3.3#2015/07/27 01:06:29  306.593915 BGP: 1.1.1.1 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:06:30  307.008085 BGP: 3.3.3.3 [FSM] Timer (keepalive timer expire)
+#4.4.4.4#2015/07/27 01:06:30  307.008085 BGP: 3.3.3.3 [FSM] KeepAlive_timer_expired (Established->Established)
+#4.4.4.4#2015/07/27 01:06:30  307.008085 BGP: 3.3.3.3 sending KEEPALIVE
+#4.4.4.4#2015/07/27 01:06:30  307.008085 BGP: 3.3.3.3 send message type 4, length (incl. header) 19
+#3.3.3.3#2015/07/27 01:06:30  307.009399 BGP: 4.4.4.4 rcv message type 4, length (excl. header) 0
+#3.3.3.3#2015/07/27 01:06:30  307.009399 BGP: 4.4.4.4 KEEPALIVE rcvd
+#3.3.3.3#2015/07/27 01:06:30  307.009399 BGP: 4.4.4.4 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:06:30  307.009538 BGP: 4.4.4.4 [FSM] Timer (keepalive timer expire)
+#3.3.3.3#2015/07/27 01:06:30  307.009538 BGP: 4.4.4.4 [FSM] KeepAlive_timer_expired (Established->Established)
+#3.3.3.3#2015/07/27 01:06:30  307.009538 BGP: 4.4.4.4 sending KEEPALIVE
+#3.3.3.3#2015/07/27 01:06:30  307.009538 BGP: 4.4.4.4 send message type 4, length (incl. header) 19
+#4.4.4.4#2015/07/27 01:06:30  307.010853 BGP: 3.3.3.3 rcv message type 4, length (excl. header) 0
+#4.4.4.4#2015/07/27 01:06:30  307.010853 BGP: 3.3.3.3 KEEPALIVE rcvd
+#4.4.4.4#2015/07/27 01:06:30  307.010853 BGP: 3.3.3.3 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:06:30  307.699539 BGP: 3.3.3.3 [FSM] Timer (keepalive timer expire)
+#2.2.2.2#2015/07/27 01:06:30  307.699539 BGP: 3.3.3.3 [FSM] KeepAlive_timer_expired (Established->Established)
+#2.2.2.2#2015/07/27 01:06:30  307.699539 BGP: 3.3.3.3 sending KEEPALIVE
+#2.2.2.2#2015/07/27 01:06:30  307.699539 BGP: 3.3.3.3 send message type 4, length (incl. header) 19
+#3.3.3.3#2015/07/27 01:06:30  307.700854 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+#3.3.3.3#2015/07/27 01:06:30  307.700854 BGP: 2.2.2.2 KEEPALIVE rcvd
+#3.3.3.3#2015/07/27 01:06:30  307.700854 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:06:30  307.700992 BGP: 2.2.2.2 [FSM] Timer (keepalive timer expire)
+#3.3.3.3#2015/07/27 01:06:30  307.700992 BGP: 2.2.2.2 [FSM] KeepAlive_timer_expired (Established->Established)
+#3.3.3.3#2015/07/27 01:06:30  307.700992 BGP: 2.2.2.2 sending KEEPALIVE
+#3.3.3.3#2015/07/27 01:06:30  307.700992 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+#2.2.2.2#2015/07/27 01:06:30  307.702307 BGP: 3.3.3.3 rcv message type 4, length (excl. header) 0
+#2.2.2.2#2015/07/27 01:06:30  307.702307 BGP: 3.3.3.3 KEEPALIVE rcvd
+#2.2.2.2#2015/07/27 01:06:30  307.702307 BGP: 3.3.3.3 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:06:31  308.228935 BGP: 1.1.1.1 [FSM] Timer (keepalive timer expire)
+#2.2.2.2#2015/07/27 01:06:31  308.228935 BGP: 1.1.1.1 [FSM] KeepAlive_timer_expired (Established->Established)
+#2.2.2.2#2015/07/27 01:06:31  308.228935 BGP: 1.1.1.1 sending KEEPALIVE
+#2.2.2.2#2015/07/27 01:06:31  308.228935 BGP: 1.1.1.1 send message type 4, length (incl. header) 19
+#1.1.1.1#2015/07/27 01:06:31  308.230250 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+#1.1.1.1#2015/07/27 01:06:31  308.230250 BGP: 2.2.2.2 KEEPALIVE rcvd
+#1.1.1.1#2015/07/27 01:06:31  308.230250 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:06:31  308.230388 BGP: 2.2.2.2 [FSM] Timer (keepalive timer expire)
+#1.1.1.1#2015/07/27 01:06:31  308.230388 BGP: 2.2.2.2 [FSM] KeepAlive_timer_expired (Established->Established)
+#1.1.1.1#2015/07/27 01:06:31  308.230388 BGP: 2.2.2.2 sending KEEPALIVE
+#1.1.1.1#2015/07/27 01:06:31  308.230388 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+#2.2.2.2#2015/07/27 01:06:31  308.231703 BGP: 1.1.1.1 rcv message type 4, length (excl. header) 0
+#2.2.2.2#2015/07/27 01:06:31  308.231703 BGP: 1.1.1.1 KEEPALIVE rcvd
+#2.2.2.2#2015/07/27 01:06:31  308.231703 BGP: 1.1.1.1 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:06:43  320.001453 BGP: 2.2.2.2 [FSM] Timer (routeadv timer expire)
+#3.3.3.3#2015/07/27 01:06:43  320.001453 BGP: 2.2.2.2 send UPDATE 10.0.3.0/24 nexthop 3.3.3.3, origin i, path 1 4
+#1.1.1.1#2015/07/27 01:06:43  320.001453 BGP: 3.3.3.3 [FSM] Timer (routeadv timer expire)
+#1.1.1.1#2015/07/27 01:06:43  320.001453 BGP: 3.3.3.3 send UPDATE 10.0.3.0/24 nexthop 1.1.1.1, origin i, path 2 4
+#2.2.2.2#2015/07/27 01:06:43  320.001453 BGP: 1.1.1.1 [FSM] Timer (routeadv timer expire)
+#2.2.2.2#2015/07/27 01:06:43  320.001453 BGP: 1.1.1.1 send UPDATE 10.0.3.0/24 nexthop 2.2.2.2, origin i, path 3 4
+#2.2.2.2#2015/07/27 01:06:43  320.002928 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 3.3.3.3, origin i, path 3 1 4
+#2.2.2.2#2015/07/27 01:06:43  320.002928 BGP: 3.3.3.3 rcvd 10.0.3.0/24
+#2.2.2.2#2015/07/27 01:06:43  320.002928 BGP: 1.1.1.1 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#2.2.2.2#2015/07/27 01:06:43  320.002928 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 nexthop 2.2.2.2, origin i, path 3 1 4
+#3.3.3.3#2015/07/27 01:06:43  320.002928 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 1.1.1.1, origin i, path 1 2 4
+#3.3.3.3#2015/07/27 01:06:43  320.002928 BGP: 1.1.1.1 rcvd 10.0.3.0/24
+#3.3.3.3#2015/07/27 01:06:43  320.002928 BGP: 2.2.2.2 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#3.3.3.3#2015/07/27 01:06:43  320.002928 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 nexthop 3.3.3.3, origin i, path 1 2 4
+#1.1.1.1#2015/07/27 01:06:43  320.002928 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, path 2 3 4
+#1.1.1.1#2015/07/27 01:06:43  320.002928 BGP: 2.2.2.2 rcvd 10.0.3.0/24
+#1.1.1.1#2015/07/27 01:06:43  320.002928 BGP: 3.3.3.3 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#1.1.1.1#2015/07/27 01:06:43  320.002928 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 nexthop 1.1.1.1, origin i, path 2 3 4
+#2.2.2.2#2015/07/27 01:06:43  320.002928 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:06:43  320.002928 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:06:43  320.002928 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:06:43  320.004413 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, path 2 3 1 4
+#4.4.4.4#2015/07/27 01:06:43  320.004413 BGP: 2.2.2.2 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#4.4.4.4#2015/07/27 01:06:43  320.004413 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:06:43  320.004413 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 3.3.3.3, origin i, path 3 1 2 4
+#4.4.4.4#2015/07/27 01:06:43  320.004413 BGP: 3.3.3.3 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#4.4.4.4#2015/07/27 01:06:43  320.004413 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:06:43  320.004413 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 1.1.1.1, origin i, path 1 2 3 4
+#4.4.4.4#2015/07/27 01:06:43  320.004413 BGP: 1.1.1.1 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#4.4.4.4#2015/07/27 01:06:43  320.004413 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:07:13  350.001453 BGP: 1.1.1.1 [FSM] Timer (routeadv timer expire)
+#2.2.2.2#2015/07/27 01:07:13  350.001453 BGP: 1.1.1.1 send UPDATE 10.0.3.0/24 nexthop 2.2.2.2, origin i, path 3 1 4
+#3.3.3.3#2015/07/27 01:07:13  350.001453 BGP: 2.2.2.2 [FSM] Timer (routeadv timer expire)
+#3.3.3.3#2015/07/27 01:07:13  350.001453 BGP: 2.2.2.2 send UPDATE 10.0.3.0/24 nexthop 3.3.3.3, origin i, path 1 2 4
+#1.1.1.1#2015/07/27 01:07:13  350.001453 BGP: 3.3.3.3 [FSM] Timer (routeadv timer expire)
+#1.1.1.1#2015/07/27 01:07:13  350.001453 BGP: 3.3.3.3 send UPDATE 10.0.3.0/24 nexthop 1.1.1.1, origin i, path 2 3 4
+#1.1.1.1#2015/07/27 01:07:13  350.002939 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, path 2 3 1 4
+#1.1.1.1#2015/07/27 01:07:13  350.002939 BGP: 2.2.2.2 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#1.1.1.1#2015/07/27 01:07:13  350.002939 BGP: 2.2.2.2 send UPDATE 10.0.3.0/24 nexthop 1.1.1.1, origin i, path 4
+#1.1.1.1#2015/07/27 01:07:13  350.002939 BGP: 3.3.3.3 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#1.1.1.1#2015/07/27 01:07:13  350.002939 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 -- unreachable
+#2.2.2.2#2015/07/27 01:07:13  350.002939 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 3.3.3.3, origin i, path 3 1 2 4
+#2.2.2.2#2015/07/27 01:07:13  350.002939 BGP: 3.3.3.3 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#2.2.2.2#2015/07/27 01:07:13  350.002939 BGP: 1.1.1.1 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#2.2.2.2#2015/07/27 01:07:13  350.002939 BGP: 3.3.3.3 send UPDATE 10.0.3.0/24 nexthop 2.2.2.2, origin i, path 4
+#2.2.2.2#2015/07/27 01:07:13  350.002939 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 -- unreachable
+#3.3.3.3#2015/07/27 01:07:13  350.002939 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 1.1.1.1, origin i, path 1 2 3 4
+#3.3.3.3#2015/07/27 01:07:13  350.002939 BGP: 1.1.1.1 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#3.3.3.3#2015/07/27 01:07:13  350.002939 BGP: 1.1.1.1 send UPDATE 10.0.3.0/24 nexthop 3.3.3.3, origin i, path 4
+#3.3.3.3#2015/07/27 01:07:13  350.002939 BGP: 2.2.2.2 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#3.3.3.3#2015/07/27 01:07:13  350.002939 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 -- unreachable
+#1.1.1.1#2015/07/27 01:07:13  350.002939 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:07:13  350.002939 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:07:13  350.002939 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:07:13  350.004296 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+#4.4.4.4#2015/07/27 01:07:13  350.004296 BGP: 1.1.1.1 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+#4.4.4.4#2015/07/27 01:07:13  350.004296 BGP: 1.1.1.1 Cant find the route 10.0.3.0/24
+#4.4.4.4#2015/07/27 01:07:13  350.004296 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:07:13  350.004296 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+#4.4.4.4#2015/07/27 01:07:13  350.004296 BGP: 2.2.2.2 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+#4.4.4.4#2015/07/27 01:07:13  350.004296 BGP: 2.2.2.2 Cant find the route 10.0.3.0/24
+#4.4.4.4#2015/07/27 01:07:13  350.004296 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:07:13  350.004296 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+#4.4.4.4#2015/07/27 01:07:13  350.004296 BGP: 3.3.3.3 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+#4.4.4.4#2015/07/27 01:07:13  350.004296 BGP: 3.3.3.3 Cant find the route 10.0.3.0/24
+#4.4.4.4#2015/07/27 01:07:13  350.004296 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:07:13  350.004403 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 1.1.1.1, origin i, path 1 4
+#2.2.2.2#2015/07/27 01:07:13  350.004403 BGP: 1.1.1.1 rcvd 10.0.3.0/24
+#3.3.3.3#2015/07/27 01:07:13  350.004403 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, path 2 4
+#3.3.3.3#2015/07/27 01:07:13  350.004403 BGP: 2.2.2.2 rcvd 10.0.3.0/24
+#1.1.1.1#2015/07/27 01:07:13  350.004403 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 3.3.3.3, origin i, path 3 4
+#1.1.1.1#2015/07/27 01:07:13  350.004403 BGP: 3.3.3.3 rcvd 10.0.3.0/24
+#2.2.2.2#2015/07/27 01:07:13  350.004403 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:07:13  350.004403 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:07:13  350.004403 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:07:28  365.999905 BGP: 4.4.4.4 [FSM] Timer (keepalive timer expire)
+#1.1.1.1#2015/07/27 01:07:28  365.999905 BGP: 4.4.4.4 [FSM] KeepAlive_timer_expired (Established->Established)
+#1.1.1.1#2015/07/27 01:07:28  365.999905 BGP: 4.4.4.4 sending KEEPALIVE
+#1.1.1.1#2015/07/27 01:07:28  365.999905 BGP: 4.4.4.4 send message type 4, length (incl. header) 19
+#4.4.4.4#2015/07/27 01:07:29  366.001219 BGP: 1.1.1.1 rcv message type 4, length (excl. header) 0
+#4.4.4.4#2015/07/27 01:07:29  366.001219 BGP: 1.1.1.1 KEEPALIVE rcvd
+#4.4.4.4#2015/07/27 01:07:29  366.001219 BGP: 1.1.1.1 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:07:29  366.001358 BGP: 1.1.1.1 [FSM] Timer (keepalive timer expire)
+#4.4.4.4#2015/07/27 01:07:29  366.001358 BGP: 1.1.1.1 [FSM] KeepAlive_timer_expired (Established->Established)
+#4.4.4.4#2015/07/27 01:07:29  366.001358 BGP: 1.1.1.1 sending KEEPALIVE
+#4.4.4.4#2015/07/27 01:07:29  366.001358 BGP: 1.1.1.1 send message type 4, length (incl. header) 19
+#1.1.1.1#2015/07/27 01:07:29  366.002673 BGP: 4.4.4.4 rcv message type 4, length (excl. header) 0
+#1.1.1.1#2015/07/27 01:07:29  366.002673 BGP: 4.4.4.4 KEEPALIVE rcvd
+#1.1.1.1#2015/07/27 01:07:29  366.002673 BGP: 4.4.4.4 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:07:29  366.167985 BGP: 4.4.4.4 [FSM] Timer (keepalive timer expire)
+#2.2.2.2#2015/07/27 01:07:29  366.167985 BGP: 4.4.4.4 [FSM] KeepAlive_timer_expired (Established->Established)
+#2.2.2.2#2015/07/27 01:07:29  366.167985 BGP: 4.4.4.4 sending KEEPALIVE
+#2.2.2.2#2015/07/27 01:07:29  366.167985 BGP: 4.4.4.4 send message type 4, length (incl. header) 19
+#4.4.4.4#2015/07/27 01:07:29  366.169299 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+#4.4.4.4#2015/07/27 01:07:29  366.169299 BGP: 2.2.2.2 KEEPALIVE rcvd
+#4.4.4.4#2015/07/27 01:07:29  366.169299 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:07:29  366.169438 BGP: 2.2.2.2 [FSM] Timer (keepalive timer expire)
+#4.4.4.4#2015/07/27 01:07:29  366.169438 BGP: 2.2.2.2 [FSM] KeepAlive_timer_expired (Established->Established)
+#4.4.4.4#2015/07/27 01:07:29  366.169438 BGP: 2.2.2.2 sending KEEPALIVE
+#4.4.4.4#2015/07/27 01:07:29  366.169438 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+#2.2.2.2#2015/07/27 01:07:29  366.170753 BGP: 4.4.4.4 rcv message type 4, length (excl. header) 0
+#2.2.2.2#2015/07/27 01:07:29  366.170753 BGP: 4.4.4.4 KEEPALIVE rcvd
+#2.2.2.2#2015/07/27 01:07:29  366.170753 BGP: 4.4.4.4 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:07:29  366.591147 BGP: 1.1.1.1 [FSM] Timer (keepalive timer expire)
+#3.3.3.3#2015/07/27 01:07:29  366.591147 BGP: 1.1.1.1 [FSM] KeepAlive_timer_expired (Established->Established)
+#3.3.3.3#2015/07/27 01:07:29  366.591147 BGP: 1.1.1.1 sending KEEPALIVE
+#3.3.3.3#2015/07/27 01:07:29  366.591147 BGP: 1.1.1.1 send message type 4, length (incl. header) 19
+#1.1.1.1#2015/07/27 01:07:29  366.592462 BGP: 3.3.3.3 rcv message type 4, length (excl. header) 0
+#1.1.1.1#2015/07/27 01:07:29  366.592462 BGP: 3.3.3.3 KEEPALIVE rcvd
+#1.1.1.1#2015/07/27 01:07:29  366.592462 BGP: 3.3.3.3 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:07:29  366.592601 BGP: 3.3.3.3 [FSM] Timer (keepalive timer expire)
+#1.1.1.1#2015/07/27 01:07:29  366.592601 BGP: 3.3.3.3 [FSM] KeepAlive_timer_expired (Established->Established)
+#1.1.1.1#2015/07/27 01:07:29  366.592601 BGP: 3.3.3.3 sending KEEPALIVE
+#1.1.1.1#2015/07/27 01:07:29  366.592601 BGP: 3.3.3.3 send message type 4, length (incl. header) 19
+#3.3.3.3#2015/07/27 01:07:29  366.593915 BGP: 1.1.1.1 rcv message type 4, length (excl. header) 0
+#3.3.3.3#2015/07/27 01:07:29  366.593915 BGP: 1.1.1.1 KEEPALIVE rcvd
+#3.3.3.3#2015/07/27 01:07:29  366.593915 BGP: 1.1.1.1 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:07:30  367.008085 BGP: 3.3.3.3 [FSM] Timer (keepalive timer expire)
+#4.4.4.4#2015/07/27 01:07:30  367.008085 BGP: 3.3.3.3 [FSM] KeepAlive_timer_expired (Established->Established)
+#4.4.4.4#2015/07/27 01:07:30  367.008085 BGP: 3.3.3.3 sending KEEPALIVE
+#4.4.4.4#2015/07/27 01:07:30  367.008085 BGP: 3.3.3.3 send message type 4, length (incl. header) 19
+#3.3.3.3#2015/07/27 01:07:30  367.009399 BGP: 4.4.4.4 rcv message type 4, length (excl. header) 0
+#3.3.3.3#2015/07/27 01:07:30  367.009399 BGP: 4.4.4.4 KEEPALIVE rcvd
+#3.3.3.3#2015/07/27 01:07:30  367.009399 BGP: 4.4.4.4 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:07:30  367.009538 BGP: 4.4.4.4 [FSM] Timer (keepalive timer expire)
+#3.3.3.3#2015/07/27 01:07:30  367.009538 BGP: 4.4.4.4 [FSM] KeepAlive_timer_expired (Established->Established)
+#3.3.3.3#2015/07/27 01:07:30  367.009538 BGP: 4.4.4.4 sending KEEPALIVE
+#3.3.3.3#2015/07/27 01:07:30  367.009538 BGP: 4.4.4.4 send message type 4, length (incl. header) 19
+#4.4.4.4#2015/07/27 01:07:30  367.010853 BGP: 3.3.3.3 rcv message type 4, length (excl. header) 0
+#4.4.4.4#2015/07/27 01:07:30  367.010853 BGP: 3.3.3.3 KEEPALIVE rcvd
+#4.4.4.4#2015/07/27 01:07:30  367.010853 BGP: 3.3.3.3 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:07:30  367.699539 BGP: 3.3.3.3 [FSM] Timer (keepalive timer expire)
+#2.2.2.2#2015/07/27 01:07:30  367.699539 BGP: 3.3.3.3 [FSM] KeepAlive_timer_expired (Established->Established)
+#2.2.2.2#2015/07/27 01:07:30  367.699539 BGP: 3.3.3.3 sending KEEPALIVE
+#2.2.2.2#2015/07/27 01:07:30  367.699539 BGP: 3.3.3.3 send message type 4, length (incl. header) 19
+#3.3.3.3#2015/07/27 01:07:30  367.700854 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+#3.3.3.3#2015/07/27 01:07:30  367.700854 BGP: 2.2.2.2 KEEPALIVE rcvd
+#3.3.3.3#2015/07/27 01:07:30  367.700854 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:07:30  367.700992 BGP: 2.2.2.2 [FSM] Timer (keepalive timer expire)
+#3.3.3.3#2015/07/27 01:07:30  367.700992 BGP: 2.2.2.2 [FSM] KeepAlive_timer_expired (Established->Established)
+#3.3.3.3#2015/07/27 01:07:30  367.700992 BGP: 2.2.2.2 sending KEEPALIVE
+#3.3.3.3#2015/07/27 01:07:30  367.700992 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+#2.2.2.2#2015/07/27 01:07:30  367.702307 BGP: 3.3.3.3 rcv message type 4, length (excl. header) 0
+#2.2.2.2#2015/07/27 01:07:30  367.702307 BGP: 3.3.3.3 KEEPALIVE rcvd
+#2.2.2.2#2015/07/27 01:07:30  367.702307 BGP: 3.3.3.3 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:07:31  368.228935 BGP: 1.1.1.1 [FSM] Timer (keepalive timer expire)
+#2.2.2.2#2015/07/27 01:07:31  368.228935 BGP: 1.1.1.1 [FSM] KeepAlive_timer_expired (Established->Established)
+#2.2.2.2#2015/07/27 01:07:31  368.228935 BGP: 1.1.1.1 sending KEEPALIVE
+#2.2.2.2#2015/07/27 01:07:31  368.228935 BGP: 1.1.1.1 send message type 4, length (incl. header) 19
+#1.1.1.1#2015/07/27 01:07:31  368.230250 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+#1.1.1.1#2015/07/27 01:07:31  368.230250 BGP: 2.2.2.2 KEEPALIVE rcvd
+#1.1.1.1#2015/07/27 01:07:31  368.230250 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:07:31  368.230388 BGP: 2.2.2.2 [FSM] Timer (keepalive timer expire)
+#1.1.1.1#2015/07/27 01:07:31  368.230388 BGP: 2.2.2.2 [FSM] KeepAlive_timer_expired (Established->Established)
+#1.1.1.1#2015/07/27 01:07:31  368.230388 BGP: 2.2.2.2 sending KEEPALIVE
+#1.1.1.1#2015/07/27 01:07:31  368.230388 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+#2.2.2.2#2015/07/27 01:07:31  368.231703 BGP: 1.1.1.1 rcv message type 4, length (excl. header) 0
+#2.2.2.2#2015/07/27 01:07:31  368.231703 BGP: 1.1.1.1 KEEPALIVE rcvd
+#2.2.2.2#2015/07/27 01:07:31  368.231703 BGP: 1.1.1.1 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:07:43  380.001453 BGP: 2.2.2.2 [FSM] Timer (routeadv timer expire)
+#3.3.3.3#2015/07/27 01:07:43  380.001453 BGP: 2.2.2.2 send UPDATE 10.0.3.0/24 nexthop 3.3.3.3, origin i, path 4
+#1.1.1.1#2015/07/27 01:07:43  380.001453 BGP: 3.3.3.3 [FSM] Timer (routeadv timer expire)
+#1.1.1.1#2015/07/27 01:07:43  380.001453 BGP: 3.3.3.3 send UPDATE 10.0.3.0/24 nexthop 1.1.1.1, origin i, path 4
+#2.2.2.2#2015/07/27 01:07:43  380.001453 BGP: 1.1.1.1 [FSM] Timer (routeadv timer expire)
+#2.2.2.2#2015/07/27 01:07:43  380.001453 BGP: 1.1.1.1 send UPDATE 10.0.3.0/24 nexthop 2.2.2.2, origin i, path 4
+#2.2.2.2#2015/07/27 01:07:43  380.002917 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 3.3.3.3, origin i, path 3 4
+#2.2.2.2#2015/07/27 01:07:43  380.002917 BGP: 3.3.3.3 rcvd 10.0.3.0/24
+#2.2.2.2#2015/07/27 01:07:43  380.002917 BGP: 1.1.1.1 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#2.2.2.2#2015/07/27 01:07:43  380.002917 BGP: 3.3.3.3 send UPDATE 10.0.3.0/24 -- unreachable
+#2.2.2.2#2015/07/27 01:07:43  380.002917 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 nexthop 2.2.2.2, origin i, path 3 4
+#3.3.3.3#2015/07/27 01:07:43  380.002917 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 1.1.1.1, origin i, path 1 4
+#3.3.3.3#2015/07/27 01:07:43  380.002917 BGP: 1.1.1.1 rcvd 10.0.3.0/24
+#3.3.3.3#2015/07/27 01:07:43  380.002917 BGP: 1.1.1.1 send UPDATE 10.0.3.0/24 -- unreachable
+#3.3.3.3#2015/07/27 01:07:43  380.002917 BGP: 2.2.2.2 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#3.3.3.3#2015/07/27 01:07:43  380.002917 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 nexthop 3.3.3.3, origin i, path 1 4
+#1.1.1.1#2015/07/27 01:07:43  380.002917 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, path 2 4
+#1.1.1.1#2015/07/27 01:07:43  380.002917 BGP: 2.2.2.2 rcvd 10.0.3.0/24
+#1.1.1.1#2015/07/27 01:07:43  380.002917 BGP: 2.2.2.2 send UPDATE 10.0.3.0/24 -- unreachable
+#1.1.1.1#2015/07/27 01:07:43  380.002917 BGP: 3.3.3.3 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#1.1.1.1#2015/07/27 01:07:43  380.002917 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 nexthop 1.1.1.1, origin i, path 2 4
+#2.2.2.2#2015/07/27 01:07:43  380.002917 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:07:43  380.002917 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:07:43  380.002917 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:07:43  380.004275 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+#3.3.3.3#2015/07/27 01:07:43  380.004275 BGP: 2.2.2.2 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+#1.1.1.1#2015/07/27 01:07:43  380.004275 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+#1.1.1.1#2015/07/27 01:07:43  380.004275 BGP: 3.3.3.3 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+#2.2.2.2#2015/07/27 01:07:43  380.004275 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+#2.2.2.2#2015/07/27 01:07:43  380.004275 BGP: 1.1.1.1 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+#3.3.3.3#2015/07/27 01:07:43  380.004275 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:07:43  380.004275 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:07:43  380.004275 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:07:43  380.004392 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, path 2 3 4
+#4.4.4.4#2015/07/27 01:07:43  380.004392 BGP: 2.2.2.2 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#4.4.4.4#2015/07/27 01:07:43  380.004392 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:07:43  380.004392 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 3.3.3.3, origin i, path 3 1 4
+#4.4.4.4#2015/07/27 01:07:43  380.004392 BGP: 3.3.3.3 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#4.4.4.4#2015/07/27 01:07:43  380.004392 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:07:43  380.004392 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 1.1.1.1, origin i, path 1 2 4
+#4.4.4.4#2015/07/27 01:07:43  380.004392 BGP: 1.1.1.1 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#4.4.4.4#2015/07/27 01:07:43  380.004392 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:08:13  410.001453 BGP: 2.2.2.2 [FSM] Timer (routeadv timer expire)
+#3.3.3.3#2015/07/27 01:08:13  410.001453 BGP: 2.2.2.2 send UPDATE 10.0.3.0/24 nexthop 3.3.3.3, origin i, path 1 4
+#1.1.1.1#2015/07/27 01:08:13  410.001453 BGP: 3.3.3.3 [FSM] Timer (routeadv timer expire)
+#1.1.1.1#2015/07/27 01:08:13  410.001453 BGP: 3.3.3.3 send UPDATE 10.0.3.0/24 nexthop 1.1.1.1, origin i, path 2 4
+#2.2.2.2#2015/07/27 01:08:13  410.001453 BGP: 1.1.1.1 [FSM] Timer (routeadv timer expire)
+#2.2.2.2#2015/07/27 01:08:13  410.001453 BGP: 1.1.1.1 send UPDATE 10.0.3.0/24 nexthop 2.2.2.2, origin i, path 3 4
+#2.2.2.2#2015/07/27 01:08:13  410.002928 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 3.3.3.3, origin i, path 3 1 4
+#2.2.2.2#2015/07/27 01:08:13  410.002928 BGP: 3.3.3.3 rcvd 10.0.3.0/24
+#2.2.2.2#2015/07/27 01:08:13  410.002928 BGP: 1.1.1.1 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#2.2.2.2#2015/07/27 01:08:13  410.002928 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 nexthop 2.2.2.2, origin i, path 3 1 4
+#3.3.3.3#2015/07/27 01:08:13  410.002928 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 1.1.1.1, origin i, path 1 2 4
+#3.3.3.3#2015/07/27 01:08:13  410.002928 BGP: 1.1.1.1 rcvd 10.0.3.0/24
+#3.3.3.3#2015/07/27 01:08:13  410.002928 BGP: 2.2.2.2 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#3.3.3.3#2015/07/27 01:08:13  410.002928 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 nexthop 3.3.3.3, origin i, path 1 2 4
+#1.1.1.1#2015/07/27 01:08:13  410.002928 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, path 2 3 4
+#1.1.1.1#2015/07/27 01:08:13  410.002928 BGP: 2.2.2.2 rcvd 10.0.3.0/24
+#1.1.1.1#2015/07/27 01:08:13  410.002928 BGP: 3.3.3.3 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#1.1.1.1#2015/07/27 01:08:13  410.002928 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 nexthop 1.1.1.1, origin i, path 2 3 4
+#2.2.2.2#2015/07/27 01:08:13  410.002928 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:08:13  410.002928 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:08:13  410.002928 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:08:13  410.004413 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, path 2 3 1 4
+#4.4.4.4#2015/07/27 01:08:13  410.004413 BGP: 2.2.2.2 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#4.4.4.4#2015/07/27 01:08:13  410.004413 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:08:13  410.004413 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 3.3.3.3, origin i, path 3 1 2 4
+#4.4.4.4#2015/07/27 01:08:13  410.004413 BGP: 3.3.3.3 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#4.4.4.4#2015/07/27 01:08:13  410.004413 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:08:13  410.004413 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 1.1.1.1, origin i, path 1 2 3 4
+#4.4.4.4#2015/07/27 01:08:13  410.004413 BGP: 1.1.1.1 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#4.4.4.4#2015/07/27 01:08:13  410.004413 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:08:28  425.999905 BGP: 4.4.4.4 [FSM] Timer (keepalive timer expire)
+#1.1.1.1#2015/07/27 01:08:28  425.999905 BGP: 4.4.4.4 [FSM] KeepAlive_timer_expired (Established->Established)
+#1.1.1.1#2015/07/27 01:08:28  425.999905 BGP: 4.4.4.4 sending KEEPALIVE
+#1.1.1.1#2015/07/27 01:08:28  425.999905 BGP: 4.4.4.4 send message type 4, length (incl. header) 19
+#4.4.4.4#2015/07/27 01:08:29  426.001219 BGP: 1.1.1.1 rcv message type 4, length (excl. header) 0
+#4.4.4.4#2015/07/27 01:08:29  426.001219 BGP: 1.1.1.1 KEEPALIVE rcvd
+#4.4.4.4#2015/07/27 01:08:29  426.001219 BGP: 1.1.1.1 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:08:29  426.001358 BGP: 1.1.1.1 [FSM] Timer (keepalive timer expire)
+#4.4.4.4#2015/07/27 01:08:29  426.001358 BGP: 1.1.1.1 [FSM] KeepAlive_timer_expired (Established->Established)
+#4.4.4.4#2015/07/27 01:08:29  426.001358 BGP: 1.1.1.1 sending KEEPALIVE
+#4.4.4.4#2015/07/27 01:08:29  426.001358 BGP: 1.1.1.1 send message type 4, length (incl. header) 19
+#1.1.1.1#2015/07/27 01:08:29  426.002673 BGP: 4.4.4.4 rcv message type 4, length (excl. header) 0
+#1.1.1.1#2015/07/27 01:08:29  426.002673 BGP: 4.4.4.4 KEEPALIVE rcvd
+#1.1.1.1#2015/07/27 01:08:29  426.002673 BGP: 4.4.4.4 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:08:29  426.167985 BGP: 4.4.4.4 [FSM] Timer (keepalive timer expire)
+#2.2.2.2#2015/07/27 01:08:29  426.167985 BGP: 4.4.4.4 [FSM] KeepAlive_timer_expired (Established->Established)
+#2.2.2.2#2015/07/27 01:08:29  426.167985 BGP: 4.4.4.4 sending KEEPALIVE
+#2.2.2.2#2015/07/27 01:08:29  426.167985 BGP: 4.4.4.4 send message type 4, length (incl. header) 19
+#4.4.4.4#2015/07/27 01:08:29  426.169299 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+#4.4.4.4#2015/07/27 01:08:29  426.169299 BGP: 2.2.2.2 KEEPALIVE rcvd
+#4.4.4.4#2015/07/27 01:08:29  426.169299 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:08:29  426.169438 BGP: 2.2.2.2 [FSM] Timer (keepalive timer expire)
+#4.4.4.4#2015/07/27 01:08:29  426.169438 BGP: 2.2.2.2 [FSM] KeepAlive_timer_expired (Established->Established)
+#4.4.4.4#2015/07/27 01:08:29  426.169438 BGP: 2.2.2.2 sending KEEPALIVE
+#4.4.4.4#2015/07/27 01:08:29  426.169438 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+#2.2.2.2#2015/07/27 01:08:29  426.170753 BGP: 4.4.4.4 rcv message type 4, length (excl. header) 0
+#2.2.2.2#2015/07/27 01:08:29  426.170753 BGP: 4.4.4.4 KEEPALIVE rcvd
+#2.2.2.2#2015/07/27 01:08:29  426.170753 BGP: 4.4.4.4 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:08:29  426.591147 BGP: 1.1.1.1 [FSM] Timer (keepalive timer expire)
+#3.3.3.3#2015/07/27 01:08:29  426.591147 BGP: 1.1.1.1 [FSM] KeepAlive_timer_expired (Established->Established)
+#3.3.3.3#2015/07/27 01:08:29  426.591147 BGP: 1.1.1.1 sending KEEPALIVE
+#3.3.3.3#2015/07/27 01:08:29  426.591147 BGP: 1.1.1.1 send message type 4, length (incl. header) 19
+#1.1.1.1#2015/07/27 01:08:29  426.592462 BGP: 3.3.3.3 rcv message type 4, length (excl. header) 0
+#1.1.1.1#2015/07/27 01:08:29  426.592462 BGP: 3.3.3.3 KEEPALIVE rcvd
+#1.1.1.1#2015/07/27 01:08:29  426.592462 BGP: 3.3.3.3 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:08:29  426.592601 BGP: 3.3.3.3 [FSM] Timer (keepalive timer expire)
+#1.1.1.1#2015/07/27 01:08:29  426.592601 BGP: 3.3.3.3 [FSM] KeepAlive_timer_expired (Established->Established)
+#1.1.1.1#2015/07/27 01:08:29  426.592601 BGP: 3.3.3.3 sending KEEPALIVE
+#1.1.1.1#2015/07/27 01:08:29  426.592601 BGP: 3.3.3.3 send message type 4, length (incl. header) 19
+#3.3.3.3#2015/07/27 01:08:29  426.593915 BGP: 1.1.1.1 rcv message type 4, length (excl. header) 0
+#3.3.3.3#2015/07/27 01:08:29  426.593915 BGP: 1.1.1.1 KEEPALIVE rcvd
+#3.3.3.3#2015/07/27 01:08:29  426.593915 BGP: 1.1.1.1 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:08:30  427.008085 BGP: 3.3.3.3 [FSM] Timer (keepalive timer expire)
+#4.4.4.4#2015/07/27 01:08:30  427.008085 BGP: 3.3.3.3 [FSM] KeepAlive_timer_expired (Established->Established)
+#4.4.4.4#2015/07/27 01:08:30  427.008085 BGP: 3.3.3.3 sending KEEPALIVE
+#4.4.4.4#2015/07/27 01:08:30  427.008085 BGP: 3.3.3.3 send message type 4, length (incl. header) 19
+#3.3.3.3#2015/07/27 01:08:30  427.009399 BGP: 4.4.4.4 rcv message type 4, length (excl. header) 0
+#3.3.3.3#2015/07/27 01:08:30  427.009399 BGP: 4.4.4.4 KEEPALIVE rcvd
+#3.3.3.3#2015/07/27 01:08:30  427.009399 BGP: 4.4.4.4 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:08:30  427.009538 BGP: 4.4.4.4 [FSM] Timer (keepalive timer expire)
+#3.3.3.3#2015/07/27 01:08:30  427.009538 BGP: 4.4.4.4 [FSM] KeepAlive_timer_expired (Established->Established)
+#3.3.3.3#2015/07/27 01:08:30  427.009538 BGP: 4.4.4.4 sending KEEPALIVE
+#3.3.3.3#2015/07/27 01:08:30  427.009538 BGP: 4.4.4.4 send message type 4, length (incl. header) 19
+#4.4.4.4#2015/07/27 01:08:30  427.010853 BGP: 3.3.3.3 rcv message type 4, length (excl. header) 0
+#4.4.4.4#2015/07/27 01:08:30  427.010853 BGP: 3.3.3.3 KEEPALIVE rcvd
+#4.4.4.4#2015/07/27 01:08:30  427.010853 BGP: 3.3.3.3 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:08:30  427.699539 BGP: 3.3.3.3 [FSM] Timer (keepalive timer expire)
+#2.2.2.2#2015/07/27 01:08:30  427.699539 BGP: 3.3.3.3 [FSM] KeepAlive_timer_expired (Established->Established)
+#2.2.2.2#2015/07/27 01:08:30  427.699539 BGP: 3.3.3.3 sending KEEPALIVE
+#2.2.2.2#2015/07/27 01:08:30  427.699539 BGP: 3.3.3.3 send message type 4, length (incl. header) 19
+#3.3.3.3#2015/07/27 01:08:30  427.700854 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+#3.3.3.3#2015/07/27 01:08:30  427.700854 BGP: 2.2.2.2 KEEPALIVE rcvd
+#3.3.3.3#2015/07/27 01:08:30  427.700854 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:08:30  427.700992 BGP: 2.2.2.2 [FSM] Timer (keepalive timer expire)
+#3.3.3.3#2015/07/27 01:08:30  427.700992 BGP: 2.2.2.2 [FSM] KeepAlive_timer_expired (Established->Established)
+#3.3.3.3#2015/07/27 01:08:30  427.700992 BGP: 2.2.2.2 sending KEEPALIVE
+#3.3.3.3#2015/07/27 01:08:30  427.700992 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+#2.2.2.2#2015/07/27 01:08:30  427.702307 BGP: 3.3.3.3 rcv message type 4, length (excl. header) 0
+#2.2.2.2#2015/07/27 01:08:30  427.702307 BGP: 3.3.3.3 KEEPALIVE rcvd
+#2.2.2.2#2015/07/27 01:08:30  427.702307 BGP: 3.3.3.3 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:08:31  428.228935 BGP: 1.1.1.1 [FSM] Timer (keepalive timer expire)
+#2.2.2.2#2015/07/27 01:08:31  428.228935 BGP: 1.1.1.1 [FSM] KeepAlive_timer_expired (Established->Established)
+#2.2.2.2#2015/07/27 01:08:31  428.228935 BGP: 1.1.1.1 sending KEEPALIVE
+#2.2.2.2#2015/07/27 01:08:31  428.228935 BGP: 1.1.1.1 send message type 4, length (incl. header) 19
+#1.1.1.1#2015/07/27 01:08:31  428.230250 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+#1.1.1.1#2015/07/27 01:08:31  428.230250 BGP: 2.2.2.2 KEEPALIVE rcvd
+#1.1.1.1#2015/07/27 01:08:31  428.230250 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:08:31  428.230388 BGP: 2.2.2.2 [FSM] Timer (keepalive timer expire)
+#1.1.1.1#2015/07/27 01:08:31  428.230388 BGP: 2.2.2.2 [FSM] KeepAlive_timer_expired (Established->Established)
+#1.1.1.1#2015/07/27 01:08:31  428.230388 BGP: 2.2.2.2 sending KEEPALIVE
+#1.1.1.1#2015/07/27 01:08:31  428.230388 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+#2.2.2.2#2015/07/27 01:08:31  428.231703 BGP: 1.1.1.1 rcv message type 4, length (excl. header) 0
+#2.2.2.2#2015/07/27 01:08:31  428.231703 BGP: 1.1.1.1 KEEPALIVE rcvd
+#2.2.2.2#2015/07/27 01:08:31  428.231703 BGP: 1.1.1.1 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:08:43  440.001453 BGP: 2.2.2.2 [FSM] Timer (routeadv timer expire)
+#3.3.3.3#2015/07/27 01:08:43  440.001453 BGP: 2.2.2.2 send UPDATE 10.0.3.0/24 nexthop 3.3.3.3, origin i, path 1 2 4
+#1.1.1.1#2015/07/27 01:08:43  440.001453 BGP: 3.3.3.3 [FSM] Timer (routeadv timer expire)
+#1.1.1.1#2015/07/27 01:08:43  440.001453 BGP: 3.3.3.3 send UPDATE 10.0.3.0/24 nexthop 1.1.1.1, origin i, path 2 3 4
+#2.2.2.2#2015/07/27 01:08:43  440.001453 BGP: 1.1.1.1 [FSM] Timer (routeadv timer expire)
+#2.2.2.2#2015/07/27 01:08:43  440.001453 BGP: 1.1.1.1 send UPDATE 10.0.3.0/24 nexthop 2.2.2.2, origin i, path 3 1 4
+#2.2.2.2#2015/07/27 01:08:43  440.002939 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 3.3.3.3, origin i, path 3 1 2 4
+#2.2.2.2#2015/07/27 01:08:43  440.002939 BGP: 3.3.3.3 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#2.2.2.2#2015/07/27 01:08:43  440.002939 BGP: 1.1.1.1 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#2.2.2.2#2015/07/27 01:08:43  440.002939 BGP: 3.3.3.3 send UPDATE 10.0.3.0/24 nexthop 2.2.2.2, origin i, path 4
+#2.2.2.2#2015/07/27 01:08:43  440.002939 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 -- unreachable
+#3.3.3.3#2015/07/27 01:08:43  440.002939 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 1.1.1.1, origin i, path 1 2 3 4
+#3.3.3.3#2015/07/27 01:08:43  440.002939 BGP: 1.1.1.1 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#3.3.3.3#2015/07/27 01:08:43  440.002939 BGP: 1.1.1.1 send UPDATE 10.0.3.0/24 nexthop 3.3.3.3, origin i, path 4
+#3.3.3.3#2015/07/27 01:08:43  440.002939 BGP: 2.2.2.2 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#3.3.3.3#2015/07/27 01:08:43  440.002939 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 -- unreachable
+#1.1.1.1#2015/07/27 01:08:43  440.002939 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, path 2 3 1 4
+#1.1.1.1#2015/07/27 01:08:43  440.002939 BGP: 2.2.2.2 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#1.1.1.1#2015/07/27 01:08:43  440.002939 BGP: 2.2.2.2 send UPDATE 10.0.3.0/24 nexthop 1.1.1.1, origin i, path 4
+#1.1.1.1#2015/07/27 01:08:43  440.002939 BGP: 3.3.3.3 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#1.1.1.1#2015/07/27 01:08:43  440.002939 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 -- unreachable
+#2.2.2.2#2015/07/27 01:08:43  440.002939 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:08:43  440.002939 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:08:43  440.002939 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:08:43  440.004296 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+#4.4.4.4#2015/07/27 01:08:43  440.004296 BGP: 2.2.2.2 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+#4.4.4.4#2015/07/27 01:08:43  440.004296 BGP: 2.2.2.2 Cant find the route 10.0.3.0/24
+#4.4.4.4#2015/07/27 01:08:43  440.004296 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:08:43  440.004296 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+#4.4.4.4#2015/07/27 01:08:43  440.004296 BGP: 3.3.3.3 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+#4.4.4.4#2015/07/27 01:08:43  440.004296 BGP: 3.3.3.3 Cant find the route 10.0.3.0/24
+#4.4.4.4#2015/07/27 01:08:43  440.004296 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:08:43  440.004296 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+#4.4.4.4#2015/07/27 01:08:43  440.004296 BGP: 1.1.1.1 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+#4.4.4.4#2015/07/27 01:08:43  440.004296 BGP: 1.1.1.1 Cant find the route 10.0.3.0/24
+#4.4.4.4#2015/07/27 01:08:43  440.004296 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:08:43  440.004403 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, path 2 4
+#3.3.3.3#2015/07/27 01:08:43  440.004403 BGP: 2.2.2.2 rcvd 10.0.3.0/24
+#1.1.1.1#2015/07/27 01:08:43  440.004403 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 3.3.3.3, origin i, path 3 4
+#1.1.1.1#2015/07/27 01:08:43  440.004403 BGP: 3.3.3.3 rcvd 10.0.3.0/24
+#2.2.2.2#2015/07/27 01:08:43  440.004403 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 1.1.1.1, origin i, path 1 4
+#2.2.2.2#2015/07/27 01:08:43  440.004403 BGP: 1.1.1.1 rcvd 10.0.3.0/24
+#3.3.3.3#2015/07/27 01:08:43  440.004403 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:08:43  440.004403 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:08:43  440.004403 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:09:13  470.001453 BGP: 2.2.2.2 [FSM] Timer (routeadv timer expire)
+#3.3.3.3#2015/07/27 01:09:13  470.001453 BGP: 2.2.2.2 send UPDATE 10.0.3.0/24 nexthop 3.3.3.3, origin i, path 4
+#1.1.1.1#2015/07/27 01:09:13  470.001453 BGP: 3.3.3.3 [FSM] Timer (routeadv timer expire)
+#1.1.1.1#2015/07/27 01:09:13  470.001453 BGP: 3.3.3.3 send UPDATE 10.0.3.0/24 nexthop 1.1.1.1, origin i, path 4
+#2.2.2.2#2015/07/27 01:09:13  470.001453 BGP: 1.1.1.1 [FSM] Timer (routeadv timer expire)
+#2.2.2.2#2015/07/27 01:09:13  470.001453 BGP: 1.1.1.1 send UPDATE 10.0.3.0/24 nexthop 2.2.2.2, origin i, path 4
+#2.2.2.2#2015/07/27 01:09:13  470.002917 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 3.3.3.3, origin i, path 3 4
+#2.2.2.2#2015/07/27 01:09:13  470.002917 BGP: 3.3.3.3 rcvd 10.0.3.0/24
+#2.2.2.2#2015/07/27 01:09:13  470.002917 BGP: 1.1.1.1 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#2.2.2.2#2015/07/27 01:09:13  470.002917 BGP: 3.3.3.3 send UPDATE 10.0.3.0/24 -- unreachable
+#2.2.2.2#2015/07/27 01:09:13  470.002917 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 nexthop 2.2.2.2, origin i, path 3 4
+#3.3.3.3#2015/07/27 01:09:13  470.002917 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 1.1.1.1, origin i, path 1 4
+#3.3.3.3#2015/07/27 01:09:13  470.002917 BGP: 1.1.1.1 rcvd 10.0.3.0/24
+#3.3.3.3#2015/07/27 01:09:13  470.002917 BGP: 1.1.1.1 send UPDATE 10.0.3.0/24 -- unreachable
+#3.3.3.3#2015/07/27 01:09:13  470.002917 BGP: 2.2.2.2 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#3.3.3.3#2015/07/27 01:09:13  470.002917 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 nexthop 3.3.3.3, origin i, path 1 4
+#1.1.1.1#2015/07/27 01:09:13  470.002917 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, path 2 4
+#1.1.1.1#2015/07/27 01:09:13  470.002917 BGP: 2.2.2.2 rcvd 10.0.3.0/24
+#1.1.1.1#2015/07/27 01:09:13  470.002917 BGP: 2.2.2.2 send UPDATE 10.0.3.0/24 -- unreachable
+#1.1.1.1#2015/07/27 01:09:13  470.002917 BGP: 3.3.3.3 UPDATE  10.0.3.0/24 -- SUPRESS due to: MRAI per prefix timer
+#1.1.1.1#2015/07/27 01:09:13  470.002917 BGP: 4.4.4.4 send UPDATE 10.0.3.0/24 nexthop 1.1.1.1, origin i, path 2 4
+#2.2.2.2#2015/07/27 01:09:13  470.002917 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:09:13  470.002917 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:09:13  470.002917 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:09:13  470.004275 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+#3.3.3.3#2015/07/27 01:09:13  470.004275 BGP: 2.2.2.2 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+#1.1.1.1#2015/07/27 01:09:13  470.004275 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+#1.1.1.1#2015/07/27 01:09:13  470.004275 BGP: 3.3.3.3 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+#2.2.2.2#2015/07/27 01:09:13  470.004275 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+#2.2.2.2#2015/07/27 01:09:13  470.004275 BGP: 1.1.1.1 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+#3.3.3.3#2015/07/27 01:09:13  470.004275 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:09:13  470.004275 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:09:13  470.004275 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:09:13  470.004392 BGP: 2.2.2.2 rcvd UPDATE w/ attr: nexthop 2.2.2.2, origin i, path 2 3 4
+#4.4.4.4#2015/07/27 01:09:13  470.004392 BGP: 2.2.2.2 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#4.4.4.4#2015/07/27 01:09:13  470.004392 BGP: 2.2.2.2 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:09:13  470.004392 BGP: 3.3.3.3 rcvd UPDATE w/ attr: nexthop 3.3.3.3, origin i, path 3 1 4
+#4.4.4.4#2015/07/27 01:09:13  470.004392 BGP: 3.3.3.3 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#4.4.4.4#2015/07/27 01:09:13  470.004392 BGP: 3.3.3.3 [FSM] Receive_UPDATE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:09:13  470.004392 BGP: 1.1.1.1 rcvd UPDATE w/ attr: nexthop 1.1.1.1, origin i, path 1 2 4
+#4.4.4.4#2015/07/27 01:09:13  470.004392 BGP: 1.1.1.1 rcvd UPDATE about 10.0.3.0/24 -- DENIED due to: as-path contains our own AS;
+#4.4.4.4#2015/07/27 01:09:13  470.004392 BGP: 1.1.1.1 [FSM] Receive_UPDATE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:09:28  485.999905 BGP: 4.4.4.4 [FSM] Timer (keepalive timer expire)
+#1.1.1.1#2015/07/27 01:09:28  485.999905 BGP: 4.4.4.4 [FSM] KeepAlive_timer_expired (Established->Established)
+#1.1.1.1#2015/07/27 01:09:28  485.999905 BGP: 4.4.4.4 sending KEEPALIVE
+#1.1.1.1#2015/07/27 01:09:28  485.999905 BGP: 4.4.4.4 send message type 4, length (incl. header) 19
+#4.4.4.4#2015/07/27 01:09:29  486.001219 BGP: 1.1.1.1 rcv message type 4, length (excl. header) 0
+#4.4.4.4#2015/07/27 01:09:29  486.001219 BGP: 1.1.1.1 KEEPALIVE rcvd
+#4.4.4.4#2015/07/27 01:09:29  486.001219 BGP: 1.1.1.1 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:09:29  486.001358 BGP: 1.1.1.1 [FSM] Timer (keepalive timer expire)
+#4.4.4.4#2015/07/27 01:09:29  486.001358 BGP: 1.1.1.1 [FSM] KeepAlive_timer_expired (Established->Established)
+#4.4.4.4#2015/07/27 01:09:29  486.001358 BGP: 1.1.1.1 sending KEEPALIVE
+#4.4.4.4#2015/07/27 01:09:29  486.001358 BGP: 1.1.1.1 send message type 4, length (incl. header) 19
+#1.1.1.1#2015/07/27 01:09:29  486.002673 BGP: 4.4.4.4 rcv message type 4, length (excl. header) 0
+#1.1.1.1#2015/07/27 01:09:29  486.002673 BGP: 4.4.4.4 KEEPALIVE rcvd
+#1.1.1.1#2015/07/27 01:09:29  486.002673 BGP: 4.4.4.4 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:09:29  486.167985 BGP: 4.4.4.4 [FSM] Timer (keepalive timer expire)
+#2.2.2.2#2015/07/27 01:09:29  486.167985 BGP: 4.4.4.4 [FSM] KeepAlive_timer_expired (Established->Established)
+#2.2.2.2#2015/07/27 01:09:29  486.167985 BGP: 4.4.4.4 sending KEEPALIVE
+#2.2.2.2#2015/07/27 01:09:29  486.167985 BGP: 4.4.4.4 send message type 4, length (incl. header) 19
+#4.4.4.4#2015/07/27 01:09:29  486.169299 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+#4.4.4.4#2015/07/27 01:09:29  486.169299 BGP: 2.2.2.2 KEEPALIVE rcvd
+#4.4.4.4#2015/07/27 01:09:29  486.169299 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:09:29  486.169438 BGP: 2.2.2.2 [FSM] Timer (keepalive timer expire)
+#4.4.4.4#2015/07/27 01:09:29  486.169438 BGP: 2.2.2.2 [FSM] KeepAlive_timer_expired (Established->Established)
+#4.4.4.4#2015/07/27 01:09:29  486.169438 BGP: 2.2.2.2 sending KEEPALIVE
+#4.4.4.4#2015/07/27 01:09:29  486.169438 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+#2.2.2.2#2015/07/27 01:09:29  486.170753 BGP: 4.4.4.4 rcv message type 4, length (excl. header) 0
+#2.2.2.2#2015/07/27 01:09:29  486.170753 BGP: 4.4.4.4 KEEPALIVE rcvd
+#2.2.2.2#2015/07/27 01:09:29  486.170753 BGP: 4.4.4.4 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:09:29  486.591147 BGP: 1.1.1.1 [FSM] Timer (keepalive timer expire)
+#3.3.3.3#2015/07/27 01:09:29  486.591147 BGP: 1.1.1.1 [FSM] KeepAlive_timer_expired (Established->Established)
+#3.3.3.3#2015/07/27 01:09:29  486.591147 BGP: 1.1.1.1 sending KEEPALIVE
+#3.3.3.3#2015/07/27 01:09:29  486.591147 BGP: 1.1.1.1 send message type 4, length (incl. header) 19
+#1.1.1.1#2015/07/27 01:09:29  486.592462 BGP: 3.3.3.3 rcv message type 4, length (excl. header) 0
+#1.1.1.1#2015/07/27 01:09:29  486.592462 BGP: 3.3.3.3 KEEPALIVE rcvd
+#1.1.1.1#2015/07/27 01:09:29  486.592462 BGP: 3.3.3.3 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:09:29  486.592601 BGP: 3.3.3.3 [FSM] Timer (keepalive timer expire)
+#1.1.1.1#2015/07/27 01:09:29  486.592601 BGP: 3.3.3.3 [FSM] KeepAlive_timer_expired (Established->Established)
+#1.1.1.1#2015/07/27 01:09:29  486.592601 BGP: 3.3.3.3 sending KEEPALIVE
+#1.1.1.1#2015/07/27 01:09:29  486.592601 BGP: 3.3.3.3 send message type 4, length (incl. header) 19
+#3.3.3.3#2015/07/27 01:09:29  486.593915 BGP: 1.1.1.1 rcv message type 4, length (excl. header) 0
+#3.3.3.3#2015/07/27 01:09:29  486.593915 BGP: 1.1.1.1 KEEPALIVE rcvd
+#3.3.3.3#2015/07/27 01:09:29  486.593915 BGP: 1.1.1.1 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#4.4.4.4#2015/07/27 01:09:30  487.008085 BGP: 3.3.3.3 [FSM] Timer (keepalive timer expire)
+#4.4.4.4#2015/07/27 01:09:30  487.008085 BGP: 3.3.3.3 [FSM] KeepAlive_timer_expired (Established->Established)
+#4.4.4.4#2015/07/27 01:09:30  487.008085 BGP: 3.3.3.3 sending KEEPALIVE
+#4.4.4.4#2015/07/27 01:09:30  487.008085 BGP: 3.3.3.3 send message type 4, length (incl. header) 19
+#3.3.3.3#2015/07/27 01:09:30  487.009399 BGP: 4.4.4.4 rcv message type 4, length (excl. header) 0
+#3.3.3.3#2015/07/27 01:09:30  487.009399 BGP: 4.4.4.4 KEEPALIVE rcvd
+#3.3.3.3#2015/07/27 01:09:30  487.009399 BGP: 4.4.4.4 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:09:30  487.009538 BGP: 4.4.4.4 [FSM] Timer (keepalive timer expire)
+#3.3.3.3#2015/07/27 01:09:30  487.009538 BGP: 4.4.4.4 [FSM] KeepAlive_timer_expired (Established->Established)
+#3.3.3.3#2015/07/27 01:09:30  487.009538 BGP: 4.4.4.4 sending KEEPALIVE
+#3.3.3.3#2015/07/27 01:09:30  487.009538 BGP: 4.4.4.4 send message type 4, length (incl. header) 19
+#4.4.4.4#2015/07/27 01:09:30  487.010853 BGP: 3.3.3.3 rcv message type 4, length (excl. header) 0
+#4.4.4.4#2015/07/27 01:09:30  487.010853 BGP: 3.3.3.3 KEEPALIVE rcvd
+#4.4.4.4#2015/07/27 01:09:30  487.010853 BGP: 3.3.3.3 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:09:30  487.699539 BGP: 3.3.3.3 [FSM] Timer (keepalive timer expire)
+#2.2.2.2#2015/07/27 01:09:30  487.699539 BGP: 3.3.3.3 [FSM] KeepAlive_timer_expired (Established->Established)
+#2.2.2.2#2015/07/27 01:09:30  487.699539 BGP: 3.3.3.3 sending KEEPALIVE
+#2.2.2.2#2015/07/27 01:09:30  487.699539 BGP: 3.3.3.3 send message type 4, length (incl. header) 19
+#3.3.3.3#2015/07/27 01:09:30  487.700854 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+#3.3.3.3#2015/07/27 01:09:30  487.700854 BGP: 2.2.2.2 KEEPALIVE rcvd
+#3.3.3.3#2015/07/27 01:09:30  487.700854 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#3.3.3.3#2015/07/27 01:09:30  487.700992 BGP: 2.2.2.2 [FSM] Timer (keepalive timer expire)
+#3.3.3.3#2015/07/27 01:09:30  487.700992 BGP: 2.2.2.2 [FSM] KeepAlive_timer_expired (Established->Established)
+#3.3.3.3#2015/07/27 01:09:30  487.700992 BGP: 2.2.2.2 sending KEEPALIVE
+#3.3.3.3#2015/07/27 01:09:30  487.700992 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+#2.2.2.2#2015/07/27 01:09:30  487.702307 BGP: 3.3.3.3 rcv message type 4, length (excl. header) 0
+#2.2.2.2#2015/07/27 01:09:30  487.702307 BGP: 3.3.3.3 KEEPALIVE rcvd
+#2.2.2.2#2015/07/27 01:09:30  487.702307 BGP: 3.3.3.3 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#2.2.2.2#2015/07/27 01:09:31  488.228935 BGP: 1.1.1.1 [FSM] Timer (keepalive timer expire)
+#2.2.2.2#2015/07/27 01:09:31  488.228935 BGP: 1.1.1.1 [FSM] KeepAlive_timer_expired (Established->Established)
+#2.2.2.2#2015/07/27 01:09:31  488.228935 BGP: 1.1.1.1 sending KEEPALIVE
+#2.2.2.2#2015/07/27 01:09:31  488.228935 BGP: 1.1.1.1 send message type 4, length (incl. header) 19
+#1.1.1.1#2015/07/27 01:09:31  488.230250 BGP: 2.2.2.2 rcv message type 4, length (excl. header) 0
+#1.1.1.1#2015/07/27 01:09:31  488.230250 BGP: 2.2.2.2 KEEPALIVE rcvd
+#1.1.1.1#2015/07/27 01:09:31  488.230250 BGP: 2.2.2.2 [FSM] Receive_KEEPALIVE_message (Established->Established)
+#1.1.1.1#2015/07/27 01:09:31  488.230388 BGP: 2.2.2.2 [FSM] Timer (keepalive timer expire)
+#1.1.1.1#2015/07/27 01:09:31  488.230388 BGP: 2.2.2.2 [FSM] KeepAlive_timer_expired (Established->Established)
+#1.1.1.1#2015/07/27 01:09:31  488.230388 BGP: 2.2.2.2 sending KEEPALIVE
+#1.1.1.1#2015/07/27 01:09:31  488.230388 BGP: 2.2.2.2 send message type 4, length (incl. header) 19
+#2.2.2.2#2015/07/27 01:09:31  488.231703 BGP: 1.1.1.1 rcv message type 4, length (excl. header) 0
+#2.2.2.2#2015/07/27 01:09:31  488.231703 BGP: 1.1.1.1 KEEPALIVE rcvd
+#2.2.2.2#2015/07/27 01:09:31  488.231703 BGP: 1.1.1.1 [FSM] Receive_KEEPALIVE_message (Established->Established)

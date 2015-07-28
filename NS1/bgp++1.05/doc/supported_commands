@@ -1,0 +1,333 @@
+ip community-list WORD (deny|permit) .AA:NN
+no ip community-list WORD (deny|permit) .AA:NN
+no ip community-list WORD
+debug bgp fsm
+no debug bgp fsm
+debug bgp events
+no debug bgp events
+debug bgp filters
+no debug bgp filters
+debug bgp keepalives
+no debug bgp keepalives
+debug bgp updates
+debug bgp updates (in|out)
+no debug bgp updates
+debug bgp
+no debug bgp
+no debug all bgp
+show debugging bgp
+dump bgp all PATH
+dump bgp all PATH INTERVAL
+no dump bgp all [PATH] [INTERVAL]
+dump bgp updates PATH
+dump bgp updates PATH INTERVAL
+no dump bgp updates [PATH] [INTERVAL]
+dump bgp routes-mrt PATH INTERVAL
+no dump bgp routes-mrt [PATH] [INTERVAL]
+ip as-path access-list WORD (deny|permit) .LINE
+no ip as-path access-list WORD (deny|permit) .LINE
+no ip as-path access-list WORD
+network A.B.C.D/M
+network A.B.C.D mask A.B.C.D
+no network A.B.C.D/M
+no network A.B.C.D mask A.B.C.D
+aggregate-address A.B.C.D/M
+aggregate-address A.B.C.D A.B.C.D
+aggregate-address A.B.C.D/M summary-only
+aggregate-address A.B.C.D A.B.C.D summary-only
+aggregate-address A.B.C.D/M as-set
+aggregate-address A.B.C.D A.B.C.D as-set
+aggregate-address A.B.C.D/M as-set summary-only
+aggregate-address A.B.C.D A.B.C.D as-set summary-only
+no aggregate-address A.B.C.D/M
+no aggregate-address A.B.C.D A.B.C.D
+show ip bgp
+show ip bgp A.B.C.D
+show ip bgp A.B.C.D/M
+show ip bgp regexp .LINE
+show ip bgp prefix-list WORD
+show ip bgp filter-list WORD
+show ip bgp cidr-only
+show ip bgp community
+show ip bgp community (AA:NN|local-AS|no-advertise|no-export)
+show ip bgp community (AA:NN|local-AS|no-advertise|no-export) exact-match
+show ip bgp community-list WORD
+show ip bgp community-list WORD exact-match
+show ip bgp A.B.C.D/M longer-prefixes
+show ip bgp neighbors (A.B.C.D|X:X::X:X) advertised-routes
+show ip bgp neighbors (A.B.C.D|X:X::X:X) received-routes
+show ip bgp neighbors (A.B.C.D|X:X::X:X) routes
+bgp dampening <1-45> <1-20000> <1-20000> <1-255>
+no bgp dampening
+match ip address WORD
+no match ip address
+match ip next-hop WORD
+no match ip next-hop
+match ip address prefix-list WORD
+no match ip address prefix-list
+match ip next-hop prefix-list WORD
+no match ip next-hop prefix-list
+match metric <0-4294967295>
+no match metric
+match community WORD
+no match community
+match as-path WORD
+no match as-path
+set ip next-hop A.B.C.D
+no set ip next-hop
+set metric (<0-4294967295>|<+/-metric>)
+no set metric
+set local-preference <0-4294967295>
+no set local-preference
+set weight <0-4294967295>
+no set weight
+set as-path prepend .<1-65535>
+no set as-path prepend
+set community .AA:NN
+no set community
+set community-additive .AA:NN
+no set community-additive
+set community-delete WORD
+no set community-delete
+set extcommunity rt .ASN:nn_or_IP-address:nn
+no set extcommunity rt
+set extcommunity soo .ASN:nn_or_IP-address:nn
+no set extcommunity soo
+set origin (egp|igp|incomplete)
+no set origin
+set atomic-aggregate
+no set atomic-aggregate
+set aggregator as <1-65535> A.B.C.D
+no set aggregator as
+set originator-id A.B.C.D
+no set originator-id
+bgp router-id A.B.C.D
+no bgp router-id
+timers bgp <0-65535> <0-65535>
+no timers bgp
+bgp cluster-id A.B.C.D
+no bgp cluster-id
+bgp confederation peers .<1-65535>
+bgp confederation identifier <1-65535>
+no bgp confederation peers .<1-65535>
+no bgp confederation identifier <1-65535>
+no bgp client-to-client reflection
+bgp client-to-client reflection
+bgp always-compare-med
+no bgp always-compare-med
+bgp deterministic-med
+no bgp deterministic-med
+bgp enforce-first-as
+no bgp enforce-first-as
+bgp bestpath compare-routerid
+no bgp bestpath compare-routerid
+bgp bestpath as-path ignore
+no bgp bestpath as-path ignore
+bgp bestpath med (confed|missing-as-worst)
+bgp bestpath med confed missing-as-worst
+no bgp bestpath med (confed|missing-as-worst)
+no bgp bestpath med confed missing-as-worst
+bgp default local-preference <0-4294967295>
+no bgp default local-preference
+router bgp <1-65535>
+show startup-config
+log file FILENAME
+no log file [FILENAME]
+neighbor A.B.C.D advertisement-interval <0-600>
+no neighbor A.B.C.D advertisement-interval
+show memory all
+show memory lib
+show memory bgp
+no router bgp <1-65535>
+neighbor A.B.C.D remote-as <1-65535>
+no neighbor A.B.C.D remote-as <1-65535>
+neighbor A.B.C.D activate
+no neighbor A.B.C.D activate
+neighbor A.B.C.D passive
+no neighbor A.B.C.D passive
+neighbor A.B.C.D shutdown
+no neighbor A.B.C.D shutdown
+neighbor A.B.C.D description .LINE
+no neighbor A.B.C.D description
+neighbor A.B.C.D version (4|4-)
+no neighbor A.B.C.D version
+neighbor A.B.C.D next-hop-self
+no neighbor A.B.C.D next-hop-self
+neighbor A.B.C.D send-community
+no neighbor A.B.C.D send-community
+neighbor A.B.C.D send-community (both|extended|standard)
+no neighbor A.B.C.D send-community (both|extended|standard)
+neighbor A.B.C.D weight <0-65535>
+no neighbor A.B.C.D weight
+neighbor A.B.C.D soft-reconfiguration inbound
+no neighbor A.B.C.D soft-reconfiguration inbound
+neighbor A.B.C.D route-reflector-client
+no neighbor A.B.C.D route-reflector-client
+neighbor A.B.C.D capability route-refresh
+no neighbor A.B.C.D capability route-refresh
+neighbor A.B.C.D dont-capability-negotiate
+no neighbor A.B.C.D dont-capability-negotiate
+neighbor A.B.C.D override-capability
+no neighbor A.B.C.D override-capability
+neighbor A.B.C.D strict-capability-match
+no neighbor A.B.C.D strict-capability-match
+neighbor A.B.C.D timers <0-65535> <0-65535>
+no neighbor A.B.C.D timers
+neighbor A.B.C.D timers connect <0-65535>
+no neighbor A.B.C.D timers connect [TIMER]
+neighbor A.B.C.D prefix-list WORD (in|out)
+no neighbor A.B.C.D prefix-list WORD (in|out)
+neighbor A.B.C.D filter-list WORD (in|out)
+no neighbor A.B.C.D filter-list WORD (in|out)
+neighbor A.B.C.D route-map WORD (in|out)
+no neighbor A.B.C.D route-map WORD (in|out)
+neighbor A.B.C.D maximum-prefix <1-4294967295>
+no neighbor A.B.C.D maximum-prefix
+neighbor A.B.C.D transparent-as
+no neighbor A.B.C.D transparent-as
+neighbor A.B.C.D transparent-nexthop
+no neighbor A.B.C.D transparent-nexthop
+no neighbor A.B.C.D
+show ip bgp summary
+show ip bgp neighbors
+show ip bgp neighbors (A.B.C.D|X:X::X:X)
+show ip bgp paths
+show ip bgp community-info
+show ip bgp attribute-info
+clear ip bgp *
+clear ip bgp <1-65535>
+clear ip bgp (A.B.C.D|X:X::X:X)
+clear ip bgp A.B.C.D soft in
+clear ip bgp A.B.C.D in
+clear ip bgp <1-65535> soft in
+clear ip bgp <1-65535> in
+clear ip bgp * soft in
+clear ip bgp * in
+clear ip bgp <1-65535> soft out
+clear ip bgp * soft out
+clear ip bgp A.B.C.D soft
+clear ip bgp <1-65535> soft
+clear ip bgp * soft
+clear ip bgp A.B.C.D soft out
+route-map WORD (deny|permit) <1-65535>
+no route-map WORD (deny|permit) <1-65535>
+no route-map WORD
+on-match next
+no on-match next
+on-match goto <1-65535>
+no on-match goto
+access-list WORD (deny|permit) (A.B.C.D/M|any)
+no access-list WORD (deny|permit) (A.B.C.D/M|any)
+access-list WORD remark .LINE
+no access-list WORD remark
+no access-list WORD
+ip prefix-list WORD (deny|permit) (A.B.C.D/M|any)
+no ip prefix-list WORD
+show ip prefix-list
+clear ip prefix-list
+ip prefix-list WORD (deny|permit) A.B.C.D/M ge <0-32>
+no ip prefix-list WORD (deny|permit) A.B.C.D/M ge <0-32>
+ip prefix-list WORD (deny|permit) A.B.C.D/M ge <0-32> le <0-32>
+ip prefix-list WORD (deny|permit) A.B.C.D/M le <0-32>
+no ip prefix-list WORD (deny|permit) A.B.C.D/M le <0-32>
+ip prefix-list WORD (deny|permit) A.B.C.D/M le <0-32> ge <0-32>
+no ip prefix-list WORD (deny|permit) A.B.C.D/M le <0-32> ge <0-32>
+ip prefix-list WORD seq <1-4294967295> (deny|permit) (A.B.C.D/M|any)
+no ip prefix-list WORD seq <1-4294967295> (deny|permit) (A.B.C.D/M|any)
+ip prefix-list WORD seq <1-4294967295> (deny|permit) A.B.C.D/M ge <0-32>
+no ip prefix-list WORD seq <1-4294967295> (deny|permit) A.B.C.D/M ge <0-32>
+ip prefix-list WORD seq <1-4294967295> (deny|permit) A.B.C.D/M ge <0-32> le <0-32>
+no ip prefix-list WORD seq <1-4294967295> (deny|permit) A.B.C.D/M ge <0-32> le <0-32>
+ip prefix-list WORD seq <1-4294967295> (deny|permit) A.B.C.D/M le <0-32>
+no ip prefix-list WORD seq <1-4294967295> (deny|permit) A.B.C.D/M le <0-32>
+ip prefix-list WORD seq <1-4294967295> (deny|permit) A.B.C.D/M le <0-32> ge <0-32>
+no ip prefix-list WORD seq <1-4294967295> (deny|permit) A.B.C.D/M le <0-32> ge <0-32>
+ip prefix-list WORD description .LINE
+no ip prefix-list WORD description
+ip prefix-list sequence-number
+no ip prefix-list sequence-number
+show ip prefix-list WORD
+show ip prefix-list WORD seq <1-4294967295>
+show ip prefix-list WORD A.B.C.D/M
+show ip prefix-list WORD A.B.C.D/M longer
+show ip prefix-list WORD A.B.C.D/M first-match
+show ip prefix-list summary
+show ip prefix-list summary WORD
+show ip prefix-list detail
+show ip prefix-list detail WORD
+clear ip prefix-list WORD
+clear ip prefix-list WORD A.B.C.D/M
+no ip prefix-list WORD (deny|permit) (A.B.C.D/M|any)
+no ip prefix-list WORD (deny|permit) A.B.C.D/M ge <0-32> le <0-32>
+
+undebug bgp fsm
+undebug bgp events
+undebug bgp filters
+undebug bgp keepalives
+undebug bgp updates
+undebug bgp
+undebug all bgp
+network A.B.C.D
+no network A.B.C.D
+aggregate-address A.B.C.D/M summary-only as-set
+aggregate-address A.B.C.D A.B.C.D summary-only as-set
+no aggregate-address A.B.C.D/M summary-only
+no aggregate-address A.B.C.D/M as-set
+no aggregate-address A.B.C.D/M as-set summary-only
+no aggregate-address A.B.C.D/M summary-only as-set
+no aggregate-address A.B.C.D A.B.C.D summary-only
+no aggregate-address A.B.C.D A.B.C.D as-set
+no aggregate-address A.B.C.D A.B.C.D as-set summary-only
+no aggregate-address A.B.C.D A.B.C.D summary-only as-set
+show ip bgp community (AA:NN|local-AS|no-advertise|no-export) (AA:NN|local-AS|no-advertise|no-export)
+show ip bgp community (AA:NN|local-AS|no-advertise|no-export) (AA:NN|local-AS|no-advertise|no-export) (AA:NN|local-AS|no-advertise|no-export)
+show ip bgp community (AA:NN|local-AS|no-advertise|no-export) (AA:NN|local-AS|no-advertise|no-export) (AA:NN|local-AS|no-advertise|no-export) (AA:NN|local-AS|no-advertise|no-export)
+show ip bgp community (AA:NN|local-AS|no-advertise|no-export) (AA:NN|local-AS|no-advertise|no-export) exact-match
+show ip bgp community (AA:NN|local-AS|no-advertise|no-export) (AA:NN|local-AS|no-advertise|no-export) (AA:NN|local-AS|no-advertise|no-export) exact-match
+show ip bgp community (AA:NN|local-AS|no-advertise|no-export) (AA:NN|local-AS|no-advertise|no-export) 
+bgp dampening <1-45>
+bgp dampening
+no bgp dampening <1-45> <1-20000> <1-20000> <1-255>
+clear ip bgp dampening
+clear ip bgp dampening A.B.C.D/M
+clear ip bgp dampening A.B.C.D
+clear ip bgp dampening A.B.C.D A.B.C.D
+no match ip address WORD
+no match ip next-hop WORD
+no match ip address prefix-list WORD
+no match ip next-hop prefix-list WORD
+no match metric <0-4294967295>
+no match community WORD
+no match as-path WORD
+no set ip next-hop A.B.C.D
+no set metric <0-4294967295>
+no set local-preference <0-4294967295>
+no set weight <0-4294967295>
+no set as-path prepend .<1-65535>
+set community none
+no set community .AA:NN
+no set community none
+no set community-additive .AA:NN
+no set community-delete WORD
+no set extcommunity rt .ASN:nn_or_IP-address:nn
+no set extcommunity soo .ASN:nn_or_IP-address:nn
+no set origin (egp|igp|incomplete)
+no set aggregator as <1-65535> A.B.C.D
+no set originator-id A.B.C.D
+no bgp router-id A.B.C.D
+bgp cluster-id <1-4294967295>
+no bgp cluster-id A.B.C.D
+bgp bestpath med missing-as-worst confed
+no bgp bestpath med missing-as-worst confed
+no bgp default local-preference <0-4294967295>
+no neighbor A.B.C.D description .LINE
+no neighbor A.B.C.D weight <0-65535>
+no neighbor A.B.C.D maximum-prefix <1-4294967295>
+clear ip bgp A.B.C.D out
+clear ip bgp <1-65535> out
+clear ip bgp * out
+access-list WORD (deny|permit) A.B.C.D/M (exact-match|)
+no access-list WORD (deny|permit) A.B.C.D/M (exact-match|)
+no access-list WORD remark .LINE
+show memory
+no ip prefix-list WORD description .LINE

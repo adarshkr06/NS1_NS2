@@ -1,0 +1,64 @@
+BGP++ pdns support
+------------------
+
+BGP++ supports parallel distributed simulations using the
+pdns package <http://www.cc.gatech.edu/computing/compass/pdns/>.
+This features permits to distribute a simulation over a network
+of workstations, resulting in the availability of more hardware 
+resources (especially memory, which is the primary limiting 
+factor for large scale simulations).
+
+To install BGP++ with pdns support follow the instructions at the
+README file of the main distribution directory.
+
+pdns requires to change the syntax of ns scripts, at its Home Page
+(above) you can find more detail on how the syntax is modified.
+For BGP++ to support pdns there were necessary some additional 
+modifications in the syntax. The example bellow describes the 
+configuration for a 2 router simulation run distributed
+over 2 machines (federates). The example does not cover all the 
+pdns details, it is adviced to read the "short" documentation at 
+<http://www.cc.gatech.edu/computing/compass/pdns/>.
+
+First, the simulation is space parallel, that is different parts of the 
+topolgy reside in different federates.
+
+		    Federate 1	\  Federate 2
+				/	
+			### 	\    ###
+			#1#-----/----#2#
+			###	\    ###
+				/
+				\
+
+
+set ns [new Simulator]			
+$ns use-scheduler RTI  
+set n1 [$ns node]
+$n1 rlink 100Mb 5ms DropTail 10.1.0.1 255.255.255.0; #Create remote link and assign an IP address
+						     
+$ns add-route $n1 10.1.0.1 10.1.0.2 255.255.255.0
+
+#END OF ns/pdns configuration
+
+set r0 [new BgpRegistry]
+
+
+#This is a new command special for BGP++ with pdns support
+#it should have the following format:
+#  $registry bgp-router ip-identifier  ip-addr mask ip-addr mask 
+#
+#  ip-identifier: is the IP address (as specified in the .conf file) of a BGP peer that resides in another federate.
+#  ip-addr mask : 
+
+
+$r0 bgp-router 192.38.14.2 192.168.2.3 255.255.255.0
+
+set BGP1 [new Application/Route/Bgp]
+$BGP1 register  $r0; 
+$BGP1 finish-time  $fin
+$BGP1 config-file ./conf/bgpd1.conf
+$BGP1 attach-node $n1
+$BGP1 cpu-load-model uniform 0.0001 0.00001
+$ns at 60  "$BGP1 command \"show ip bgp\""
+

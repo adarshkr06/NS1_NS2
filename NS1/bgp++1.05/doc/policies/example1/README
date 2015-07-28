@@ -1,0 +1,11 @@
+ex1.tcl:
+	Assume routers BGP1 (AS1) and BGP2 (AS2); BGP2 advertises three networks:
+	10.0.1.0/24, 10.0.2.0/24 and 10.0.3.0/24. Router BGP1 does not accept 
+	advertisements for network 10.0.1.0/24 by AS2. To accomplish this, a route 
+	map is applied on the inbound updates received by BGP1. At some point after
+	the beginning of the simulation we change the applied policies and accept 
+	all announcements from router 2.
+
+To run the simulation:
+	ns ex1.tcl 	[ -stop simulation_time_in_sec [ default 100 ] ]    
+			[ -dir  path_to_dir_that_contains_configuration_file [ default cwd ] ]

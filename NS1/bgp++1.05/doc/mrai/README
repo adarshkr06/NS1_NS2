@@ -1,0 +1,91 @@
+This directory contains examples that test 
+BGP++ mrai implementation. All the experiments use 
+the following topology. Also, all the experiments 
+test how router 2 behaves in its session with 
+router 1, when it receives advertisements from 
+routers 3,4 and 5.
+		
+			###
+			#3#
+			###
+                         |
+		###	###	###
+		#1#-----#2#-----#4#
+		###	###	###
+                         |
+			###
+			#5#
+			###
+
+for PER PREFIX MRAI:
+-------------------
+
+******mrai-1.tcl: 
+
+at 20 router 3 advertises to 2 that it can reach perfix p, at 3 as-hop distance  
+at 21 router 4 advertises to 2 that it can reach perfix p, at 2 as-hop distance
+
+the experiment is successful if router 2 suppresses the advertisement of the second
+UPDATE to router 1 for MRAI seconds.  
+
+Also the same experiment is repeated using two different prefixes p1 and p2. In this 
+scenario the UPDATES should propagate immediately to router 1 through router 2 without 
+any suppressing.
+
+
+******mrai-2.tcl: 
+
+at 20 router 3 advertises to 2 that it can reach prefix p, at 3 as-hop distance  
+at 21 router 4 advertises to 2 that it can reach prefix p, at 2 as-hop distance
+at 22 router 5 advertises to 2 that it originates prefix p
+
+the experiment is successful if router 2 suppresses the advertisement of routers 
+4 and 5 for MRAI time. Furthermore, the latter advertisement overwrites the first,
+thus at the end of MRAI interval only the UPDATE of router 5 is propagated.
+
+Also the same experiment is repeated using three different prefixes p1, p2 and p3. In this 
+scenario the UPDATES should propagate immediately to router 1 through router 2 without 
+any suppressing.
+
+ 
+******mrai-3.tcl: 
+
+at 20 router 3 advertises to 2 that it can reach prefix p, at 3 as-hop distance  
+at 25 router 3 withdraws its advertisement. 
+
+the experiment is successful if router 2 propagates the withdrawal for prefix p 
+immediately. 
+
+
+PER PEER MRAI
+
+******mrai-4.tcl: 
+
+at 20 router 3 advertises to 2 that it can reach prefix p1, at 3 as-hops distance  
+at 21 router 4 advertises to 2 that it can reach prefix p2, at 2 as-hops distance
+
+the experiment is successful if router 2 suppresses the advertisement of the second
+UPDATE to router 1 for MRAI seconds.  
+
+
+******mrai-5.tcl: 
+
+at 20 router 3 advertises to 2 that it can reach prefix p, at 3 as-hops distance  
+at 25 router 3 withdraws its advertisement. 
+
+the experiment is successful if router 2 propagates the withdrawal for prefix p 
+immediately. 
+
+
+******mrai-6.tcl: 
+
+at 20 router 3 advertises to 2 that it can reach prefix p, at 3 as-hops distance  
+at 21 router 4 advertises to 2 that it can reach prefix p, at 2 as-hops distance
+at 22 router 5 advertises to 2 that it originates prefix p
+
+the experiment is successful if router 2 suppresses the advertisement of routers 
+4 and 5 for MRAI time. Furthermore, the later advertisement overwrites the first,
+thus at the end of MRAI interval only the UPDATE of router 5 is propagated.
+
+
+

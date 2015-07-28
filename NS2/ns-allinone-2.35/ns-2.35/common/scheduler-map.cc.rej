@@ -1,0 +1,121 @@
+*** common/scheduler-map.cc	2003-02.35 17:07:41.000000000 -0500
+--- common/scheduler-map.cc	2003-08-20 16:25:58.000000000 -0400
+***************
+*** 132,154 ****
+  {
+! 	for (EventQueue_t::iterator eIT = EventQueue_.begin();
+! 	     eIT != EventQueue_.end(); 
+! 	     ++eIT) {
+! 		if ((*eIT)->uid_ == uid) 
+! 			return (*eIT);
+! 	}
+! 
+! 	return 0;
+  }
+  
+! Event* MapScheduler::deque()
+  {
+! 	EventQueue_t::const_iterator eIT = EventQueue_.begin();
+! 	if (eIT == EventQueue_.end()) 
+! 		return 0;
+! 
+! 	EventQueue_.erase(eIT);
+! 
+! 	return *eIT;
+  }
+  
+- #endif // HAVE_STL
+--- 163,255 ----
+  {
+! #ifdef USING_UIDDEQ
+!   if (uid >= fuid && uid < luid) return UIDDeq[uid-fuid];
+!   printf("HuH?  MapScheduler::lookup, uid out of range ");
+! 	printf(UID_PRINTF_FORMAT, uid);
+! 	printf(" ");
+! 	printf(UID_PRINTF_FORMAT, fuid);
+! 	printf(" ");
+! 	printf(UID_PRINTF_FORMAT, luid);
+! 	printf("\n");
+! #else
+! 	for (EventMap_t::const_iterator i = EventList.begin();
+! 			 i != EventList.end(); ++i)
+! 		{
+! 			if (i->first.second == uid) return i->second; // Found it
+! 		}
+! #endif
+!   return NULL;
+  }
+  
+! Event* MapScheduler::deque()		// next event (removes from q)
+  {
+!   if (EventList.size() == 0) return NULL; // HuH?
+!   EventMap_t::iterator i = EventList.begin();
+!   Event* p = i->second;
+! #ifdef USING_UIDDEQ
+!   CleanUID();
+!   if (UIDDeq.size() == 0)
+!     { 
+!       printf("HuH? MapScheduler::deque, empty uid list\n");
+!     }
+!   else
+!     {
+!       if (i->second->uid_ != UIDDeq[0]->uid_)
+!         {
+!           if (i->second->uid_ >= fuid && i->second->uid_ < luid)
+!             { // Not in order, just null it out
+! 							UIDDeq[i->second->uid_ - fuid] = NULL;
+!             }
+!           else
+!             {
+!               printf("HuH? MapScheduler::deque, uid %ld outofrange %ld %ld\n",
+!                      (unsigned long) i->second->uid_,
+!                      (unsigned long) fuid,
+!                      (unsigned long) luid);
+!             }
+!         }
+!       else
+!         { // Is head of list, just remove it
+!           UIDDeq.pop_front(); // Remove
+! 					fuid++;
+!         }
+!     }
+! #endif
+!   EventList.erase(i);
+! 	hint = EventList.end();
+!   totrm++;
+!   return p;
+! }
+! 
+! Event* MapScheduler::earliest()		// earliest event (do not remove)
+! {
+!   if (EventList.size() == 0) return NULL; // HuH?
+!   EventMap_t::iterator i = EventList.begin();
+!   return i->second;
+! }
+! 
+! void MapScheduler::CleanUID()
+! {
+! #ifdef USING_UIDDEQ
+!   while(UIDDeq.size() > 0 && UIDDeq[0] == NULL)
+!     { // Remove null entries
+!       UIDDeq.pop_front();
+!       fuid++;
+!     }
+! #endif
+! }
+! 
+! void MapScheduler::DBDump(const char* pMsg)
+! {
+!   EventMap_t::const_iterator i;
+! 	if (pMsg) printf(pMsg);
+! 	printf("Dumping event list\n");
+! 	for (i = EventList.begin(); i != EventList.end(); ++i)
+! 		{
+! 			printf("Time %f/%f uid ", i->first.first, i->second->time_ );
+! 			printf(UID_PRINTF_FORMAT, i->second->uid_);
+! 			printf(" e %p\n", i->second);
+! 			//Event* e = lookup(i->second->uid_);
+! 			//if (e != i->second) printf("Event mismatch, %p %p\n", e, i->second);
+! 		}
+  }
+  

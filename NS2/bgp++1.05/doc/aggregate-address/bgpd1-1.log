@@ -1,0 +1,81 @@
+2015/07/24 19:51:03  6.570038 BGP: [Event] BGP connection from host 2.2.2.1
+2015/07/24 19:51:03  6.570038 BGP: [Event] BGP connection IP address 2.2.2.1 is Idle state
+2015/07/24 19:51:03  6.570038 BGP: [Event] BGP closing TCP connection to IP address 2.2.2.1 
+2015/07/24 19:51:04  7.303715 BGP: 2.2.2.1 [FSM] Timer (start timer expire).
+2015/07/24 19:51:04  7.303715 BGP: 2.2.2.1 [FSM] BGP_Start (Idle->Connect)
+2015/07/24 19:51:04  7.303715 BGP: 2.2.2.1 went from Idle to Connect
+2015/07/24 19:51:04  7.303715 BGP: 2.2.2.1 [Event] Connect start to 2.2.2.1
+2015/07/24 19:51:04  7.303715 BGP: 2.2.2.1 [FSM] Non blocking connect waiting result
+2015/07/24 19:51:04  7.306142 BGP: 2.2.2.1 [FSM] TCP_connection_open (Connect->OpenSent)
+2015/07/24 19:51:04  7.306142 BGP: 2.2.2.1 went from Connect to OpenSent
+2015/07/24 19:51:04  7.306142 BGP: 2.2.2.1 sending OPEN, version 4, my as 100, holdtime 180, id 2.2.2.2
+2015/07/24 19:51:04  7.306142 BGP: 2.2.2.1 send message type 1, length (incl. header) 45
+2015/07/24 19:51:04  7.309475 BGP: 2.2.2.1 rcv message type 1, length (excl. header) 26
+2015/07/24 19:51:04  7.309475 BGP: 2.2.2.1 rcv OPEN, version 4, remote-as 300, holdtime 180, id 2.2.2.1
+2015/07/24 19:51:04  7.309475 BGP: 2.2.2.1 rcv OPEN w/ OPTION parameter len: 16
+2015/07/24 19:51:04  7.309475 BGP: 2.2.2.1 rcvd OPEN w/ optional parameter type 2 (Capability) len 6
+2015/07/24 19:51:04  7.309475 BGP: 2.2.2.1 OPEN has CAPABILITY code: 1, length 4
+2015/07/24 19:51:04  7.309475 BGP: 2.2.2.1 OPEN has MP_EXT CAP for afi/safi: 1/1
+2015/07/24 19:51:04  7.309475 BGP: 2.2.2.1 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+2015/07/24 19:51:04  7.309475 BGP: 2.2.2.1 OPEN has CAPABILITY code: 128, length 0
+2015/07/24 19:51:04  7.309475 BGP: 2.2.2.1 OPEN has ROUTE-REFRESH capability(old) for all address-families
+2015/07/24 19:51:04  7.309475 BGP: 2.2.2.1 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+2015/07/24 19:51:04  7.309475 BGP: 2.2.2.1 OPEN has CAPABILITY code: 2, length 0
+2015/07/24 19:51:04  7.309475 BGP: 2.2.2.1 OPEN has ROUTE-REFRESH capability(New) for all address-families
+2015/07/24 19:51:04  7.309475 BGP: 2.2.2.1 [FSM] Receive_OPEN_message (OpenSent->OpenConfirm)
+2015/07/24 19:51:04  7.309475 BGP: 2.2.2.1 went from OpenSent to OpenConfirm
+2015/07/24 19:51:04  7.309475 BGP: 2.2.2.1 sending KEEPALIVE
+2015/07/24 19:51:04  7.309475 BGP: 2.2.2.1 send message type 4, length (incl. header) 19
+2015/07/24 19:51:04  7.312104 BGP: 2.2.2.1 rcv message type 4, length (excl. header) 0
+2015/07/24 19:51:04  7.312104 BGP: 2.2.2.1 KEEPALIVE rcvd
+2015/07/24 19:51:04  7.312104 BGP: 2.2.2.1 [FSM] Receive_KEEPALIVE_message (OpenConfirm->Established)
+2015/07/24 19:51:04  7.312104 BGP: 2.2.2.1 went from OpenConfirm to Established
+2015/07/24 19:51:04  7.312104 BGP: 2.2.2.1 sending KEEPALIVE
+2015/07/24 19:51:04  7.312104 BGP: 2.2.2.1 send message type 4, length (incl. header) 19
+2015/07/24 19:51:04  7.314968 BGP: 2.2.2.1 rcv message type 4, length (excl. header) 0
+2015/07/24 19:51:04  7.314968 BGP: 2.2.2.1 KEEPALIVE rcvd
+2015/07/24 19:51:04  7.314968 BGP: 2.2.2.1 [FSM] Receive_KEEPALIVE_message (Established->Established)
+2015/07/24 19:51:04  7.314968 BGP: 2.2.2.1 rcvd UPDATE w/ attr: nexthop 2.2.2.1, origin i, path 300
+2015/07/24 19:51:04  7.314968 BGP: 2.2.2.1 rcvd 170.10.0.0/16
+2015/07/24 19:51:04  7.314968 BGP: 2.2.2.1 [FSM] Receive_UPDATE_message (Established->Established)
+2015/07/24 19:51:05  8.668108 BGP: 2.2.2.1 rcvd UPDATE w/ attr: nexthop 2.2.2.1, origin i, atomic-aggregate, aggregated by 300 2.2.2.1, path 300
+2015/07/24 19:51:05  8.668108 BGP: 2.2.2.1 rcvd 160.0.0.0/8
+2015/07/24 19:51:05  8.668108 BGP: 2.2.2.1 [FSM] Receive_UPDATE_message (Established->Established)
+2015/07/24 19:52:04  67.309336 BGP: 2.2.2.1 rcv message type 4, length (excl. header) 0
+2015/07/24 19:52:04  67.309336 BGP: 2.2.2.1 KEEPALIVE rcvd
+2015/07/24 19:52:04  67.309336 BGP: 2.2.2.1 [FSM] Receive_KEEPALIVE_message (Established->Established)
+2015/07/24 19:52:04  67.309475 BGP: 2.2.2.1 [FSM] Timer (keepalive timer expire)
+2015/07/24 19:52:04  67.309475 BGP: 2.2.2.1 [FSM] KeepAlive_timer_expired (Established->Established)
+2015/07/24 19:52:04  67.309475 BGP: 2.2.2.1 sending KEEPALIVE
+2015/07/24 19:52:04  67.309475 BGP: 2.2.2.1 send message type 4, length (incl. header) 19
+>show ip bgp
+BGP table version is 0, local router ID is 2.2.2.2
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+*> 160.0.0.0/8        2.2.2.1                                0  300i
+*> 170.10.0.0       2.2.2.1                                0  300i
+
+Total number of prefixes 2
+2015/07/24 19:53:04  127.309336 BGP: 2.2.2.1 rcv message type 4, length (excl. header) 0
+2015/07/24 19:53:04  127.309336 BGP: 2.2.2.1 KEEPALIVE rcvd
+2015/07/24 19:53:04  127.309336 BGP: 2.2.2.1 [FSM] Receive_KEEPALIVE_message (Established->Established)
+2015/07/24 19:53:04  127.309475 BGP: 2.2.2.1 [FSM] Timer (keepalive timer expire)
+2015/07/24 19:53:04  127.309475 BGP: 2.2.2.1 [FSM] KeepAlive_timer_expired (Established->Established)
+2015/07/24 19:53:04  127.309475 BGP: 2.2.2.1 sending KEEPALIVE
+2015/07/24 19:53:04  127.309475 BGP: 2.2.2.1 send message type 4, length (incl. header) 19
+2015/07/24 19:54:04  187.309336 BGP: 2.2.2.1 rcv message type 4, length (excl. header) 0
+2015/07/24 19:54:04  187.309336 BGP: 2.2.2.1 KEEPALIVE rcvd
+2015/07/24 19:54:04  187.309336 BGP: 2.2.2.1 [FSM] Receive_KEEPALIVE_message (Established->Established)
+2015/07/24 19:54:04  187.309475 BGP: 2.2.2.1 [FSM] Timer (keepalive timer expire)
+2015/07/24 19:54:04  187.309475 BGP: 2.2.2.1 [FSM] KeepAlive_timer_expired (Established->Established)
+2015/07/24 19:54:04  187.309475 BGP: 2.2.2.1 sending KEEPALIVE
+2015/07/24 19:54:04  187.309475 BGP: 2.2.2.1 send message type 4, length (incl. header) 19
+2015/07/24 19:55:04  247.309336 BGP: 2.2.2.1 rcv message type 4, length (excl. header) 0
+2015/07/24 19:55:04  247.309336 BGP: 2.2.2.1 KEEPALIVE rcvd
+2015/07/24 19:55:04  247.309336 BGP: 2.2.2.1 [FSM] Receive_KEEPALIVE_message (Established->Established)
+2015/07/24 19:55:04  247.309475 BGP: 2.2.2.1 [FSM] Timer (keepalive timer expire)
+2015/07/24 19:55:04  247.309475 BGP: 2.2.2.1 [FSM] KeepAlive_timer_expired (Established->Established)
+2015/07/24 19:55:04  247.309475 BGP: 2.2.2.1 sending KEEPALIVE
+2015/07/24 19:55:04  247.309475 BGP: 2.2.2.1 send message type 4, length (incl. header) 19

@@ -1,0 +1,241 @@
+adarshkr06@adarshkr06-VirtualBox:~/bgp++1.05/doc/mrai$ ns mrai-1.tcl -dir conf/
+warning: no class variable Scheduler/RealTime::adjust_new_width_interval_
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Scheduler/RealTime::min_bin_width_
+
+Creating the nodes and BGP Applications
+Creating AS 1
+ Warning the "bgp-instance finish-time time" command is not required any more
+Creating AS 2
+ Warning the "bgp-instance finish-time time" command is not required any more
+Creating AS 3
+ Warning the "bgp-instance finish-time time" command is not required any more
+nodecreation elapsed seconds 0
+ Warning the "bgp-instance finish-time time" command is not required any more
+ Warning the "bgp-instance finish-time time" command is not required any more
+Creating the links and BGP connectivity
+Connecting AS 1
+Connecting AS 2
+Connecting AS 3
+created 2 peering agreements
+linkcreation elapsed seconds 0
+Starting the run
+BGP constructors elapsed seconds 0
+BGP main elapsed seconds 0
+End of BGP constructors at 1437599665
+RealTimeScheduler: warning: slop 0.030714 exceeded limit 0.010000 [clock_:17.886965, p->time_:17.856251]
+
+_o23: BGP UPDATE SEND
+
+ SENDING FROM AS 3 
+
+ SENDING TO AS 2 
+The IP Address is 10.0.3.0
+DEBUG: OnSend Print
+
+ DEBUG: Object created and network queue of AS 2 incremented to 1
+DEBUG: OnReceive Print
+DEBUG: Prefix 0 = 10.0.3.0
+The IP Address is 10.0.3.0
+
+ DEBUG: OnReceive network queue of AS 2 decremented to 0
+ DEBUG: OnReceive process queue of AS 2 incremented to 1
+_o19: BGP UPDATE SEND
+
+ SENDING FROM AS 2 
+
+ SENDING TO AS 1 
+The IP Address is 10.0.3.0
+DEBUG: OnSend Print
+DEBUG: Prefix 0 = 10.0.3.0
+
+ DEBUG: OnSend network queue of AS 1 incremented to 1
+_o19: BGP UPDATE SEND
+
+ SENDING FROM AS 2 
+
+ SENDING TO AS 4 
+The IP Address is 10.0.3.0
+DEBUG: OnSend Print
+DEBUG: Prefix 0 = 10.0.3.0
+
+ DEBUG: OnSend network queue of AS 4 incremented to 1
+_o19: BGP UPDATE SEND
+
+ SENDING FROM AS 2 
+
+ SENDING TO AS 5 
+The IP Address is 10.0.3.0
+DEBUG: OnSend Print
+DEBUG: Prefix 0 = 10.0.3.0
+
+ DEBUG: OnSend network queue of AS 5 incremented to 1
+ DEBUG: OnSend process queue of AS 2 decremented to 0
+DEBUG: Network not yet converged
+DEBUG: IN NLRI_PARSE
+IP PREFIX = 10.0.3.0
+AS = 3
+LOCAL_AS = 2
+
+DEBUG: OnReceive Print
+DEBUG: Prefix 0 = 10.0.3.0
+The IP Address is 10.0.3.0
+
+ DEBUG: OnReceive network queue of AS 1 decremented to 0
+ DEBUG: OnReceive process queue of AS 1 incremented to 1
+ DEBUG: OnSend process queue of AS 1 decremented to 0
+DEBUG: Network not yet converged
+DEBUG: IN NLRI_PARSE
+IP PREFIX = 10.0.3.0
+AS = 2
+LOCAL_AS = 1
+
+DEBUG: OnReceive Print
+DEBUG: Prefix 0 = 10.0.3.0
+The IP Address is 10.0.3.0
+
+ DEBUG: OnReceive network queue of AS 4 decremented to 0
+ DEBUG: OnReceive process queue of AS 4 incremented to 1
+ DEBUG: OnSend process queue of AS 4 decremented to 0
+DEBUG: Network not yet converged
+DEBUG: IN NLRI_PARSE
+IP PREFIX = 10.0.3.0
+AS = 2
+LOCAL_AS = 4
+
+DEBUG: OnReceive Print
+DEBUG: Prefix 0 = 10.0.3.0
+The IP Address is 10.0.3.0
+
+ DEBUG: OnReceive network queue of AS 5 decremented to 0
+ DEBUG: OnReceive process queue of AS 5 incremented to 1
+ DEBUG: OnSend process queue of AS 5 decremented to 0
+DEBUG: NETWORK CONVERGED FOR PREFIX10.0.3.0
+DEBUG: IN NLRI_PARSE
+IP PREFIX = 10.0.3.0
+AS = 2
+LOCAL_AS = 5
+
+_o27: BGP UPDATE SEND
+
+ SENDING FROM AS 4 
+
+ SENDING TO AS 2 
+The IP Address is 10.0.3.0
+DEBUG: OnSend Print
+
+ DEBUG: Object created and network queue of AS 2 incremented to 1
+DEBUG: OnReceive Print
+DEBUG: Prefix 0 = 10.0.3.0
+The IP Address is 10.0.3.0
+
+ DEBUG: OnReceive network queue of AS 2 decremented to 0
+ DEBUG: OnReceive process queue of AS 2 incremented to 1DEBUG: MRAI PER PREFIX SUPRESS 
+IP PREFIX = 10.0.3.0
+AS = 1
+LOCAL_AS = 2
+VALUE IN MAP1
+
+_o19: BGP UPDATE SEND
+
+ SENDING FROM AS 2 
+
+ SENDING TO AS 3 
+The IP Address is 10.0.3.0
+DEBUG: OnSend Print
+DEBUG: Prefix 0 = 10.0.3.0
+
+ DEBUG: OnSend network queue of AS 3 incremented to 1
+_o19: BGP WITHDRAW SEND
+
+ SENDING FROM AS 2 
+
+ SENDING TO AS 4 
+The IP Address is 10.0.3.0
+DEBUG: OnSend Print
+DEBUG: Prefix 0 = 10.0.3.0
+
+ DEBUG: OnSend network queue of AS 4 incremented to 1DEBUG: MRAI PER PREFIX SUPRESS 
+IP PREFIX = 10.0.3.0
+AS = 5
+LOCAL_AS = 2
+VALUE IN MAP1
+DEBUG: IN NLRI_PARSE
+IP PREFIX = 10.0.3.0
+AS = 4
+LOCAL_AS = 2
+
+DEBUG: OnReceive Print
+DEBUG: Prefix 0 = 10.0.3.0
+The IP Address is 10.0.3.0
+
+ DEBUG: OnReceive network queue of AS 4 decremented to 0
+ DEBUG: OnReceive process queue of AS 4 incremented to 1
+ DEBUG: OnSend process queue of AS 4 decremented to 0DEBUG: Network not yet convergedDEBUG: IN NLRI_PARSE
+IP PREFIX = 10.0.3.0
+AS = 2
+LOCAL_AS = 4
+
+DEBUG: OnReceive Print
+DEBUG: Prefix 0 = 10.0.3.0
+The IP Address is 10.0.3.0
+
+ DEBUG: OnReceive network queue of AS 3 decremented to 0
+ DEBUG: OnReceive process queue of AS 3 incremented to 1
+ DEBUG: OnSend process queue of AS 3 decremented to 0DEBUG: Network not yet convergedDEBUG: IN NLRI_PARSE
+IP PREFIX = 10.0.3.0
+AS = 2
+LOCAL_AS = 3
+RealTimeScheduler: warning: slop 0.030516 exceeded limit 0.010000 [clock_:22.359679, p->time_:22.329163]
+RealTimeScheduler: warning: slop 0.019990 exceeded limit 0.010000 [clock_:42.726532, p->time_:42.706542]
+
+_o19: BGP UPDATE SEND
+
+ SENDING FROM AS 2 
+
+ SENDING TO AS 5 
+The IP Address is 10.0.3.0
+DEBUG: OnSend Print
+DEBUG: Prefix 0 = 10.0.3.0
+
+ DEBUG: OnSend network queue of AS 5 incremented to 1DEBUG: BGP ROUTE ADV TIMER EXPIRY: MRAI PER PREFIX TYPE
+
+ DEBUG: OnSend process queue of AS 2 decremented to 0
+_o19: BGP UPDATE SEND
+
+ SENDING FROM AS 2 
+
+ SENDING TO AS 1 
+The IP Address is 10.0.3.0
+DEBUG: OnSend Print
+DEBUG: Prefix 0 = 10.0.3.0
+
+ DEBUG: OnSend network queue of AS 1 incremented to 1DEBUG: BGP ROUTE ADV TIMER EXPIRY: MRAI PER PREFIX TYPE
+
+ DEBUG: OnSend process queue of AS 2 decremented to -1
+DEBUG: OnReceive Print
+DEBUG: Prefix 0 = 10.0.3.0
+The IP Address is 10.0.3.0
+
+ DEBUG: OnReceive network queue of AS 5 decremented to 0
+ DEBUG: OnReceive process queue of AS 5 incremented to 1
+ DEBUG: OnSend process queue of AS 5 decremented to 0DEBUG: Network not yet convergedDEBUG: IN NLRI_PARSE
+IP PREFIX = 10.0.3.0
+AS = 2
+LOCAL_AS = 5
+
+DEBUG: OnReceive Print
+DEBUG: Prefix 0 = 10.0.3.0
+The IP Address is 10.0.3.0
+
+ DEBUG: OnReceive network queue of AS 1 decremented to 0
+ DEBUG: OnReceive process queue of AS 1 incremented to 1
+ DEBUG: OnSend process queue of AS 1 decremented to 0DEBUG: Network not yet convergedDEBUG: IN NLRI_PARSE
+IP PREFIX = 10.0.3.0
+AS = 2
+LOCAL_AS = 1
+simulation elapsed seconds 100
+adarshkr06@adarshkr06-VirtualBox:~/bgp++1.05/doc/mrai$ 
+

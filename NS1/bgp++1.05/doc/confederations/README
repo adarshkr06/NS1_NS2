@@ -1,0 +1,8 @@
+confederations.tcl:
+	Example that demonstrates confederations in BGP++.
+	AS500 is partitioned into confederations (AS50,AS60,AS70).
+	look the configuration files for more.	 
+
+To run the simulation:
+	ns confederations.tcl 	[ -stop simulation_time_in_sec [ default 100 ] ]    
+				[ -dir  path_to_dir_that_contains_configuration_file [ default cwd ] ]

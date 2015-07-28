@@ -1,0 +1,6 @@
+#!/bin/csh
+rsh -n f2g "(setenv NODEINFO 3:f2g,f3g,f4g:0; setenv SESSIONNAME 12345; cd BGP++/bgp++_doc/doc/pdns-ex; ~/BGP++/ns-allinone-2.26/ns-2.26_main/pdns test_bgp++.tcl 0)" &
+rsh -n f3g "(setenv NODEINFO 3:f2g,f3g,f4g:1; setenv SESSIONNAME 12345; cd BGP++/bgp++_doc/doc/pdns-ex; ~/BGP++/ns-allinone-2.26/ns-2.26_main/pdns test_bgp++.tcl 1)" &
+rsh -n f4g "(setenv NODEINFO 3:f2g,f3g,f4g:2; setenv SESSIONNAME 12345; cd BGP++/bgp++_doc/doc/pdns-ex; ~/BGP++/ns-allinone-2.26/ns-2.26_main/pdns test_bgp++.tcl 2)" &
+
+

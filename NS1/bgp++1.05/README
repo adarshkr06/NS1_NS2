@@ -1,0 +1,118 @@
+                           
+                              B G P + +
+========================================================================
+
+INTRODUCTION
+************
+
+This is the beta release of BGP++ 1.05. BGP++ is a C++ implementation of BGP 
+for ns-2. BGP++ was not developed from scratch, instead of this existing 
+software (Zebra bgpd) was modified to work with ns-2 simulator. 
+Zebra <http://www.zebra.org> is an implementation of BGP as well as other 
+routing protocols for UNIX platforms. BGP++ maintains most of the Zebra
+bgpd functionality while it incorporates the software in a OO simulation
+environment.
+
+COPYING
+*******
+
+BGP++ is Copyrighted (C) 2003 Georgia Institute of Technology under GNU General 
+Public License (GPL)
+
+INSTALLATION
+************
+
+Installation of BGP++ follow the instructions:
+
+	1.Decompress the baseline ns software:
+
+		cd $(HOME)
+        	    gunzip -c ns-allinone-2.26.tar.gz | tar -xvpf -
+
+	2. Move the BGP++ patch (patch_bgp++1.05_pdns_v2) file to the ~/ns-allinone-2.26/ns-2.26/ 
+	   directory and patch the stock ns:
+
+		cd $(HOME)/ns-allinone-2.26/ns-2.26/
+        	    patch -p7 <  patch_bgp++1.05_pdns_v2
+           This will install both BGP++ 1.05 and pdns v2 (Parallel Distributed ns)
+
+	3. (OPTIONAL STEP)
+	   If your machine has Performance-Monitoring Counters Drivers installed, 
+	   which can be found at <http://www.csd.uu.se/~mikpe/linux/perfctr/> ( BGP++ 
+	   is tested with perfctr-2.5.1), you will need to modify the  
+	   ~/ns-allinone-2.26/ns-2.26/Makefile.in file: 
+
+		a) append -lperfctr to the LIB macro
+		b) edit the OBJ_C macro, adding the following line
+			bgp/perfctr.o \ 
+		c) append -DHAVE_PERFCTR to the DEFINE macro
+	
+           The perfctr package is used by BGP++ to implement a router workload model, 
+	   in which the workload of the router is estimated by measuring the execution 
+	   time of BGP++. If you dont have the perfctr package and you dont want to spend 
+  	   time installing it, you can skip this step.
+
+	4. (OPTIONAL STEP)
+	   Do this step only if you want pdns support.
+
+	   Edit the ~/ns-allinone-2.26/ns-2.26/Makefile.in file:
+	   Change the KITHOME macro to reflect the correct directory of libSynk
+
+	   More information on the liSynk with installation instructions 
+	   can be found at pdns home page:	
+		<http://www.cc.gatech.edu/computing/compass/pdns/> 
+
+	   Also rename $(NS) to $(PDNS) in the 'all' rule.	
+	   Finally, append  -DHAVE_PDNS_BGP to the DEFINE macro.	   
+
+	5. (OPTIONAL STEP)
+	   If you wan to enable checkpointing you need to have CONDOR
+	   <http://www.cs.wisc.edu/condor/> installed. Then, in the 
+   	   Makefile.in append the -DHAVE_CONDOR on the DEFINE macro and 
+	   the -lcondorsyscall in the LIB macro.
+
+	6. (OPTIONAL STEP)
+	   The BGP++ 1.04 version merged in modification (not all) from
+           Zebra 0.92a to 0.93b. To enable the modifications append 
+  	   -DHAVE_ZEBRA_93b at the end of the DEFINE macro. The modifications
+	   are associated with the MRAI implementation. In 93b, MRAI 
+	   is implemented as a running timer that expires every 30 secs 
+	   (by default) and only then updates are sent. Without 
+	   -DHAVE_ZEBRA_93b appended, then the typical, i.e., per-peer
+	   and per-prefix, MRAI implementations available.
+
+	6. Install ns/pdns normally:
+		cd $(HOME)/ns-allinone-2.26
+		./install 
+	   or, if you started with a preinstalled ns-2.26 distribution, rebuild: 
+
+           cd $(HOME)/ns-allinone-2.26/ns-2.26
+                ./configure
+		make clean
+	        make 
+	
+
+
+DOCUMENTATION
+*************
+
+Please refer to BGP++ homepage at <http://www.ece.gatech.edu/research/labs/MANIACS/BGP++>
+for documentation and tutorials. Also under the doc/ directory you will find some
+example simulation scenarios, which are a good starting point.
+
+
+IMPORTANT NOTES
+***************
+Before using BGP++ please make sure you know what it can and *cannot* do,
+don't hesitate to contact me if you need clarifications. Especially, note
+that BGP++ can only be used for studying control plane issues, not for their
+impact on the data plane. This is because BGP RIBs are not redistributed
+into the FIBs of the routers.
+
+Moreover, BGP++ has only been tested on Linux, if you compile it on another
+platform please let me know. Finally, if you encounter problems or find bugs, 
+please email me at <fontas [at] ece [dot] gatech [dot] edu> (Xenofontas 
+Dimitropoulos), your feedback is precious for maintaining the software.
+		   	
+
+

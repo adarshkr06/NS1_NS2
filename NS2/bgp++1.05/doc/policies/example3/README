@@ -1,0 +1,7 @@
+ex3.tcl:
+	This example shows how access-list can be used with regexp to configure 
+	complex policies.
+
+To run the simulation:
+	ns ex3.tcl 	[ -stop simulation_time_in_sec [ default 100 ] ]    
+			[ -dir  path_to_dir_that_contains_configuration_file [ default cwd ] ]

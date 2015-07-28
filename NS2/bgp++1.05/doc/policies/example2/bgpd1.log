@@ -1,0 +1,91 @@
+2015/07/26 06:02:34  5.425972 BGP: 192.38.0.2 [FSM] Timer (start timer expire).
+2015/07/26 06:02:34  5.425972 BGP: 192.38.0.2 [FSM] BGP_Start (Idle->Connect)
+2015/07/26 06:02:34  5.425972 BGP: 192.38.0.2 went from Idle to Connect
+2015/07/26 06:02:34  5.425972 BGP: 192.38.0.2 [Event] Connect start to 192.38.0.2
+2015/07/26 06:02:34  5.425972 BGP: 192.38.0.2 [FSM] Non blocking connect waiting result
+2015/07/26 06:02:34  5.428399 BGP: 192.38.0.2 [FSM] TCP_connection_open (Connect->OpenSent)
+2015/07/26 06:02:34  5.428399 BGP: 192.38.0.2 went from Connect to OpenSent
+2015/07/26 06:02:34  5.428399 BGP: 192.38.0.2 sending OPEN, version 4, my as 1, holdtime 180, id 192.38.0.1
+2015/07/26 06:02:34  5.428399 BGP: 192.38.0.2 send message type 1, length (incl. header) 45
+2015/07/26 06:02:34  5.430826 BGP: 192.38.0.2 [Event] BGP connection closed 
+2015/07/26 06:02:34  5.430826 BGP: 192.38.0.2 [FSM] TCP_connection_closed (OpenSent->Active)
+2015/07/26 06:02:34  5.430826 BGP: 192.38.0.2 went from OpenSent to Active
+2015/07/26 06:02:36  7.985584 BGP: [Event] BGP connection from host 192.38.0.2
+2015/07/26 06:02:36  7.985584 BGP: [Event] Make dummy peer structure until read Open packet
+2015/07/26 06:02:36  7.985584 BGP: 192.38.0.2 [FSM] TCP_connection_open (Active->OpenSent)
+2015/07/26 06:02:36  7.985584 BGP: 192.38.0.2 went from Active to OpenSent
+2015/07/26 06:02:36  7.986250 BGP: 192.38.0.2 rcv message type 1, length (excl. header) 26
+2015/07/26 06:02:36  7.986250 BGP: 192.38.0.2 rcv OPEN, version 4, remote-as 2, holdtime 180, id 192.38.0.2
+2015/07/26 06:02:36  7.986250 BGP: 192.38.0.2 [Event] Transfer temporary BGP peer to existing one
+2015/07/26 06:02:36  7.986250 BGP: 192.38.0.2 sending OPEN, version 4, my as 1, holdtime 180, id 192.38.0.1
+2015/07/26 06:02:36  7.986250 BGP: 192.38.0.2 send message type 1, length (incl. header) 45
+2015/07/26 06:02:36  7.986250 BGP: 192.38.0.2 rcv OPEN w/ OPTION parameter len: 16
+2015/07/26 06:02:36  7.986250 BGP: 192.38.0.2 rcvd OPEN w/ optional parameter type 2 (Capability) len 6
+2015/07/26 06:02:36  7.986250 BGP: 192.38.0.2 OPEN has CAPABILITY code: 1, length 4
+2015/07/26 06:02:36  7.986250 BGP: 192.38.0.2 OPEN has MP_EXT CAP for afi/safi: 1/1
+2015/07/26 06:02:36  7.986250 BGP: 192.38.0.2 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+2015/07/26 06:02:36  7.986250 BGP: 192.38.0.2 OPEN has CAPABILITY code: 128, length 0
+2015/07/26 06:02:36  7.986250 BGP: 192.38.0.2 OPEN has ROUTE-REFRESH capability(old) for all address-families
+2015/07/26 06:02:36  7.986250 BGP: 192.38.0.2 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+2015/07/26 06:02:36  7.986250 BGP: 192.38.0.2 OPEN has CAPABILITY code: 2, length 0
+2015/07/26 06:02:36  7.986250 BGP: 192.38.0.2 OPEN has ROUTE-REFRESH capability(New) for all address-families
+2015/07/26 06:02:36  7.986250 BGP: 192.38.0.2 [Event] Accepting BGP peer delete
+2015/07/26 06:02:36  7.986250 BGP: 192.38.0.2 [FSM] Receive_OPEN_message (OpenSent->OpenConfirm)
+2015/07/26 06:02:36  7.986250 BGP: 192.38.0.2 went from OpenSent to OpenConfirm
+2015/07/26 06:02:36  7.986250 BGP: 192.38.0.2 sending KEEPALIVE
+2015/07/26 06:02:36  7.986250 BGP: 192.38.0.2 send message type 4, length (incl. header) 19
+2015/07/26 06:02:36  7.989018 BGP: 192.38.0.2 rcv message type 4, length (excl. header) 0
+2015/07/26 06:02:36  7.989018 BGP: 192.38.0.2 KEEPALIVE rcvd
+2015/07/26 06:02:36  7.989018 BGP: 192.38.0.2 [FSM] Receive_KEEPALIVE_message (OpenConfirm->Established)
+2015/07/26 06:02:36  7.989018 BGP: 192.38.0.2 went from OpenConfirm to Established
+2015/07/26 06:02:36  7.989018 BGP: 192.38.0.2 sending KEEPALIVE
+2015/07/26 06:02:36  7.989018 BGP: 192.38.0.2 send message type 4, length (incl. header) 19
+2015/07/26 06:02:36  7.989018 BGP: 192.38.0.2 send UPDATE 10.10.0.0/19 nexthop 192.38.0.1, origin i, path 
+2015/07/26 06:02:36  7.989018 BGP: 192.38.0.2 send UPDATE 10.10.10.0/24 nexthop 192.38.0.1, origin i, path 
+2015/07/26 06:02:36  7.989018 BGP: 192.38.0.2 send UPDATE 192.32.10.0/24 nexthop 192.38.0.1, origin i, path 
+2015/07/26 06:02:36  7.991648 BGP: 192.38.0.2 rcv message type 4, length (excl. header) 0
+2015/07/26 06:02:36  7.991648 BGP: 192.38.0.2 KEEPALIVE rcvd
+2015/07/26 06:02:36  7.991648 BGP: 192.38.0.2 [FSM] Receive_KEEPALIVE_message (Established->Established)
+2015/07/26 06:03:20  51.001213 BGP: 192.38.0.2 [Event] BGP connection closed 
+2015/07/26 06:03:20  51.001213 BGP: 192.38.0.2 [FSM] TCP_connection_closed (Established->Idle)
+2015/07/26 06:03:20  51.001213 BGP: 192.38.0.2 went from Established to Idle
+2015/07/26 06:03:25  56.366216 BGP: [Event] BGP connection from host 192.38.0.2
+2015/07/26 06:03:25  56.366216 BGP: [Event] BGP connection IP address 192.38.0.2 is Idle state
+2015/07/26 06:03:25  56.366216 BGP: [Event] BGP closing TCP connection to IP address 192.38.0.2 
+2015/07/26 06:03:26  57.340058 BGP: 192.38.0.2 [FSM] Timer (start timer expire).
+2015/07/26 06:03:26  57.340058 BGP: 192.38.0.2 [FSM] BGP_Start (Idle->Connect)
+2015/07/26 06:03:26  57.340058 BGP: 192.38.0.2 went from Idle to Connect
+2015/07/26 06:03:26  57.340058 BGP: 192.38.0.2 [Event] Connect start to 192.38.0.2
+2015/07/26 06:03:26  57.340058 BGP: 192.38.0.2 [FSM] Non blocking connect waiting result
+2015/07/26 06:03:26  57.342485 BGP: 192.38.0.2 [FSM] TCP_connection_open (Connect->OpenSent)
+2015/07/26 06:03:26  57.342485 BGP: 192.38.0.2 went from Connect to OpenSent
+2015/07/26 06:03:26  57.342485 BGP: 192.38.0.2 sending OPEN, version 4, my as 1, holdtime 180, id 192.38.0.1
+2015/07/26 06:03:26  57.342485 BGP: 192.38.0.2 send message type 1, length (incl. header) 45
+2015/07/26 06:03:26  57.345818 BGP: 192.38.0.2 rcv message type 1, length (excl. header) 26
+2015/07/26 06:03:26  57.345818 BGP: 192.38.0.2 rcv OPEN, version 4, remote-as 2, holdtime 180, id 192.38.0.2
+2015/07/26 06:03:26  57.345818 BGP: 192.38.0.2 rcv OPEN w/ OPTION parameter len: 16
+2015/07/26 06:03:26  57.345818 BGP: 192.38.0.2 rcvd OPEN w/ optional parameter type 2 (Capability) len 6
+2015/07/26 06:03:26  57.345818 BGP: 192.38.0.2 OPEN has CAPABILITY code: 1, length 4
+2015/07/26 06:03:26  57.345818 BGP: 192.38.0.2 OPEN has MP_EXT CAP for afi/safi: 1/1
+2015/07/26 06:03:26  57.345818 BGP: 192.38.0.2 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+2015/07/26 06:03:26  57.345818 BGP: 192.38.0.2 OPEN has CAPABILITY code: 128, length 0
+2015/07/26 06:03:26  57.345818 BGP: 192.38.0.2 OPEN has ROUTE-REFRESH capability(old) for all address-families
+2015/07/26 06:03:26  57.345818 BGP: 192.38.0.2 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+2015/07/26 06:03:26  57.345818 BGP: 192.38.0.2 OPEN has CAPABILITY code: 2, length 0
+2015/07/26 06:03:26  57.345818 BGP: 192.38.0.2 OPEN has ROUTE-REFRESH capability(New) for all address-families
+2015/07/26 06:03:26  57.345818 BGP: 192.38.0.2 [FSM] Receive_OPEN_message (OpenSent->OpenConfirm)
+2015/07/26 06:03:26  57.345818 BGP: 192.38.0.2 went from OpenSent to OpenConfirm
+2015/07/26 06:03:26  57.345818 BGP: 192.38.0.2 sending KEEPALIVE
+2015/07/26 06:03:26  57.345818 BGP: 192.38.0.2 send message type 4, length (incl. header) 19
+2015/07/26 06:03:26  57.348447 BGP: 192.38.0.2 rcv message type 4, length (excl. header) 0
+2015/07/26 06:03:26  57.348447 BGP: 192.38.0.2 KEEPALIVE rcvd
+2015/07/26 06:03:26  57.348447 BGP: 192.38.0.2 [FSM] Receive_KEEPALIVE_message (OpenConfirm->Established)
+2015/07/26 06:03:26  57.348447 BGP: 192.38.0.2 went from OpenConfirm to Established
+2015/07/26 06:03:26  57.348447 BGP: 192.38.0.2 sending KEEPALIVE
+2015/07/26 06:03:26  57.348447 BGP: 192.38.0.2 send message type 4, length (incl. header) 19
+2015/07/26 06:03:26  57.348447 BGP: 192.38.0.2 send UPDATE 10.10.0.0/19 nexthop 192.38.0.1, origin i, path 
+2015/07/26 06:03:26  57.348447 BGP: 192.38.0.2 send UPDATE 10.10.10.0/24 nexthop 192.38.0.1, origin i, path 
+2015/07/26 06:03:26  57.348447 BGP: 192.38.0.2 send UPDATE 192.32.10.0/24 nexthop 192.38.0.1, origin i, path 
+2015/07/26 06:03:26  57.351077 BGP: 192.38.0.2 rcv message type 4, length (excl. header) 0
+2015/07/26 06:03:26  57.351077 BGP: 192.38.0.2 KEEPALIVE rcvd
+2015/07/26 06:03:26  57.351077 BGP: 192.38.0.2 [FSM] Receive_KEEPALIVE_message (Established->Established)

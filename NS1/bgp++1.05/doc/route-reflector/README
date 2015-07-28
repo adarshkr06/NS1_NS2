@@ -1,0 +1,14 @@
+route-reflector.tcl
+	AS 100 has two clusters; the first consists of routers: 2,3,4,5, 
+	where 2 and 3 are configured as route reflectors. The second 
+	cluster is composed of routers 6 (Route Reflector), 7 and 8. 
+	Router 1 is not part of any of the two clusters. Special 
+	configuration is necessary only for the RR's. For each of the three 
+	RR's we configure its clients. Also, it's necessary to specify a 
+	cluster-id for routers 2 and 3 that are RR's for the same cluster. 
+	Finally, each router is statically configured with a /24 prefix 
+	(route-reflector.tcl). For details look at the configuration files.
+
+To run the simulation:
+	ns route-reflector.tcl 	[ -stop simulation_time_in_sec [ default 100 ] ]    
+				[ -dir  path_to_dir_that_contains_configuration_file [ default cwd ] ]

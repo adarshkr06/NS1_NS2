@@ -1,0 +1,52 @@
+2015/07/24 19:51:08  8.069456 BGP: [Event] BGP closing TCP connection to IP address 192.38.0.2 
+2015/07/24 19:51:08  8.405249 BGP: 192.38.0.2 rcvd UPDATE w/ attr: nexthop 192.38.0.2, origin i, path 2 3
+2015/07/24 19:51:08  8.405249 BGP: 192.38.0.2 rcvd 10.0.3.0/24
+2015/07/24 19:52:00  60.002715 BGP: 192.38.0.2 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+2015/07/24 19:52:00  60.002715 BGP: 192.38.0.2 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+>show ip bgp 10.0.3.0/24
+% Network not in table
+2015/07/24 19:53:00  120.002917 BGP: 192.38.0.2 rcvd UPDATE w/ attr: nexthop 192.38.0.2, origin i, path 2 3
+2015/07/24 19:53:00  120.002917 BGP: 192.38.0.2 rcvd 10.0.3.0/24
+>show ip bgp 10.0.3.0/24
+BGP routing table entry for 10.0.3.0/24
+Paths: (1 available, best #1, table Default-IP-Routing-Table)
+  Not advertised to any peer
+   2 3
+    Next-hop, Neighbor, Router-id: 192.38.0.2 from 192.38.0.2 (192.38.0.2)
+      Origin IGP, localpref 100, valid, external, best
+      Last update: Fri Jul 24 19:53:00 2015
+
+2015/07/24 19:54:00  180.002715 BGP: 192.38.0.2 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+2015/07/24 19:54:00  180.002715 BGP: 192.38.0.2 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+>show ip bgp 10.0.3.0/24
+% Network not in table
+2015/07/24 19:55:00  240.002917 BGP: 192.38.0.2 rcvd UPDATE w/ attr: nexthop 192.38.0.2, origin i, path 2 3
+2015/07/24 19:55:00  240.002917 BGP: 192.38.0.2 rcvd 10.0.3.0/24
+>show ip bgp 10.0.3.0/24
+BGP routing table entry for 10.0.3.0/24
+Paths: (1 available, best #1, table Default-IP-Routing-Table)
+  Not advertised to any peer
+   2 3
+    Next-hop, Neighbor, Router-id: 192.38.0.2 from 192.38.0.2 (192.38.0.2)
+      Origin IGP, localpref 100, valid, external, best
+      Last update: Fri Jul 24 19:55:00 2015
+
+2015/07/24 19:56:00  300.002715 BGP: 192.38.0.2 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+2015/07/24 19:56:00  300.002715 BGP: 192.38.0.2 rcvd UPDATE about 10.0.3.0/24 -- withdrawn
+>show ip bgp 10.0.3.0/24
+% Network not in table
+>show ip bgp 10.0.3.0/24
+% Network not in table
+>show ip bgp 10.0.3.0/24
+% Network not in table
+2015/07/24 19:59:21  501.002917 BGP: 192.38.0.2 rcvd UPDATE w/ attr: nexthop 192.38.0.2, origin i, path 2 3
+2015/07/24 19:59:21  501.002917 BGP: 192.38.0.2 rcvd 10.0.3.0/24
+>show ip bgp
+BGP table version is 0, local router ID is 192.38.0.1
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+*> 10.0.3.0/24         192.38.0.2                             0  2 3i
+
+Total number of prefixes 1

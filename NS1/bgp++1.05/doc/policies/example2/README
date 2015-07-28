@@ -1,0 +1,9 @@
+ex2.tcl:
+	In this configuration, router BGP2 uses a prefix-list to accept all updates for 
+	networks with prefix mask length less or equal to 19, while it denies all other 
+	updates with longer prefix masks. At the 50th second of the simulation we reconfigure 
+	the prefix list so as to accept prefixes with mask length greater equal to 18
+	
+To run the simulation:
+	ns ex2.tcl 	[ -stop simulation_time_in_sec [ default 100 ] ]    
+			[ -dir  path_to_dir_that_contains_configuration_file [ default cwd ] ]

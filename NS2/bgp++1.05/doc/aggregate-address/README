@@ -1,0 +1,62 @@
+This directory contains a set of validation experiments
+for BGP++ aggregate-address commands. The experiments are
+identical to Cisco case studies available in the url:
+http://www.cisco.com/warp/public/459/bgp-toc.html
+
+############
+experiment 1:
+############
+Topology:
+	1-----2-----3
+
+
+In this example, router 3 is generating network 160.10.0.0. 
+while router 2 is configured to propagate a supernet of that 
+route 160.0.0.0 to router 1. The command "aggregate-address 
+160.0.0.0" will propagate an additional network 160.0.0.0 but 
+will not prevent 160.10.0.0 from being also propagated to router 1.
+To run:
+	ns aggregate1.tcl -dir ./conf1 -stop 200
+
+
+The command "aggregate-address 160.0.0.0 255.0.0.0 summary-only" 
+will propagate network 160.0.0.0 and will suppress the more specific 
+route 160.10.0.0. 
+To run:
+	ns aggregate1.tcl -dir ./conf1 -stop 200 -sum
+
+
+############
+experiment 2:
+############
+
+Topology:
+
+		      3
+		      |
+                      |
+		1-----2-----4
+
+This example tests the "aggregate-address address mask as-set" command
+
+
+AS-SETS are used in aggregation to reduce the size of the path information 
+by listing the AS number only once, regardless of how many times it may have 
+appeared in multiple paths that were aggregated. The as-set aggregate command 
+is used in situations were aggregation of information causes loss of information 
+regarding the path attribute. In the following example router 2 is getting 
+updates about 160.20.0.0 from router 1  and updates about 160.10.0.0 from router 3. 
+Suppose router 2  wants to aggregate network 160.0.0.0/8 and send it to router 4. 
+router 4 would not know what the origin of that route is. By adding the aggregate 
+as-set statement we force router 2 to generate path information in the form of a 
+set {}. All the path information is included in that set irrespective of which 
+path came first.
+
+To run: 
+	ns aggregate2.tcl -dir ./conf2 -stop 200 
+
+
+
+
+
+

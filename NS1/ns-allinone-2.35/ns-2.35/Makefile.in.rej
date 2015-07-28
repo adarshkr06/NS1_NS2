@@ -1,0 +1,66 @@
+*** Makefile.in	2003-02-27 19:51:25.000000000 -0500
+--- Makefile.in	2005-03-06 20:05:27.000000000 -0500
+***************
+*** 63,67 ****
+  
+! DEFINE	= -DTCP_DELAY_BIND_ALL -DNO_TK @V_DEFINE@ @V_DEFINES@ @DEFS@ -DNS_DIFFUSION -DSMAC_NO_SYNC -DSTL_NAMESPACE=@STL_NAMESPACE@ -DUSE_SINGLE_ADDRESS_SPACE
+  
+! INCLUDES = \
+  	-I. @V_INCLUDE_X11@ \
+--- 67,80 ----
+  
+! # ALFRED libSynk define
+! KITHOME = $(HOME)/pdns/libsynk/
+! KITLIBS = -L$(KITHOME)/fdkcompat -lbrti -L$(KITHOME) -lsynk
+! 
+! # ALFRED add -DNIXVECTOR and -DUSE_COMPRESSION
+! DEFINE	= -DTCP_DELAY_BIND_ALL -DNO_TK @V_DEFINE@ @V_DEFINES@ @DEFS@ -DNS_DIFFUSION -DSMAC_NO_SYNC -DSTL_NAMESPACE=@STL_NAMESPACE@ -DUSE_SINGLE_ADDRESS_SPACE -DNIXVECTOR -DHAVE_FILTER -DUSE_COMPRESSION
+! #-DHAVE_PDNS_BGP 
+! #-DHAVE_ZEBRA_93b 
+! #-DHAVE_CONDOR
+  
+! # ALFRED rename INCLUDES to BASEINCLUDES
+! BASEINCLUDES = \
+  	-I. @V_INCLUDE_X11@ \
+***************
+*** 321,323 ****
+  # what was here before is now in emulate/
+! OBJ_C =
+  
+--- 364,367 ----
+  # what was here before is now in emulate/
+! OBJ_C = \
+! 	bgp/c-lib/hash.o \
+  
+***************
+*** 383,386 ****
+  
+! all: $(NS) $(BUILD_NSE) all-recursive
+! 
+  
+--- 445,449 ----
+  
+! # ALFRED modify all target to include PDNS
+! all: $(NS)
+! #all: $(NS) $(BUILD_NSE) all-recursive
+  
+***************
+*** 389,393 ****
+  
+! $(NS): $(OBJ) common/tclAppInit.o Makefile
+  	$(LINK) $(LDFLAGS) $(LDOUT)$@ \
+! 		common/tclAppInit.o $(OBJ) $(LIB)
+  
+--- 452,463 ----
+  
+! # ALFRED modify ns target to include dummy CC
+! $(NS): $(OBJ) $(OBJ_DUMMY_CC) common/tclAppInit.o Makefile
+  	$(LINK) $(LDFLAGS) $(LDOUT)$@ \
+! 		common/tclAppInit.o $(OBJ) $(OBJ_DUMMY_CC) $(LIB)
+! 
+! # ALFRED add PDNS target
+! $(PDNS): $(OBJ) common/tclAppInit.o Makefile $(OBJ_DIST)
+! 	@echo Linking pdns
+! 	$(LINK) $(LDFLAGS) $(LDOUT)$@ \
+! 		common/tclAppInit.o $(OBJ) $(OBJ_DIST) $(LIBT)
+  

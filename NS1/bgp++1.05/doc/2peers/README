@@ -1,0 +1,5 @@
+2peers.tcl:
+	Simple example that creates a session between two peers
+
+To run the simulation:
+	ns 2peers.tcl

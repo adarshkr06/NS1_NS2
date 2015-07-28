@@ -1,0 +1,19 @@
+2015/07/28 01:57:37  5.368786 BGP: [Event] BGP closing TCP connection to IP address 192.38.14.1 
+2015/07/28 01:57:40  8.316002 BGP: 192.38.14.1 send UPDATE 193.0.0.0/8 nexthop 192.38.14.2, origin i, path 
+2015/07/28 01:57:40  8.316002 BGP: 192.38.14.1 send UPDATE 194.0.0.0/8 nexthop 192.38.14.2, origin i, path 
+2015/07/28 01:57:40  8.319890 BGP: 192.38.14.1 rcvd UPDATE w/ attr: nexthop 192.38.14.1, origin i, path 1
+2015/07/28 01:57:40  8.319890 BGP: 192.38.14.1 rcvd 189.0.0.0/8
+2015/07/28 01:57:40  8.319933 BGP: 192.38.14.1 rcvd UPDATE w/ attr: nexthop 192.38.14.1, origin i, path 1
+2015/07/28 01:57:40  8.319933 BGP: 192.38.14.1 rcvd 190.0.0.0/8
+>show ip bgp
+BGP table version is 0, local router ID is 192.38.14.2
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+*> 189.0.0.0/8        192.38.14.1                            0  1i
+*> 190.0.0.0/8        192.38.14.1                            0  1i
+*> 193.0.0.0/8        0.0.0.0                            32768  i
+*> 194.0.0.0/8        0.0.0.0                            32768  i
+
+Total number of prefixes 4

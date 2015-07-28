@@ -1,0 +1,13 @@
+o This directory contains examples of common BGP scenarios that will 
+  help you become familiar with BGP++. For further information on BGP++ 
+  and tutorials please check BGP++ homepage at 
+  <http://www.ece.gatech.edu/research/labs/MANIACS/BGP++>
+
+
+o The validate.pl will run 8 validation tests.
+  usage: validate.pl -e <ns> [-v] 
+     <ns> ns executable 
+     -v   validate in verbose mode
+
+
+

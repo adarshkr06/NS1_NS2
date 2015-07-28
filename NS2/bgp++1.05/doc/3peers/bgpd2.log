@@ -1,0 +1,101 @@
+2015/07/27 21:25:39  5.621391 BGP: [Event] BGP connection from host 192.38.14.3
+2015/07/27 21:25:39  5.621391 BGP: [Event] BGP connection IP address 192.38.14.3 is Idle state
+2015/07/27 21:25:39  5.621391 BGP: [Event] BGP closing TCP connection to IP address 192.38.14.3 
+2015/07/27 21:25:41  7.203836 BGP: 192.38.14.1 [FSM] Timer (start timer expire).
+2015/07/27 21:25:41  7.203836 BGP: 192.38.14.1 [FSM] BGP_Start (Idle->Connect)
+2015/07/27 21:25:41  7.203836 BGP: 192.38.14.1 went from Idle to Connect
+2015/07/27 21:25:41  7.203836 BGP: 192.38.14.1 [Event] Connect start to 192.38.14.1
+2015/07/27 21:25:41  7.203836 BGP: 192.38.14.1 [FSM] Non blocking connect waiting result
+2015/07/27 21:25:41  7.214581 BGP: 192.38.14.1 [FSM] TCP_connection_open (Connect->OpenSent)
+2015/07/27 21:25:41  7.214581 BGP: 192.38.14.1 went from Connect to OpenSent
+2015/07/27 21:25:41  7.214581 BGP: 192.38.14.1 sending OPEN, version 4, my as 2, holdtime 180, id 192.38.14.2
+2015/07/27 21:25:41  7.214581 BGP: 192.38.14.1 send message type 1, length (incl. header) 45
+2015/07/27 21:25:41  7.217135 BGP: 192.38.14.1 [Event] BGP connection closed 
+2015/07/27 21:25:41  7.217147 BGP: 192.38.14.1 [FSM] TCP_connection_closed (OpenSent->Active)
+2015/07/27 21:25:41  7.217147 BGP: 192.38.14.1 went from OpenSent to Active
+2015/07/27 21:25:41  7.402790 BGP: [Event] BGP connection from host 192.38.14.1
+2015/07/27 21:25:41  7.402790 BGP: [Event] Make dummy peer structure until read Open packet
+2015/07/27 21:25:41  7.402916 BGP: 192.38.14.1 [FSM] TCP_connection_open (Active->OpenSent)
+2015/07/27 21:25:41  7.402916 BGP: 192.38.14.1 went from Active to OpenSent
+2015/07/27 21:25:41  7.403821 BGP: 192.38.14.1 rcv message type 1, length (excl. header) 26
+2015/07/27 21:25:41  7.403821 BGP: 192.38.14.1 rcv OPEN, version 4, remote-as 1, holdtime 180, id 192.38.14.1
+2015/07/27 21:25:41  7.403821 BGP: 192.38.14.1 [Event] Transfer temporary BGP peer to existing one
+2015/07/27 21:25:41  7.403821 BGP: 192.38.14.1 sending OPEN, version 4, my as 2, holdtime 180, id 192.38.14.2
+2015/07/27 21:25:41  7.403821 BGP: 192.38.14.1 send message type 1, length (incl. header) 45
+2015/07/27 21:25:41  7.403821 BGP: 192.38.14.1 rcv OPEN w/ OPTION parameter len: 16
+2015/07/27 21:25:41  7.403821 BGP: 192.38.14.1 rcvd OPEN w/ optional parameter type 2 (Capability) len 6
+2015/07/27 21:25:41  7.403821 BGP: 192.38.14.1 OPEN has CAPABILITY code: 1, length 4
+2015/07/27 21:25:41  7.403821 BGP: 192.38.14.1 OPEN has MP_EXT CAP for afi/safi: 1/1
+2015/07/27 21:25:41  7.403821 BGP: 192.38.14.1 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+2015/07/27 21:25:41  7.403821 BGP: 192.38.14.1 OPEN has CAPABILITY code: 128, length 0
+2015/07/27 21:25:41  7.403821 BGP: 192.38.14.1 OPEN has ROUTE-REFRESH capability(old) for all address-families
+2015/07/27 21:25:41  7.403821 BGP: 192.38.14.1 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+2015/07/27 21:25:41  7.403821 BGP: 192.38.14.1 OPEN has CAPABILITY code: 2, length 0
+2015/07/27 21:25:41  7.403821 BGP: 192.38.14.1 OPEN has ROUTE-REFRESH capability(New) for all address-families
+2015/07/27 21:25:41  7.403821 BGP: 192.38.14.1 [Event] Accepting BGP peer delete
+2015/07/27 21:25:41  7.403889 BGP: 192.38.14.1 [FSM] Receive_OPEN_message (OpenSent->OpenConfirm)
+2015/07/27 21:25:41  7.403889 BGP: 192.38.14.1 went from OpenSent to OpenConfirm
+2015/07/27 21:25:41  7.403889 BGP: 192.38.14.1 sending KEEPALIVE
+2015/07/27 21:25:41  7.403889 BGP: 192.38.14.1 send message type 4, length (incl. header) 19
+2015/07/27 21:25:41  7.407950 BGP: 192.38.14.1 rcv message type 4, length (excl. header) 0
+2015/07/27 21:25:41  7.407950 BGP: 192.38.14.1 KEEPALIVE rcvd
+2015/07/27 21:25:41  7.407985 BGP: 192.38.14.1 [FSM] Receive_KEEPALIVE_message (OpenConfirm->Established)
+2015/07/27 21:25:41  7.407985 BGP: 192.38.14.1 went from OpenConfirm to Established
+2015/07/27 21:25:41  7.407985 BGP: 192.38.14.1 sending KEEPALIVE
+2015/07/27 21:25:41  7.407985 BGP: 192.38.14.1 send message type 4, length (incl. header) 19
+2015/07/27 21:25:41  7.411094 BGP: 192.38.14.1 rcv message type 4, length (excl. header) 0
+2015/07/27 21:25:41  7.411094 BGP: 192.38.14.1 KEEPALIVE rcvd
+2015/07/27 21:25:41  7.411133 BGP: 192.38.14.1 [FSM] Receive_KEEPALIVE_message (Established->Established)
+2015/07/27 21:25:42  8.591397 BGP: 192.38.14.3 [FSM] Timer (start timer expire).
+2015/07/27 21:25:42  8.591397 BGP: 192.38.14.3 [FSM] BGP_Start (Idle->Connect)
+2015/07/27 21:25:42  8.591397 BGP: 192.38.14.3 went from Idle to Connect
+2015/07/27 21:25:42  8.591397 BGP: 192.38.14.3 [Event] Connect start to 192.38.14.3
+2015/07/27 21:25:42  8.591397 BGP: 192.38.14.3 [FSM] Non blocking connect waiting result
+2015/07/27 21:25:42  8.627559 BGP: 192.38.14.3 [FSM] TCP_connection_open (Connect->OpenSent)
+2015/07/27 21:25:42  8.627559 BGP: 192.38.14.3 went from Connect to OpenSent
+2015/07/27 21:25:42  8.627559 BGP: 192.38.14.3 sending OPEN, version 4, my as 2, holdtime 180, id 192.38.14.2
+2015/07/27 21:25:42  8.627559 BGP: 192.38.14.3 send message type 1, length (incl. header) 45
+2015/07/27 21:25:42  8.631693 BGP: 192.38.14.3 rcv message type 1, length (excl. header) 26
+2015/07/27 21:25:42  8.631693 BGP: 192.38.14.3 rcv OPEN, version 4, remote-as 3, holdtime 180, id 192.38.14.3
+2015/07/27 21:25:42  8.631693 BGP: 192.38.14.3 rcv OPEN w/ OPTION parameter len: 16
+2015/07/27 21:25:42  8.631693 BGP: 192.38.14.3 rcvd OPEN w/ optional parameter type 2 (Capability) len 6
+2015/07/27 21:25:42  8.631693 BGP: 192.38.14.3 OPEN has CAPABILITY code: 1, length 4
+2015/07/27 21:25:42  8.631693 BGP: 192.38.14.3 OPEN has MP_EXT CAP for afi/safi: 1/1
+2015/07/27 21:25:42  8.631693 BGP: 192.38.14.3 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+2015/07/27 21:25:42  8.631693 BGP: 192.38.14.3 OPEN has CAPABILITY code: 128, length 0
+2015/07/27 21:25:42  8.631693 BGP: 192.38.14.3 OPEN has ROUTE-REFRESH capability(old) for all address-families
+2015/07/27 21:25:42  8.631693 BGP: 192.38.14.3 rcvd OPEN w/ optional parameter type 2 (Capability) len 2
+2015/07/27 21:25:42  8.631693 BGP: 192.38.14.3 OPEN has CAPABILITY code: 2, length 0
+2015/07/27 21:25:42  8.631693 BGP: 192.38.14.3 OPEN has ROUTE-REFRESH capability(New) for all address-families
+2015/07/27 21:25:42  8.631747 BGP: 192.38.14.3 [FSM] Receive_OPEN_message (OpenSent->OpenConfirm)
+2015/07/27 21:25:42  8.631747 BGP: 192.38.14.3 went from OpenSent to OpenConfirm
+2015/07/27 21:25:42  8.631747 BGP: 192.38.14.3 sending KEEPALIVE
+2015/07/27 21:25:42  8.631747 BGP: 192.38.14.3 send message type 4, length (incl. header) 19
+2015/07/27 21:25:42  8.634803 BGP: 192.38.14.3 rcv message type 4, length (excl. header) 0
+2015/07/27 21:25:42  8.634803 BGP: 192.38.14.3 KEEPALIVE rcvd
+2015/07/27 21:25:42  8.634873 BGP: 192.38.14.3 [FSM] Receive_KEEPALIVE_message (OpenConfirm->Established)
+2015/07/27 21:25:42  8.634873 BGP: 192.38.14.3 went from OpenConfirm to Established
+2015/07/27 21:25:42  8.634873 BGP: 192.38.14.3 sending KEEPALIVE
+2015/07/27 21:25:42  8.634873 BGP: 192.38.14.3 send message type 4, length (incl. header) 19
+2015/07/27 21:25:42  8.637928 BGP: 192.38.14.3 rcv message type 4, length (excl. header) 0
+2015/07/27 21:25:42  8.637928 BGP: 192.38.14.3 KEEPALIVE rcvd
+2015/07/27 21:25:42  8.638020 BGP: 192.38.14.3 [FSM] Receive_KEEPALIVE_message (Established->Established)
+2015/07/27 21:25:44  10.004039 BGP: 192.38.14.1 rcvd UPDATE w/ attr: nexthop 192.38.14.1, origin i, path 1
+2015/07/27 21:25:44  10.004039 BGP: 192.38.14.1 rcvd 190.162.0.0/16
+2015/07/27 21:25:44  10.004039 BGP: 192.38.14.3 send UPDATE 190.162.0.0/16 nexthop 192.38.14.2, origin i, path 1
+2015/07/27 21:25:44  10.004196 BGP: 192.38.14.1 [FSM] Receive_UPDATE_message (Established->Established)
+>show ip bgp
+BGP table version is 0, local router ID is 192.38.14.2
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+*> 190.162.0.0      192.38.14.1                            0  1i
+
+Total number of prefixes 1
+2015/07/27 21:25:49  15.004380 BGP: 192.38.14.1 rcvd UPDATE w/ attr: nexthop 0.0.0.0, origin i
+2015/07/27 21:25:49  15.004380 BGP: 192.38.14.1 rcvd UPDATE about 190.162.0.0/16 -- withdrawn
+2015/07/27 21:25:49  15.004380 BGP: 192.38.14.3 send UPDATE 190.162.0.0/16 -- unreachable
+2015/07/27 21:25:49  15.004706 BGP: 192.38.14.1 [FSM] Receive_UPDATE_message (Established->Established)
+>show ip bgp
+No BGP network exists

@@ -1,0 +1,38 @@
+This scenario illustrates how med influences the 
+BGP decision algorithm. The following topology is used:
+
+	       100---400
+                 |\   
+                 | \  
+                 |  \       
+              300a---300b
+
+
+The scenario is taken from Cisco BGP case studies webpage 
+that you can find at:
+	http://www.cisco.com/warp/public/459/bgp-toc.html
+
+Routers 400, 300a, and 300b advertise the same prefix p to router 100,
+with different MED values, 120, 200, and 50 respectively. 
+We start router 400 at the 200th second of the simulation. This way,
+router 100 establishes a connection with routers 300a and 300b 
+before connecting to 400. Router 100 pics router 300a to reach 
+the prefix, since this router has a lower med than 300b. Also 
+router 400 is another alternative but it is not chosen because
+paths that are learned first are preferred (this is done to minimize
+routing flaps).
+
+If we repeat the simulation using the command "bgp always-compare-med" 
+at router 100, then router 100 will choose 400 to reach p. This command 
+will enable comparing MEDs for all paths and not only for
+paths with the same first AS. To run the experiments:
+
+	ns med.tcl -dir ./conf -stop 300 
+and:
+	ns med.tcl -dir ./conf -stop 300 -cmpmed 
+to enable "bgp always-compare-med" 	
+
+
+
+
+
