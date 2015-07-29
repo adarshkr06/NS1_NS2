@@ -9842,6 +9842,8 @@ Bgp::bgp_dump_routes_entry (struct prefix *p, struct bgp_info *info, int afi,
     int plen;
     int safi = 0;
 
+    cout << "\n Entries are being dumped" << endl;
+
     /* Make dump stream. */
     obuf = bgp_dump_obuf;
     stream_reset (obuf);
@@ -9927,7 +9929,8 @@ Bgp::bgp_dump_routes_func (int afi)
 
     /* Walk down each BGP route. */
     table = bgp->rib[afi][SAFI_UNICAST];
-
+    cout << "\n\n DUMP FUNCTION CALLED" << endl;
+ 
     for (rn = route_top (table); rn; rn = route_next (rn))
         for (info = ( bgp_info * ) rn->info; info; info = ( bgp_info *)  info->next)
             bgp_dump_routes_entry (&rn->p, info, afi, MSG_TABLE_DUMP, seq++);
@@ -16996,7 +16999,7 @@ Bgp::bgp_withdraw (struct peer *peer, struct prefix *p, struct attr *attr,
 
 #endif
 
-void check_convergence(int index)
+void Bgp::check_convergence(int index)
 {
     map<int, int>::iterator it;
     for ( it = ls_array[index]->process_queue.begin(); it != ls_array[index]->process_queue.end(); it++ )
@@ -17022,6 +17025,7 @@ void check_convergence(int index)
     }
     printf("\nDEBUG: NETWORK CONVERGED FOR PREFIX ");
     cout << event_prefix[index] << endl;	
+    Bgp::bgp_dump_routes_func (AFI_IP);
     delete ls_array[index];
     //total_events--;
     event_prefix[index] = "";
