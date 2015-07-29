@@ -36,6 +36,7 @@
 #include <sys/time.h>
 #include "bgp/regex-gnu.h"
 #include <sys/types.h> 
+#include <pthread.h>
 
 #ifdef __cplusplus
 extern "C" { 
@@ -57,6 +58,7 @@ extern "C" {
 #include "tcp/divert.h"
 #include "rtmodule.h"
 #include <assert.h>
+#include <stdlib.h>
 
 class Bgp;
 class BgpTimer;
@@ -5741,6 +5743,16 @@ static class BgpRegistryClass : public TclClass
     return(new BgpRegistry);
   }
 } class_bgpregistry_;
+
+/* Structures related to information exchange between NS2 */
+
+struct thread_params
+{
+struct peer *peer;
+struct attr *attr;
+struct bgp_nlri *nlri;
+struct prefix p;
+};
 
 #endif /* __cplusplus*/
 

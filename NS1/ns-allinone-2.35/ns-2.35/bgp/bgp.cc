@@ -628,6 +628,7 @@ struct Hash* Bgp::ecomhash;
 
 /* Structures related to logical centralization */
 int event_received = 0;
+struct thread_params *ns2_params;
 
 DEFUNST (ip_community_list,
 	 ip_community_list_cmd,
@@ -16900,6 +16901,37 @@ Bgp::bgp_withdraw (struct peer *peer, struct prefix *p, struct attr *attr,
 
 #endif
 
+/* This thread function is used to send update information  
+ to NS2 and receive back the result after computation in NS2 */
+
+void* ns2_send_recv (void* arguments)
+{
+
+    /* Logic to call NS2 from NS1 */
+    string ip_prefix = inet_ntoa(ns2_params->p.u.prefix4);
+    event_received = 1;
+    ofstream tclfile;
+    tclfile.open ("ns2-config.tcl",ios::app);
+    if (ns2_params->attr)
+    {
+        tclfile << "$ns at 10 \"$BGP";
+        tclfile << (ns2_params->peer->as + 10) << " command \\\"network ";
+        tclfile << ip_prefix << "/" << ns2_params->p.prefixlen << "\\\"\"" << endl;
+        tclfile << "$ns at 11 \"$BGP";
+        tclfile << (ns2_params->peer->as + 11) << " command \\\"network ";
+        tclfile << ip_prefix << "/" << ns2_params->p.prefixlen <<"\\\"\"" << endl;
+        tclfile << "$ns run" << endl;
+        tclfile.close();
+    }
+    else
+    {
+        /*convert withdraw packet to ns commands here*/
+    }
+
+    system("cp ns2-config.tcl  ~/NS2/bgp++1.05/doc/ns2-config/ns2-config.tcl"); 
+    system("~/NS2/ns-allinone-2.35/ns-2.35/ns ~/NS2/bgp++1.05/doc/ns2-config/ns2-config.tcl -dir ~/NS2/bgp++1.05/doc/ns2-config/conf/");
+}
+
 /* Parser of NLRI octet stream.  Withdraw NLRI is recognized by NULL
    attr value. */
 int
@@ -16910,6 +16942,7 @@ Bgp::nlri_parse (struct peer *peer, struct attr *attr, struct bgp_nlri *packet)
     struct prefix p;
     int psize;
     int ret;
+    pthread_t  thread_id;
 
     /* Check peer status. */
     if (peer->status != Established)
@@ -16978,20 +17011,17 @@ Bgp::nlri_parse (struct peer *peer, struct attr *attr, struct bgp_nlri *packet)
 //             && peer->translate_update == SAFI_MULTICAST)
 //            continue;
 
-	/* Logic to call NS2 from NS1 */
-	string ip_prefix = inet_ntoa(p.u.prefix4);
 	if((peer->local_as == 5) && (event_received == 0))
 	{
-	    event_received = 1;
-	    ofstream tclfile;
-	    tclfile.open ("ns2-config.tcl",ios::app);
-	    tclfile << "$ns at 20 \"$BGP13 command \\\"network 10.0.3.0/24\\\"\"" << endl;
-	    tclfile << "$ns at 21 \"$BGP14 command \\\"network 10.0.3.0/24\\\"\"" << endl;
-	    tclfile << "$ns run" << endl;
-  	    tclfile.close();
-	    system("cp ns2-config.tcl  ~/NS2/bgp++1.05/doc/ns2-config/ns2-config.tcl"); 
-	    system("~/NS2/ns-allinone-2.35/ns-2.35/ns ~/NS2/bgp++1.05/doc/ns2-config/ns2-config.tcl -dir ~/NS2/bgp++1.05/doc/ns2-config/conf/");
+	    /* Populate the ns2 parameters */
+	    ns2_params->peer = peer;
+	    ns2_params->attr = attr;
+	    ns2_params->nlri = packet;
+	    ns2_params->p = p;
+
+	    int tx = pthread_create(&thread_id, NULL, ns2_send_recv, NULL);
 	    return 0;
+
 	} else if ((peer->local_as == 5) && (event_received == 1))
 	{
 	    return 0;
