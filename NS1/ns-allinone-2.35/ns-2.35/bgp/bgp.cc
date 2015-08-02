@@ -13661,6 +13661,7 @@ Bgp::bgp_update_send (struct peer_conf *conf, struct peer *peer,
 #ifdef DEBUG
     bgp_packet_dump (packet);
 #endif /* DEBUG */
+    //bgp_packet_dump (packet);
 
     /* Add packet to the peer. */
     bgp_packet_add (peer, packet);
@@ -16937,8 +16938,8 @@ void bgp_update_rs (Bgp* bgpo, struct peer *peer, struct prefix *p, struct attr 
         	if ((conf_to = ( struct peer_conf * ) mm->data) != NULL)
         	{
             	peer_to = conf_to->peer;
-		cout << "AS IN THE PEER TO STRUCTURE " << peer_to->as << endl;
-		cout << "LOCAL AS IN THE PEER TO STRUCTURE " << peer_to->local_as << endl;
+		//cout << "AS IN THE PEER TO STRUCTURE " << peer_to->as << endl;
+		//cout << "LOCAL AS IN THE PEER TO STRUCTURE " << peer_to->local_as << endl;
 
     		const char* token[MAX_TOKENS_PER_LINE] = {}; // initialize to 0
 	 	
@@ -16960,6 +16961,9 @@ void bgp_update_rs (Bgp* bgpo, struct peer *peer, struct prefix *p, struct attr 
     			}
 			
 		}
+		
+		if (!atoi(token[3]))
+			continue;
 
     		s = bgpo->stream_new (BGP_MAX_PACKET_SIZE);
 
@@ -16984,16 +16988,16 @@ void bgp_update_rs (Bgp* bgpo, struct peer *peer, struct prefix *p, struct attr 
 
        		bgpo->stream_putc (s, BGP_ATTR_FLAG_TRANS);
         	bgpo->stream_putc (s, BGP_ATTR_AS_PATH);
-        	bgpo->stream_putc (s, token[2][0]);
+        	bgpo->stream_putc (s, atoi(token[2]));
         	bgpo->stream_putc (s, 2);
-        	bgpo->stream_putc (s, token[3][0]);
+        	bgpo->stream_putc (s, atoi(token[3]));
 		int i = 0;
 		if (token[4] != NULL)
+		bgpo->stream_putc (s, 0);
 		while(token[4][i] != '\0')
 		{
-			//cout << "Character " << i << " = " << token[4][i] << endl;
-			if (token[4][i])
-				bgpo->stream_putc (s, token[4][i]);
+			if (token[4][i] != ' ')
+				bgpo->stream_putc (s, (token[4][i]) - 48);
 			else
 				bgpo->stream_putc (s, 0);
 			i++;
@@ -17021,7 +17025,7 @@ void bgp_update_rs (Bgp* bgpo, struct peer *peer, struct prefix *p, struct attr 
     		/* Add packet to the peer. */
     		bgpo->bgp_packet_add (peer_to, packet);
 
-    		bgpo->bgp_packet_dump (packet);
+    		//bgpo->bgp_packet_dump (packet);
     		//BGP_WRITE_ON (peer_to->t_write, &Bgp::bgp_write);
 		peer_to->t_write = bgpo->thread_add_ready (bgpo->master, &Bgp::bgp_write,peer_to);
 		}
