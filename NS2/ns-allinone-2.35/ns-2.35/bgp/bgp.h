@@ -47,8 +47,11 @@ extern "C" {
 #include <list>
 #include <iostream>
 #include <sstream>
+#include <fstream>
 #include <utility>
 #include <map>
+#include <vector>
+#include <iterator>
 
 #include "tcp-full.h"
 #include "ranvar.h"
@@ -4378,7 +4381,6 @@ class Bgp : public RouteApp {
   void bgp_dump_routes_entry(struct prefix *,struct bgp_info *,int,int,unsigned int);
   void bgp_dump_routes_func(int);
   int bgp_dump_interval_func(struct thread *);
-  void check_convergence(int);
   void bgp_dump_common(struct stream *,struct peer *);
   void bgp_dump_state(struct peer *,int,int);
   void bgp_dump_packet_func(struct bgp_dump *,struct peer *,struct stream *);

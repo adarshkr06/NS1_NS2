@@ -639,6 +639,7 @@ struct logical_stamp
 	map<int, int> network_queue;
 };	
 
+std::vector<struct bgp *> bgp_instances(20,NULL);
 
 DEFUNST (ip_community_list,
 	 ip_community_list_cmd,
@@ -9842,8 +9843,6 @@ Bgp::bgp_dump_routes_entry (struct prefix *p, struct bgp_info *info, int afi,
     int plen;
     int safi = 0;
 
-    cout << "\n Entries are being dumped" << endl;
-
     /* Make dump stream. */
     obuf = bgp_dump_obuf;
     stream_reset (obuf);
@@ -9929,7 +9928,6 @@ Bgp::bgp_dump_routes_func (int afi)
 
     /* Walk down each BGP route. */
     table = bgp->rib[afi][SAFI_UNICAST];
-    cout << "\n\n DUMP FUNCTION CALLED" << endl;
  
     for (rn = route_top (table); rn; rn = route_next (rn))
         for (info = ( bgp_info * ) rn->info; info; info = ( bgp_info *)  info->next)
@@ -15963,9 +15961,15 @@ Bgp::bgp_process (struct bgp *bgp, struct bgp_node *rn, afi_t afi, safi_t safi,
     struct attr attr;
     struct bgp_info *ri1;
     struct bgp_info *ri2;
+    struct bgp *dummy;
 
     memset(&attr,0,sizeof(struct attr));
     p = &rn->p;
+
+    /* Save the BGP instance in a global array to be used for 
+	dumping bgp tables after convergence */
+    dummy = bgp_get_default();
+    bgp_instances[dummy->as] = dummy; 
 
     /* bgp deterministic-med */
     new_select = NULL;
@@ -16999,7 +17003,64 @@ Bgp::bgp_withdraw (struct peer *peer, struct prefix *p, struct attr *attr,
 
 #endif
 
-void Bgp::check_convergence(int index)
+void write_conv_results(Bgp *bgpo)
+{
+    struct bgp *bgp;
+    struct bgp_info *ri;
+    struct bgp_node *rn;
+    struct bgp_table *table;
+    struct attr *attr;
+
+    ofstream bgptable;
+    bgptable.open("ns2-bgp_table.mrt");
+ 
+   for (vector<struct bgp *>::iterator bgp = bgp_instances.begin(); bgp != bgp_instances.end(); ++bgp) 
+   {
+	if (NULL != (*bgp))
+	{
+    	    //cout << "******** DUMPING BGP TABLE FOR AS *************" << (*bgp)->as << endl;
+    	    table = (*bgp)->rib[AFI_IP][SAFI_UNICAST];
+
+    	    for (rn = bgpo->route_top (table); rn; rn = bgpo->route_next (rn))
+        	if (rn->info != NULL)
+        	{
+            	    for (ri = (struct bgp_info * ) rn->info; ri; ri = ri->next)
+            	    {
+    			if (CHECK_FLAG (ri->flags, BGP_INFO_SELECTED))
+			{	
+			bgptable << (*bgp)->as << ",";
+			attr = ri->attr;
+
+   			if (attr)
+    			{
+	  		    //cout  << "  NEXT HOP : " << inet_ntoa (attr->nexthop) << endl;
+			    bgptable << inet_ntoa (attr->nexthop) << ",";
+        		    //if (attr->flag & ATTR_FLAG_BIT (BGP_ATTR_MULTI_EXIT_DISC))
+	  		    //cout  << "  MED VALUE : " << attr->med << endl;
+
+        		    //if (attr->flag & ATTR_FLAG_BIT (BGP_ATTR_LOCAL_PREF))
+	  		    //cout  << "  LOCAL PREFERENCE : " << attr->local_pref << endl;
+
+	  		    //cout  << "  WEIGHT : " << attr->weight << endl;
+        		    if (attr->aspath)
+			    {
+				bgptable << attr->aspath->length << ",";
+				bgptable << attr->aspath->count << ",";
+			    	bgptable << attr->aspath->str << endl;
+			    }
+	  		    //cout  << "  AS PATH : " << attr->aspath->str << endl;
+
+    			}
+			}
+	    	    }
+		}
+	}
+   }
+   bgptable.close();
+}
+
+
+void check_convergence(Bgp *bgp, int index)
 {
     map<int, int>::iterator it;
     for ( it = ls_array[index]->process_queue.begin(); it != ls_array[index]->process_queue.end(); it++ )
@@ -17023,11 +17084,11 @@ void Bgp::check_convergence(int index)
 		return;
 	}
     }
-    printf("\nDEBUG: NETWORK CONVERGED FOR PREFIX ");
-    cout << event_prefix[index] << endl;	
-    Bgp::bgp_dump_routes_func (AFI_IP);
+    //printf("\nDEBUG: NETWORK CONVERGED FOR PREFIX ");
+    //cout << event_prefix[index] << endl;	
+    write_conv_results(bgp);
+    bgp->bgp_dump_routes_func(AFI_IP);
     delete ls_array[index];
-    //total_events--;
     event_prefix[index] = "";
     return;
 }
@@ -17145,7 +17206,7 @@ Bgp::nlri_parse (struct peer *peer, struct attr *attr, struct bgp_nlri *packet)
 		printf("\n DEBUG: OnSend process queue of AS %d decremented to %d",peer->local_as, ls_array[index]->process_queue[peer->local_as]);
 		#endif
 		if (ls_array[index]->process_queue[peer->local_as] == 0)
-			check_convergence(index);
+			check_convergence(this, index);
 	}
 
         /* Address family configuration mismatch or maximum-prefix count
