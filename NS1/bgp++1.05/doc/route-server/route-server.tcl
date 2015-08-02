@@ -1,6 +1,6 @@
 # Created by Xenofontas Dimitropoulos
 # Georgia Tech, Spring 2002
-set opt(stop) 100
+set opt(stop) 50
 set opt(dir)  [pwd]
 proc finish { }  {
 	global tf ns
@@ -35,7 +35,7 @@ proc process_args {} {
 process_args
 set stime [clock seconds]
 set ns [new Simulator]
-#$ns use-scheduler RealTime
+$ns use-scheduler RealTime
 
 puts "Creating the nodes and BGP Applications"
 # Create the AS nodes and BGP applications
@@ -107,7 +107,9 @@ $ns at 20 "$BGP3 command \"network 10.0.3.0/24\""
 $ns at 21 "$BGP4 command \"network 10.0.3.0/24\""
 
 $ns at 25 "$BGP1 command \"show ip bgp\""
-$ns at 55 "$BGP1 command \"show ip bgp\""
+$ns at 25 "$BGP2 command \"show ip bgp\""
+$ns at 25 "$BGP3 command \"show ip bgp\""
+$ns at 25 "$BGP4 command \"show ip bgp\""
 
 puts "Starting the run"
 $ns run
