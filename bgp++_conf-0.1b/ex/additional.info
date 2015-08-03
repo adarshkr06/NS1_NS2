@@ -1,3 +1,0 @@
-head 1e1 1e2 1e3
-	!switch on debugging for updates
-	debug bgp fsm
