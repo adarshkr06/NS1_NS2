@@ -1,0 +1,50 @@
+This directory contains a simple example for using bgp++_conf.
+
+The router.info file defines the following 8 AS topology:
+
+  BGP-level and ns-2-level topology:
+
+  a <--> b is a peering relationship between 'a' and 'b'
+  a ---> b is a customer-provider relationship between 'a' (provider) and 'b'
+           (customer)
+  a --&> b is a customer-provider relationship between 'a' (provider) and 'b'
+           (customer) where a provides full routes to b
+  a ---- b is an ibgp relationship between 'a' and 'b'
+
+
+
+                8<---->1e1-----1e2<---->7    
+                       | \     / |   
+                       |  \   /  |   
+                       |   \ /   |   
+                       |   1e3   |   
+		      &|         |
+                       v         v
+               2e2----2e1<----->3e1---3e2
+                |      |         |
+		|      |	 |
+		|      |	 |
+		v      v  	 v
+		4      5	 6
+
+
+The routerprefs.info file associates a \24 prefix with each AS.
+The additional.info file enables fsm logging at routers 1e1 1e2 and 1e3
+
+The .tcl and .conf files are generated with the command:
+
+bgp++_conf -f router.info -F routerprefs.info -b additional.info -L 5 
+	-L 2 -T "10 100" -d "4 0.4.104.0/24 100" > ns.tcl
+	
+The -L option turns on logging of UPDATE and KEEPALIVE msgs
+The -T option makes the routers dump their routing tables at 
+the 10th and 100th sec of  the simulation.
+The -d option instructs router 4 to withdraw prefi 0.4.104.0/24
+at the 100th sec of the simulation.
+
+Assuming that the .conf files are located in the ./conf directory, the simulation
+is run as follows:
+
+ns ns.tcl -dir ./conf/ -check 50 1 120
+
+(Look the info page for more on the -check option)

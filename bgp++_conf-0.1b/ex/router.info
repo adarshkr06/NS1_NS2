@@ -1,0 +1,13 @@
+1e1	1e2	ibgp
+1e2	1e3	ibgp
+1e1	1e3	ibgp
+2e1	2e2	ibgp
+3e1	3e2	ibgp
+1e1	2e1	cust
+1e1	8	peer
+1e2	3e1	custfull
+1e2	7	peer
+2e1	3e1	peer
+2e2	4	custfull
+2e1	5	custfull
+3e1	6	custfull
