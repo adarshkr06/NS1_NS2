@@ -1,0 +1,62 @@
+# 2peers.tcl
+# Created by Xenofontas Dimitropoulos
+# Georgia Tech, Spring 2003
+
+proc finish { }  {
+	global tf ns
+	if [info exists tf] {
+		close $tf
+	}
+	$ns halt
+}
+
+proc haalt { }	{
+	global ns
+	$ns halt
+}
+
+proc ressume { }  {
+	global ns
+	$ns resume
+}
+
+set ns [new Simulator]
+
+set n1 [$ns node]
+set n2 [$ns node]
+
+$ns duplex-link $n1 $n2 1Mb 1ms DropTail
+
+# Create the AS nodes and BGP applications
+set r [new BgpRegistry]
+set fin 40
+
+# Set the finish time of the simulation here 
+set tf [ open out.tr w ]
+$ns trace-all $tf
+
+set BGP1 [new Application/Route/Bgp]
+$BGP1 config-file ./bgpd1.conf
+$BGP1 attach-node $n1
+$BGP1 cpu-load-model uniform 0.0001 0.00001
+
+set BGP2 [new Application/Route/Bgp]
+$BGP2 config-file ./bgpd2.conf
+$BGP2 attach-node $n2
+$BGP2 cpu-load-model uniform 0.0001 0.00001
+
+$ns at 39  "$BGP1 command \"show ip bgp\""
+$ns at 39  "$BGP2 command \"show ip bgp\""
+
+puts "Stage 1"
+
+$ns at 100 "haalt"
+
+puts "Stage 2"
+$ns run
+
+puts "Stage 4"
+
+$ns at-now  "$BGP1 command \"show ip bgp\""
+$ns at-now  "$BGP2 command \"show ip bgp\""
+$ns run
