@@ -13673,13 +13673,13 @@ Bgp::bgp_update_send (struct peer_conf *conf, struct peer *peer,
 	ls_array[i] = new struct logical_stamp;
 	ls_array[i]->network_queue[peer->as]++;
 	#if CONV_DET_DEBUG
-	printf("\n DEBUG: Object created and network queue of AS %d incremented to %d",peer->as, ls_array[i]->network_queue[peer->as]);
+	printf("\n DEBUG: %d Object created and network queue of AS %d incremented to %d",__LINE__, peer->as, ls_array[i]->network_queue[peer->as]);
 	#endif
     } else
     {
 	ls_array[i]->network_queue[peer->as]++;
 	#if CONV_DET_DEBUG
-	printf("\n DEBUG: OnSend network queue of AS %d incremented to %d",peer->as, ls_array[i]->network_queue[peer->as]);
+	printf("\n DEBUG: %d OnSend network queue of AS %d incremented to %d",__LINE__, peer->as, ls_array[i]->network_queue[peer->as]);
 	#endif
     } 		
     
@@ -13881,13 +13881,13 @@ Bgp::bgp_withdraw_send (struct peer *peer, struct prefix *p, afi_t afi, safi_t s
 	ls_array[i] = new struct logical_stamp;
 	ls_array[i]->network_queue[peer->as]++;
 	#if CONV_DET_DEBUG
-	printf("\n DEBUG: Object created and network queue of AS %d incremented to %d",peer->as, ls_array[i]->network_queue[peer->as]);
+	printf("\n DEBUG: %d Object created and network queue of AS %d incremented to %d",__LINE__, peer->as, ls_array[i]->network_queue[peer->as]);
 	#endif
     } else
     {
 	ls_array[i]->network_queue[peer->as]++;
 	#if CONV_DET_DEBUG
-	printf("\n DEBUG: OnSend network queue of AS %d incremented to %d",peer->as, ls_array[i]->network_queue[peer->as]);
+	printf("\n DEBUG: %d OnSend network queue of AS %d incremented to %d",__LINE__, peer->as, ls_array[i]->network_queue[peer->as]);
 	#endif
     } 		
 
@@ -17046,7 +17046,14 @@ void write_conv_results(Bgp *bgpo)
 			    {
 				bgptable << attr->aspath->length << ",";
 				bgptable << attr->aspath->count << ",";
-			    	bgptable << attr->aspath->str << endl;
+				for (int i = 0; attr->aspath->str[i]!='\0'; i++)	
+			    	{
+					if (attr->aspath->str[i] == ' ')
+						bgptable << "," ;
+					else
+						bgptable << attr->aspath->str[i];
+				}
+				bgptable << endl;
 			    }
 	  		    //cout  << "  AS PATH : " << attr->aspath->str << endl;
 
@@ -17068,7 +17075,7 @@ void check_convergence(Bgp *bgp, int index)
         if(it->second) 
         {
 		#if CONV_DET_DEBUG
-		printf ("\nDEBUG: Network not yet converged");
+		printf ("\nDEBUG: %d Network not yet converged",__LINE__);
 		#endif
 		return;
 	}
@@ -17079,7 +17086,7 @@ void check_convergence(Bgp *bgp, int index)
         if(it->second) 
         {
 		#if CONV_DET_DEBUG
-		printf ("\nDEBUG: Network not yet converged\n");
+		printf ("\nDEBUG: %d Network not yet converged\n", __LINE__);
 		#endif
 		return;
 	}
@@ -17184,8 +17191,8 @@ Bgp::nlri_parse (struct peer *peer, struct attr *attr, struct bgp_nlri *packet)
 			ls_array[i]->network_queue[peer->local_as] -= 1;
 			ls_array[i]->process_queue[peer->local_as] += 1;
 			#if CONV_DET_DEBUG
-			printf("\n DEBUG: OnReceive network queue of AS %d decremented to %d",peer->local_as, ls_array[i]->network_queue[peer->local_as]);
-			printf("\n DEBUG: OnReceive process queue of AS %d incremented to %d",peer->local_as, ls_array[i]->process_queue[peer->local_as]);
+			printf("\n DEBUG: %d OnReceive network queue of AS %d decremented to %d",__LINE__,peer->local_as, ls_array[i]->network_queue[peer->local_as]);
+			printf("\n DEBUG: %d OnReceive process queue of AS %d incremented to %d",__LINE__,peer->local_as, ls_array[i]->process_queue[peer->local_as]);
 			#endif
 			break;
 		}
@@ -17201,9 +17208,10 @@ Bgp::nlri_parse (struct peer *peer, struct attr *attr, struct bgp_nlri *packet)
 
 	/* Decrement the processing queue used for convergence detection*/		
 	if (mrai_map[(make_pair(ip_prefix,peer->local_as))] != 1)
-	{ls_array[index]->process_queue[peer->local_as] -= 1;
+	{
+		ls_array[index]->process_queue[peer->local_as] -= 1;
 		#if CONV_DET_DEBUG
-		printf("\n DEBUG: OnSend process queue of AS %d decremented to %d",peer->local_as, ls_array[index]->process_queue[peer->local_as]);
+		printf("\n DEBUG: %d OnSend process queue of AS %d decremented to %d",__LINE__, peer->local_as, ls_array[index]->process_queue[peer->local_as]);
 		#endif
 		if (ls_array[index]->process_queue[peer->local_as] == 0)
 			check_convergence(this, index);
@@ -38424,7 +38432,7 @@ Bgp::bgp_routeadv_timer (struct thread *thread){
 	{		
       		ls_array[i]->process_queue[peer->local_as] -= 1; 
 		#if CONV_DET_DEBUG
-      		printf("\n DEBUG: OnSend process queue of AS %d decremented to %d",peer->local_as, ls_array[i]->process_queue[peer->local_as]);
+      		printf("\n DEBUG: %d OnSend process queue of AS %d decremented to %d",__LINE__, peer->local_as, ls_array[i]->process_queue[peer->local_as]);
 		#endif
 		break;
      	}
@@ -38498,7 +38506,7 @@ Bgp::bgp_routeadv_timer (struct thread *thread){
 	{		
       	    ls_array[i]->process_queue[peer->local_as] = 0; 
 	    #if CONV_DET_DEBUG
-      	    printf("\n DEBUG: OnSend process queue of AS %d decremented to %d",peer->local_as, ls_array[i]->process_queue[peer->local_as]);
+      	    printf("\n DEBUG: %d OnSend process queue of AS %d decremented to %d",__LINE__, peer->local_as, ls_array[i]->process_queue[peer->local_as]);
 	    #endif
 	    break;
      	}
