@@ -142,6 +142,7 @@ Scheduler::run()
 		dispatch(p, p->time_);
     EvC++; // ALFRED event count
 	}
+  cout << "PRINTING THIS POINTER : " << this << endl; 
   // ALFRED print out statistics
   printf("ns event count: %llu\n", EvC);
   printf("ns packet hop count: %llu\n", pktC);
@@ -676,7 +677,7 @@ CalendarScheduler::insert(Event* e)
 	++qsize_;
 	//assert(e == buckets_[i].list_ ||  e->prev_->time_ <= e->time_);
 	//assert(e == buckets_[i].list_->prev_ || e->next_->time_ >= e->time_);
-
+	cout << "\n EVENT SCHEDULED" << endl;
   	if (stat_qsize_ > top_threshold_) {
   		resize(nbuckets_ << 1, cal_clock_);
 		return;
