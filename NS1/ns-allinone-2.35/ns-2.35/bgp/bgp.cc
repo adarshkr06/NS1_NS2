@@ -12004,7 +12004,7 @@ Bgp::bgp_connect (struct peer *peer)
       )
     {
       struct bgp *bgp = bgp_get_default();
-
+      cout << "\n ERROR in 1st NS" << endl;
       if (1) printf("At %lf: Connect warning (from bgp_connect()): peer %s couldnt be found in Registry, Local id: %s\n",
 		    NOW,inet_sutop (&peer->su, buf),Bgp::inet_ntop(AF_INET,&bgp->id,str,sizeof(str)));
       return connect_error;
@@ -14236,7 +14236,12 @@ Bgp::bgp_update_receive (struct peer *peer, bgp_size_t size)
     struct bgp_nlri mp_withdraw;
     char attrstr[BUFSIZ];
 
-    if (0) printf("\n%s: BGP UPDATE RECEIVE",name());
+    if (0) 
+    {
+	printf("\n%s: BGP UPDATE RECEIVE",name());
+	cout << "\n UPDATE RECEIVED BY AS : " << peer->local_as << " FROM AS : " << peer->as << endl;
+    }
+
     /* Status must be Established. */
     if (peer->status != Established)
     {
@@ -14676,6 +14681,7 @@ Bgp::bgp_read (struct thread *thread)
     /* Yes first of all get peer pointer. */
     peer = ( struct peer * ) THREAD_ARG (thread);
     peer->t_read = NULL;
+
 
     /* For non-blocking IO check. */
     if (peer->status == Connect)
@@ -16938,8 +16944,8 @@ void bgp_update_rs (Bgp* bgpo, struct peer *peer, struct prefix *p, struct attr 
         	if ((conf_to = ( struct peer_conf * ) mm->data) != NULL)
         	{
             	peer_to = conf_to->peer;
-		//cout << "AS IN THE PEER TO STRUCTURE " << peer_to->as << endl;
-		//cout << "LOCAL AS IN THE PEER TO STRUCTURE " << peer_to->local_as << endl;
+		cout << "AS IN THE PEER TO STRUCTURE " << peer_to->as << endl;
+		cout << "LOCAL AS IN THE PEER TO STRUCTURE " << peer_to->local_as << endl;
 
     		const char* token[MAX_TOKENS_PER_LINE] = {}; // initialize to 0
 	 	
@@ -16986,22 +16992,18 @@ void bgp_update_rs (Bgp* bgpo, struct peer *peer, struct prefix *p, struct attr 
     		bgpo->stream_putc (s, 1);
     		bgpo->stream_putc (s, 0);
 
+		/* AS PATH LENGTH and HOP count */
        		bgpo->stream_putc (s, BGP_ATTR_FLAG_TRANS);
         	bgpo->stream_putc (s, BGP_ATTR_AS_PATH);
         	bgpo->stream_putc (s, atoi(token[2]));
         	bgpo->stream_putc (s, 2);
         	bgpo->stream_putc (s, atoi(token[3]));
-		int i = 0;
-		if (token[4] != NULL)
-		bgpo->stream_putc (s, 0);
-		while(token[4][i] != '\0')
-		{
-			if (token[4][i] != ' ')
-				bgpo->stream_putc (s, (token[4][i]) - 48);
-			else
-				bgpo->stream_putc (s, 0);
-			i++;
-		}
+		
+		/* AS path */
+		for(int i = 1; i <= atoi(token[3]); i++)
+		bgpo->stream_putw (s, atoi (token[3+i]));
+
+		/* NEXT HOP details */
     		bgpo->stream_putc (s, BGP_ATTR_FLAG_TRANS);
     		bgpo->stream_putc (s, BGP_ATTR_NEXT_HOP);
     		bgpo->stream_putc (s, 4);
@@ -17076,24 +17078,24 @@ void bgp_process_rs (struct bgp *bgp, struct bgp_node *rn, afi_t afi, safi_t saf
 /* This thread function is used to send update information
  to NS2 and receive back the result after computation in NS2 */
 
-void* ns2_send_recv (void* arguments)
+void ns2_send_recv (Bgp* bgp)
 {
 
-    Bgp* bgp = (Bgp *) arguments;
+    //Bgp* bgp = (Bgp *) arguments;
     char attrstr[BUFSIZ];
 
     /* Logic to call NS2 from NS1 */
     string ip_prefix = inet_ntoa(ns2_params.p.u.prefix4);
     ofstream tclfile;
-    tclfile.open ("ns2-config.tcl",ios::app);
+    tclfile.open ("ns2.tcl",ios::app);
     if (ns2_params.attr)
     {
-        tclfile << "$ns at 10 \"$BGP";
+        tclfile << "$ns at 20 \"$BGP";
         tclfile << (ns2_params.peer->as) << " command \\\"network ";
         tclfile << ip_prefix << "/24" << "\\\"\"" << endl;
-        tclfile << "$ns at 11 \"$BGP";
-        tclfile << (ns2_params.peer->as + 1) << " command \\\"network ";
-        tclfile << ip_prefix << "/24" <<"\\\"\"" << endl;
+        //tclfile << "$ns at 11 \"$BGP";
+        //tclfile << (ns2_params.peer->as + 1) << " command \\\"network ";
+        //tclfile << ip_prefix << "/24" <<"\\\"\"" << endl;
         tclfile << "$ns run" << endl;
         tclfile.close();
     }
@@ -17102,13 +17104,10 @@ void* ns2_send_recv (void* arguments)
         /*convert withdraw packet to ns commands here*/
     }
 
-    system("cp ns2-config.tcl  ~/NS2/bgp++1.05/doc/ns2-config/ns2-config.tcl");
-    system("~/NS2/ns-allinone-2.35/ns-2.35/ns ~/NS2/bgp++1.05/doc/ns2-config/ns2-config.tcl -dir ~/NS2/bgp++1.05/doc/ns2-config/conf/");
+    system("cp ns2.tcl  ~/NS2/bgp++1.05/doc/1knodes/ns.tcl");
+    system("~/NS2/ns-allinone-2.35/ns-2.35/ns ~/NS2/bgp++1.05/doc/1knodes/ns.tcl -dir ~/NS2/bgp++1.05/doc/1knodes/ -stop 200");
+    system("cp ns2_basic.tcl ns2.tcl");
 
-    /* Parse the log file and look for all routes */
-    //ifstream logfile;
-    //logfile.open("ns2-config.log");
-    //if (!fin.good())
     usleep(2000);
 
     bgp_update_rs (bgp, ns2_params.peer, &(ns2_params.p), ns2_params.attr, AFI_IP, SAFI_UNICAST,
@@ -17204,7 +17203,8 @@ Bgp::nlri_parse (struct peer *peer, struct attr *attr, struct bgp_nlri *packet)
 	    ns2_params.nlri = packet;
 	    ns2_params.p = p;
 
-	    int tx = pthread_create(&thread_id, NULL, ns2_send_recv, (void *) this);
+	    //int tx = pthread_create(&thread_id, NULL, ns2_send_recv, (void *) this);
+	    ns2_send_recv(this);
 	    return 0;
 
 	} else if ((peer->local_as == 5) && (event_received == 1))

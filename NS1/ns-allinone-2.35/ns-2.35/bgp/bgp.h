@@ -5755,6 +5755,8 @@ struct bgp_nlri *nlri;
 struct prefix p;
 };
 
+#define RSERVER_AS_NUM	5
+
 #endif /* __cplusplus*/
 
 
