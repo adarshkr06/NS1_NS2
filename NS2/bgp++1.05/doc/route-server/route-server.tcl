@@ -104,7 +104,7 @@ $ns at $opt(stop)  "finish"
 
 
 $ns at 20 "$BGP3 command \"network 10.0.3.0/24\""
-$ns at 21 "$BGP4 command \"network 10.0.3.0/24\""
+#$ns at 21 "$BGP4 command \"network 10.0.3.0/24\""
 
 $ns at 25 "$BGP1 command \"show ip bgp\""
 $ns at 55 "$BGP1 command \"show ip bgp\""
