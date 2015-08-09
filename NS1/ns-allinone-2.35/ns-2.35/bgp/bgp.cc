@@ -15862,7 +15862,7 @@ Bgp::bgp_refresh_table (struct peer *peer, afi_t afi, safi_t safi)
 /* Process changed routing entry. */
 int
 Bgp::bgp_process (struct bgp *bgp, struct bgp_node *rn, afi_t afi, safi_t safi,
-                  struct bgp_info *del, struct prefix_rd *prd, u_char *tag)
+                  struct bgp_info *del, struct prefix_rd *prd, u_char *tag, struct peer *peer)
 {
     struct prefix *p;
     struct bgp_info *ri;
@@ -15874,6 +15874,7 @@ Bgp::bgp_process (struct bgp *bgp, struct bgp_node *rn, afi_t afi, safi_t safi,
     struct attr attr;
     struct bgp_info *ri1;
     struct bgp_info *ri2;
+    bool from_rs = 0;
 
     memset(&attr,0,sizeof(struct attr));
     p = &rn->p;
@@ -15955,7 +15956,15 @@ Bgp::bgp_process (struct bgp *bgp, struct bgp_node *rn, afi_t afi, safi_t safi,
         UNSET_FLAG (new_select->flags, BGP_INFO_ATTR_CHANGED);
     }
 
+    if (peer)
+    if (peer->as == 5)
+    {
+	from_rs = 1;
+	//cout << "\nAS VALUE IN PEER " << peer->as << " LOCAL_AS IN PEER " << peer->local_as << endl;
+    }
+
     /* Check each BGP peer. */
+    if(!from_rs)	
     for (nn = bgp->peer_conf->head; nn; nn = nn->next)
         if ((conf_to = ( struct peer_conf * ) nn->data) != NULL)
         {
@@ -15977,7 +15986,7 @@ Bgp::bgp_process (struct bgp *bgp, struct bgp_node *rn, afi_t afi, safi_t safi,
                 /* Send update to the peer. */
 	      if(bgp_update_send_check(new_select,conf_to,peer_to,p,&attr,afi,safi,
 				       new_select->peer,prd,tag)) {
-
+				
                 bgp_update_send (conf_to, peer_to, p, &attr, afi, safi,
                                  new_select->peer, prd, tag);
 		/* For per prefix mrai */
@@ -16007,7 +16016,7 @@ Bgp::bgp_process (struct bgp *bgp, struct bgp_node *rn, afi_t afi, safi_t safi,
 
 int
 Bgp::bgp_process (struct bgp *bgp, struct bgp_node *rn, afi_t afi, safi_t safi,
-		  struct bgp_info *del, struct prefix_rd *prd, u_char *tag)
+		  struct bgp_info *del, struct prefix_rd *prd, u_char *tag, struct peer *peer)
 {
   struct prefix *p;
   struct bgp_info *ri;
@@ -16278,7 +16287,7 @@ Bgp::bgp_update (struct peer *peer, struct prefix *p, struct attr *attr,
 		    if (ret != BGP_DAMP_SUPPRESSED)
 		      {
 			bgp_aggregate_increment (bgp, p, ri, afi, safi);
-			bgp_process (bgp, rn, afi, safi, NULL, prd, tag);
+			bgp_process (bgp, rn, afi, safi, NULL, prd, tag, NULL);
 		      }
 		  }
 		else
@@ -16344,7 +16353,7 @@ Bgp::bgp_update (struct peer *peer, struct prefix *p, struct attr *attr,
 	    /* Process change. */
 	    bgp_aggregate_increment (bgp, p, ri, afi, safi);
 
-	    bgp_process (bgp, rn, afi, safi, NULL, prd, tag);
+	    bgp_process (bgp, rn, afi, safi, NULL, prd, tag, NULL);
 	    route_unlock_node (rn);
 	    return 0;
 	  }
@@ -16386,7 +16395,7 @@ Bgp::bgp_update (struct peer *peer, struct prefix *p, struct attr *attr,
 	    return -1;
 
 	/* Process change. */
-	bgp_process (bgp, rn, afi, safi,NULL ,prd ,tag );
+	bgp_process (bgp, rn, afi, safi,NULL ,prd ,tag, NULL );
 
 	return 0;
       }
@@ -16442,7 +16451,7 @@ Bgp::bgp_rib_withdraw (struct bgp_node *rn, struct bgp_info *ri, struct peer *pe
 
   valid = CHECK_FLAG (ri->flags, BGP_INFO_VALID);
   UNSET_FLAG (ri->flags, BGP_INFO_VALID);
-  bgp_process (bgp, rn, afi, safi, NULL, NULL, NULL);
+  bgp_process (bgp, rn, afi, safi, NULL, NULL, NULL, NULL);
 
   if (valid)
     SET_FLAG (ri->flags, BGP_INFO_VALID);
@@ -16485,6 +16494,7 @@ Bgp::bgp_update (struct peer *peer, struct prefix *p, struct attr *attr,
             bgp_adj_set (peer->adj_in[afi][safi], p, attr, prd, safi);
     }
 
+
     /* Kick each configuration BGP instance. */
     for (nn = peer->conf->head; nn; nn = nn->next)
       if ((conf = ( struct peer_conf * ) nn->data) != NULL)
@@ -16515,7 +16525,7 @@ Bgp::bgp_update (struct peer *peer, struct prefix *p, struct attr *attr,
                           Bgp::inet_ntop (p->family, &p->u.prefix, buf, SU_ADDRSTRLEN),
                           p->prefixlen);
                 /* Process change. */
-                bgp_process (bgp, rn, afi, safi, NULL, prd, tag);
+                bgp_process (bgp, rn, afi, safi, NULL, prd, tag, peer);
                 route_unlock_node (rn);
                 continue;
             }
@@ -16535,7 +16545,7 @@ Bgp::bgp_update (struct peer *peer, struct prefix *p, struct attr *attr,
                           Bgp::inet_ntop (p->family, &p->u.prefix, buf, SU_ADDRSTRLEN),
                           p->prefixlen);
                 /* Process change. */
-                bgp_process (bgp, rn, afi, safi, NULL, prd, tag);
+                bgp_process (bgp, rn, afi, safi, NULL, prd, tag, peer);
                 route_unlock_node (rn);
                 continue;
             }
@@ -16554,7 +16564,7 @@ Bgp::bgp_update (struct peer *peer, struct prefix *p, struct attr *attr,
                           Bgp::inet_ntop (p->family, &p->u.prefix, buf, SU_ADDRSTRLEN),
                           p->prefixlen);
                 /* Process change. */
-                bgp_process (bgp, rn, afi, safi, NULL, prd, tag);
+                bgp_process (bgp, rn, afi, safi, NULL, prd, tag, peer);
                 route_unlock_node (rn);
                 continue;
             }
@@ -16576,7 +16586,7 @@ Bgp::bgp_update (struct peer *peer, struct prefix *p, struct attr *attr,
                           p->prefixlen);
                 }
                 /* Process change. */
-                bgp_process (bgp, rn, afi, safi, NULL, prd, tag);
+                bgp_process (bgp, rn, afi, safi, NULL, prd, tag, peer);
                 route_unlock_node (rn);
                 continue;
             }
@@ -16599,7 +16609,7 @@ Bgp::bgp_update (struct peer *peer, struct prefix *p, struct attr *attr,
                           p->prefixlen);
                 }
                 /* Process change. */
-                bgp_process (bgp, rn, afi, safi, NULL, prd, tag);
+                bgp_process (bgp, rn, afi, safi, NULL, prd, tag, peer);
                 route_unlock_node (rn);
                 continue;
             }
@@ -16633,7 +16643,7 @@ Bgp::bgp_update (struct peer *peer, struct prefix *p, struct attr *attr,
                         bgp_implicit_withdraw (conf, bgp, p, ri, rn, afi, safi);
 
                     /* Process change. */
-                    bgp_process (bgp, rn, afi, safi, NULL, prd, tag);
+                    bgp_process (bgp, rn, afi, safi, NULL, prd, tag, peer);
                     route_unlock_node (rn);
                     continue;
                 }
@@ -16663,7 +16673,7 @@ Bgp::bgp_update (struct peer *peer, struct prefix *p, struct attr *attr,
 		    simulation_time = Scheduler::instance().clock();
 		    time_t clock = (int)simulation_time + start_time;
                     ri->uptime = clock;
-                    bgp_process (bgp, rn, afi, safi, NULL, prd, tag);
+                    bgp_process (bgp, rn, afi, safi, NULL, prd, tag, peer);
                     route_unlock_node (rn);
                     continue;
                 }
@@ -16699,7 +16709,7 @@ Bgp::bgp_update (struct peer *peer, struct prefix *p, struct attr *attr,
 
                 /* Process change. */
                 bgp_aggregate_increment (bgp, p, ri, afi, safi);
-                bgp_process (bgp, rn, afi, safi, NULL, prd, tag);
+                bgp_process (bgp, rn, afi, safi, NULL, prd, tag, peer);
                 route_unlock_node (rn);
                 continue;
             }
@@ -16743,7 +16753,7 @@ Bgp::bgp_update (struct peer *peer, struct prefix *p, struct attr *attr,
                     return -1;
 
                 /* Process change. */
-            bgp_process (bgp, rn, afi, safi, NULL, prd, tag);
+            bgp_process (bgp, rn, afi, safi, NULL, prd, tag, peer);
         }
     return 0;
 }
@@ -16876,7 +16886,7 @@ Bgp::bgp_withdraw (struct peer *peer, struct prefix *p, struct attr *attr,
                         || status == BGP_DAMP_DISCONTINUE)
                     {
                         bgp_aggregate_decrement (bgp, p, ri, afi, safi);
-                        bgp_process (bgp, rn, afi, safi, ri, prd, tag);
+                        bgp_process (bgp, rn, afi, safi, ri, prd, tag, NULL);
                         conf->pcount[afi][safi]--;
                     }
                 }
@@ -16885,7 +16895,7 @@ Bgp::bgp_withdraw (struct peer *peer, struct prefix *p, struct attr *attr,
                 {
                     bgp_aggregate_decrement (bgp, p, ri, afi, safi);
                     bgp_info_delete ((struct bgp_info **) &rn->info, ri);
-                    bgp_process (bgp, rn, afi, safi, ri, prd, tag);
+                    bgp_process (bgp, rn, afi, safi, ri, prd, tag, NULL);
                     bgp_info_free (ri);
                     route_unlock_node (rn);
 
@@ -16944,8 +16954,8 @@ void bgp_update_rs (Bgp* bgpo, struct peer *peer, struct prefix *p, struct attr 
         	if ((conf_to = ( struct peer_conf * ) mm->data) != NULL)
         	{
             	peer_to = conf_to->peer;
-		cout << "AS IN THE PEER TO STRUCTURE " << peer_to->as << endl;
-		cout << "LOCAL AS IN THE PEER TO STRUCTURE " << peer_to->local_as << endl;
+		//cout << "AS IN THE PEER TO STRUCTURE " << peer_to->as << endl;
+		//cout << "LOCAL AS IN THE PEER TO STRUCTURE " << peer_to->local_as << endl;
 
     		const char* token[MAX_TOKENS_PER_LINE] = {}; // initialize to 0
 	 	
@@ -16967,7 +16977,11 @@ void bgp_update_rs (Bgp* bgpo, struct peer *peer, struct prefix *p, struct attr 
     			}
 			
 		}
-		
+		if (atoi(token[0]) != 0)
+		{
+		//cout << "AS IN THE PEER TO STRUCTURE " << peer_to->as << endl;
+		//cout << "LOCAL AS IN THE PEER TO STRUCTURE " << peer_to->local_as << endl;
+				
 		if (!atoi(token[3]))
 			continue;
 
@@ -17030,6 +17044,7 @@ void bgp_update_rs (Bgp* bgpo, struct peer *peer, struct prefix *p, struct attr 
     		//bgpo->bgp_packet_dump (packet);
     		//BGP_WRITE_ON (peer_to->t_write, &Bgp::bgp_write);
 		peer_to->t_write = bgpo->thread_add_ready (bgpo->master, &Bgp::bgp_write,peer_to);
+		}
 		}
 
         }
@@ -17104,8 +17119,8 @@ void ns2_send_recv (Bgp* bgp)
         /*convert withdraw packet to ns commands here*/
     }
 
-    system("cp ns2.tcl  ~/NS2/bgp++1.05/doc/1knodes/ns.tcl");
-    system("~/NS2/ns-allinone-2.35/ns-2.35/ns ~/NS2/bgp++1.05/doc/1knodes/ns.tcl -dir ~/NS2/bgp++1.05/doc/1knodes/ -stop 200");
+    system("cp ns2.tcl  ~/NS2/bgp++1.05/doc/test_cdf/ns.tcl");
+    system("~/NS2/ns-allinone-2.35/ns-2.35/ns ~/NS2/bgp++1.05/doc/test_cdf/ns.tcl -dir ~/NS2/bgp++1.05/doc/test_cdf/ -stop 200");
     system("cp ns2_basic.tcl ns2.tcl");
 
     usleep(2000);
@@ -17196,6 +17211,8 @@ Bgp::nlri_parse (struct peer *peer, struct attr *attr, struct bgp_nlri *packet)
 
 	if((peer->local_as == 5) && (event_received == 0))
 	{
+
+	    //cout << "\n RECEIVED PACKET FROM " << peer->as << endl;
 	    event_received = 1;
 	    /* Populate the ns2 parameters */
 	    ns2_params.peer = peer;
@@ -17385,7 +17402,7 @@ Bgp::bgp_route_clear_with_afi (struct peer *peer, struct bgp *bgp, afi_t afi,
             {
                 bgp_aggregate_decrement (bgp, &rn->p, ri, afi, safi);
                 bgp_info_delete ((struct bgp_info **) &rn->info, ri);
-                bgp_process (bgp, rn, afi, safi, ri, NULL, NULL);
+                bgp_process (bgp, rn, afi, safi, ri, NULL, NULL, NULL);
                 bgp_info_free (ri);
                 route_unlock_node (rn);
             }
@@ -17496,7 +17513,7 @@ Bgp::bgp_rib_remove (struct bgp_node *rn, struct bgp_info *ri, struct peer *peer
 
       bgp_aggregate_decrement (bgp, &rn->p, ri, afi, safi);
       UNSET_FLAG (ri->flags, BGP_INFO_VALID);
-      bgp_process (bgp, rn, afi, safi, NULL, NULL, NULL);
+      bgp_process (bgp, rn, afi, safi, NULL, NULL, NULL, NULL);
     }
   bgp_info_delete ((struct bgp_info**)&rn->info, ri);
   bgp_info_free (ri);
@@ -17550,7 +17567,7 @@ Bgp::bgp_static_update (struct bgp *bgp, struct prefix *p, u_int16_t afi,
     bgp_info_add ((struct bgp_info **) &rn->info, New);
 
     /* Process change. */
-    bgp_process (bgp, rn, afi, safi, NULL, NULL, NULL);
+    bgp_process (bgp, rn, afi, safi, NULL, NULL, NULL, NULL);
 }
 
 
@@ -17575,7 +17592,7 @@ Bgp::bgp_static_withdraw (struct bgp *bgp, struct prefix *p, u_int16_t afi,
     {
         bgp_aggregate_decrement (bgp, p, ri, afi, safi);
         bgp_info_delete ((struct bgp_info **) &rn->info, ri);
-        bgp_process (bgp, rn, afi, safi, ri, NULL, NULL);
+        bgp_process (bgp, rn, afi, safi, ri, NULL, NULL, NULL);
         bgp_info_free (ri);
         route_unlock_node (rn);
     }
@@ -17928,7 +17945,7 @@ Bgp::bgp_aggregate_route (struct bgp *bgp, struct prefix *p, struct bgp_info *ri
                 }
             }
             if (match)
-                bgp_process (bgp, rn, afi, safi, NULL, NULL, NULL);
+                bgp_process (bgp, rn, afi, safi, NULL, NULL, NULL, NULL);
         }
     route_unlock_node (top);
 
@@ -17981,7 +17998,7 @@ Bgp::bgp_aggregate_route (struct bgp *bgp, struct prefix *p, struct bgp_info *ri
         New->uptime = clock;
 
         bgp_info_add ((struct bgp_info **) &rn->info, New);
-        bgp_process (bgp, rn, afi, safi, NULL, NULL, NULL);
+        bgp_process (bgp, rn, afi, safi, NULL, NULL, NULL, NULL);
     } else
     {
         if (aspath)
@@ -18122,7 +18139,7 @@ Bgp::bgp_aggregate_add (struct bgp *bgp, struct prefix *p, afi_t afi, safi_t saf
 
             /* If this node is suppressed, process the change. */
             if (match)
-                bgp_process (bgp, rn, afi, safi, NULL, NULL, NULL);
+                bgp_process (bgp, rn, afi, safi, NULL, NULL, NULL, NULL);
         }
     route_unlock_node (top);
 
@@ -18145,7 +18162,7 @@ Bgp::bgp_aggregate_add (struct bgp *bgp, struct prefix *p, afi_t afi, safi_t saf
         bgp_info_add ((struct bgp_info **) &rn->info, New);
 
         /* Process change. */
-        bgp_process (bgp, rn, afi, safi, NULL, NULL, NULL);
+        bgp_process (bgp, rn, afi, safi, NULL, NULL, NULL, NULL);
     }
 }
 
@@ -18196,7 +18213,7 @@ Bgp::bgp_aggregate_delete (struct bgp *bgp, struct prefix *p, afi_t afi,
 
             /* If this node is suppressed, process the change. */
             if (match)
-                bgp_process (bgp, rn, afi, safi, NULL, NULL, NULL);
+                bgp_process (bgp, rn, afi, safi, NULL, NULL, NULL, NULL);
         }
     route_unlock_node (top);
 
@@ -18213,7 +18230,7 @@ Bgp::bgp_aggregate_delete (struct bgp *bgp, struct prefix *p, afi_t afi,
     if (ri)
     {
         bgp_info_delete ((struct bgp_info **) &rn->info, ri);
-        bgp_process (bgp, rn, afi, safi, ri, NULL, NULL);
+        bgp_process (bgp, rn, afi, safi, ri, NULL, NULL, NULL);
         bgp_info_free (ri);
         route_unlock_node (rn);
     }
@@ -18550,7 +18567,7 @@ Bgp::bgp_redistribute_add (struct prefix *p, struct in_addr *nexthop,
                 rn = bgp_route_node_get (bgp, afi, SAFI_UNICAST, p, NULL);
                 bgp_aggregate_increment (bgp, p, New, afi, SAFI_UNICAST);
                 bgp_info_add ((struct bgp_info **) &rn->info, New);
-                bgp_process (bgp, rn, afi, SAFI_UNICAST, NULL, NULL, NULL);
+                bgp_process (bgp, rn, afi, SAFI_UNICAST, NULL, NULL, NULL, NULL);
             }
         }
 
@@ -18584,7 +18601,7 @@ Bgp::bgp_redistribute_delete (struct prefix *p, u_char type)
                 {
                     bgp_aggregate_decrement (bgp, p, ri, afi, SAFI_UNICAST);
                     bgp_info_delete ((struct bgp_info **) &rn->info, ri);
-                    bgp_process (bgp, rn, afi, SAFI_UNICAST, ri, NULL, NULL);
+                    bgp_process (bgp, rn, afi, SAFI_UNICAST, ri, NULL, NULL, NULL);
                     bgp_info_free (ri);
                     route_unlock_node (rn);
                 }
@@ -18614,7 +18631,7 @@ Bgp::bgp_redistribute_withdraw (struct bgp *bgp, afi_t afi, int type)
         {
             bgp_aggregate_decrement (bgp, &rn->p, ri, afi, SAFI_UNICAST);
             bgp_info_delete ((struct bgp_info **) &rn->info, ri);
-            bgp_process (bgp, rn, afi, SAFI_UNICAST, ri, NULL, NULL);
+            bgp_process (bgp, rn, afi, SAFI_UNICAST, ri, NULL, NULL, NULL);
             bgp_info_free (ri);
             route_unlock_node (rn);
         }

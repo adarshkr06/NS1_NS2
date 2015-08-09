@@ -4578,7 +4578,7 @@ class Bgp : public RouteApp {
   void bgp_announce_route (struct peer *peer, afi_t afi, safi_t safi);
   void bgp_announce_route_all (struct peer *peer);
 #endif
-  int bgp_process(struct bgp *,struct bgp_node *,afi_t,safi_t,struct bgp_info *,struct prefix_rd *,u_char *);
+  int bgp_process(struct bgp *,struct bgp_node *,afi_t,safi_t,struct bgp_info *,struct prefix_rd *,u_char *,struct peer *);
   int bgp_maximum_prefix_overflow(struct peer_conf *,afi_t,safi_t);
   void bgp_implicit_withdraw(struct peer_conf *,struct bgp *,struct prefix *,struct bgp_info *,struct bgp_node *,afi_t,safi_t);
   int bgp_update(struct peer *,struct prefix *,struct attr *,afi_t,safi_t,int,int,struct prefix_rd *,u_char *,int);
