@@ -631,15 +631,15 @@ struct Hash* Bgp::ecomhash;
 map <string, int> event_map;
 int total_events=0;
 map<pair<string, int>, int> mrai_map;
-struct logical_stamp *ls_array[10];
-string event_prefix[10];
+struct logical_stamp *ls_array[100];
+std::map<string, int> prefix_map;
 struct logical_stamp
 {
 	map<int, int> process_queue;
 	map<int, int> network_queue;
 };	
 
-std::vector<struct bgp *> bgp_instances(20,NULL);
+std::vector<struct bgp *> bgp_instances(11000,NULL);
 
 DEFUNST (ip_community_list,
 	 ip_community_list_cmd,
@@ -4059,9 +4059,12 @@ Bgp::Bgp(double start):mrai_type(MRAI_PER_PREFIX),ssld(false),first_time_insert(
 }
 void print_event_prefixes()
 {
-	for (int i = 0; i < total_events; i ++)
+    int i=0;
+    std::map<string, int>::iterator it;
+	for (it = prefix_map.begin(); it != prefix_map.end(); ++it )
 	{
-		cout << "DEBUG: Prefix " << i << " = " << event_prefix[i] << endl;
+		cout << "\nDEBUG: Prefix " << i << " = " << it->first << endl;
+		i++;
 	}
 }
 
@@ -4165,6 +4168,7 @@ void Bgp::bgp_main()
 
     /* Make master thread. */
     master = thread_make_master ();
+
 
     /* Initializations. */
     cmd_init (1);
@@ -12033,7 +12037,7 @@ Bgp::bgp_connect (struct peer *peer)
       )
     {
       struct bgp *bgp = bgp_get_default();
-      
+      cout << "\n ERROR in 2nd NS" << endl; 
       if (1) printf("At %lf: Connect warning (from bgp_connect()): peer %s couldnt be found in Registry, Local id: %s\n",
 		    NOW,inet_sutop (&peer->su, buf),Bgp::inet_ntop(AF_INET,&bgp->id,str,sizeof(str)));
       return connect_error;
@@ -13657,29 +13661,28 @@ Bgp::bgp_update_send (struct peer_conf *conf, struct peer *peer,
 	Create object if there wasn't one */
 
     ip_prefix = inet_ntoa(p->u.prefix4);
-    //print_event_prefixes();
-    for (i = 0; i < total_events; i++)
+    #if CONV_DET_DEBUG
+    print_event_prefixes();
+    #endif
+
+    std::map<string, int>::iterator it;
+ 
+    it = prefix_map.find(ip_prefix);	
+    if (it == prefix_map.end())
     {
-	if (event_prefix[i] == ip_prefix)
-	{
-		found = 1;
-		break;
-	}
-    }
-    if (!found)
-    {
-	total_events++;
-	event_prefix[i] = ip_prefix;
-	ls_array[i] = new struct logical_stamp;
-	ls_array[i]->network_queue[peer->as]++;
+	prefix_map[ip_prefix] = total_events;
+	ls_array[total_events] = new struct logical_stamp;
+	ls_array[total_events]->network_queue[peer->as]++;
 	#if CONV_DET_DEBUG
-	printf("\n DEBUG: %d Object created and network queue of AS %d incremented to %d",__LINE__, peer->as, ls_array[i]->network_queue[peer->as]);
+	printf("\n DEBUG: %d Object created and network queue of AS %d incremented to %d",__LINE__, peer->as, ls_array[total_events]->network_queue[peer->as]);
 	#endif
+	total_events++;
+
     } else
     {
-	ls_array[i]->network_queue[peer->as]++;
+	ls_array[it->second]->network_queue[peer->as]++;
 	#if CONV_DET_DEBUG
-	printf("\n DEBUG: %d OnSend network queue of AS %d incremented to %d",__LINE__, peer->as, ls_array[i]->network_queue[peer->as]);
+	printf("\n DEBUG: %d OnSend network queue of AS %d incremented to %d",__LINE__, peer->as, ls_array[it->second]->network_queue[peer->as]);
 	#endif
     } 		
     
@@ -13865,29 +13868,28 @@ Bgp::bgp_withdraw_send (struct peer *peer, struct prefix *p, afi_t afi, safi_t s
     /* Increment the network queue used for convergence detection in NS2 
 	Create object if there wasn't one */
     ip_prefix = inet_ntoa(p->u.prefix4);
-    //print_event_prefixes();
-    for (i = 0; i < total_events; i++)
+    #if CONV_DET_DEBUG
+    print_event_prefixes();
+    #endif
+
+    std::map<string, int>::iterator it;
+ 
+    it = prefix_map.find(ip_prefix);	
+    if (it == prefix_map.end())
     {
- 	if (event_prefix[i] == ip_prefix)
-	{
-		found = 1;
-		break;
-	}
-    }
-    if (!found)
-    {
-	total_events++;
-	event_prefix[i] = ip_prefix;
-	ls_array[i] = new struct logical_stamp;
-	ls_array[i]->network_queue[peer->as]++;
+	prefix_map[ip_prefix] = total_events;
+	ls_array[total_events] = new struct logical_stamp;
+	ls_array[total_events]->network_queue[peer->as]++;
 	#if CONV_DET_DEBUG
-	printf("\n DEBUG: %d Object created and network queue of AS %d incremented to %d",__LINE__, peer->as, ls_array[i]->network_queue[peer->as]);
+	printf("\n DEBUG: %d Object created and network queue of AS %d incremented to %d",__LINE__, peer->as, ls_array[total_events]->network_queue[peer->as]);
 	#endif
+	total_events++;
+
     } else
     {
-	ls_array[i]->network_queue[peer->as]++;
+	ls_array[it->second]->network_queue[peer->as]++;
 	#if CONV_DET_DEBUG
-	printf("\n DEBUG: %d OnSend network queue of AS %d incremented to %d",__LINE__, peer->as, ls_array[i]->network_queue[peer->as]);
+	printf("\n DEBUG: %d OnSend network queue of AS %d incremented to %d",__LINE__, peer->as, ls_array[it->second]->network_queue[peer->as]);
 	#endif
     } 		
 
@@ -15761,6 +15763,7 @@ Bgp::bgp_announce_table (struct peer *peer)
 {
     struct listnode *nn;
     struct peer_conf *conf;
+
     for (nn = peer->conf->head; nn; nn = nn->next)
         if ((conf = ( struct peer_conf * ) nn->data) != NULL)
         {
@@ -15961,15 +15964,10 @@ Bgp::bgp_process (struct bgp *bgp, struct bgp_node *rn, afi_t afi, safi_t safi,
     struct attr attr;
     struct bgp_info *ri1;
     struct bgp_info *ri2;
-    struct bgp *dummy;
 
     memset(&attr,0,sizeof(struct attr));
     p = &rn->p;
 
-    /* Save the BGP instance in a global array to be used for 
-	dumping bgp tables after convergence */
-    dummy = bgp_get_default();
-    bgp_instances[dummy->as] = dummy; 
 
     /* bgp deterministic-med */
     new_select = NULL;
@@ -17021,6 +17019,12 @@ void write_conv_results(Bgp *bgpo)
     	    //cout << "******** DUMPING BGP TABLE FOR AS *************" << (*bgp)->as << endl;
     	    table = (*bgp)->rib[AFI_IP][SAFI_UNICAST];
 
+	    if (NULL == table->top)
+	    {
+		bgptable << "0" << endl;
+		continue;
+	    }
+
     	    for (rn = bgpo->route_top (table); rn; rn = bgpo->route_next (rn))
         	if (rn->info != NULL)
         	{
@@ -17060,14 +17064,14 @@ void write_conv_results(Bgp *bgpo)
     			}
 			}
 	    	    }
-		}
+		} 
 	}
    }
    bgptable.close();
 }
 
 
-void check_convergence(Bgp *bgp, int index)
+void check_convergence(Bgp *bgp, int index, string ip_prefix)
 {
     map<int, int>::iterator it;
     for ( it = ls_array[index]->process_queue.begin(); it != ls_array[index]->process_queue.end(); it++ )
@@ -17091,12 +17095,16 @@ void check_convergence(Bgp *bgp, int index)
 		return;
 	}
     }
-    //printf("\nDEBUG: NETWORK CONVERGED FOR PREFIX ");
-    //cout << event_prefix[index] << endl;	
+    #if CONV_DET_DEBUG
+    cout << "\nDEBUG: NETWORK CONVERGED FOR PREFIX " << ip_prefix << endl;;
+    #endif
     write_conv_results(bgp);
     bgp->bgp_dump_routes_func(AFI_IP);
     delete ls_array[index];
-    event_prefix[index] = "";
+    prefix_map.erase(ip_prefix);
+    #if CONV_DET_DEBUG
+    print_event_prefixes();
+    #endif
     return;
 }
 /* Parser of NLRI octet stream.  Withdraw NLRI is recognized by NULL
@@ -17179,25 +17187,24 @@ Bgp::nlri_parse (struct peer *peer, struct attr *attr, struct bgp_nlri *packet)
 
 	/* Decrement the network queue and increment the processing queue
 	used for convergence detection in NS2*/ 
-	//print_event_prefixes();
+	#if CONV_DET_DEBUG
+    	print_event_prefixes();
+    	#endif
 
 	string ip_prefix = inet_ntoa(p.u.prefix4);
-	int index=0;
-	for (int i = 0; i < total_events; i++)
+	std::map<string, int>::iterator it;
+	it = prefix_map.find(ip_prefix);
+	int index;
+	if (it != prefix_map.end())
 	{
-		if (event_prefix[i] == ip_prefix)
-		{
-			index = i;
-			ls_array[i]->network_queue[peer->local_as] -= 1;
-			ls_array[i]->process_queue[peer->local_as] += 1;
-			#if CONV_DET_DEBUG
-			printf("\n DEBUG: %d OnReceive network queue of AS %d decremented to %d",__LINE__,peer->local_as, ls_array[i]->network_queue[peer->local_as]);
-			printf("\n DEBUG: %d OnReceive process queue of AS %d incremented to %d",__LINE__,peer->local_as, ls_array[i]->process_queue[peer->local_as]);
-			#endif
-			break;
-		}
-     	}
-	    
+		index = it->second;
+		ls_array[index]->network_queue[peer->local_as] -= 1;
+		ls_array[index]->process_queue[peer->local_as] += 1;
+		#if CONV_DET_DEBUG
+		printf("\n DEBUG: %d OnReceive network queue of AS %d decremented to %d",__LINE__,peer->local_as, ls_array[index]->network_queue[peer->local_as]);
+		printf("\n DEBUG: %d OnReceive process queue of AS %d incremented to %d",__LINE__,peer->local_as, ls_array[index]->process_queue[peer->local_as]);
+		#endif
+	}    
         /* Normal process. */
         if (attr)
             ret = bgp_update (peer, &p, attr, packet->afi, packet->safi, 
@@ -17214,7 +17221,7 @@ Bgp::nlri_parse (struct peer *peer, struct attr *attr, struct bgp_nlri *packet)
 		printf("\n DEBUG: %d OnSend process queue of AS %d decremented to %d",__LINE__, peer->local_as, ls_array[index]->process_queue[peer->local_as]);
 		#endif
 		if (ls_array[index]->process_queue[peer->local_as] == 0)
-			check_convergence(this, index);
+			check_convergence(this, index , ip_prefix);
 	}
 
         /* Address family configuration mismatch or maximum-prefix count
@@ -23881,6 +23888,14 @@ Bgp::bgp_get (struct vty *vty, as_t as, char *name)
     listnode_add (bgp_list, bgp);
     
     vty->index = bgp;
+
+    /* Save the BGP instance in a global array to be used for 
+	dumping bgp tables after convergence */
+    //cout << "REACHED HERE" << endl;
+    //struct bgp *dummy;
+    //dummy = bgp_get_default();
+    bgp_instances[bgp->as] = bgp; 
+
     return CMD_SUCCESS;
     
     return CMD_SUCCESS;
@@ -38426,16 +38441,15 @@ Bgp::bgp_routeadv_timer (struct thread *thread){
       /* Unmark the supression and decrement the processing queue */
       string ip_prefix = inet_ntoa(top->p->u.prefix4);
       mrai_map[make_pair(ip_prefix,peer->local_as)] = 0;
-      for (int i = 0; i < total_events; i++)
+      std::map<string, int>::iterator it;
+      it = prefix_map.find(ip_prefix);
+
+      if (it != prefix_map.end())
       {
-     	if (event_prefix[i] == ip_prefix)
-	{		
-      		ls_array[i]->process_queue[peer->local_as] -= 1; 
-		#if CONV_DET_DEBUG
-      		printf("\n DEBUG: %d OnSend process queue of AS %d decremented to %d",__LINE__, peer->local_as, ls_array[i]->process_queue[peer->local_as]);
-		#endif
-		break;
-     	}
+      	ls_array[it->second]->process_queue[peer->local_as] -= 1; 
+      	#if CONV_DET_DEBUG
+      	printf("\n DEBUG: %d OnSend process queue of AS %d decremented to %d",__LINE__, peer->local_as, ls_array[it->second]->process_queue[peer->local_as]);
+      	#endif
       }
       
       bgp_adj_set (peer->adj_out[top->afi][top->safi], top->p, &top->attribute,
@@ -38500,16 +38514,14 @@ Bgp::bgp_routeadv_timer (struct thread *thread){
       }
       
       /* Decrement the processing queue */
-      for (int i = 0; i < total_events; i++)
-      {
-        if (event_prefix[i] == ip_prefix)
-	{		
-      	    ls_array[i]->process_queue[peer->local_as] = 0; 
-	    #if CONV_DET_DEBUG
-      	    printf("\n DEBUG: %d OnSend process queue of AS %d decremented to %d",__LINE__, peer->local_as, ls_array[i]->process_queue[peer->local_as]);
-	    #endif
-	    break;
-     	}
+      std::map<string, int>::iterator it;
+      it = prefix_map.find(ip_prefix);
+      if(it != prefix_map.end())
+      {	    
+	ls_array[it->second]->process_queue[peer->local_as] = 0; 
+	#if CONV_DET_DEBUG
+      	printf("\n DEBUG: %d OnSend process queue of AS %d decremented to %d",__LINE__, peer->local_as, ls_array[it->second]->process_queue[peer->local_as]);
+	#endif
       }
 
   }
