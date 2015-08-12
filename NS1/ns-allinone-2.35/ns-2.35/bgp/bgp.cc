@@ -16917,7 +16917,6 @@ Bgp::bgp_withdraw (struct peer *peer, struct prefix *p, struct attr *attr,
     return 0;
 }
 
-
 #endif
 
 void bgp_update_rs (Bgp* bgpo, struct peer *peer, struct prefix *p, struct attr *attr,
@@ -17105,12 +17104,12 @@ void ns2_send_recv (Bgp* bgp)
     tclfile.open ("ns2.tcl",ios::app);
     if (ns2_params.attr)
     {
-        tclfile << "$ns at 20 \"$BGP";
-        tclfile << (ns2_params.peer->as) << " command \\\"network ";
-        tclfile << ip_prefix << "/24" << "\\\"\"" << endl;
-        //tclfile << "$ns at 11 \"$BGP";
-        //tclfile << (ns2_params.peer->as + 1) << " command \\\"network ";
-        //tclfile << ip_prefix << "/24" <<"\\\"\"" << endl;
+        //tclfile << "$ns at 20 \"$BGP";
+        //tclfile << (ns2_params.peer->as) << " command \\\"network ";
+        //tclfile << ip_prefix << "/24" << "\\\"\"" << endl;
+
+	tclfile << "$ns at 310 \"$BGP1833 command \\\"route-map RMAP_NONCUST_OUT permit 10\\\"\"" << endl;
+	tclfile << "$ns at 315 \"$BGP1833 command \\\"clear ip bgp * soft\\\"\"" << endl;
         tclfile << "$ns run" << endl;
         tclfile.close();
     }
@@ -17119,14 +17118,14 @@ void ns2_send_recv (Bgp* bgp)
         /*convert withdraw packet to ns commands here*/
     }
 
-    system("cp ns2.tcl  ~/NS2/bgp++1.05/doc/test_cdf/ns.tcl");
-    system("~/NS2/ns-allinone-2.35/ns-2.35/ns ~/NS2/bgp++1.05/doc/test_cdf/ns.tcl -dir ~/NS2/bgp++1.05/doc/test_cdf/ -stop 200");
+    system("cp ns2.tcl  ~/NS2/bgp++1.05/doc/CDF_1K/ns.tcl");
+    system("~/NS2/ns-allinone-2.35/ns-2.35/ns ~/NS2/bgp++1.05/doc/CDF_1K/ns.tcl -dir ~/NS2/bgp++1.05/doc/CDF_1K/ -stop 500");
     system("cp ns2_basic.tcl ns2.tcl");
 
     usleep(2000);
 
-    bgp_update_rs (bgp, ns2_params.peer, &(ns2_params.p), ns2_params.attr, AFI_IP, SAFI_UNICAST,
-                           ZEBRA_ROUTE_BGP, BGP_ROUTE_NORMAL, NULL, NULL, 0);
+    //bgp_update_rs (bgp, ns2_params.peer, &(ns2_params.p), ns2_params.attr, AFI_IP, SAFI_UNICAST,
+    //                      ZEBRA_ROUTE_BGP, BGP_ROUTE_NORMAL, NULL, NULL, 0);
 
 }
 
@@ -17209,19 +17208,26 @@ Bgp::nlri_parse (struct peer *peer, struct attr *attr, struct bgp_nlri *packet)
 //             && peer->translate_update == SAFI_MULTICAST)
 //            continue;
 
-	if((peer->local_as == 5) && (event_received == 0))
+	double sim_time;
+        sim_time = Scheduler::instance().clock();
+
+        if ((event_received == 0) && (peer->local_as == 5)) 
 	{
 
-	    //cout << "\n RECEIVED PACKET FROM " << peer->as << endl;
-	    event_received = 1;
-	    /* Populate the ns2 parameters */
-	    ns2_params.peer = peer;
-	    ns2_params.attr = attr;
-	    ns2_params.nlri = packet;
-	    ns2_params.p = p;
+	    if (((int )sim_time >= 310) && ((int )sim_time <= 320))
+	    {
+		cout << "\n 2ND NS CALLED FROM RS AT " << (int )sim_time << endl;
+	    	event_received = 1;
+	    	/* Populate the ns2 parameters */
+	    	ns2_params.peer = peer;
+	    	ns2_params.attr = attr;
+	    	ns2_params.nlri = packet;
+	    	ns2_params.p = p;
 
-	    //int tx = pthread_create(&thread_id, NULL, ns2_send_recv, (void *) this);
-	    ns2_send_recv(this);
+	    	//int tx = pthread_create(&thread_id, NULL, ns2_send_recv, (void *) this);
+	    	ns2_send_recv(this);
+	    }
+
 	    return 0;
 
 	} else if ((peer->local_as == 5) && (event_received == 1))
