@@ -8,7 +8,8 @@ static const char rcsid[] =
 #include "random.h"
 #include "address.h"
 #include "ip.h"
-
+#include <iostream>
+#include <fstream>
 
 static class MessagePassingAgentClass : public TclClass {
 public:
@@ -91,16 +92,37 @@ void MessagePassingAgent::sendto(int nbytes, AppData *data, const char*, ns_addr
 
 void MessagePassingAgent::recv(Packet* pkt, Handler*)
 {
+
 	if (app_ ) {
 		// If an application is attached, pass the data to the app
 		hdr_cmn* h = hdr_cmn::access(pkt);
 		app_->process_data(h->size(), pkt->userdata());
 	} else if (pkt->userdata() && pkt->userdata()->type() == PACKET_DATA) {
 		// otherwise if it's just PacketData, pass it to Tcl
-
 		PacketData* data = (PacketData*)pkt->userdata();
-
 		hdr_ip* iph = hdr_ip::access(pkt);
+		
+		cout << "ADDRESS IN IP HEADER : " << iph->daddr() << endl;
+		if (iph->daddr() == 0)
+		{
+			cout << "INITIALIZING NS2 ..........." << endl;
+			ofstream tclfile;
+	    		tclfile.open ("ns.tcl",ios::app);
+			tclfile << data->data() << endl;
+    			tclfile << "$ns run" << endl;
+    			tclfile.close();
+	    		int ret;
+			ret = system("cp ns.tcl  ~/NS2/bgp++1.05/doc/3peers/3peers.tcl");
+    			if(ret)
+			cout << "\nSYSTEM CALL CP UNSUCCESSFUL" << endl;
+    			ret = system("~/NS2/ns-allinone-2.35/ns-2.35/ns ~/NS2/bgp++1.05/doc/3peers/3peers.tcl -dir ~/NS2/bgp++1.05/doc/3peers/ -stop 20");
+    			if(ret)
+			cout << "\nSYSTEM CALL NS UNSUCCESSFUL" << endl;
+    			ret = system("cp ns_basic.tcl ns.tcl");
+	    		if(ret)
+			cout << "\nSYSTEM CALL CP UNSUCCESSFUL" << endl;
+		}
+
                 Tcl& tcl = Tcl::instance();
 		tcl.evalf("%s recv %d %d %d {%s}", name(),
 			  iph->saddr(), iph->sport(),
